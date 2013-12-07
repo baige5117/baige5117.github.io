@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="keywords" content="personal blog, Notes, GitHub, Jekyll, baige5117, all for one, 个人博客, 个人网站, 学习笔记, Music, Picture, 励志成功, 开心一刻, 学习提升, 工具, 软件" />
+<meta name="description" content="Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting." />
+<meta name="author" content="Yinlai Bai" />
+<meta name="robots" content="all,index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<title>Home | All For One</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/syntax.css" />
+<!-- [if IE 7]>
+     <link rel="stylesheet" media="all" href="css/ie7.css" />
+     <![endif]-->
+<!-- Google Fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kristi" />
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/js/tags.js"> </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <header id="page-header">
+	<div id="logo">
+	  <h1 id="title"><a href="/">All For One</a></h1>
+	  <span>Love life, love sports, love to learn, & love...</span>
+	</div>
+	<div id="topSearch">
+	  <form id="searchform" action="index.html" method="get">
+	    <input type="text" id="s" name="s" value="type your search and hit enter" onFocus="this.value=''" />
+	  </form>
+	</div>
+      </header>
+      <!-- End Header -->
+      <!-- Begin Content -->
+      <div id="content-wrapper">
+	<div id="content-inner-wrapper">
+	  
+	  <!-- Begin Main Content ( right col ) -->
+	  <section id="main-content">
+	    
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;28,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 中的全部文章" rel="category">休闲 & 娱乐</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#视频" title="查看 视频 中的全部文章">视频&nbsp;&nbsp;</a><a href="/blog/tags.html#青春" title="查看 青春 中的全部文章">青春&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/boy_diary.html">北大宣传片——男生日记</a></h1>
+  </header>
+  <section class="postText">
+    <blockquote><p>在对的时间遇见对的人，那是童话；在错的时间遇到对的人，这才是青春……</p></blockquote>
+
+<p>曾记得，那些让我们内心有所悸动的人和事，即使只是一个关切的眼神，抑或一个划过嘴角浅浅的微笑，都震撼吾心，久久不能忘怀。因为青春，我们彷徨着不知所措，因为青春，我们一无所有两手空空，也因为着青春，我们敢爱敢恨无所顾忌，也因为着青春，我们敢闹敢闯肆无忌惮。这就是我们的青春，有着放不下，也忘不了，剪不断，理还乱的情愫。</p>
+[......]
+    <p class="read-more"><a href="/blog/boy_diary.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;08,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a><a href="/blog/tags.html#C语言" title="查看 C语言 中的全部文章">C语言&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/classic_sort_algorithm.html">经典排序算法</a></h1>
+  </header>
+  <section class="postText">
+    <p>排序，就是将无序元素经过一系列操作将其变为有序元素以方便后续处理的过程。排序操作是计算机编程中最常用的一种操作之一，因此被研究出了许多经典的排序算法，如快速排序、选择排序、冒泡排序等。</p>
+
+<h2>快速排序（Quick Sort）</h2>
+
+<h3>基本思想</h3>
+
+<p><img src="/images/post/quicksort.gif" alt="快速排序" title="快速排序" style="float:left;width:280;height:214;padding:0.5em;" /></p>
+
+<p>快速排序采用的思想是<strong>分治</strong>与<strong>递归</strong>。</p>
+
+<p>具体为：选取一个元素（理论上可以随便找一个元素，但为了简便起见一般选取第一个元素）作为基准（pivot），通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比基准元素都要小，而另外一部分的所有数据都要比基准元素大。然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+[......]
+    <p class="read-more"><a href="/blog/classic_sort_algorithm.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;04,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#Linux" title="查看 Linux 中的全部文章">Linux&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">The Geek Stuff</span></div>
+    <h1><a href="/blog/the_basic_usage_of_grep_in_linux.html">Linux 中 Grep 命令使用方法</a></h1>
+  </header>
+  <section class="postText">
+    <p>grep（global search regular expression(RE) and print out the line，全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
+
+<p>grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到屏幕，不影响原文件内容。</p>
+[......]
+    <p class="read-more"><a href="/blog/the_basic_usage_of_grep_in_linux.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;04,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#机械" title="查看 机械 中的全部文章">机械&nbsp;&nbsp;</a><a href="/blog/tags.html#CAD" title="查看 CAD 中的全部文章">CAD&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/the_basic_usage_of_FreeCAD.html">FreeCAD 的使用</a></h1>
+  </header>
+  <section class="postText">
+    <h2>FreeCAD 简介</h2>
+
+<p>FreeCAD 是一款参数化三维建模工具，其以参数化特征建模为核心功能，基于模块化的软件架构而实现，可在不改动系统核心的的前提下进行高级功能扩展和定制。其主要应用于机械工程与产品设计领域，当然也适用于诸如建筑等工程领域。</p>
+
+<p>FreeCAD 建立于强大的几何核心 OpenCasCade 之上，采用 Coin 3D 提供的与 Open Inventor 兼容的三维场景模型，并提供丰富的 Python 应用程序接口，其图形交互界面基于 Qt 实现。</p>
+
+<p>FreeCAD 也是一款开源软件，完全遵循 Open Source(GPL &amp; LGPL License)协议。而且完全跨平台使用，目前能够完美地在 Windows, Mac OS X 与 Linux 平台上运行且具有完全一致的用户交互界面和功能。</p>
+
+<p>但是，FC 仍然处于初级开发阶段，因此无法完成一些高级任务。尽管如此，对于一些初级操作以及那些想深入学习建模原理的用户，FC 还是值得学习和使用。</p>
+[......]
+    <p class="read-more"><a href="/blog/the_basic_usage_of_FreeCAD.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Nov&nbsp;01,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 中的全部文章" rel="category">励志 & 成功</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#成功学" title="查看 成功学 中的全部文章">成功学&nbsp;&nbsp;</a><a href="/blog/tags.html#励志" title="查看 励志 中的全部文章">励志&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/secret_law_of_attraction.html">The Secret - The Law of Attraction</a></h1>
+  </header>
+  <section class="postText">
+    <p style="text-align:center;"><img src="http://baige5117.u.qiniudn.com/20121101.jpg" height="300" width="450" alt="The Secret" /></p>
+
+<p>The leaders in the past who had the secret wanted to keep the power, and not share the power. So, they kept people ignorant of the secret. People went to work, they did their job, they came home. There were on a 2)treadmill, with no power, because the secret was kept in the few.</p>
+
+<p>You know, this secret gives you everything you want. Happineess, health and wealth. You can have, do or be anything you want.</p>
+[......]
+    <p class="read-more"><a href="/blog/secret_law_of_attraction.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;28,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/markdown-syntax.html">Markdown 基本语法</a></h1>
+  </header>
+  <section class="postText">
+    <h2>Markdown 基本介绍</h2>
+
+<p>Markdown 既是一种轻量级的标记语言，又是一款文本到 HTML（text-to HTML）转换工具。利用 markdown 可以用一种易读易写的纯文本格式写作，然后将其转换为结构化标记语言 XHTML/HTML。Markdown 首要的设计目标是使其成为可读性最大并可再发行的可输入输出格式。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。Markdown 允许使用 HTML 语法，所以使用者如果需要可以直接用 HTML 来表示。</p>
+
+<h3>行内 HTML</h3>
+
+<p>Markdown 的语法非常短小精悍，仅仅实现了 HTML 的一小部分标签，要想使用更多的 HTML 标签，需要在 Markdown 文本中插入 HTML 标签。插入的方式很简单，无需前置符号或者限定符号，只需要直接插入 HTML 标签即可。</p>
+
+<p>但是，对于块级别（block-level）的元素——例如<code>&lt;div&gt;</code>,<code>&lt;table&gt;</code>,<code>&lt;pre&gt;</code>,<code>&lt;p&gt;</code>等——前后必须使用空行分割开，而且块级元素的开始标签和结束标签不能用空格或者制表符缩进。</p>
+
+<p>在块级 HTML 标签内部将不再支持 Markdown 的语法格式，也即在 HTML 块内无法再使用星号进行强调。</p>
+
+<p>文本级（span-level） HTML 元素没有以上限制，可以在任何位置使用，而且在其标签内仍支持 Markdown 语法格式。</p>
+[......]
+    <p class="read-more"><a href="/blog/markdown-syntax.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;27,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 中的全部文章" rel="category">休闲 & 娱乐</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#人物" title="查看 人物 中的全部文章">人物&nbsp;&nbsp;</a><a href="/blog/tags.html#趣事" title="查看 趣事 中的全部文章">趣事&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/RMS-personal-ad.html">理查德·斯托曼的征婚启事</a></h1>
+  </header>
+  <section class="postText">
+    <p>理查德·马修·斯托曼（Richard Matthew Stallman, RMS，生于1953年），自由软件运动的精神领袖、GNU 计划以及自由软件基金会（Free Software Foundation）的创立者、著名黑客。他的主要成就包括 Emacs 及后来的 GNU Emacs，GNU C 编译器及 GNU 调试器。他所写作的 GNU 通用公共许可证（GNU GPL）是世上最广为采用的自由软件许可证，为 copyleft 观念开拓出一条崭新的道路。他最大的影响是为自由软件运动竖立道德、政治及法律框架。他被许多人誉为当今自由软件的斗士、伟大的理想主义者。</p>
+
+<p>斯托曼不仅技术一流，其幽默感也颇佳，从他的<a href="http://www.stallman.org/">个人主页</a>上贴着的那张显赫的“<a href="http://www.stallman.org/extra/personal.html">征婚启事</a>”就可见一斑：</p>
+[......]
+    <p class="read-more"><a href="/blog/RMS-personal-ad.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;26,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100t5nx.html" target="_blank" rel="author">逍遥书斋</a></span></div>
+    <h1><a href="/blog/R-Tree.html">R 树——动态空间索引结构</a></h1>
+  </header>
+  <section class="postText">
+    <h2>一些术语</h2>
+
+<p>本文特别定义了一些术语用于表示不同的对象，正确地区分这些术语有助于更好的理解 R 树。</p>
+
+<ul>
+<li>空间数据库（Spatial database）：存储真正的空间数据对象（比如点、面片等）的地方，它由大量的空间数据对象组成，这些数据对象几乎没有任何（或者仅有简单的）组织形式。</li>
+<li>叶子节点（Leaf node）：树中最底层的节点，没有子节点的节点。R 树中的叶子节点由一定数目的索引记录构成。</li>
+<li>非叶节点（Non-leaf node）：树中除叶子节点之外的节点。R 树中的非叶节点由一定数目的条目构成。</li>
+<li>索引记录（Index records）：叶子节点中存储的数据形式，一条索引记录指向空间数据库中的一个数据对象。</li>
+<li>元组（Tuple）：空间数据库中存储的数据形式，一条元组就是一个空间数据对象，并且每个元组都有一个唯一的标识符。</li>
+<li>条目（Entry）：又称索引条目（Index entry），R 树节点中存储的数据形式，当为叶子节点时，此条目就是索引记录。</li>
+</ul>
+
+[......]
+    <p class="read-more"><a href="/blog/R-Tree.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<div class="pagination">
+  
+  
+  <a href="/blog/page5" title="前一页">&#171;</a>
+  
+  
+  
+  
+  
+  
+  <a href="/">1</a>
+  
+  
+  
+  
+    
+  <a href="/blog/page2">2</a>
+  
+  
+  
+  
+    
+  <a href="/blog/page3">3</a>
+  
+  
+  
+  
+    
+  <a href="/blog/page4">4</a>
+  
+  
+  
+  
+    
+  <a href="/blog/page5">5</a>
+  
+  
+  
+  
+  <span class="current">6</span>
+  
+  
+  
+    
+  <a href="/blog/page7">7</a>
+  
+  
+  
+  
+  
+  <a href="/blog/page7" title="后一页">&#187;</a>
+  
+</div>
+
+
+	  </section>
+	  <!-- End Main Content ( right col ) -->
+	  
+	  <aside id="sidebar">
+  <!-- Begin Social Icons -->
+  <section id="nav">
+    <ul>
+      <li><a href="/" class="blog" title="博客">博文</a></li>
+      <li><a href="/music.html" class="music" title="音乐之声">音乐</a></li>
+      <li><a href="/sayings.html" class="say" title="言语">Say</a></li>
+      <li><a href="/about.html" class="about" title="关于">关于</a></li>
+    </ul>
+    <a href="#contact" id="butContact">Contact</a>
+  </section>
+  <!-- End Social Icons -->
+  
+  <section class="sideBox">
+    <div class="avatar"><a href="/about.html">Baige5117</a></div>
+  </section>
+  
+  <section class="sideBox">
+    <h3><a href="/blog/categories.html" title="查看分类页">分类目录</a></h3>		
+    <ul>
+      
+      <li>
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(1)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(11)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(5)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(19)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(6)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(8)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(1)
+      </li>
+      
+    </ul>
+  </section>
+
+  <section class="sideBox">		
+    <h3>推荐文章</h3>		
+    <ul>
+      <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
+      <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
+      <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
+      <li><a href="/blog/open_source_CAD-CAM_softwares.html" title="几款不错的开源CAD-CAM软件">几款不错的开源CAD-CAM软件</a></li>
+      <li><a href="/blog/how_to_jog_in_the_best_way.html" title="如何最有效的慢跑">如何最有效的慢跑</a></li>
+      <li><a href="/blog/R-Tree.html" title="R 树——动态空间索引结构">R 树——动态空间索引结构</a></li>
+      <li><a href="/blog/good_habbits_of_efficient_people.html" title="高效率人士的优秀习惯">高效率人士的优秀习惯</a></li>
+      <li><a href="/blog/secret_law_of_attraction.html" title="The Secret - The Law of Attraction">The Secret - The Law of Attraction</a></li>
+      <li><a href="/blog/the_basic_usage_of_FreeCAD.html" title="FreeCAD的使用">FreeCAD的使用</a></li>
+      <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
+      <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
+      <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3><a href="/blog/archive.html" title="查看日期归档页">日期存档</a></h3>
+    <ul>
+      
+      
+      
+      
+      
+        
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;11&nbsp;月 的文章">2013&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;10&nbsp;月 的文章">2013&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;09&nbsp;月 的文章">2013&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(13)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;08&nbsp;月 的文章">2013&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;07&nbsp;月 的文章">2013&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(9)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;06&nbsp;月 的文章">2013&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;04&nbsp;月 的文章">2013&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;02&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;02&nbsp;月 的文章">2013&nbsp;年&nbsp;02&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;12&nbsp;月 的文章">2012&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(6)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;11&nbsp;月 的文章">2012&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+    </ul>
+    <!--ul>
+	<li><a href=“” title=“”>2013 年十一月</a>&nbsp;(3)</li>
+    </ul-->
+  </section>
+  <section class="sideBox">
+    <h3>常用链接</h3>
+    <ul class='xoxo blogroll'>
+      <li><a href="http://www.w3schools.com/" target="_blank">w3school在线教程(英文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://www.w3school.com.cn/" target="_blank">w3school在线教程(中文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://colorschemedesigner.com/" target="_blank">高级在线配色器—Color Scheme Designer</a></li>
+      <li><a href="http://ikreator.com/special-characters/" target="_blank">HTML特殊字符大全—HTML Special Characters</a></li>
+      <li><a href="http://www.refresh-sf.com/yui/" target="_blank">在线JS/CSS压缩工具—YUI Compressor</a></li>
+      <li><a href="http://www.smushit.com/ysmush.it/" target="_blank">在线图片压缩工具—Smush.it</a></li>
+      <li><a href="http://tinypng.org/" target="_blank">非常好用的在线PNG图片压缩工具—tinypng</a></li>
+      <li><a href="http://pngmini.com/" target="_blank">PNG图片压缩工具—ImageAlpha</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3>微博说说</h3>
+    <div id="weibo_wrap">
+      <iframe width="230" height="600" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=230&height=600&fansRow=2&ptype=1&speed=0&skin=8&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1312421323&verifier=dde46a02&dpc=1"></iframe>
+    </div>
+  </section>
+
+  <section class="sideBox">		
+    <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
+    <div id="tags_wrap">
+    
+    <a href="/blog/tags.html#健康" title="1">健康</a>
+    
+    <a href="/blog/tags.html#运动" title="1">运动</a>
+    
+    <a href="/blog/tags.html#阅读" title="3">阅读</a>
+    
+    <a href="/blog/tags.html#思考" title="4">思考</a>
+    
+    <a href="/blog/tags.html#效率" title="1">效率</a>
+    
+    <a href="/blog/tags.html#习惯" title="2">习惯</a>
+    
+    <a href="/blog/tags.html#空间索引" title="1">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="1">数据结构</a>
+    
+    <a href="/blog/tags.html#人物" title="4">人物</a>
+    
+    <a href="/blog/tags.html#趣事" title="3">趣事</a>
+    
+    <a href="/blog/tags.html#网页设计" title="3">网页设计</a>
+    
+    <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
+    
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    
+    <a href="/blog/tags.html#励志" title="5">励志</a>
+    
+    <a href="/blog/tags.html#机械" title="6">机械</a>
+    
+    <a href="/blog/tags.html#CAD" title="3">CAD</a>
+    
+    <a href="/blog/tags.html#Linux" title="4">Linux</a>
+    
+    <a href="/blog/tags.html#编程语言" title="5">编程语言</a>
+    
+    <a href="/blog/tags.html#C语言" title="4">C语言</a>
+    
+    <a href="/blog/tags.html#视频" title="2">视频</a>
+    
+    <a href="/blog/tags.html#青春" title="2">青春</a>
+    
+    <a href="/blog/tags.html#幽默" title="3">幽默</a>
+    
+    <a href="/blog/tags.html#快乐" title="1">快乐</a>
+    
+    <a href="/blog/tags.html#开心一刻" title="2">开心一刻</a>
+    
+    <a href="/blog/tags.html#程序设计" title="3">程序设计</a>
+    
+    <a href="/blog/tags.html#软件" title="2">软件</a>
+    
+    <a href="/blog/tags.html#音乐" title="3">音乐</a>
+    
+    <a href="/blog/tags.html#人生" title="8">人生</a>
+    
+    <a href="/blog/tags.html#国学" title="2">国学</a>
+    
+    <a href="/blog/tags.html#文学" title="1">文学</a>
+    
+    <a href="/blog/tags.html#计算机" title="3">计算机</a>
+    
+    <a href="/blog/tags.html#黑客" title="1">黑客</a>
+    
+    <a href="/blog/tags.html#语录" title="1">语录</a>
+    
+    <a href="/blog/tags.html#电影" title="1">电影</a>
+    
+    <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
+    
+    <a href="/blog/tags.html#演讲" title="2">演讲</a>
+    
+    <a href="/blog/tags.html#故事" title="3">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="4">学习笔记</a>
+    
+    <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
+    
+    <a href="/blog/tags.html#力学" title="3">力学</a>
+    
+    <a href="/blog/tags.html#物理" title="3">物理</a>
+    
+    <a href="/blog/tags.html#数学" title="3">数学</a>
+    
+    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    
+    <a href="/blog/tags.html#事业" title="1">事业</a>
+    
+    <a href="/blog/tags.html#生活" title="2">生活</a>
+    
+    <a href="/blog/tags.html#脚本" title="2">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="2">批处理</a>
+    
+    <a href="/blog/tags.html#工作" title="1">工作</a>
+    
+    <a href="/blog/tags.html#职业" title="1">职业</a>
+    
+  </div>
+  </section>
+
+  <section class="sideBox">
+    <h3 id="contact">联系我</h3>		
+    <ul id="social">
+      <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
+      <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
+      <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
+      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+    </ul>
+  </section>
+</aside>
+
+	</div>
+      </div>
+      <!-- End Content -->
+      <footer id="page-footer">
+	<div id="site5bottom">By <br /><a href="/">Yinlai.Bai</a>.<br/>
+	</div>
+      </footer>
+    </div>
+    <div id="gotop">回顶部</div>
+    <script type="text/javascript" src="/js/gotop.js"></script>
+    <!--以下为百度统计代码-->
+    <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb145740af16f12510a2d43b45804e638' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="keywords" content="personal blog, Notes, GitHub, Jekyll, baige5117, all for one, 个人博客, 个人网站, 学习笔记, Music, Picture, 励志成功, 开心一刻, 学习提升, 工具, 软件" />
+<meta name="description" content="Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting." />
+<meta name="author" content="Yinlai Bai" />
+<meta name="robots" content="all,index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<title>RDiscount - Markdown for Ruby | All For One</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/syntax.css" />
+<!-- [if IE 7]>
+     <link rel="stylesheet" media="all" href="css/ie7.css" />
+     <![endif]-->
+<!-- Google Fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kristi" />
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/js/tags.js"> </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <header id="page-header">
+	<div id="logo">
+	  <h1 id="title"><a href="/">All For One</a></h1>
+	  <span>Love life, love sports, love to learn, & love...</span>
+	</div>
+	<div id="topSearch">
+	  <form id="searchform" action="index.html" method="get">
+	    <input type="text" id="s" name="s" value="type your search and hit enter" onFocus="this.value=''" />
+	  </form>
+	</div>
+      </header>
+      <!-- End Header -->
+      <!-- Begin Content -->
+      <div id="content-wrapper">
+	<div id="content-inner-wrapper">
+	  
+	  <!-- Begin Main Content ( right col ) -->
+	  <section id="main-content">
+	    <article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;04,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1>RDiscount - Markdown for Ruby</h1>
+  </header>
+  <section class="postText">
+    <p>RDiscount 是针对 Gruber 的 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 语法利用 C 语言开发的一款快速转换程序，可将由 Markdown 语法书写的文本转换为 HTML 格式文档。它使用 <a href="http://www.pell.portland.or.us/~orc/Code/discount/">Discount</a> 处理程序来完成转换工作，在保留原 Markdown 语法特性的基础上，又增加了许多有用的新特性。</p>
+
+<h2><a href="http://michelf.ca/projects/php-markdown/extra/#footnotes" title="php Markdown Extra - Footnotes">脚注</a></h2>
+
+<p>脚注由两部分构成：<strong>脚注标记</strong>和<strong>脚注内容</strong>，前者作为需进行脚注标注的文本的数字上标标记，后者则作为标注内容将以脚注列表的形式位于文档末尾处。</p>
+
+<pre><code>这是脚注示例[^1]。
+
+[^1]: 这是脚注内容。
+</code></pre>
+
+<!--excerpt break-->
+
+
+<p>将转换为：</p>
+
+<pre><code>&lt;p&gt;这是脚注示例&lt;sup id="fnref-1"&gt;&lt;a href="#fn-1" class="footnote-ref"&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+
+&lt;li id="fn-1"&gt;
+&lt;p&gt;这是脚注内容。
+   &lt;a href="#fnref-1" class="footnote-backref"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;/ol&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>效果为：</p>
+
+<p>这是脚注示例<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<p>脚注可以出现在文档中任何位置，但是脚注标记和脚注内容将按照脚注出现的先后次序自动排序编号，同一个脚注内容不能有两个脚注标记位置，即脚注标记不能重复出现。</p>
+
+<p>脚注标记可以不按数字顺序进行标记，而且脚注标记不仅可以是数字，也可以为字符（满足 HTML id 属性的合法字符）。脚注内容的位置无论位于文档的哪个位置，最终都会被转换到文档的底部。</p>
+
+<p>脚注内容可以包含块级元素——段落、列表、引用等，和列表项包含块级元素相同，需要将相关块级元素缩进 4 个字符<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+<p><span class="red">在 jekyll 中使用脚注需要在 _config.yml 文件中插入以下代码：</span></p>
+
+<pre><code>markdown: rdiscount
+rdiscount:
+   extensions:
+     - footnotes
+</code></pre>
+
+<h2><a href="http://michelf.ca/projects/php-markdown/extra/#table" title="php Markdown Extra - Table">表格</a></h2>
+
+<p>一个简单的表格实现如下：</p>
+
+<pre><code>First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+</code></pre>
+
+<p>其完全等价于：</p>
+
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre>
+
+<p>第一行包含列标题，第二行包含强制分割行用于将标题和内容分割开，其后各行为表格的各行。列总是被管道符<code>|</code>隔开。以上代码转换为 HTML 为：</p>
+
+<pre><code>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+  &lt;th&gt;First Header  &lt;/th&gt;
+  &lt;th&gt; Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+  &lt;td&gt;Content Cell  &lt;/td&gt;
+  &lt;td&gt; Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Content Cell  &lt;/td&gt;
+  &lt;td&gt; Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>显示效果为：</p>
+
+<table>
+<thead>
+<tr>
+<th> First Header  </th>
+<th> Second Header </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Content Cell  </td>
+<td> Content Cell  </td>
+</tr>
+<tr>
+<td> Content Cell  </td>
+<td> Content Cell  </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>需要注意的是，表格的每一行中至少需要一个管道符，因此在创建单列表格时，要么在行首或行尾加上一个管道符，要么都加上。</p>
+
+<p>可以使用冒号<code>:</code>来改变表格中列文本的对齐方式，当冒号位于强制分割行的右端时，列文本将右对齐；位于左侧时，则左对齐；当分割行两端都有冒号时则中间对齐。本质上对齐方式是利用 HTML 的<code>align</code>属性来完成的。</p>
+
+<pre><code>| Item      | Value |
+| --------- |:-----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+</code></pre>
+
+<p>显示效果为：</p>
+
+<table>
+<thead>
+<tr>
+<th> Item      </th>
+<th style="text-align:center;"> Value </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Computer  </td>
+<td style="text-align:center;"> $1600 </td>
+</tr>
+<tr>
+<td> Phone     </td>
+<td style="text-align:center;">   $12 </td>
+</tr>
+<tr>
+<td> Pipe      </td>
+<td style="text-align:center;">    $1 </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>单元格中的文本可以使用 Markdown 的行级（span-level）格式进行格式化。</p>
+
+<pre><code>| Function name | Description                    |
+| ------------- | ------------------------------ |
+| *help()*      | Display the help window.       |
+| `destroy()`   | **Destroy your computer!**     |
+</code></pre>
+
+<p>显示效果为：</p>
+
+<table>
+<thead>
+<tr>
+<th> Function name </th>
+<th> Description                    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <em>help()</em>      </td>
+<td> Display the help window.       </td>
+</tr>
+<tr>
+<td> <code>destroy()</code>   </td>
+<td> <strong>Destroy your computer!</strong>     </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>图片大小设置</h2>
+
+<p>设置格式为：</p>
+
+<pre><code>![alt文本](图片地址 =宽度x长度 "title文本")
+</code></pre>
+
+<p><span class="red">其中图片的大小设置<strong>不能</strong>放到 title 文本的后面。</span></p>
+
+<p>示例：</p>
+
+<pre><code>![GitHub Favicon](https://github.com/favicon.ico =16x16)
+</code></pre>
+
+<p>显示效果为：</p>
+
+<p><img src="https://github.com/favicon.ico" height="16" width="16" alt="GitHub Favicon" /></p>
+
+<h2>块级代码</h2>
+
+<p>RDiscount 支持围栏式（Fenced）的代码块：<a href="https://help.github.com/articles/github-flavored-markdown#fenced-code-blocks">backtick-delimited</a>、<a href="http://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks">tilde-delimited</a>，其特征是，可利用开始和结束围栏行（fence lines）而不是缩进将代码围起来。围栏行包含三个或者更多波浪线<code>~</code>或反引号<code>`</code>，而且开始行和结束行所使用的符号必须相同数量相等。需要注意的是，开始行的前面必须有空行，否则将转换为行内代码。结束行之后可以没有空行。例如：</p>
+
+<pre><code>~~~~~~~~~~~~~~~~~~~~~
+int main() //这是代码行
+~~~~~~~~~~~~~~~~~~~~~
+</code></pre>
+
+<p>等价于：</p>
+
+<pre><code>`````````````````````
+int main() //这是代码行
+`````````````````````
+</code></pre>
+
+<p>效果为：</p>
+
+<pre><code>int main() //这是代码行
+</code></pre>
+
+<p>利用围栏式代码块，可以在代码块的开始和结束处使用空行。而且更方便直接从其它编辑器中直接粘贴过来已经缩进好的代码。</p>
+
+<p>但是，这种方法对以 HTML 标签开始（且前边不含空格）的代码不能正常显示。例如以下代码就无法正常显示：</p>
+
+<pre><code>~~~~~~~~~~~~~~~~~~~~~
+&lt;p&gt;Hello, world!&lt;/p&gt;
+~~~~~~~~~~~~~~~~~~~~~
+</code></pre>
+
+<p>而以下两个代码块即可正常显示：</p>
+
+<pre><code>~~~~~~~~~~~~~~~~~~~~~
+ &lt;p&gt;Hello, world!&lt;/p&gt;
+~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~
+Start, &lt;p&gt;Hello, world!&lt;/p&gt; End
+~~~~~~~~~~~~~~~~~~~~~
+</code></pre>
+
+<p>因此，如果要输出以 HTML 标签开始的代码块，<span class="red">必须</span>在 HTML 标签前面加上至少一个空格，或者直接用缩进形式的代码块。</p>
+
+<p><span class="red">注意</span>：偶然发现如果使用 pygments 对代码块进行语法高亮显示，不需要任何特别的处理即可实现代码块原样输出显示，即不需要缩进也不需要围栏行，只需将代码块置入<code>{% highlight c linenos %}</code>和<code>{% endhighlight %}</code>（以 c 代码为例）之间即可，如下：</p>
+
+<pre><code>{% highlight c linenos %}
+#include &lt;stdio&gt;
+
+int main()
+{
+   printf ("Hello, world!\n");
+   return 0;
+}
+{% endhighlight %}
+</code></pre>
+
+<p>将被转化为：</p>
+
+<pre><code>&lt;div class="highlight"&gt;&lt;pre&gt;&lt;code class="c"&gt;
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</code></pre>
+
+<p>显示效果为：</p>
+
+<div class="highlight"><pre><code class="c"><span class="lineno">1</span> <span class="cp">#include &lt;stdio&gt;</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="lineno">4</span> <span class="p">{</span>
+<span class="lineno">5</span>   <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Hello, world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="lineno">6</span>   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">7</span> <span class="p">}</span>
+</code></pre></div>
+
+
+<p>由于<code>{% highlight c linenos %}</code>和<code>{% endhighlight %}</code>都是 liquid 代码，所以如果程序代码中含有 liquid 代码，则 liquid 代码被 Jekyll 作为 liquid 模板处理从而无法显示，此时需要利用 liquid 的 <code>raw</code>标签（<code>{% raw %}</code>）来暂时停止解析 liquid 模板。</p>
+
+<h2>段落居中</h2>
+
+<p>将段落文本置于<code>-&gt;</code>和<code>&lt;-</code>之间即可实现居中对齐。</p>
+
+<pre><code>-&gt;这是段落居中对齐&lt;-
+</code></pre>
+
+<p>将转换为：</p>
+
+<pre><code>&lt;p style="text-align:center;"&gt;这是段落居中对齐&lt;/p&gt;
+</code></pre>
+
+<p>显示效果为：</p>
+
+<p style="text-align:center;">这是段落居中对齐</p>
+
+<h2>添加 HTML 中 class 和 id 的支持</h2>
+
+<ul>
+<li><code>class:name</code>：将被转换为<code>&lt;span class="name"&gt;…&lt;/span&gt;</code></li>
+<li><code>id:name</code>：将被转换为<code>&lt;a id="name"&gt;…&lt;/a&gt;</code></li>
+</ul>
+
+
+<p>但是经过测试，并不是按上面所说的进行转换，测试结果为：</p>
+
+<pre><code>[测试文字](class:red)
+[测试文字](id:blue)
+</code></pre>
+
+<p>将被转换为：</p>
+
+<pre><code>&lt;span class="red"&gt;测试文字&lt;/span&gt;
+&lt;span id="blue"&gt;测试文字&lt;/span&gt;
+</code></pre>
+
+<p>更多伪类的定义扩展可参见 <a href="http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions">Discount 主页</a>。</p>
+
+<h2>Jekyll 中 RDiscount 可用的扩展</h2>
+
+<ul>
+<li><code>footnotes</code>：支持脚注</li>
+<li><code>smart</code>：开启 <a href="http://daringfireball.net/projects/smartypants/">SmartyPants</a> 处理</li>
+<li><code>aotulink</code>：自动将 URL 地址转换为链接，即使 URL 地址没在尖括号内<code>&lt; &gt;</code></li>
+<li><code>no_image</code>：不处理<code>![ ]</code>，并且从输出中移除所有<code>&lt;img&gt;</code>标签</li>
+<li><code>no_links</code>：不处理<code>[ ]</code>，并且从输出中移除所有<code>&lt;a&gt;</code>标签</li>
+<li>&hellip;&hellip;</li>
+</ul>
+
+
+<p>更多扩展信息参见 <a href="http://rdoc.info/github/davidfstr/rdiscount/master/RDiscount">RDiscount 文档</a>。</p>
+
+<h2>参考链接</h2>
+
+<ul>
+<li><a href="http://dafoster.net/projects/rdiscount/">RDiscount 主页</a></li>
+<li><a href="https://github.com/davidfstr/rdiscount">RDiscount 源代码</a></li>
+<li><a href="http://rdoc.info/github/davidfstr/rdiscount/master/RDiscount">RDiscount 文档</a></li>
+<li><a href="http://www.pell.portland.or.us/~orc/Code/discount/">Discount 主页</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>这是脚注内容。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>测试没成功！By: bai @ 2013/12/04 19:56:49<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+
+  </section>
+  <section class="postText">
+  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/about_career.html" title="一位过来人对求职工作者的深刻建议">一位过来人对求职工作者的深刻建议</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/mathjax_in_jekyll.html" title="利用 MathJax 在 Jekyll 网页中插入 Tex/LaTex 数学公式">利用 MathJax 在 Jekyll 网页中插入 Tex/LaTex 数学公式</a></p>
+  </section>
+  <section class="postText">
+    <div id="duoshuo">
+      <!-- Duoshuo Comment BEGIN -->
+      <div class="ds-thread"></div>
+      <script type="text/javascript">
+	var duoshuoQuery = {short_name:"baige5117"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+      </script>
+      <!-- Duoshuo Comment END -->
+    </div>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+
+	  </section>
+	  <!-- End Main Content ( right col ) -->
+	  
+	  <aside id="sidebar">
+  <!-- Begin Social Icons -->
+  <section id="nav">
+    <ul>
+      <li><a href="/" class="blog" title="博客">博文</a></li>
+      <li><a href="/music.html" class="music" title="音乐之声">音乐</a></li>
+      <li><a href="/sayings.html" class="say" title="言语">Say</a></li>
+      <li><a href="/about.html" class="about" title="关于">关于</a></li>
+    </ul>
+    <a href="#contact" id="butContact">Contact</a>
+  </section>
+  <!-- End Social Icons -->
+  
+  <section class="sideBox">
+    <div class="avatar"><a href="/about.html">Baige5117</a></div>
+  </section>
+  
+  <section class="sideBox">
+    <h3><a href="/blog/categories.html" title="查看分类页">分类目录</a></h3>		
+    <ul>
+      
+      <li>
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(1)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(11)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(5)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(19)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(6)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(8)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(1)
+      </li>
+      
+    </ul>
+  </section>
+
+  <section class="sideBox">		
+    <h3>推荐文章</h3>		
+    <ul>
+      <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
+      <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
+      <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
+      <li><a href="/blog/open_source_CAD-CAM_softwares.html" title="几款不错的开源CAD-CAM软件">几款不错的开源CAD-CAM软件</a></li>
+      <li><a href="/blog/how_to_jog_in_the_best_way.html" title="如何最有效的慢跑">如何最有效的慢跑</a></li>
+      <li><a href="/blog/R-Tree.html" title="R 树——动态空间索引结构">R 树——动态空间索引结构</a></li>
+      <li><a href="/blog/good_habbits_of_efficient_people.html" title="高效率人士的优秀习惯">高效率人士的优秀习惯</a></li>
+      <li><a href="/blog/secret_law_of_attraction.html" title="The Secret - The Law of Attraction">The Secret - The Law of Attraction</a></li>
+      <li><a href="/blog/the_basic_usage_of_FreeCAD.html" title="FreeCAD的使用">FreeCAD的使用</a></li>
+      <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
+      <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
+      <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3><a href="/blog/archive.html" title="查看日期归档页">日期存档</a></h3>
+    <ul>
+      
+      
+      
+      
+      
+        
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;11&nbsp;月 的文章">2013&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;10&nbsp;月 的文章">2013&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;09&nbsp;月 的文章">2013&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(13)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;08&nbsp;月 的文章">2013&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;07&nbsp;月 的文章">2013&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(9)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;06&nbsp;月 的文章">2013&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;04&nbsp;月 的文章">2013&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;02&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;02&nbsp;月 的文章">2013&nbsp;年&nbsp;02&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;12&nbsp;月 的文章">2012&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(6)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;11&nbsp;月 的文章">2012&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+    </ul>
+    <!--ul>
+	<li><a href=“” title=“”>2013 年十一月</a>&nbsp;(3)</li>
+    </ul-->
+  </section>
+  <section class="sideBox">
+    <h3>常用链接</h3>
+    <ul class='xoxo blogroll'>
+      <li><a href="http://www.w3schools.com/" target="_blank">w3school在线教程(英文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://www.w3school.com.cn/" target="_blank">w3school在线教程(中文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://colorschemedesigner.com/" target="_blank">高级在线配色器—Color Scheme Designer</a></li>
+      <li><a href="http://ikreator.com/special-characters/" target="_blank">HTML特殊字符大全—HTML Special Characters</a></li>
+      <li><a href="http://www.refresh-sf.com/yui/" target="_blank">在线JS/CSS压缩工具—YUI Compressor</a></li>
+      <li><a href="http://www.smushit.com/ysmush.it/" target="_blank">在线图片压缩工具—Smush.it</a></li>
+      <li><a href="http://tinypng.org/" target="_blank">非常好用的在线PNG图片压缩工具—tinypng</a></li>
+      <li><a href="http://pngmini.com/" target="_blank">PNG图片压缩工具—ImageAlpha</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3>微博说说</h3>
+    <div id="weibo_wrap">
+      <iframe width="230" height="600" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=230&height=600&fansRow=2&ptype=1&speed=0&skin=8&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1312421323&verifier=dde46a02&dpc=1"></iframe>
+    </div>
+  </section>
+
+  <section class="sideBox">		
+    <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
+    <div id="tags_wrap">
+    
+    <a href="/blog/tags.html#健康" title="1">健康</a>
+    
+    <a href="/blog/tags.html#运动" title="1">运动</a>
+    
+    <a href="/blog/tags.html#阅读" title="3">阅读</a>
+    
+    <a href="/blog/tags.html#思考" title="4">思考</a>
+    
+    <a href="/blog/tags.html#效率" title="1">效率</a>
+    
+    <a href="/blog/tags.html#习惯" title="2">习惯</a>
+    
+    <a href="/blog/tags.html#空间索引" title="1">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="1">数据结构</a>
+    
+    <a href="/blog/tags.html#人物" title="4">人物</a>
+    
+    <a href="/blog/tags.html#趣事" title="3">趣事</a>
+    
+    <a href="/blog/tags.html#网页设计" title="3">网页设计</a>
+    
+    <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
+    
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    
+    <a href="/blog/tags.html#励志" title="5">励志</a>
+    
+    <a href="/blog/tags.html#机械" title="6">机械</a>
+    
+    <a href="/blog/tags.html#CAD" title="3">CAD</a>
+    
+    <a href="/blog/tags.html#Linux" title="4">Linux</a>
+    
+    <a href="/blog/tags.html#编程语言" title="5">编程语言</a>
+    
+    <a href="/blog/tags.html#C语言" title="4">C语言</a>
+    
+    <a href="/blog/tags.html#视频" title="2">视频</a>
+    
+    <a href="/blog/tags.html#青春" title="2">青春</a>
+    
+    <a href="/blog/tags.html#幽默" title="3">幽默</a>
+    
+    <a href="/blog/tags.html#快乐" title="1">快乐</a>
+    
+    <a href="/blog/tags.html#开心一刻" title="2">开心一刻</a>
+    
+    <a href="/blog/tags.html#程序设计" title="3">程序设计</a>
+    
+    <a href="/blog/tags.html#软件" title="2">软件</a>
+    
+    <a href="/blog/tags.html#音乐" title="3">音乐</a>
+    
+    <a href="/blog/tags.html#人生" title="8">人生</a>
+    
+    <a href="/blog/tags.html#国学" title="2">国学</a>
+    
+    <a href="/blog/tags.html#文学" title="1">文学</a>
+    
+    <a href="/blog/tags.html#计算机" title="3">计算机</a>
+    
+    <a href="/blog/tags.html#黑客" title="1">黑客</a>
+    
+    <a href="/blog/tags.html#语录" title="1">语录</a>
+    
+    <a href="/blog/tags.html#电影" title="1">电影</a>
+    
+    <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
+    
+    <a href="/blog/tags.html#演讲" title="2">演讲</a>
+    
+    <a href="/blog/tags.html#故事" title="3">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="4">学习笔记</a>
+    
+    <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
+    
+    <a href="/blog/tags.html#力学" title="3">力学</a>
+    
+    <a href="/blog/tags.html#物理" title="3">物理</a>
+    
+    <a href="/blog/tags.html#数学" title="3">数学</a>
+    
+    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    
+    <a href="/blog/tags.html#事业" title="1">事业</a>
+    
+    <a href="/blog/tags.html#生活" title="2">生活</a>
+    
+    <a href="/blog/tags.html#脚本" title="2">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="2">批处理</a>
+    
+    <a href="/blog/tags.html#工作" title="1">工作</a>
+    
+    <a href="/blog/tags.html#职业" title="1">职业</a>
+    
+  </div>
+  </section>
+
+  <section class="sideBox">
+    <h3 id="contact">联系我</h3>		
+    <ul id="social">
+      <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
+      <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
+      <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
+      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+    </ul>
+  </section>
+</aside>
+
+	</div>
+      </div>
+      <!-- End Content -->
+      <footer id="page-footer">
+	<div id="site5bottom">By <br /><a href="/">Yinlai.Bai</a>.<br/>
+	</div>
+      </footer>
+    </div>
+    <div id="gotop">回顶部</div>
+    <script type="text/javascript" src="/js/gotop.js"></script>
+    <!--以下为百度统计代码-->
+    <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb145740af16f12510a2d43b45804e638' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </body>
+</html>

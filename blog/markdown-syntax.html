@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="keywords" content="personal blog, Notes, GitHub, Jekyll, baige5117, all for one, 个人博客, 个人网站, 学习笔记, Music, Picture, 励志成功, 开心一刻, 学习提升, 工具, 软件" />
+<meta name="description" content="Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting." />
+<meta name="author" content="Yinlai Bai" />
+<meta name="robots" content="all,index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<title>Markdown 基本语法 | All For One</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/syntax.css" />
+<!-- [if IE 7]>
+     <link rel="stylesheet" media="all" href="css/ie7.css" />
+     <![endif]-->
+<!-- Google Fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kristi" />
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/js/tags.js"> </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <header id="page-header">
+	<div id="logo">
+	  <h1 id="title"><a href="/">All For One</a></h1>
+	  <span>Love life, love sports, love to learn, & love...</span>
+	</div>
+	<div id="topSearch">
+	  <form id="searchform" action="index.html" method="get">
+	    <input type="text" id="s" name="s" value="type your search and hit enter" onFocus="this.value=''" />
+	  </form>
+	</div>
+      </header>
+      <!-- End Header -->
+      <!-- Begin Content -->
+      <div id="content-wrapper">
+	<div id="content-inner-wrapper">
+	  
+	  <!-- Begin Main Content ( right col ) -->
+	  <section id="main-content">
+	    <article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;28,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1>Markdown 基本语法</h1>
+  </header>
+  <section class="postText">
+    <h2>Markdown 基本介绍</h2>
+
+<p>Markdown 既是一种轻量级的标记语言，又是一款文本到 HTML（text-to HTML）转换工具。利用 markdown 可以用一种易读易写的纯文本格式写作，然后将其转换为结构化标记语言 XHTML/HTML。Markdown 首要的设计目标是使其成为可读性最大并可再发行的可输入输出格式。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。Markdown 允许使用 HTML 语法，所以使用者如果需要可以直接用 HTML 来表示。</p>
+
+<h3>行内 HTML</h3>
+
+<p>Markdown 的语法非常短小精悍，仅仅实现了 HTML 的一小部分标签，要想使用更多的 HTML 标签，需要在 Markdown 文本中插入 HTML 标签。插入的方式很简单，无需前置符号或者限定符号，只需要直接插入 HTML 标签即可。</p>
+
+<p>但是，对于块级别（block-level）的元素——例如<code>&lt;div&gt;</code>,<code>&lt;table&gt;</code>,<code>&lt;pre&gt;</code>,<code>&lt;p&gt;</code>等——前后必须使用空行分割开，而且块级元素的开始标签和结束标签不能用空格或者制表符缩进。</p>
+
+<p>在块级 HTML 标签内部将不再支持 Markdown 的语法格式，也即在 HTML 块内无法再使用星号进行强调。</p>
+
+<p>文本级（span-level） HTML 元素没有以上限制，可以在任何位置使用，而且在其标签内仍支持 Markdown 语法格式。</p>
+
+<!--excerpt break-->
+
+
+<h3>特殊字符的自动忽略</h3>
+
+<p>HTML 中有两个字符需要特别对待：小于号<code>&lt;</code>和<code>&amp;</code>，前者用语标签的开始，后者用语表示 HTML 实体）（HTML entities）。如果要在 HTML 中使用两个字符的字面值，必须使用他们的实体值，即<code>&amp;lt;</code>、<code>&amp;amp;</code>。</p>
+
+<p>Markdown 可自动完成两个字符的转换。如果两个字符确实用语表示 HTML 标签或位于 HTML 标签内，则 Markdown 将不做任何处理，其它情况下将其转换为 HTML 实体值。例如：</p>
+
+<pre><code>AT&amp;T
+4 &lt; 5
+</code></pre>
+
+<p>将被转换为：</p>
+
+<pre><code>AT&amp;amp;T
+4 &amp;lt; 5
+</code></pre>
+
+<p>另外，在 Markdown 的代码区域内（行内代码或块代码），两个字符也将被自动转换为 HTML 实体，这样书写关于 HTML 的代码将变的十分方便。</p>
+
+<h2>块级元素（Block Elements）</h2>
+
+<h3>段落</h3>
+
+<p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。<strong>普通段落不该用空格或制表符来缩进</strong>。</p>
+
+<p>两个连续文本行中间没有空行的话被视为一个段落，如果要在多个连续文本行之间强行断行，也即插入<code>&lt;br /&gt;</code>标签，可在相应的文本行末尾插入两个以上空格。</p>
+
+<h3>标题</h3>
+
+<p>Markdown 支持两种风格的标题表示方法：<a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a> 和 <a href="http://www.aaronsw.com/2002/atx/">atx</a>。</p>
+
+<p>Setext 风格利用在相应文字下方输入等号表示一级标题，短折线表示二级标题，等号或短折线的数量没有任何限制。例如：</p>
+
+<pre><code>This is an H1
+=============
+This is an H2
+-------------
+</code></pre>
+
+<p>Atx 风格利用井号表示，在标题文字前面插入 1 到 6 个<code>#</code>，对应到 1 到 6 级标题，例如：</p>
+
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+
+<h3>引用</h3>
+
+<p>行首使用小于号<code>&gt;</code>加上一个空格表示引用段落，内部可以嵌套多个引用。</p>
+
+<p>示例：</p>
+
+<pre><code>&gt; 骄傲使人进步，谦虚使人退步。——我 ^_^
+</code></pre>
+
+<p>将转换为：</p>
+
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;骄傲使人进步，谦虚使人退步。——我 ^_^&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+<p>显示效果为：</p>
+
+<blockquote><p>骄傲使人进步，谦虚使人退步。——我 ^_^</p></blockquote>
+
+<h3>代码区块</h3>
+
+<p>和程序相关的写作或是标签语言原始码通常会有已经排版好的代码区块，通常这些区块我们并不希望它以一般段落文件的方式去排版，而是照原来的书写方式进行显示，这就是代码区域控制。</p>
+
+<h4>行内代码</h4>
+
+<p>用反引号<code>`</code>（波浪号键下方的符号）表示，反引号将被转换为<code>&lt;code&gt;</code>和<code>&lt;/code&gt;</code>标签，而反引号之间的内容将按照书写的形式进行转化显示，比如 AND 字符<code>&amp;</code>及大于号小于号（<code>&lt;</code>或<code>&gt;</code>）将被自动的转换为 HTML 实体（HTML entities）：<code>&amp;amp;</code>、<code>&amp;lt;</code>、<code>&amp;gt;</code>。如果要在行内代码块中使用反引号的字面值，则需要用两个反引号。</p>
+
+<p>示例：</p>
+
+<pre><code>C 语言中的打印输出函数为 `printf()` 。HTML 的段落标签为 `&lt;p&gt;`。
+``There is a literal backtick (`) here.``
+A single backtick in a code span: `` ` ``
+A backtick-delimited string in a code span: `` `foo` ``
+</code></pre>
+
+<p>将转换为：</p>
+
+<pre><code>C 语言中的打印输出函数为 &lt;code&gt;printf()&lt;/code&gt; 。HTML 的段落标签为 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;。
+&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;
+A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;
+A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
+</code></pre>
+
+<p>显示效果为：</p>
+
+<p>C 语言中的打印输出函数为 <code>printf()</code>。HTML 的段落标签为 <code>&lt;p&gt;</code>。</p>
+
+<p><code>There is a literal backtick (`) here.</code></p>
+
+<p>A single backtick in a code span: <code>`</code></p>
+
+<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+
+<h4>区域块代码</h4>
+
+<p>用<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>标签来把代码区块包起来。要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，而这个每行一阶的缩进（4 个空格或是 1 个制表符），都会被移除，一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。例如，下面的输入：</p>
+
+<pre><code> 这是一个普通段落：
+     这是一个代码区块。
+</code></pre>
+
+<p>Markdown 会转换成：</p>
+
+<pre><code> &lt;p&gt;这是一个普通段落：&lt;/p&gt;
+ &lt;pre&gt;&lt;code&gt;这是一个代码区块。
+ &lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+<p>在代码区块里面， <code>&amp;</code>、<code>&lt;</code>和<code>&gt;</code>会自动转成 HTML 实体。</p>
+
+<p>例如一段 C 语言经典程序如下所示：</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf ("Hello, world!\n");
+    return 0;
+}
+</code></pre>
+
+<h3>列表</h3>
+
+<p><strong>无序列表</strong>使用星号<code>*</code>、加号<code>+</code>、减号<code>-</code>后面加上空格来表示。</p>
+
+<p>示例：</p>
+
+<pre><code>* 列表1
+* 列表1
+
++ 列表1
++ 列表2
+
+- 列表1
+- 列表2
+</code></pre>
+
+<p>显示效果为：</p>
+
+<ul>
+<li>列表1</li>
+<li><p>列表1</p></li>
+<li><p>列表1</p></li>
+<li><p>列表2</p></li>
+<li><p>列表1</p></li>
+<li>列表2</li>
+</ul>
+
+
+<p><strong>有序列表</strong>使用英文数字加英文点号（句号）后面加上空格来表示。</p>
+
+<p>示例：</p>
+
+<pre><code>1. 列表1
+2. 列表2
+</code></pre>
+
+<p>显示效果为：</p>
+
+<ol>
+<li>列表1</li>
+<li>列表2</li>
+</ol>
+
+
+<p>有序列表中的数字对输出的影响不大，所有列表项可以全部使用一个数字开始，仍可转换为排序正确的 HTML 代码。但是有一点，第一项必须以数字 1 开始。（因此，如果所有列表项只使用一个数字表示，那只能是数字 1）</p>
+
+<p>如果在列表项之间存在空行，则列表项将会加上<code>&lt;p&gt;</code>标签。通过在行首利用四个空格或一个制表符缩进来创建多段落的列表项，例如：</p>
+
+<pre><code>*   A list item.
+
+    With multiple paragraphs.
+
+*   Another item in the list.
+</code></pre>
+
+<p>将会转换为：</p>
+
+<pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A list item.&lt;/p&gt;
+&lt;p&gt;With multiple paragraphs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Another item in the list.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>在列表中插入引用也需要缩进四个空格或一个制表符，但是<strong>插入代码代码块需要两倍的缩进（即八个空格或两个制表符）</strong>。</p>
+
+<h4>水平分割线</h4>
+
+<p>在一行中使用三个或三个以上的星号<code>*</code>、减号<code>-</code>或下划线<code>_</code>可以添加分隔线（<code>&lt;hr /&gt;</code>），其中可以有空白，但是不能有其他字符。例如：</p>
+
+<pre><code>-------------
+****
+_______
+</code></pre>
+
+<p>都具有同样的效果：</p>
+
+<hr />
+
+<h2>行级元素（Span Elements）</h2>
+
+<h3>强调</h3>
+
+<p>使用星号<code>*</code>或下划线<code>_</code>表示强调。</p>
+
+<p>示例：</p>
+
+<pre><code>单星号 = *斜体* -&gt; &lt;em&gt;斜体&lt;/em&gt;
+单下划线 = _斜体_ -&gt; &lt;em&gt;斜体&lt;/em&gt;
+双星号 = **加粗** -&gt; &lt;strong&gt;加粗&lt;/strong&gt;
+双下划线 = __加粗__ -&gt; &lt;strong&gt;加粗&lt;/strong&gt;
+</code></pre>
+
+<p>显示效果：</p>
+
+<p>单星号 = <em>斜体</em></p>
+
+<p>单下划线 = <em>斜体</em></p>
+
+<p>双星号 = <strong>加粗</strong></p>
+
+<p>双下划线 = <strong>加粗</strong></p>
+
+<p>当星号或者下划线两侧有空格时，两字符将按照字面值显示，即星号或下划线。当然也可以利用转义符<code>\</code>转义。</p>
+
+<h3>链接</h3>
+
+<p>Markdown 支持两种风格的链接：Inline 和 Reference。两种风格都使用方括号<code>[ ]</code>限定链接内容。</p>
+
+<h4>Inline 形式</h4>
+
+<p>以中括号标记显示的链接文本，后面紧跟用小括号包围的链接。如果链接有 title 属性，则在链接中使用空格加 “title属性”。</p>
+
+<pre><code>这个一个 Inline 示例：[Google](http://google.com/ "Google").
+</code></pre>
+
+<p>将被转换为：</p>
+
+<pre><code>&lt;p&gt;这个一个 Inline 示例：&lt;a href="http://google.com/" title="Google"&gt;Google&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
+
+<p>显示效果为：</p>
+
+<p>这个一个 Inline 示例：<a href="http://google.com/" title="Google">Google</a>。</p>
+
+<h4>Reference 形式</h4>
+
+<p>一般应用于多个不同位置使用相同链接。通常分为两个部分，调用部分为<code>[链接文本][ref]</code>；定义部分可以出现在文本中的其他位置，格式为<code>[ref]: http://some/link/address "可选的标题"</code>，其中的 UTR 地址可用尖括号括起来，可选的标题属性必须用双引号、单引号或者圆括号三者之一括起来。值得注意的是在<code>ref</code>中可包含字母、数字、空格或标点符号，而且不区分大小写。</p>
+
+<p>Reference 链接有种简写形式，链接名称可以省略，此时链接名称为链接文本。</p>
+
+<p>示例：</p>
+
+<pre><code>这个一个 Reference 示例：[Yahoo][ref].
+
+[ref]: http://search.yahoo.com/ "Yahoo Search"
+
+这是一个 Reference 简写形式：[Daring Fireball][].
+
+[Daring Fireball]: http://daringfireball.net/
+
+这是一个 Reference 更为简写的形式：[MathJax].
+
+[MathJax]: http://www.mathjax.org/ "MathJax 官网"
+</code></pre>
+
+<p>将转换为：</p>
+
+<pre><code>&lt;p&gt;这个一个 Reference 示例：&lt;a href="http://search.yahoo.com/" title="Yahoo Search"&gt;Yahoo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;这个一个 Reference 简写形式：&lt;a href="http://daringfireball.net/"&gt;Daring Fireball&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;这是一个 Reference 更为简写的形式：&lt;a href="http://www.mathjax.org/" title="MathJax 官网"&gt;MathJax.&lt;/a&gt;
+</code></pre>
+
+<p>显示效果：</p>
+
+<p>这个一个 Reference 示例：<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>。</p>
+
+<p>这个一个 Reference 简写形式：<a href="http://daringfireball.net/">Daring Fireball</a>.</p>
+
+<p>这是一个 Reference 更为简写的形式：<a href="http://www.mathjax.org/" title="MathJax 官网">MathJax</a>.</p>
+
+<h3>图片</h3>
+
+<p>图片的使用方法基本上和链接类似，只是在方括号前加叹号<code>!</code>。不过由于不能设置图片的大小和样式，所以一般直接使用 HTML 中的<code>&lt;img&gt;</code>标签。</p>
+
+<p>示例：</p>
+
+<pre><code>Inline 示例：![替代文本](/images/icons/github-24.png "可选的 title")
+Reference示例：![替代文本][pic]
+[pic]: /images/icons/github-24.png "可选的 title"
+HTML示例：&lt;img src="/images/about.jpg" alt="替代文本" title="标题文本" width="200px" /&gt;
+</code></pre>
+
+<p>显示效果：</p>
+
+<p>Inline 示例：<img src="/images/icons/github-24.png" title="可选的 title" alt="替代文本" /></p>
+
+<p>Reference示例：<img src="/images/glider.png" title="可选的 title" alt="替代文本" /></p>
+
+<p>HTML示例：<img src="/images/v.jpg" alt="替代文本" title="标题文本" width="200px" /></p>
+
+<h2>其它</h2>
+
+<h3>自动链接</h3>
+
+<p>使用尖括号，可以为输入的 URL 或者邮箱自动创建链接。如 <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#116;&#101;&#x73;&#116;&#x40;&#100;&#x6f;&#109;&#x61;&#105;&#110;&#46;&#x63;&#111;&#109;">&#116;&#101;&#115;&#116;&#64;&#x64;&#x6f;&#x6d;&#97;&#x69;&#110;&#x2e;&#99;&#111;&#x6d;</a>。</p>
+
+<h2>Markdown 中特殊字符汇总</h2>
+
+<p>Markdown 中存在很多特殊字符，这些特殊字符都有特定的作用，要使用这些特殊字符本身，需要使用转义字符<code>\</code>进行转义处理，转义格式为<code>\特殊字符</code>。常用的特殊字符有：</p>
+
+<p><code>#</code>——井号，表示标题</p>
+
+<p><code>+</code>——加号，表示列表</p>
+
+<p><code>\</code>——反斜线，转义特殊字符</p>
+
+<p><code>*</code>——星号，列表，加粗或强调</p>
+
+<p><code>`</code>——反引号，行内代码</p>
+
+<p><code>!</code>——叹号，图片</p>
+
+<p><code>-</code>——减号，单个表示列表，多个表示横线</p>
+
+<p><code>_</code>——下划线，单个表示列表，多个表示加粗或斜体</p>
+
+<p><code>[ ]</code>——中括号，链接或图片用</p>
+
+<p><code>{ }</code>——大括号，链接或图片用</p>
+
+<p><code>( )</code>——小括号，链接或图片用</p>
+
+<p><code>.</code>——点号，用于有序列表</p>
+
+<h2>参考链接</h2>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/">Markdown 官方主页</a></li>
+<li><a href="http://wowubuntu.com/markdown/">Markdown 语法中文简体翻译</a></li>
+<li><a href="http://www.ituring.com.cn/article/504">Markdown 语法说明</a></li>
+</ul>
+
+
+  </section>
+  <section class="postText">
+  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/RMS-personal-ad.html" title="理查德·斯托曼的征婚启事">理查德·斯托曼的征婚启事</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/secret_law_of_attraction.html" title="The Secret - The Law of Attraction">The Secret - The Law of Attraction</a></p>
+  </section>
+  <section class="postText">
+    <div id="duoshuo">
+      <!-- Duoshuo Comment BEGIN -->
+      <div class="ds-thread"></div>
+      <script type="text/javascript">
+	var duoshuoQuery = {short_name:"baige5117"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+      </script>
+      <!-- Duoshuo Comment END -->
+    </div>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+
+	  </section>
+	  <!-- End Main Content ( right col ) -->
+	  
+	  <aside id="sidebar">
+  <!-- Begin Social Icons -->
+  <section id="nav">
+    <ul>
+      <li><a href="/" class="blog" title="博客">博文</a></li>
+      <li><a href="/music.html" class="music" title="音乐之声">音乐</a></li>
+      <li><a href="/sayings.html" class="say" title="言语">Say</a></li>
+      <li><a href="/about.html" class="about" title="关于">关于</a></li>
+    </ul>
+    <a href="#contact" id="butContact">Contact</a>
+  </section>
+  <!-- End Social Icons -->
+  
+  <section class="sideBox">
+    <div class="avatar"><a href="/about.html">Baige5117</a></div>
+  </section>
+  
+  <section class="sideBox">
+    <h3><a href="/blog/categories.html" title="查看分类页">分类目录</a></h3>		
+    <ul>
+      
+      <li>
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(1)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(11)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(5)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(19)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(6)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(8)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(1)
+      </li>
+      
+    </ul>
+  </section>
+
+  <section class="sideBox">		
+    <h3>推荐文章</h3>		
+    <ul>
+      <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
+      <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
+      <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
+      <li><a href="/blog/open_source_CAD-CAM_softwares.html" title="几款不错的开源CAD-CAM软件">几款不错的开源CAD-CAM软件</a></li>
+      <li><a href="/blog/how_to_jog_in_the_best_way.html" title="如何最有效的慢跑">如何最有效的慢跑</a></li>
+      <li><a href="/blog/R-Tree.html" title="R 树——动态空间索引结构">R 树——动态空间索引结构</a></li>
+      <li><a href="/blog/good_habbits_of_efficient_people.html" title="高效率人士的优秀习惯">高效率人士的优秀习惯</a></li>
+      <li><a href="/blog/secret_law_of_attraction.html" title="The Secret - The Law of Attraction">The Secret - The Law of Attraction</a></li>
+      <li><a href="/blog/the_basic_usage_of_FreeCAD.html" title="FreeCAD的使用">FreeCAD的使用</a></li>
+      <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
+      <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
+      <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3><a href="/blog/archive.html" title="查看日期归档页">日期存档</a></h3>
+    <ul>
+      
+      
+      
+      
+      
+        
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;11&nbsp;月 的文章">2013&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;10&nbsp;月 的文章">2013&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;09&nbsp;月 的文章">2013&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(13)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;08&nbsp;月 的文章">2013&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;07&nbsp;月 的文章">2013&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(9)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;06&nbsp;月 的文章">2013&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;04&nbsp;月 的文章">2013&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;02&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;02&nbsp;月 的文章">2013&nbsp;年&nbsp;02&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;12&nbsp;月 的文章">2012&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(6)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;11&nbsp;月 的文章">2012&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+    </ul>
+    <!--ul>
+	<li><a href=“” title=“”>2013 年十一月</a>&nbsp;(3)</li>
+    </ul-->
+  </section>
+  <section class="sideBox">
+    <h3>常用链接</h3>
+    <ul class='xoxo blogroll'>
+      <li><a href="http://www.w3schools.com/" target="_blank">w3school在线教程(英文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://www.w3school.com.cn/" target="_blank">w3school在线教程(中文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://colorschemedesigner.com/" target="_blank">高级在线配色器—Color Scheme Designer</a></li>
+      <li><a href="http://ikreator.com/special-characters/" target="_blank">HTML特殊字符大全—HTML Special Characters</a></li>
+      <li><a href="http://www.refresh-sf.com/yui/" target="_blank">在线JS/CSS压缩工具—YUI Compressor</a></li>
+      <li><a href="http://www.smushit.com/ysmush.it/" target="_blank">在线图片压缩工具—Smush.it</a></li>
+      <li><a href="http://tinypng.org/" target="_blank">非常好用的在线PNG图片压缩工具—tinypng</a></li>
+      <li><a href="http://pngmini.com/" target="_blank">PNG图片压缩工具—ImageAlpha</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3>微博说说</h3>
+    <div id="weibo_wrap">
+      <iframe width="230" height="600" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=230&height=600&fansRow=2&ptype=1&speed=0&skin=8&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1312421323&verifier=dde46a02&dpc=1"></iframe>
+    </div>
+  </section>
+
+  <section class="sideBox">		
+    <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
+    <div id="tags_wrap">
+    
+    <a href="/blog/tags.html#健康" title="1">健康</a>
+    
+    <a href="/blog/tags.html#运动" title="1">运动</a>
+    
+    <a href="/blog/tags.html#阅读" title="3">阅读</a>
+    
+    <a href="/blog/tags.html#思考" title="4">思考</a>
+    
+    <a href="/blog/tags.html#效率" title="1">效率</a>
+    
+    <a href="/blog/tags.html#习惯" title="2">习惯</a>
+    
+    <a href="/blog/tags.html#空间索引" title="1">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="1">数据结构</a>
+    
+    <a href="/blog/tags.html#人物" title="4">人物</a>
+    
+    <a href="/blog/tags.html#趣事" title="3">趣事</a>
+    
+    <a href="/blog/tags.html#网页设计" title="3">网页设计</a>
+    
+    <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
+    
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    
+    <a href="/blog/tags.html#励志" title="5">励志</a>
+    
+    <a href="/blog/tags.html#机械" title="6">机械</a>
+    
+    <a href="/blog/tags.html#CAD" title="3">CAD</a>
+    
+    <a href="/blog/tags.html#Linux" title="4">Linux</a>
+    
+    <a href="/blog/tags.html#编程语言" title="5">编程语言</a>
+    
+    <a href="/blog/tags.html#C语言" title="4">C语言</a>
+    
+    <a href="/blog/tags.html#视频" title="2">视频</a>
+    
+    <a href="/blog/tags.html#青春" title="2">青春</a>
+    
+    <a href="/blog/tags.html#幽默" title="3">幽默</a>
+    
+    <a href="/blog/tags.html#快乐" title="1">快乐</a>
+    
+    <a href="/blog/tags.html#开心一刻" title="2">开心一刻</a>
+    
+    <a href="/blog/tags.html#程序设计" title="3">程序设计</a>
+    
+    <a href="/blog/tags.html#软件" title="2">软件</a>
+    
+    <a href="/blog/tags.html#音乐" title="3">音乐</a>
+    
+    <a href="/blog/tags.html#人生" title="8">人生</a>
+    
+    <a href="/blog/tags.html#国学" title="2">国学</a>
+    
+    <a href="/blog/tags.html#文学" title="1">文学</a>
+    
+    <a href="/blog/tags.html#计算机" title="3">计算机</a>
+    
+    <a href="/blog/tags.html#黑客" title="1">黑客</a>
+    
+    <a href="/blog/tags.html#语录" title="1">语录</a>
+    
+    <a href="/blog/tags.html#电影" title="1">电影</a>
+    
+    <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
+    
+    <a href="/blog/tags.html#演讲" title="2">演讲</a>
+    
+    <a href="/blog/tags.html#故事" title="3">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="4">学习笔记</a>
+    
+    <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
+    
+    <a href="/blog/tags.html#力学" title="3">力学</a>
+    
+    <a href="/blog/tags.html#物理" title="3">物理</a>
+    
+    <a href="/blog/tags.html#数学" title="3">数学</a>
+    
+    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    
+    <a href="/blog/tags.html#事业" title="1">事业</a>
+    
+    <a href="/blog/tags.html#生活" title="2">生活</a>
+    
+    <a href="/blog/tags.html#脚本" title="2">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="2">批处理</a>
+    
+    <a href="/blog/tags.html#工作" title="1">工作</a>
+    
+    <a href="/blog/tags.html#职业" title="1">职业</a>
+    
+  </div>
+  </section>
+
+  <section class="sideBox">
+    <h3 id="contact">联系我</h3>		
+    <ul id="social">
+      <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
+      <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
+      <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
+      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+    </ul>
+  </section>
+</aside>
+
+	</div>
+      </div>
+      <!-- End Content -->
+      <footer id="page-footer">
+	<div id="site5bottom">By <br /><a href="/">Yinlai.Bai</a>.<br/>
+	</div>
+      </footer>
+    </div>
+    <div id="gotop">回顶部</div>
+    <script type="text/javascript" src="/js/gotop.js"></script>
+    <!--以下为百度统计代码-->
+    <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb145740af16f12510a2d43b45804e638' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </body>
+</html>

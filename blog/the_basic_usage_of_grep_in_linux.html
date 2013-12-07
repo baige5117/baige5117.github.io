@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="keywords" content="personal blog, Notes, GitHub, Jekyll, baige5117, all for one, 个人博客, 个人网站, 学习笔记, Music, Picture, 励志成功, 开心一刻, 学习提升, 工具, 软件" />
+<meta name="description" content="Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting." />
+<meta name="author" content="Yinlai Bai" />
+<meta name="robots" content="all,index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<title>Linux 中 Grep 命令使用方法 | All For One</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/syntax.css" />
+<!-- [if IE 7]>
+     <link rel="stylesheet" media="all" href="css/ie7.css" />
+     <![endif]-->
+<!-- Google Fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kristi" />
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/js/tags.js"> </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <header id="page-header">
+	<div id="logo">
+	  <h1 id="title"><a href="/">All For One</a></h1>
+	  <span>Love life, love sports, love to learn, & love...</span>
+	</div>
+	<div id="topSearch">
+	  <form id="searchform" action="index.html" method="get">
+	    <input type="text" id="s" name="s" value="type your search and hit enter" onFocus="this.value=''" />
+	  </form>
+	</div>
+      </header>
+      <!-- End Header -->
+      <!-- Begin Content -->
+      <div id="content-wrapper">
+	<div id="content-inner-wrapper">
+	  
+	  <!-- Begin Main Content ( right col ) -->
+	  <section id="main-content">
+	    <article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;04,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#Linux" title="查看 Linux 中的全部文章">Linux&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">The Geek Stuff</span></div>
+    <h1>Linux 中 Grep 命令使用方法</h1>
+  </header>
+  <section class="postText">
+    <p>grep（global search regular expression(RE) and print out the line，全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
+
+<p>grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到屏幕，不影响原文件内容。</p>
+
+<!--excerpt break-->
+
+
+<p>首先创建一个演示文档用于后续对 grep 命令的讲解演示：</p>
+
+<pre><code>$ cat demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+
+Two lines above this line is empty.
+And this is the last line.
+</code></pre>
+
+<h4>1、在单个文件中搜索特定的字符串，输出为包含特定字符串的文本行</h4>
+
+<pre><code>Syntax:
+grep "literal_string" filename
+
+$ grep "this" demo_file
+this line is the 1st lower case line in this file.
+Two lines above this line is empty.
+</code></pre>
+
+<h4>2、在多个文件中检索指定的字串，输出为包含特定字符串的文件名和文本行</h4>
+
+<pre><code>Syntax:
+grep "string" FILE_PATTERN
+</code></pre>
+
+<p>为了演示需要先将刚才的演示文档复制一份。输出的文本行前面会加上相应的文件名。</p>
+
+<pre><code>$ cp demo_file demo_file1
+
+$ grep "this" demo_*
+demo_file:this line is the 1st lower case line in this file.
+demo_file:Two lines above this line is empty.
+demo_file:And this is the last line.
+demo_file1:this line is the 1st lower case line in this file.
+demo_file1:Two lines above this line is empty.
+demo_file1:And this is the last line.
+</code></pre>
+
+<h4>3、利用<code>grep -i</code>进行大小写无关的搜索</h4>
+
+<pre><code>Syntax:
+grep -i "string" FILE
+</code></pre>
+
+<p>将忽略大小写的区别，这样的话，字符串“the”，“The”和“THE”都将被搜索。</p>
+
+<pre><code>$ grep -i "the" demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+And this is the last line.
+</code></pre>
+
+<h4>4、使用用正则表达式</h4>
+
+<pre><code>Syntax:
+grep "REGEX" filename
+</code></pre>
+
+<p>例如，要搜索全部以“lines”开始以“empty”结束的字串，如搜索“lines[之间任意字]empty”，并且忽略大小写：</p>
+
+<pre><code>$ grep -i "lines.*empty" filename //中间的点不能省略
+</code></pre>
+
+<p>正则表达式遵循的几个重复的操作：</p>
+
+<ul>
+<li><code>?</code> 最多匹配一次</li>
+<li><code>*</code> 匹配零次或者任意多次</li>
+<li><code>+</code> 匹配一次以上</li>
+<li><code>{n}</code> 匹配n次</li>
+<li><code>{n,}</code> 最少匹配n次</li>
+<li><code>{,m}</code> 最多匹配m次</li>
+<li><code>{n,m}</code> 匹配n到m次</li>
+</ul>
+
+
+<h4>5、用<code>grep -w</code>搜索整个词，而不是词中的部分字符串</h4>
+
+<p>搜索包含单词为“is”的文本行，当然包含“his”, “this” 等的文本行将忽略：</p>
+
+<pre><code>$ grep -i "is" demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+Two lines above this line is empty.
+And this is the last line.
+</code></pre>
+
+<h4>6、利用<code>grep -A -B -C</code>显示所匹配的文本行的前/后/前后一些行内容</h4>
+
+<p>对于一些大型文件，不仅显示所匹配的文本行，而且显示之前/之后/前后的一些文本行也是很有用的。为演示需要，先创建另一个演示文档：</p>
+
+<pre><code>$ cat demo_text
+ 4. Vim Word Navigation
+
+ You may want to do several navigation in relation to the words, such as:
+
+  * e - go to the end of the current word.
+  * E - go to the end of the current WORD.
+  * b - go to the previous (before) word.
+  * B - go to the previous (before) WORD.
+  * w - go to the next word.
+  * W - go to the next WORD.
+
+ ORD - WORD consists of a sequence of non-blank characters, separated with white space.
+ word - word consists of a sequence of letters, digits and underscores.
+
+ Example to show the difference between WORD and word
+
+  * 192.168.1.1 - single WORD
+  * 192.168.1.1 - seven words.
+</code></pre>
+
+<p>6.1、显示匹配行<strong>之后</strong>的行<code>-A</code>（After）</p>
+
+<pre><code>Syntax:
+grep -A &lt;N&gt; "string" FILENAME
+</code></pre>
+
+<p>例如，显示匹配行之后的三行内容（空行也算）：</p>
+
+<pre><code>$ grep -A 3 -i "example" demo_text
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD
+* 192.168.1.1 - seven words.
+</code></pre>
+
+<p>6.2、显示匹配行<strong>之前</strong>的行<code>-B</code>（Before）</p>
+
+<pre><code>Syntax:
+grep -B &lt;N&gt; "string" FILENAME
+</code></pre>
+
+<p>例如，显示匹配行之前的两行内容（空行也算）：</p>
+
+<pre><code>$ grep -B 2 "single WORD" demo_text
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD
+</code></pre>
+
+<p>6.3、显示匹配行<strong>前后</strong>的行<code>-C</code></p>
+
+<p>例如，显示匹配行前后的各两行内容（空行也算）：</p>
+
+<pre><code>$ grep -C 2 "Example" demo_text
+word - word consists of a sequence of letters, digits and underscores.
+
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD
+</code></pre>
+
+<h4>7、高亮显示匹配的内容</h4>
+
+<p>需要设置<code>GREP_OPTIONS</code>环境变量：</p>
+
+<pre><code>$ export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
+</code></pre>
+
+<p>然后再进行搜索。</p>
+
+<pre><code>$ export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
+
+$ grep this demo_file
+this line is the 1st lower case line in this file.
+Two lines above this line is empty.
+And this is the last line.
+</code></pre>
+
+<h4>8、利用<code>grep -r</code>在目录中递归搜索</h4>
+
+<p>如果在目录中即有文件又有目录，则普通的搜索只搜索文件而不搜索目录，利用 -r 选项即可递归进行搜索，搜索目录下的所有文件及其子目录内的文件。</p>
+
+<pre><code>$ grep -r "ramesh" *
+</code></pre>
+
+<h4>9、利用<code>grep -v</code>搜索不包含特定字符串的文本行</h4>
+
+<p>例如显示所有不包含字符串“go”的文本行：</p>
+
+<pre><code>$ grep -v "go" demo_text
+4. Vim Word Navigation
+
+You may want to do several navigation in relation to the words, such as:
+
+WORD - WORD consists of a sequence of non-blank characters, separated with white space.
+word - word consists of a sequence of letters, digits and underscores.
+
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD
+* 192.168.1.1 - seven words.
+</code></pre>
+
+<h4>10、显示不包含所有几个特定字符串的文本行</h4>
+
+<pre><code>Syntax:
+grep -v -e "pattern" -e "pattern"
+
+
+$ cat test-file.txt
+a
+b
+c
+d
+
+$ grep -v -e "a" -e "b" -e "c" test-file.txt
+d
+</code></pre>
+
+<h4>11、利用<code>grep -c</code>统计所匹配的字符串数目</h4>
+
+<pre><code>Syntax:
+grep -c "pattern" filename
+</code></pre>
+
+<p>例如：</p>
+
+<pre><code>$ grep -c "go" demo_text
+6
+</code></pre>
+
+<p>查找有多少行匹配字符串：</p>
+
+<pre><code>$ grep -c this demo_file
+3
+</code></pre>
+
+<p>查找有多少行不匹配字符串：</p>
+
+<pre><code>$ grep -v -c this demo_file
+4
+</code></pre>
+
+<h4>12、利用<code>grep -l</code>只显示包含特定字符串的文件名称</h4>
+
+<pre><code>$ grep -l this demo_*
+demo_file
+demo_file1
+</code></pre>
+
+<h4>13、利用<code>grep -o</code>只显示所匹配的字符串</h4>
+
+<p>默认的搜索显示的是匹配的文本行的所有内容，但是如果想只显示所搜的特定字符串，则就要使用 -o 选项了。乍看起来只显示所匹配的字符串好像用处不大，但在使用正则表达式的搜索中很有用处。</p>
+
+<pre><code>$ grep -o "is.*line" demo_file
+is line is the 1st lower case line
+is line
+is is the last line
+</code></pre>
+
+<h4>14、显示特定字符串的具体位置</h4>
+
+<pre><code>Syntax:
+grep -o -b "pattern" file
+</code></pre>
+
+<p>例如：</p>
+
+<pre><code>$ cat temp-file.txt
+12345
+12345
+
+$ grep -o -b "3" temp-file.txt
+2:3
+8:3
+</code></pre>
+
+<h4>15、利用<code>grep -n</code>同时显示行号</h4>
+
+<pre><code>$ grep -n "go" demo_text
+5: * e - go to the end of the current word.
+6: * E - go to the end of the current WORD.
+7: * b - go to the previous (before) word.
+8: * B - go to the previous (before) WORD.
+9: * w - go to the next word.
+10: * W - go to the next WORD.
+</code></pre>
+
+  </section>
+  <section class="postText">
+  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/the_basic_usage_of_FreeCAD.html" title="FreeCAD 的使用">FreeCAD 的使用</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></p>
+  </section>
+  <section class="postText">
+    <div id="duoshuo">
+      <!-- Duoshuo Comment BEGIN -->
+      <div class="ds-thread"></div>
+      <script type="text/javascript">
+	var duoshuoQuery = {short_name:"baige5117"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+      </script>
+      <!-- Duoshuo Comment END -->
+    </div>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+
+	  </section>
+	  <!-- End Main Content ( right col ) -->
+	  
+	  <aside id="sidebar">
+  <!-- Begin Social Icons -->
+  <section id="nav">
+    <ul>
+      <li><a href="/" class="blog" title="博客">博文</a></li>
+      <li><a href="/music.html" class="music" title="音乐之声">音乐</a></li>
+      <li><a href="/sayings.html" class="say" title="言语">Say</a></li>
+      <li><a href="/about.html" class="about" title="关于">关于</a></li>
+    </ul>
+    <a href="#contact" id="butContact">Contact</a>
+  </section>
+  <!-- End Social Icons -->
+  
+  <section class="sideBox">
+    <div class="avatar"><a href="/about.html">Baige5117</a></div>
+  </section>
+  
+  <section class="sideBox">
+    <h3><a href="/blog/categories.html" title="查看分类页">分类目录</a></h3>		
+    <ul>
+      
+      <li>
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(1)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(11)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(5)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(19)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(6)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(8)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(1)
+      </li>
+      
+    </ul>
+  </section>
+
+  <section class="sideBox">		
+    <h3>推荐文章</h3>		
+    <ul>
+      <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
+      <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
+      <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
+      <li><a href="/blog/open_source_CAD-CAM_softwares.html" title="几款不错的开源CAD-CAM软件">几款不错的开源CAD-CAM软件</a></li>
+      <li><a href="/blog/how_to_jog_in_the_best_way.html" title="如何最有效的慢跑">如何最有效的慢跑</a></li>
+      <li><a href="/blog/R-Tree.html" title="R 树——动态空间索引结构">R 树——动态空间索引结构</a></li>
+      <li><a href="/blog/good_habbits_of_efficient_people.html" title="高效率人士的优秀习惯">高效率人士的优秀习惯</a></li>
+      <li><a href="/blog/secret_law_of_attraction.html" title="The Secret - The Law of Attraction">The Secret - The Law of Attraction</a></li>
+      <li><a href="/blog/the_basic_usage_of_FreeCAD.html" title="FreeCAD的使用">FreeCAD的使用</a></li>
+      <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
+      <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
+      <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3><a href="/blog/archive.html" title="查看日期归档页">日期存档</a></h3>
+    <ul>
+      
+      
+      
+      
+      
+        
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;11&nbsp;月 的文章">2013&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;10&nbsp;月 的文章">2013&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;09&nbsp;月 的文章">2013&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(13)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;08&nbsp;月 的文章">2013&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;07&nbsp;月 的文章">2013&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(9)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;06&nbsp;月 的文章">2013&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;04&nbsp;月 的文章">2013&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;02&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;02&nbsp;月 的文章">2013&nbsp;年&nbsp;02&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;12&nbsp;月 的文章">2012&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(6)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;11&nbsp;月 的文章">2012&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+    </ul>
+    <!--ul>
+	<li><a href=“” title=“”>2013 年十一月</a>&nbsp;(3)</li>
+    </ul-->
+  </section>
+  <section class="sideBox">
+    <h3>常用链接</h3>
+    <ul class='xoxo blogroll'>
+      <li><a href="http://www.w3schools.com/" target="_blank">w3school在线教程(英文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://www.w3school.com.cn/" target="_blank">w3school在线教程(中文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://colorschemedesigner.com/" target="_blank">高级在线配色器—Color Scheme Designer</a></li>
+      <li><a href="http://ikreator.com/special-characters/" target="_blank">HTML特殊字符大全—HTML Special Characters</a></li>
+      <li><a href="http://www.refresh-sf.com/yui/" target="_blank">在线JS/CSS压缩工具—YUI Compressor</a></li>
+      <li><a href="http://www.smushit.com/ysmush.it/" target="_blank">在线图片压缩工具—Smush.it</a></li>
+      <li><a href="http://tinypng.org/" target="_blank">非常好用的在线PNG图片压缩工具—tinypng</a></li>
+      <li><a href="http://pngmini.com/" target="_blank">PNG图片压缩工具—ImageAlpha</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3>微博说说</h3>
+    <div id="weibo_wrap">
+      <iframe width="230" height="600" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=230&height=600&fansRow=2&ptype=1&speed=0&skin=8&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1312421323&verifier=dde46a02&dpc=1"></iframe>
+    </div>
+  </section>
+
+  <section class="sideBox">		
+    <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
+    <div id="tags_wrap">
+    
+    <a href="/blog/tags.html#健康" title="1">健康</a>
+    
+    <a href="/blog/tags.html#运动" title="1">运动</a>
+    
+    <a href="/blog/tags.html#阅读" title="3">阅读</a>
+    
+    <a href="/blog/tags.html#思考" title="4">思考</a>
+    
+    <a href="/blog/tags.html#效率" title="1">效率</a>
+    
+    <a href="/blog/tags.html#习惯" title="2">习惯</a>
+    
+    <a href="/blog/tags.html#空间索引" title="1">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="1">数据结构</a>
+    
+    <a href="/blog/tags.html#人物" title="4">人物</a>
+    
+    <a href="/blog/tags.html#趣事" title="3">趣事</a>
+    
+    <a href="/blog/tags.html#网页设计" title="3">网页设计</a>
+    
+    <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
+    
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    
+    <a href="/blog/tags.html#励志" title="5">励志</a>
+    
+    <a href="/blog/tags.html#机械" title="6">机械</a>
+    
+    <a href="/blog/tags.html#CAD" title="3">CAD</a>
+    
+    <a href="/blog/tags.html#Linux" title="4">Linux</a>
+    
+    <a href="/blog/tags.html#编程语言" title="5">编程语言</a>
+    
+    <a href="/blog/tags.html#C语言" title="4">C语言</a>
+    
+    <a href="/blog/tags.html#视频" title="2">视频</a>
+    
+    <a href="/blog/tags.html#青春" title="2">青春</a>
+    
+    <a href="/blog/tags.html#幽默" title="3">幽默</a>
+    
+    <a href="/blog/tags.html#快乐" title="1">快乐</a>
+    
+    <a href="/blog/tags.html#开心一刻" title="2">开心一刻</a>
+    
+    <a href="/blog/tags.html#程序设计" title="3">程序设计</a>
+    
+    <a href="/blog/tags.html#软件" title="2">软件</a>
+    
+    <a href="/blog/tags.html#音乐" title="3">音乐</a>
+    
+    <a href="/blog/tags.html#人生" title="8">人生</a>
+    
+    <a href="/blog/tags.html#国学" title="2">国学</a>
+    
+    <a href="/blog/tags.html#文学" title="1">文学</a>
+    
+    <a href="/blog/tags.html#计算机" title="3">计算机</a>
+    
+    <a href="/blog/tags.html#黑客" title="1">黑客</a>
+    
+    <a href="/blog/tags.html#语录" title="1">语录</a>
+    
+    <a href="/blog/tags.html#电影" title="1">电影</a>
+    
+    <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
+    
+    <a href="/blog/tags.html#演讲" title="2">演讲</a>
+    
+    <a href="/blog/tags.html#故事" title="3">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="4">学习笔记</a>
+    
+    <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
+    
+    <a href="/blog/tags.html#力学" title="3">力学</a>
+    
+    <a href="/blog/tags.html#物理" title="3">物理</a>
+    
+    <a href="/blog/tags.html#数学" title="3">数学</a>
+    
+    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    
+    <a href="/blog/tags.html#事业" title="1">事业</a>
+    
+    <a href="/blog/tags.html#生活" title="2">生活</a>
+    
+    <a href="/blog/tags.html#脚本" title="2">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="2">批处理</a>
+    
+    <a href="/blog/tags.html#工作" title="1">工作</a>
+    
+    <a href="/blog/tags.html#职业" title="1">职业</a>
+    
+  </div>
+  </section>
+
+  <section class="sideBox">
+    <h3 id="contact">联系我</h3>		
+    <ul id="social">
+      <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
+      <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
+      <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
+      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+    </ul>
+  </section>
+</aside>
+
+	</div>
+      </div>
+      <!-- End Content -->
+      <footer id="page-footer">
+	<div id="site5bottom">By <br /><a href="/">Yinlai.Bai</a>.<br/>
+	</div>
+      </footer>
+    </div>
+    <div id="gotop">回顶部</div>
+    <script type="text/javascript" src="/js/gotop.js"></script>
+    <!--以下为百度统计代码-->
+    <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb145740af16f12510a2d43b45804e638' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </body>
+</html>
