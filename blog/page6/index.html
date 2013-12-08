@@ -163,6 +163,29 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;30,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#科普知识" title="查看 科普知识 中的全部文章">科普知识&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/10-thought-experiments.html">历史上十个最著名的思想实验</a></h1>
+  </header>
+  <section class="postText">
+    <h2>10．电车难题（The Trolley Problem）</h2>
+
+<p>“电车难题”是伦理学领域最为知名的思想实验之一，其内容大致是：一个疯子把五个无辜的人绑在电车轨道上。一辆失控的电车朝他们驶来，并且片刻后就要碾压到他们。幸运的是，你可以拉一个拉杆，让电车开到另一条轨道上。但是还有一个问题，那个疯子在那另一条轨道上也绑了一个人。考虑以上状况，你应该拉拉杆吗？</p>
+
+<p><b>解读：</b></p>
+
+<p>电车难题最早是由哲学家Philippa Foot提出的，用来批判伦理哲学中的主要理论，特别是功利主义。功利主义提出的观点是，大部分道德决策都是根据“为最多的人提供最大的利益”的原则做出的。从一个功利主义者的观点来看，明显的选择应该是拉拉杆，拯救五个人只杀死一个人。但是功利主义的批判者认为，一旦拉了拉杆，你就成为一个不道德行为的同谋——你要为另一条轨道上单独的一个人的死负部分责任。然而，其他人认为，你身处这种状况下就要求你要有所作为，你的不作为将会是同等的不道德。总之，不存在完全的道德行为，这就是重点所在。许多哲学家都用电车难题作为例子来表示现实生活中的状况经常强迫一个人违背他自己的道德准则，并且还存在着没有完全道德做法的情况。</p>
+[......]
+    <p class="read-more"><a href="/blog/10-thought-experiments.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Oct&nbsp;28,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
     <h1><a href="/blog/markdown-syntax.html">Markdown 基本语法</a></h1>
   </header>
@@ -201,35 +224,6 @@
 <p>斯托曼不仅技术一流，其幽默感也颇佳，从他的<a href="http://www.stallman.org/">个人主页</a>上贴着的那张显赫的“<a href="http://www.stallman.org/extra/personal.html">征婚启事</a>”就可见一斑：</p>
 [......]
     <p class="read-more"><a href="/blog/RMS-personal-ad.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Oct&nbsp;26,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100t5nx.html" target="_blank" rel="author">逍遥书斋</a></span></div>
-    <h1><a href="/blog/R-Tree.html">R 树——动态空间索引结构</a></h1>
-  </header>
-  <section class="postText">
-    <h2>一些术语</h2>
-
-<p>本文特别定义了一些术语用于表示不同的对象，正确地区分这些术语有助于更好的理解 R 树。</p>
-
-<ul>
-<li>空间数据库（Spatial database）：存储真正的空间数据对象（比如点、面片等）的地方，它由大量的空间数据对象组成，这些数据对象几乎没有任何（或者仅有简单的）组织形式。</li>
-<li>叶子节点（Leaf node）：树中最底层的节点，没有子节点的节点。R 树中的叶子节点由一定数目的索引记录构成。</li>
-<li>非叶节点（Non-leaf node）：树中除叶子节点之外的节点。R 树中的非叶节点由一定数目的条目构成。</li>
-<li>索引记录（Index records）：叶子节点中存储的数据形式，一条索引记录指向空间数据库中的一个数据对象。</li>
-<li>元组（Tuple）：空间数据库中存储的数据形式，一条元组就是一个空间数据对象，并且每个元组都有一个唯一的标识符。</li>
-<li>条目（Entry）：又称索引条目（Index entry），R 树节点中存储的数据形式，当为叶子节点时，此条目就是索引记录。</li>
-</ul>
-
-[......]
-    <p class="read-more"><a href="/blog/R-Tree.html">—阅读全文—</a></p>
   </section>
   <div class="sidebadge"></div>
 </article>
@@ -286,6 +280,18 @@
   
   
   
+    
+  <a href="/blog/page8">8</a>
+  
+  
+  
+  
+    
+  <a href="/blog/page9">9</a>
+  
+  
+  
+  
   
   <a href="/blog/page7" title="后一页">&#187;</a>
   
@@ -317,27 +323,27 @@
     <ul>
       
       <li>
-	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(1)
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(7)
       </li>
       
       <li>
-	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(11)
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(3)
       </li>
       
       <li>
-	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(5)
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(15)
       </li>
       
       <li>
-	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(19)
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(10)
       </li>
       
       <li>
-	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(6)
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(25)
       </li>
       
       <li>
-	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(8)
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(7)
       </li>
       
       <li>
@@ -350,6 +356,7 @@
   <section class="sideBox">		
     <h3>推荐文章</h3>		
     <ul>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
       <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
       <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
       <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
@@ -362,7 +369,7 @@
       <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
       <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
       <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
-      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+      <li><a href="/blog/declaration_analysis_in_c.html" title="C 语言声明解析">C 语言声明解析</a></li>
     </ul>
   </section>
   <section class="sideBox">
@@ -677,8 +684,73 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(10)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;09&nbsp;月 的文章">2012&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(2)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;08&nbsp;月 的文章">2012&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;07&nbsp;月 的文章">2012&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(1)</li>
           
         
       
@@ -693,7 +765,72 @@
         
       
       
-        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;04&nbsp;月 的文章">2012&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;03&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;03&nbsp;月 的文章">2012&nbsp;年&nbsp;03&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;01&nbsp;月 的文章">2012&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;12&nbsp;月 的文章">2011&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(2)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;11&nbsp;月 的文章">2011&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;09&nbsp;月 的文章">2011&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(1)</li>
       
       
     </ul>
@@ -725,43 +862,77 @@
     <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
     <div id="tags_wrap">
     
-    <a href="/blog/tags.html#健康" title="1">健康</a>
+    <a href="/blog/tags.html#梦想" title="3">梦想</a>
+    
+    <a href="/blog/tags.html#人生" title="12">人生</a>
+    
+    <a href="/blog/tags.html#健康" title="3">健康</a>
     
     <a href="/blog/tags.html#运动" title="1">运动</a>
     
+    <a href="/blog/tags.html#电影" title="3">电影</a>
+    
+    <a href="/blog/tags.html#励志" title="7">励志</a>
+    
+    <a href="/blog/tags.html#生活" title="3">生活</a>
+    
+    <a href="/blog/tags.html#美" title="1">美</a>
+    
+    <a href="/blog/tags.html#计算机" title="4">计算机</a>
+    
+    <a href="/blog/tags.html#趣事" title="4">趣事</a>
+    
+    <a href="/blog/tags.html#C语言" title="7">C语言</a>
+    
+    <a href="/blog/tags.html#游戏" title="1">游戏</a>
+    
     <a href="/blog/tags.html#阅读" title="3">阅读</a>
     
-    <a href="/blog/tags.html#思考" title="4">思考</a>
+    <a href="/blog/tags.html#思考" title="5">思考</a>
+    
+    <a href="/blog/tags.html#故事" title="4">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="6">学习笔记</a>
+    
+    <a href="/blog/tags.html#编程语言" title="8">编程语言</a>
+    
+    <a href="/blog/tags.html#脚本" title="3">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="3">批处理</a>
     
     <a href="/blog/tags.html#效率" title="1">效率</a>
     
     <a href="/blog/tags.html#习惯" title="2">习惯</a>
     
-    <a href="/blog/tags.html#空间索引" title="1">空间索引</a>
+    <a href="/blog/tags.html#睡眠" title="1">睡眠</a>
     
-    <a href="/blog/tags.html#数据结构" title="1">数据结构</a>
+    <a href="/blog/tags.html#网页设计" title="4">网页设计</a>
+    
+    <a href="/blog/tags.html#CSS" title="1">CSS</a>
+    
+    <a href="/blog/tags.html#文学" title="2">文学</a>
+    
+    <a href="/blog/tags.html#古诗" title="1">古诗</a>
+    
+    <a href="/blog/tags.html#国学" title="3">国学</a>
+    
+    <a href="/blog/tags.html#空间索引" title="2">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="2">数据结构</a>
     
     <a href="/blog/tags.html#人物" title="4">人物</a>
     
-    <a href="/blog/tags.html#趣事" title="3">趣事</a>
-    
-    <a href="/blog/tags.html#网页设计" title="3">网页设计</a>
-    
     <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
     
-    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    <a href="/blog/tags.html#科普知识" title="1">科普知识</a>
     
-    <a href="/blog/tags.html#励志" title="5">励志</a>
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
     
     <a href="/blog/tags.html#机械" title="6">机械</a>
     
     <a href="/blog/tags.html#CAD" title="3">CAD</a>
     
     <a href="/blog/tags.html#Linux" title="4">Linux</a>
-    
-    <a href="/blog/tags.html#编程语言" title="5">编程语言</a>
-    
-    <a href="/blog/tags.html#C语言" title="4">C语言</a>
     
     <a href="/blog/tags.html#视频" title="2">视频</a>
     
@@ -779,27 +950,13 @@
     
     <a href="/blog/tags.html#音乐" title="3">音乐</a>
     
-    <a href="/blog/tags.html#人生" title="8">人生</a>
-    
-    <a href="/blog/tags.html#国学" title="2">国学</a>
-    
-    <a href="/blog/tags.html#文学" title="1">文学</a>
-    
-    <a href="/blog/tags.html#计算机" title="3">计算机</a>
-    
     <a href="/blog/tags.html#黑客" title="1">黑客</a>
     
     <a href="/blog/tags.html#语录" title="1">语录</a>
     
-    <a href="/blog/tags.html#电影" title="1">电影</a>
-    
     <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
     
     <a href="/blog/tags.html#演讲" title="2">演讲</a>
-    
-    <a href="/blog/tags.html#故事" title="3">故事</a>
-    
-    <a href="/blog/tags.html#学习笔记" title="4">学习笔记</a>
     
     <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
     
@@ -812,12 +969,6 @@
     <a href="/blog/tags.html#有限元" title="3">有限元</a>
     
     <a href="/blog/tags.html#事业" title="1">事业</a>
-    
-    <a href="/blog/tags.html#生活" title="2">生活</a>
-    
-    <a href="/blog/tags.html#脚本" title="2">脚本</a>
-    
-    <a href="/blog/tags.html#批处理" title="2">批处理</a>
     
     <a href="/blog/tags.html#工作" title="1">工作</a>
     

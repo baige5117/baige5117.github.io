@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="keywords" content="personal blog, Notes, GitHub, Jekyll, baige5117, all for one, 个人博客, 个人网站, 学习笔记, Music, Picture, 励志成功, 开心一刻, 学习提升, 工具, 软件" />
+<meta name="description" content="Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting." />
+<meta name="author" content="Yinlai Bai" />
+<meta name="robots" content="all,index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+<title>CSS 之 Position 详解 | All For One</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/syntax.css" />
+<!-- [if IE 7]>
+     <link rel="stylesheet" media="all" href="css/ie7.css" />
+     <![endif]-->
+<!-- Google Fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kristi" />
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/js/tags.js"> </script>
+
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <header id="page-header">
+	<div id="logo">
+	  <h1 id="title"><a href="/">All For One</a></h1>
+	  <span>Love life, love sports, love to learn, & love...</span>
+	</div>
+	<div id="topSearch">
+	  <form id="searchform" action="index.html" method="get">
+	    <input type="text" id="s" name="s" value="type your search and hit enter" onFocus="this.value=''" />
+	  </form>
+	</div>
+      </header>
+      <!-- End Header -->
+      <!-- Begin Content -->
+      <div id="content-wrapper">
+	<div id="content-inner-wrapper">
+	  
+	  <!-- Begin Main Content ( right col ) -->
+	  <section id="main-content">
+	    <article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;24,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#CSS" title="查看 CSS 中的全部文章">CSS&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1>CSS 之 Position 详解</h1>
+  </header>
+  <section class="postText">
+    <p>在网页设计中，能够很好地定位其中的元素，直接关系到页面的效果。只有把各元素都合理地放置到页面中，才能搭建触美观的页面效果。</p>
+
+<p>在 CSS 中，可以通过 <code>position</code>、<code>float</code>、<code>z-index</code> 等定位方式对元素进行定位。本文将讨论一下难以理解的 <code>position</code> 定位方式。</p>
+
+<p>在市面上有很多关于 CSS 的参考书籍，但是这些书籍往往会对那些诸如字体，文本，背景等简单的属性进行大张旗鼓的介绍，而对那些同样重要但难以理解的属性仅只言片语一笔带过，有避重就轻的嫌疑。CSS 中主要难以理解的属性包括盒型模型，定位等。本文将主要讲述关于 <code>position</code> 的理解，力求让您看完本文后对 <code>position</code> 有着最全面的认识。</p>
+
+<p><code>position</code> 用于规定页面元素（主要指框模型）的定位方式：静态定位、绝对定位、相对定位还是固定定位，其中的静态定位是默认的定位方式。</p>
+
+<!--excerpt break-->
+
+
+<p><code>position</code> 的四个属性值分别为：</p>
+
+<ul>
+<li>static</li>
+<li>absolute</li>
+<li>relative</li>
+<li>fixed</li>
+</ul>
+
+
+<p><strong>注意：</strong>其实，<code>position</code> 的属性值有 5 个，除去上述 4 个属性外，还有 <code>inherit</code> 属性，由字面意思可知 <code>inherit</code> 属性是用来继承其父级元素的定位方式的。</p>
+
+<p>下面分别讲述这四个属性。</p>
+
+<h3>静态定位（<code>static</code>）</h3>
+
+<p>这是元素的默认定位方式，所以通常都在代码中省略不写。元素按照正常的文档流依次进行顺序排列，每一块区域都自然无缝地结合在一起，从上之下，如果设置的是行内对象，那么区域按照从左至右无缝拼接。</p>
+
+<h3>绝对定位（<code>absolute</code>）</h3>
+
+<p>元素按照它的<span class="red">第一个其定位方式为非静态定位方式的父级元素（或祖先元素）</span>的位置进行定位。第一个其定位方式为非静态定位方式的父级元素是指，从最内层的父级元素开始，若其定位方式是默认的定位方式，即静态定位方式，则继续查看其祖父级元素，直到其某个祖先元素的定位方式为绝对定位、相对定位或者固定定位三者之一，则此祖先元素即为所要参考的元素。如果没有这样的祖先级元素，则就会以 <code>body</code> 为定位对象，即按照浏览器的窗口进行定位。</p>
+
+<p>绝对定位是最容易令人误解的方式，许多人将其误解为不管其父级元素的定位方式如何，总是按照<span class="red">浏览器窗口</span>来进行定位，这其实是错误的，只有当其祖先级元素的定位方式都是静态定位方式的时候，才会按照浏览器窗口来定位。实际上，这是 <code>fixed</code> 属性的特点。</p>
+
+<p>参考点的位置也是值得注意的。如果元素本身和参考的父级元素设定了 <code>margin</code>，<code>border</code>，<code>padding</code> 等属性，那么，元素本身的参考点为其 <code>margin</code> 的外边界，而其父级元素的参考点为 <code>border</code> 的内部边界。</p>
+
+<p>较之于相对定位 <code>relative</code>，绝对定位的特点是当对象发生位移后，原先初始位置的内容如同被去除一样，这个对象独立于其它的页面元素，额初始位置的空白会被其它内容自然填补。</p>
+
+<h3>相对定位（<code>relative</code>）</h3>
+
+<p>元素按照它的<span class="red">原本应该出现的位置</span>进行定位。原本应该出现的位置就是 <code>static</code> 属性下的位置，也就是默认情况下的位置。例如<code>left:20px</code>表示将元素相对于其初始位置右移 20px。</p>
+
+<p>当设定不同的偏移数值后，相对于初始位置发生改变，<span class="red">而初始位置会留下空白占位</span>。</p>
+
+<h3>固定定位（<code>fiexed</code>）</h3>
+
+<p>元素按照<span class="red">浏览器窗口</span>进行定位。当页面大小超出浏览器窗口时，元素会跟随滚动条一起移动。其实，固定定位是特殊的绝对定位，即固定定位总是以 <code>body</code> 为定位对象的，按照浏览器的窗口进行定位。</p>
+
+<p>固定定位和绝对定位的性质一样，它们所定义的框的位置是独立于其它页面内容之外的，这样，难免有时它们会叠加在一起，这种情况可以使用 Z 轴属性，即层的叠加特性来改变它们的顺序。</p>
+
+  </section>
+  <section class="postText">
+  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/how-to-rest.html" title="如何有效地休息？">如何有效地休息？</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/Yi-Zi-poem.html" title="“一”字诗">“一”字诗</a></p>
+  </section>
+  <section class="postText">
+    <div id="duoshuo">
+      <!-- Duoshuo Comment BEGIN -->
+      <div class="ds-thread"></div>
+      <script type="text/javascript">
+	var duoshuoQuery = {short_name:"baige5117"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+      </script>
+      <!-- Duoshuo Comment END -->
+    </div>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+
+	  </section>
+	  <!-- End Main Content ( right col ) -->
+	  
+	  <aside id="sidebar">
+  <!-- Begin Social Icons -->
+  <section id="nav">
+    <ul>
+      <li><a href="/" class="blog" title="博客">博文</a></li>
+      <li><a href="/music.html" class="music" title="音乐之声">音乐</a></li>
+      <li><a href="/sayings.html" class="say" title="言语">Say</a></li>
+      <li><a href="/about.html" class="about" title="关于">关于</a></li>
+    </ul>
+    <a href="#contact" id="butContact">Contact</a>
+  </section>
+  <!-- End Social Icons -->
+  
+  <section class="sideBox">
+    <div class="avatar"><a href="/about.html">Baige5117</a></div>
+  </section>
+  
+  <section class="sideBox">
+    <h3><a href="/blog/categories.html" title="查看分类页">分类目录</a></h3>		
+    <ul>
+      
+      <li>
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(7)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(3)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(15)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(10)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(25)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(7)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(1)
+      </li>
+      
+    </ul>
+  </section>
+
+  <section class="sideBox">		
+    <h3>推荐文章</h3>		
+    <ul>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+      <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
+      <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
+      <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
+      <li><a href="/blog/open_source_CAD-CAM_softwares.html" title="几款不错的开源CAD-CAM软件">几款不错的开源CAD-CAM软件</a></li>
+      <li><a href="/blog/how_to_jog_in_the_best_way.html" title="如何最有效的慢跑">如何最有效的慢跑</a></li>
+      <li><a href="/blog/R-Tree.html" title="R 树——动态空间索引结构">R 树——动态空间索引结构</a></li>
+      <li><a href="/blog/good_habbits_of_efficient_people.html" title="高效率人士的优秀习惯">高效率人士的优秀习惯</a></li>
+      <li><a href="/blog/secret_law_of_attraction.html" title="The Secret - The Law of Attraction">The Secret - The Law of Attraction</a></li>
+      <li><a href="/blog/the_basic_usage_of_FreeCAD.html" title="FreeCAD的使用">FreeCAD的使用</a></li>
+      <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
+      <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
+      <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
+      <li><a href="/blog/declaration_analysis_in_c.html" title="C 语言声明解析">C 语言声明解析</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3><a href="/blog/archive.html" title="查看日期归档页">日期存档</a></h3>
+    <ul>
+      
+      
+      
+      
+      
+        
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;11&nbsp;月 的文章">2013&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;10&nbsp;月 的文章">2013&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;09&nbsp;月 的文章">2013&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(13)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;08&nbsp;月 的文章">2013&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;07&nbsp;月 的文章">2013&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(9)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;06&nbsp;月 的文章">2013&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;04&nbsp;月 的文章">2013&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;02&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;02&nbsp;月 的文章">2013&nbsp;年&nbsp;02&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;12&nbsp;月 的文章">2012&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(6)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;11&nbsp;月 的文章">2012&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(10)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;09&nbsp;月 的文章">2012&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(2)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;08&nbsp;月 的文章">2012&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;07&nbsp;月 的文章">2012&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;04&nbsp;月 的文章">2012&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;03&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;03&nbsp;月 的文章">2012&nbsp;年&nbsp;03&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;01&nbsp;月 的文章">2012&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;12&nbsp;月 的文章">2011&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(2)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;11&nbsp;月 的文章">2011&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;09&nbsp;月 的文章">2011&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+    </ul>
+    <!--ul>
+	<li><a href=“” title=“”>2013 年十一月</a>&nbsp;(3)</li>
+    </ul-->
+  </section>
+  <section class="sideBox">
+    <h3>常用链接</h3>
+    <ul class='xoxo blogroll'>
+      <li><a href="http://www.w3schools.com/" target="_blank">w3school在线教程(英文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://www.w3school.com.cn/" target="_blank">w3school在线教程(中文)—W3Schools Online Web Tutorials</a></li>
+      <li><a href="http://colorschemedesigner.com/" target="_blank">高级在线配色器—Color Scheme Designer</a></li>
+      <li><a href="http://ikreator.com/special-characters/" target="_blank">HTML特殊字符大全—HTML Special Characters</a></li>
+      <li><a href="http://www.refresh-sf.com/yui/" target="_blank">在线JS/CSS压缩工具—YUI Compressor</a></li>
+      <li><a href="http://www.smushit.com/ysmush.it/" target="_blank">在线图片压缩工具—Smush.it</a></li>
+      <li><a href="http://tinypng.org/" target="_blank">非常好用的在线PNG图片压缩工具—tinypng</a></li>
+      <li><a href="http://pngmini.com/" target="_blank">PNG图片压缩工具—ImageAlpha</a></li>
+    </ul>
+  </section>
+  <section class="sideBox">
+    <h3>微博说说</h3>
+    <div id="weibo_wrap">
+      <iframe width="230" height="600" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=230&height=600&fansRow=2&ptype=1&speed=0&skin=8&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1312421323&verifier=dde46a02&dpc=1"></iframe>
+    </div>
+  </section>
+
+  <section class="sideBox">		
+    <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
+    <div id="tags_wrap">
+    
+    <a href="/blog/tags.html#梦想" title="3">梦想</a>
+    
+    <a href="/blog/tags.html#人生" title="12">人生</a>
+    
+    <a href="/blog/tags.html#健康" title="3">健康</a>
+    
+    <a href="/blog/tags.html#运动" title="1">运动</a>
+    
+    <a href="/blog/tags.html#电影" title="3">电影</a>
+    
+    <a href="/blog/tags.html#励志" title="7">励志</a>
+    
+    <a href="/blog/tags.html#生活" title="3">生活</a>
+    
+    <a href="/blog/tags.html#美" title="1">美</a>
+    
+    <a href="/blog/tags.html#计算机" title="4">计算机</a>
+    
+    <a href="/blog/tags.html#趣事" title="4">趣事</a>
+    
+    <a href="/blog/tags.html#C语言" title="7">C语言</a>
+    
+    <a href="/blog/tags.html#游戏" title="1">游戏</a>
+    
+    <a href="/blog/tags.html#阅读" title="3">阅读</a>
+    
+    <a href="/blog/tags.html#思考" title="5">思考</a>
+    
+    <a href="/blog/tags.html#故事" title="4">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="6">学习笔记</a>
+    
+    <a href="/blog/tags.html#编程语言" title="8">编程语言</a>
+    
+    <a href="/blog/tags.html#脚本" title="3">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="3">批处理</a>
+    
+    <a href="/blog/tags.html#效率" title="1">效率</a>
+    
+    <a href="/blog/tags.html#习惯" title="2">习惯</a>
+    
+    <a href="/blog/tags.html#睡眠" title="1">睡眠</a>
+    
+    <a href="/blog/tags.html#网页设计" title="4">网页设计</a>
+    
+    <a href="/blog/tags.html#CSS" title="1">CSS</a>
+    
+    <a href="/blog/tags.html#文学" title="2">文学</a>
+    
+    <a href="/blog/tags.html#古诗" title="1">古诗</a>
+    
+    <a href="/blog/tags.html#国学" title="3">国学</a>
+    
+    <a href="/blog/tags.html#空间索引" title="2">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="2">数据结构</a>
+    
+    <a href="/blog/tags.html#人物" title="4">人物</a>
+    
+    <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
+    
+    <a href="/blog/tags.html#科普知识" title="1">科普知识</a>
+    
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    
+    <a href="/blog/tags.html#机械" title="6">机械</a>
+    
+    <a href="/blog/tags.html#CAD" title="3">CAD</a>
+    
+    <a href="/blog/tags.html#Linux" title="4">Linux</a>
+    
+    <a href="/blog/tags.html#视频" title="2">视频</a>
+    
+    <a href="/blog/tags.html#青春" title="2">青春</a>
+    
+    <a href="/blog/tags.html#幽默" title="3">幽默</a>
+    
+    <a href="/blog/tags.html#快乐" title="1">快乐</a>
+    
+    <a href="/blog/tags.html#开心一刻" title="2">开心一刻</a>
+    
+    <a href="/blog/tags.html#程序设计" title="3">程序设计</a>
+    
+    <a href="/blog/tags.html#软件" title="2">软件</a>
+    
+    <a href="/blog/tags.html#音乐" title="3">音乐</a>
+    
+    <a href="/blog/tags.html#黑客" title="1">黑客</a>
+    
+    <a href="/blog/tags.html#语录" title="1">语录</a>
+    
+    <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
+    
+    <a href="/blog/tags.html#演讲" title="2">演讲</a>
+    
+    <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
+    
+    <a href="/blog/tags.html#力学" title="3">力学</a>
+    
+    <a href="/blog/tags.html#物理" title="3">物理</a>
+    
+    <a href="/blog/tags.html#数学" title="3">数学</a>
+    
+    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    
+    <a href="/blog/tags.html#事业" title="1">事业</a>
+    
+    <a href="/blog/tags.html#工作" title="1">工作</a>
+    
+    <a href="/blog/tags.html#职业" title="1">职业</a>
+    
+  </div>
+  </section>
+
+  <section class="sideBox">
+    <h3 id="contact">联系我</h3>		
+    <ul id="social">
+      <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
+      <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
+      <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
+      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+    </ul>
+  </section>
+</aside>
+
+	</div>
+      </div>
+      <!-- End Content -->
+      <footer id="page-footer">
+	<div id="site5bottom">By <br /><a href="/">Yinlai.Bai</a>.<br/>
+	</div>
+      </footer>
+    </div>
+    <div id="gotop">回顶部</div>
+    <script type="text/javascript" src="/js/gotop.js"></script>
+    <!--以下为百度统计代码-->
+    <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb145740af16f12510a2d43b45804e638' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </body>
+</html>

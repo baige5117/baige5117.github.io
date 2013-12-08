@@ -52,6 +52,177 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;27,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100uy2f.html" target="_blank" rel="author">逍遥书斋</a></span></div>
+    <h1><a href="/blog/R%2A-Tree.html">R* 树——一种高效且健壮的点和矩形访问方法</a></h1>
+  </header>
+  <section class="postText">
+    <h2>摘要</h2>
+
+<p>R 树是最为著名的矩形访问方法（Access method）之一，其算法的基本原理是对中间节点的外接矩形面积进行启发式的优化。我们在一个标准实验平台下对各种数据、各种查询、各种操作进行了大量的实验，并根据实验结果设计了 R* 树。R* 树可以对路径中每个外接矩形的面积、边长（margin）和叠加程度进行综合优化，并将整个路径上所有外界矩形的优化结果合并起来考虑。（原文是incorporates a combined optimization of area, margin and overlap of each enclosing rectangle in the directory）。我们在标准的实验平台下对两种数据结构进行了详细的性能比较，结果证明，与现有的各种 R 树变种相比，R* 树都有明显的性能优势。这里的 R 树变种包括 Guttman 的线性 R 树、二次 R 树（或者叫平方 R 树），也包括 Greene 的 R 树变种。R* 树具有全面的性能优势，不论是针对矩形数据还是针对多维点数据、不论是查询操作还是地图叠加等各种空间操作，R* 树的性能优势均有所表现。从实际应用的角度来讲，R* 树在下面两个方面对用户有强烈的吸引力：第一，R* 树不论对点还是其他各种空间数据都能提供有效的支持；第二，R* 树的实现代价仅比 R 树略高。</p>
+[......]
+    <p class="read-more"><a href="/blog/R%2A-Tree.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;26,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100t5nx.html" target="_blank" rel="author">逍遥书斋</a></span></div>
+    <h1><a href="/blog/R-Tree.html">R 树——动态空间索引结构</a></h1>
+  </header>
+  <section class="postText">
+    <h2>一些术语</h2>
+
+<p>本文特别定义了一些术语用于表示不同的对象，正确地区分这些术语有助于更好的理解 R 树。</p>
+
+<ul>
+<li>空间数据库（Spatial database）：存储真正的空间数据对象（比如点、面片等）的地方，它由大量的空间数据对象组成，这些数据对象几乎没有任何（或者仅有简单的）组织形式。</li>
+<li>叶子节点（Leaf node）：树中最底层的节点，没有子节点的节点。R 树中的叶子节点由一定数目的索引记录构成。</li>
+<li>非叶节点（Non-leaf node）：树中除叶子节点之外的节点。R 树中的非叶节点由一定数目的条目构成。</li>
+<li>索引记录（Index records）：叶子节点中存储的数据形式，一条索引记录指向空间数据库中的一个数据对象。</li>
+<li>元组（Tuple）：空间数据库中存储的数据形式，一条元组就是一个空间数据对象，并且每个元组都有一个唯一的标识符。</li>
+<li>条目（Entry）：又称索引条目（Index entry），R 树节点中存储的数据形式，当为叶子节点时，此条目就是索引记录。</li>
+</ul>
+
+[......]
+    <p class="read-more"><a href="/blog/R-Tree.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;25,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#文学" title="查看 文学 中的全部文章">文学&nbsp;&nbsp;</a><a href="/blog/tags.html#古诗" title="查看 古诗 中的全部文章">古诗&nbsp;&nbsp;</a><a href="/blog/tags.html#国学" title="查看 国学 中的全部文章">国学&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/Yi-Zi-poem.html">“一”字诗</a></h1>
+  </header>
+  <section class="postText">
+    <blockquote class="align_c">
+一花一世界，<br />
+一木一浮生，<br />
+一草一天堂，<br />
+一叶一如来，<br />
+一砂一极乐，<br />
+一方一净土，<br />
+一笑一尘缘，<br />
+一念一清静。<br />
+<span class="quote_src">佛曰</span>
+</blockquote>
+
+
+
+
+<blockquote class="align_c">
+To see a World in a Grain of Sand<br />
+And a Heaven in a Wild Flower,<br />
+Hold Infinity in the palm of your hand<br />
+And Eternity in an hour.<br />
+<hr />
+一沙一世界，一花一天堂。<br />
+无限掌中置，刹那成永恒。<br />
+<span class="quote_src">英国诗人威廉·布莱克（William Blake）(1757-1827)</span>
+</blockquote>
+
+
+
+[......]
+    <p class="read-more"><a href="/blog/Yi-Zi-poem.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;24,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#CSS" title="查看 CSS 中的全部文章">CSS&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/css-positon.html">CSS 之 Position 详解</a></h1>
+  </header>
+  <section class="postText">
+    <p>在网页设计中，能够很好地定位其中的元素，直接关系到页面的效果。只有把各元素都合理地放置到页面中，才能搭建触美观的页面效果。</p>
+
+<p>在 CSS 中，可以通过 <code>position</code>、<code>float</code>、<code>z-index</code> 等定位方式对元素进行定位。本文将讨论一下难以理解的 <code>position</code> 定位方式。</p>
+
+<p>在市面上有很多关于 CSS 的参考书籍，但是这些书籍往往会对那些诸如字体，文本，背景等简单的属性进行大张旗鼓的介绍，而对那些同样重要但难以理解的属性仅只言片语一笔带过，有避重就轻的嫌疑。CSS 中主要难以理解的属性包括盒型模型，定位等。本文将主要讲述关于 <code>position</code> 的理解，力求让您看完本文后对 <code>position</code> 有着最全面的认识。</p>
+
+<p><code>position</code> 用于规定页面元素（主要指框模型）的定位方式：静态定位、绝对定位、相对定位还是固定定位，其中的静态定位是默认的定位方式。</p>
+[......]
+    <p class="read-more"><a href="/blog/css-positon.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;16,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 中的全部文章" rel="category">健康 & 运动</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#健康" title="查看 健康 中的全部文章">健康&nbsp;&nbsp;</a><a href="/blog/tags.html#睡眠" title="查看 睡眠 中的全部文章">睡眠&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/how-to-rest.html">如何有效地休息？</a></h1>
+  </header>
+  <section class="postText">
+    <p>你真的会休息吗？</p>
+
+<p>你根本不会休息。</p>
+
+<p>为什么你睡了 11 个小时仍然觉得疲累？</p>
+
+<p>为什么你花了好几万去岛国度假并没有增加生活的热情？</p>
+
+<p>都说要去 KTV，去夜店，去游乐园就能忘掉不快，更带劲地开始新的一天，但是尽兴归来心里只剩空虚？</p>
+
+<p>我们真的明白休息的含义吗？我们休息对了吗？</p>
+
+<p>你理解的休息是什么？一个饱觉？一阵疯玩？到 KTV 释放饭后的一串饱嗝？</p>
+
+<p>休息的真正含义是什么？是恢复疲劳，放松神经，当你重新投入工作与学习的时候觉得又是一个精力充沛的新人。</p>
+
+<p>如果你的休息方式并不能为你带来这些，那么，无论这些活动的名字听起来有多轻松，看上去有多High，它都是一种错误。抛弃它们，来一场休息革命！</p>
+[......]
+    <p class="read-more"><a href="/blog/how-to-rest.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;12,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 中的全部文章" rel="category">励志 & 成功</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#梦想" title="查看 梦想 中的全部文章">梦想&nbsp;&nbsp;</a><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/out-of-your-dream.html">你配不上你当初的梦想</a></h1>
+  </header>
+  <section class="postText">
+    <p>昨天的你坐在高三的教室里自习到学校锁门。你咬着牙对自己说，一定要以最骄傲的姿态离开。看看今天狼狈不堪的模样，有什么可以骄傲。</p>
+
+<p>昨天的你对自己说，不论我今天有多么彷徨迷茫，有一天，我都要过上自己想要的生活。以你现在的状态，凭什么。</p>
+
+<p>你唯恐他人受到伤害，不忍心拒绝任何请求，发一条短信都要忖度语气，却还是懊恼自己考虑不周全。自己都费解，究竟是想讨好谁。</p>
+
+<p>你希望自己可以宠辱不惊，喜怒不形，却总是习惯把一切写在脸上，who cares？</p>
+[......]
+    <p class="read-more"><a href="/blog/out-of-your-dream.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Oct&nbsp;02,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 中的全部文章" rel="category">励志 & 成功</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#效率" title="查看 效率 中的全部文章">效率&nbsp;&nbsp;</a><a href="/blog/tags.html#习惯" title="查看 习惯 中的全部文章">习惯&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
     <h1><a href="/blog/good_habbits_of_efficient_people.html">高效率人士的优秀习惯</a></h1>
   </header>
@@ -73,52 +244,34 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
-    <div class="date"><span class="cal">Jun&nbsp;09,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 中的全部文章" rel="category">休闲 & 娱乐</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#阅读" title="查看 阅读 中的全部文章">阅读&nbsp;&nbsp;</a><a href="/blog/tags.html#思考" title="查看 思考 中的全部文章">思考&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/animal_farm.html">动物庄园</a></h1>
+    <div class="date"><span class="cal">Sep&nbsp;20,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a><a href="/blog/tags.html#C语言" title="查看 C语言 中的全部文章">C语言&nbsp;&nbsp;</a><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/declaration_analysis_in_c.html">C 语言声明解析</a></h1>
   </header>
   <section class="postText">
-    <p style="text-align:center;"><img src="/images/post/animal_farm.jpg" height="474" width="352" alt="动物庄园" /></p>
+    <h2>合法声明的限制条件</h2>
 
-<h2>书目信息</h2>
+<ol>
+<li>函数的返回值不能是一个函数，而可以是一个函数指针，所以像<code>foo()()</code>这样是非法的，而<code>int(* fun())()</code>是合法的；</li>
+<li>函数的返回值不能是一个数组，而可以是一个指向数组的指针，所以像 <code>foo()[]</code> 这样是非法的，而 <code>int(* fun())[]</code> 是合法的；</li>
+<li>数组里面不能有函数，但数组里面可以有其他数组，所以像 <code>foo[]()</code> 这样是非法的，而 <code>int foo[][]</code> 是合法的。</li>
+</ol>
 
-<ul>
-<li>原版名称：《Animal Farm》</li>
-<li>中文译名：《动物庄园》</li>
-<li>作   者：（英）乔治·奥威尔（George Orwell）</li>
-<li>翻译版本：赫海龙的译本</li>
-</ul>
 
+<h2>声明的优先级规则</h2>
+
+<p>A：  声明从它的名字开始读取，然后按照优先级顺序依次读取。</p>
+
+<p>B：  优先级从高到低依次是：</p>
+
+<p>B.1： 声明中被括号括起来的部分</p>
+
+<p>B.2： 后缀操作符：括号<code>( )</code>表示这是一个函数，而方括号 <code>[ ]</code> 表示这是一个数组。</p>
+
+<p>B.3： 前缀操作符：星号<code>*</code>表示“指向&hellip;的指针”。</p>
+
+<p>C：  如果 <code>const</code> 和（或）<code>volatile</code> 关键字的后面紧跟类型说明符（如 <code>int</code>、<code>long</code> 等），那么它作用于类型说明符。其他情况下，<code>const</code> 和（或）<code>volatile</code> 关键字作用于它左边紧邻的指针星号。</p>
 [......]
-    <p class="read-more"><a href="/blog/animal_farm.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Oct&nbsp;03,&nbsp;2011</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 中的全部文章" rel="category">健康 & 运动</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#健康" title="查看 健康 中的全部文章">健康&nbsp;&nbsp;</a><a href="/blog/tags.html#运动" title="查看 运动 中的全部文章">运动&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/how_to_jog_in_the_best_way.html">如何最有效的慢跑</a></h1>
-  </header>
-  <section class="postText">
-    <p style="text-align:center;"><img src="http://baige5117.u.qiniudn.com/20111003.jpg" height="287" width="450" alt="Jogging" /></p>
-
-<h3>慢跑时的呼吸方法</h3>
-
-<p>用鼻子呼吸比较好，正常呼吸，最好不要用嘴呼吸，用鼻子呼吸增加肺活量，还不容易肚子痛。也可以用鼻子吸气，嘴吐气，这样可以坚持的久一点。慢跑时呼吸要均匀，要有节奏，找到适合自己的呼吸技巧，就可以在最佳状态下慢跑。</p>
-
-<h3>慢跑前重暖身，慢跑后要舒缓</h3>
-
-<p>慢跑瘦身的效果好，能燃烧很多热量，不过也有许多注意事项。但是慢跑要加强热身运动，增强韧带弹性、关节灵活度，不然稍不小心就会造成肌肉拉伤、扭伤等运动伤害。</p>
-
-<p>慢跑后一定要进行舒缓运动，因为当激烈的运动后，多量血液会集中在下肢和肌肉，若立刻停止，没有搭配舒缓运动，则会影响血液回流到心脏，而使得血液滞留在肌肉，无法有效排除乳酸，容易发生心脏和脑部血液供给不足，而产生头晕、昏倒现象。</p>
-
-<p>而且不少MM担心跑步会让小腿变粗，其实只要在跑完步后进行5-10分钟按摩，放松腿部肌肉，这样就小腿就不会变粗，还会越来越细呢。如果情况允许，在睡觉前用热水泡脚，能有效消除水肿等问题，达到瘦腿的功效。</p>
-[......]
-    <p class="read-more"><a href="/blog/how_to_jog_in_the_best_way.html">—阅读全文—</a></p>
+    <p class="read-more"><a href="/blog/declaration_analysis_in_c.html">—阅读全文—</a></p>
   </section>
   <div class="sidebadge"></div>
 </article>
@@ -175,6 +328,20 @@
   
   
   
+    
+  <a href="/blog/page8">8</a>
+  
+  
+  
+  
+    
+  <a href="/blog/page9">9</a>
+  
+  
+  
+  
+  
+  <a href="/blog/page8" title="后一页">&#187;</a>
   
 </div>
 
@@ -204,27 +371,27 @@
     <ul>
       
       <li>
-	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(1)
+	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(7)
       </li>
       
       <li>
-	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(11)
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(3)
       </li>
       
       <li>
-	<a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(5)
+	<a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(15)
       </li>
       
       <li>
-	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(19)
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(10)
       </li>
       
       <li>
-	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(6)
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(25)
       </li>
       
       <li>
-	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(8)
+	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(7)
       </li>
       
       <li>
@@ -237,6 +404,7 @@
   <section class="sideBox">		
     <h3>推荐文章</h3>		
     <ul>
+      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
       <li><a href="/blog/animal_farm.html" title="动物庄园">动物庄园</a></li>
       <li><a href="/blog/classic_sort_algorithm.html" title="经典排序算法">经典排序算法</a></li>
       <li><a href="/blog/markdown_syntax.html" title="Markdown 基本语法">Markdown 基本语法</a></li>
@@ -249,7 +417,7 @@
       <li><a href="/blog/the_basic_usage_of_grep_in_linux.html" title="Linux 中 Grep 命令使用方法">Linux 中 Grep 命令使用方法</a></li>
       <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
       <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
-      <li><a href="/blog/calculate_the_running_time_of_algorithm.html" title="Linux/Unix 环境下实现精确计算程序运行的时间">Linux/Unix 环境下实现精确计算程序运行的时间</a></li>
+      <li><a href="/blog/declaration_analysis_in_c.html" title="C 语言声明解析">C 语言声明解析</a></li>
     </ul>
   </section>
   <section class="sideBox">
@@ -564,8 +732,73 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;10&nbsp;月 的文章">2012&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(10)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;09&nbsp;月 的文章">2012&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(2)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;08&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;08&nbsp;月 的文章">2012&nbsp;年&nbsp;08&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;07&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;07&nbsp;月 的文章">2012&nbsp;年&nbsp;07&nbsp;月</a>&nbsp;&nbsp;(1)</li>
           
         
       
@@ -580,7 +813,72 @@
         
       
       
-        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;04&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;04&nbsp;月 的文章">2012&nbsp;年&nbsp;04&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;03&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;03&nbsp;月 的文章">2012&nbsp;年&nbsp;03&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;01&nbsp;月 的文章">2012&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;12&nbsp;月 的文章">2011&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(2)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;11&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;11&nbsp;月 的文章">2011&nbsp;年&nbsp;11&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;10&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;10&nbsp;月 的文章">2011&nbsp;年&nbsp;10&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          
+        
+      
+      
+        <li><a href="/blog/archive.html#2011&nbsp;年&nbsp;09&nbsp;月" title="查看所有 2011&nbsp;年&nbsp;09&nbsp;月 的文章">2011&nbsp;年&nbsp;09&nbsp;月</a>&nbsp;&nbsp;(1)</li>
       
       
     </ul>
@@ -612,43 +910,77 @@
     <h3><a href="/blog/tags.html" title="查看标签页">分类标签</a></h3>
     <div id="tags_wrap">
     
-    <a href="/blog/tags.html#健康" title="1">健康</a>
+    <a href="/blog/tags.html#梦想" title="3">梦想</a>
+    
+    <a href="/blog/tags.html#人生" title="12">人生</a>
+    
+    <a href="/blog/tags.html#健康" title="3">健康</a>
     
     <a href="/blog/tags.html#运动" title="1">运动</a>
     
+    <a href="/blog/tags.html#电影" title="3">电影</a>
+    
+    <a href="/blog/tags.html#励志" title="7">励志</a>
+    
+    <a href="/blog/tags.html#生活" title="3">生活</a>
+    
+    <a href="/blog/tags.html#美" title="1">美</a>
+    
+    <a href="/blog/tags.html#计算机" title="4">计算机</a>
+    
+    <a href="/blog/tags.html#趣事" title="4">趣事</a>
+    
+    <a href="/blog/tags.html#C语言" title="7">C语言</a>
+    
+    <a href="/blog/tags.html#游戏" title="1">游戏</a>
+    
     <a href="/blog/tags.html#阅读" title="3">阅读</a>
     
-    <a href="/blog/tags.html#思考" title="4">思考</a>
+    <a href="/blog/tags.html#思考" title="5">思考</a>
+    
+    <a href="/blog/tags.html#故事" title="4">故事</a>
+    
+    <a href="/blog/tags.html#学习笔记" title="6">学习笔记</a>
+    
+    <a href="/blog/tags.html#编程语言" title="8">编程语言</a>
+    
+    <a href="/blog/tags.html#脚本" title="3">脚本</a>
+    
+    <a href="/blog/tags.html#批处理" title="3">批处理</a>
     
     <a href="/blog/tags.html#效率" title="1">效率</a>
     
     <a href="/blog/tags.html#习惯" title="2">习惯</a>
     
-    <a href="/blog/tags.html#空间索引" title="1">空间索引</a>
+    <a href="/blog/tags.html#睡眠" title="1">睡眠</a>
     
-    <a href="/blog/tags.html#数据结构" title="1">数据结构</a>
+    <a href="/blog/tags.html#网页设计" title="4">网页设计</a>
+    
+    <a href="/blog/tags.html#CSS" title="1">CSS</a>
+    
+    <a href="/blog/tags.html#文学" title="2">文学</a>
+    
+    <a href="/blog/tags.html#古诗" title="1">古诗</a>
+    
+    <a href="/blog/tags.html#国学" title="3">国学</a>
+    
+    <a href="/blog/tags.html#空间索引" title="2">空间索引</a>
+    
+    <a href="/blog/tags.html#数据结构" title="2">数据结构</a>
     
     <a href="/blog/tags.html#人物" title="4">人物</a>
     
-    <a href="/blog/tags.html#趣事" title="3">趣事</a>
-    
-    <a href="/blog/tags.html#网页设计" title="3">网页设计</a>
-    
     <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
     
-    <a href="/blog/tags.html#成功学" title="2">成功学</a>
+    <a href="/blog/tags.html#科普知识" title="1">科普知识</a>
     
-    <a href="/blog/tags.html#励志" title="5">励志</a>
+    <a href="/blog/tags.html#成功学" title="2">成功学</a>
     
     <a href="/blog/tags.html#机械" title="6">机械</a>
     
     <a href="/blog/tags.html#CAD" title="3">CAD</a>
     
     <a href="/blog/tags.html#Linux" title="4">Linux</a>
-    
-    <a href="/blog/tags.html#编程语言" title="5">编程语言</a>
-    
-    <a href="/blog/tags.html#C语言" title="4">C语言</a>
     
     <a href="/blog/tags.html#视频" title="2">视频</a>
     
@@ -666,27 +998,13 @@
     
     <a href="/blog/tags.html#音乐" title="3">音乐</a>
     
-    <a href="/blog/tags.html#人生" title="8">人生</a>
-    
-    <a href="/blog/tags.html#国学" title="2">国学</a>
-    
-    <a href="/blog/tags.html#文学" title="1">文学</a>
-    
-    <a href="/blog/tags.html#计算机" title="3">计算机</a>
-    
     <a href="/blog/tags.html#黑客" title="1">黑客</a>
     
     <a href="/blog/tags.html#语录" title="1">语录</a>
     
-    <a href="/blog/tags.html#电影" title="1">电影</a>
-    
     <a href="/blog/tags.html#单元测试" title="2">单元测试</a>
     
     <a href="/blog/tags.html#演讲" title="2">演讲</a>
-    
-    <a href="/blog/tags.html#故事" title="3">故事</a>
-    
-    <a href="/blog/tags.html#学习笔记" title="4">学习笔记</a>
     
     <a href="/blog/tags.html#逆向工程" title="3">逆向工程</a>
     
@@ -699,12 +1017,6 @@
     <a href="/blog/tags.html#有限元" title="3">有限元</a>
     
     <a href="/blog/tags.html#事业" title="1">事业</a>
-    
-    <a href="/blog/tags.html#生活" title="2">生活</a>
-    
-    <a href="/blog/tags.html#脚本" title="2">脚本</a>
-    
-    <a href="/blog/tags.html#批处理" title="2">批处理</a>
     
     <a href="/blog/tags.html#工作" title="1">工作</a>
     
