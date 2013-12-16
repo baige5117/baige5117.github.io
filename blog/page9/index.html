@@ -51,6 +51,71 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;15,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#CSS" title="查看 CSS 中的全部文章">CSS&nbsp;&nbsp;</a><a href="/blog/tags.html#HTML" title="查看 HTML 中的全部文章">HTML&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/optimization_of_css_file.html">网站优化之 CSS 文件优化措施</a></h1>
+  </header>
+  <section class="postText">
+    <h2>选择器选用的优化措施</h2>
+
+<p>根据样式表匹配规则，选择器的匹配是从左往右进行匹配的，所以，选择器规则越长则匹配实践越长。因此，选择器选用的优化措施最主要的原则就是，尽量使选择器具有唯一性，减少使用子孙或祖先选择器。</p>
+
+<h3>尽量不要使用通用选择器，比如最常用的<code>* {...}</code>。</h3>
+
+<h3>尽量不要为 id 指配特定的标签。</h3>
+
+<p>id 选择器在同一页面只能使用一次，所以此条规则容易理解。</p>
+
+<pre><code>button#backButton {…}  /* Bad */
+.menu-left#newMenuIcon {…} /* Bad */
+
+#backButton {…} /* Good */
+#newMenuIcon {…} /* Good */
+</code></pre>
+[......]
+    <p class="read-more"><a href="/blog/optimization_of_css_file.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;12,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#CSS" title="查看 CSS 中的全部文章">CSS&nbsp;&nbsp;</a><a href="/blog/tags.html#HTML" title="查看 HTML 中的全部文章">HTML&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/html_css_image_space.html">HTML/CSS 图片下方有空隙</a></h1>
+  </header>
+  <section class="postText">
+    <h2>问题表述</h2>
+
+<p>在网页设计过程中，欲打算做一块矩形区域，在其中上下紧邻放置一张图片和一个段落，其 CSS 和 HTML 相关代码如下：</p>
+
+<pre><code>div { background: green; }
+img { margin:0; border:1px solid black; }
+p { margin:0; border:1px solid black; }
+
+------------------------------------------------
+
+&lt;div&gt;
+ &lt;img src="#" alt="..." /&gt;
+ &lt;p&gt;段落文字&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>但是，在生成的页面中，矩形区域中的图片和下方的段落之间存在这大约 5px 的空白间隙，效果图片如下图所示，图中右边的图片为想要的效果图，左图为实际效果图：</p>
+[......]
+    <p class="read-more"><a href="/blog/html_css_image_space.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Dec&nbsp;09,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 中的全部文章" rel="category">人生 & 思考</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a><a href="/blog/tags.html#思考" title="查看 思考 中的全部文章">思考&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://www.apple4.cn/2012/12/to-thank-life-of-lonely/" target="_blank" rel="author">博华</a></span></div>
     <h1><a href="/blog/talk_about_the_meaning_of_life.html">浅谈生命的意义</a></h1>
   </header>
@@ -174,73 +239,13 @@
   <section class="postText">
     <p style="text-align:center;"><img src="http://baige5117.u.qiniudn.com/20121117.jpg" height="316" width="450" alt="活在当下" /></p>
 
-<blockquote><p>白岩松—走到生命的哪一个阶段，都该喜欢那一段时光，完成那一阶段该完成的职责，顺生而行，不沉迷过去，不狂热地期待着未来，生命这样就好。不管正经历着怎样的挣扎与挑战，或许我们都只有一个选择：虽然痛苦，却依然要快乐，并相信未来。<span class="quote_src">白岩松</span></p></blockquote>
+<blockquote><p>走到生命的哪一个阶段，都该喜欢那一段时光，完成那一阶段该完成的职责，顺生而行，不沉迷过去，不狂热地期待着未来，生命这样就好。不管正经历着怎样的挣扎与挑战，或许我们都只有一个选择：虽然痛苦，却依然要快乐，并相信未来。<span class="quote_src">白岩松</span></p></blockquote>
 
 <p>人生要活在当下，及时享受每一天。</p>
 
 <p>人生其实是很短暂的，更不用提由于生命的脆弱而发生的各种意外。而且生活本身就是过程，结果只是短暂的时刻。所以，当清晨睁开第一眼的瞬间，就应该翘起嘴巴露出发自内心的微笑，因为至少我们还活着，又可以享受明媚的阳光，呼吸新鲜的空气，听到欢快的鸟语，问到沁人心脾的花香……生活到处都是美，只是由于我们迫于追赶时代而暂时蒙蔽了发现美的眼睛。活在当下，就不要再为未来做任何毫无意义的纠结、恐惧了。该来的迟早要来，躲也躲不过去，既不会提前也不会推迟；不该来的再强求也不会来。我们所能做的只有把握好当下，把当下该做好的事情做好，仅此而已。所以，为永远无法预测的事情枉费心机，浪费感情真是一件得不偿失的事情，将这部分时间精力节省出来更好的享受当下不更好！</p>
 [......]
     <p class="read-more"><a href="/blog/the_power_of_now.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Nov&nbsp;16,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#图像处理" title="查看 图像处理 中的全部文章">图像处理&nbsp;&nbsp;</a><a href="/blog/tags.html#软件" title="查看 软件 中的全部文章">软件&nbsp;&nbsp;</a><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/notes_of_photoshop_cs5.html">Photoshop CS5 学习笔记</a></h1>
-  </header>
-  <section class="postText">
-    <h2>基础知识</h2>
-
-<p>1、PS CS5 界面组成部分：视图控制栏、菜单栏、工具箱、工具选项栏、控制面板、工作区域。</p>
-
-<p>2、主窗口中一般只会显示一些最常用的控制面板，比如颜色、、图层、管道等，可以在菜单栏的“窗口”菜单中勾选相关的控制面板使其在主窗口中显示出来。</p>
-
-<p>3、放大与缩小：a、工具箱放大镜工具（Z）；b、Ctrl+“+”、Ctrl+“-”；c、Alt+鼠标滚轮；d、Ctrl+0（满画面显示图片）。</p>
-
-<p>4、手抓工具：a、工具箱中的手抓工具（H）；b、按住空格键的同时拖动鼠标左键。</p>
-
-<p>5、自由变换：Ctrl+T。可以实现图片的缩放、旋转等操作。在按住 Shift 的时候拖动图片的四个角点可以实现等比缩放。自由变换之后确认可以按“Enter”，取消自由变换则“Esc”。</p>
-[......]
-    <p class="read-more"><a href="/blog/notes_of_photoshop_cs5.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Nov&nbsp;14,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#图像处理" title="查看 图像处理 中的全部文章">图像处理&nbsp;&nbsp;</a><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a><a href="/blog/tags.html#软件" title="查看 软件 中的全部文章">软件&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/notes_of_inkscape.html">Inkscape 学习笔记</a></h1>
-  </header>
-  <section class="postText">
-    <h2>操作相关</h2>
-
-<h3>1. 改变画布大小使其自动调整以适应内容大小</h3>
-
-<p>File &rarr; Document Properties &rarr; Page &rarr; +Resize page to content&hellip; &rarr; Resize page to drawing or selection</p>
-
-<h3>2. 矩形</h3>
-
-<p>矩形绘制技巧：</p>
-
-<ul>
-<li>配合 Ctrl 键，可以绘制正方形或边长为整数比率(2：1，3：1等)的矩形。</li>
-<li>配合 Shift 键，从中心开始绘制。</li>
-</ul>
-
-
-<p>刚绘制的矩形(新绘的矩形总是自动被选中)在三个角上显示3个控制柄，但实际上有四个控制柄，如果矩形没有圆角，右上角的两个是重合在一起的。这两个是倒圆控制柄；另外两个(左上和右下)是缩放控制柄。</p>
-[......]
-    <p class="read-more"><a href="/blog/notes_of_inkscape.html">—阅读全文—</a></p>
   </section>
   <div class="sidebadge"></div>
 </article>
@@ -333,6 +338,12 @@
   
   
   
+    
+  <a href="/blog/page14">14</a>
+  
+  
+  
+  
   
   <a href="/blog/page10" title="后一页">&#187;</a>
   
@@ -368,7 +379,7 @@
       </li>
       
       <li>
-	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(4)
+	<a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 下的所有文章">健康 & 运动</a>&nbsp;(5)
       </li>
       
       <li>
@@ -376,7 +387,11 @@
       </li>
       
       <li>
-	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(18)
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(19)
+      </li>
+      
+      <li>
+	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(4)
       </li>
       
       <li>
@@ -385,10 +400,6 @@
       
       <li>
 	<a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 下的所有文章">工具 & 软件</a>&nbsp;(12)
-      </li>
-      
-      <li>
-	<a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 下的所有文章">职场 & 工作</a>&nbsp;(2)
       </li>
       
     </ul>
@@ -441,8 +452,18 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(3)</li>
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(5)</li>
           
         
       
@@ -986,8 +1007,18 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          <li><a href="/blog/archive.html#2012&nbsp;年&nbsp;06&nbsp;月" title="查看所有 2012&nbsp;年&nbsp;06&nbsp;月 的文章">2012&nbsp;年&nbsp;06&nbsp;月</a>&nbsp;&nbsp;(3)</li>
           
         
       
@@ -1092,9 +1123,9 @@
     
     <a href="/blog/tags.html#梦想" title="5">梦想</a>
     
-    <a href="/blog/tags.html#人生" title="22">人生</a>
+    <a href="/blog/tags.html#人生" title="23">人生</a>
     
-    <a href="/blog/tags.html#健康" title="4">健康</a>
+    <a href="/blog/tags.html#健康" title="5">健康</a>
     
     <a href="/blog/tags.html#运动" title="2">运动</a>
     
@@ -1117,6 +1148,12 @@
     <a href="/blog/tags.html#阅读" title="3">阅读</a>
     
     <a href="/blog/tags.html#思考" title="9">思考</a>
+    
+    <a href="/blog/tags.html#工作" title="4">工作</a>
+    
+    <a href="/blog/tags.html#职业" title="4">职业</a>
+    
+    <a href="/blog/tags.html#人物" title="7">人物</a>
     
     <a href="/blog/tags.html#故事" title="7">故事</a>
     
@@ -1148,8 +1185,6 @@
     
     <a href="/blog/tags.html#数据结构" title="2">数据结构</a>
     
-    <a href="/blog/tags.html#人物" title="6">人物</a>
-    
     <a href="/blog/tags.html#jekyll" title="3">jekyll</a>
     
     <a href="/blog/tags.html#科普知识" title="1">科普知识</a>
@@ -1169,10 +1204,6 @@
     <a href="/blog/tags.html#软件" title="6">软件</a>
     
     <a href="/blog/tags.html#机械" title="7">机械</a>
-    
-    <a href="/blog/tags.html#职业" title="2">职业</a>
-    
-    <a href="/blog/tags.html#工作" title="2">工作</a>
     
     <a href="/blog/tags.html#CAD" title="3">CAD</a>
     
