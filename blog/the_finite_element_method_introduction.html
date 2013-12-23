@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>吉普赛人古老的神奇读心术 | All For One</title>
+<title>有限单元法简介 | All For One</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -21,6 +21,27 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kristi" />
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script type="text/javascript" src="/js/tags.js"> </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      extensions: ["tex2jax.js"],
+      TeX: { equationNumbers: { autoNumber: "all" } },
+      "HTML-CSS": { linebreaks: { automatic: true, width:"450px" } },
+             SVG: { linebreaks: { automatic: true, width:"450px" } }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>	     
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+
+
 
 
   </head>
@@ -48,28 +69,167 @@
 	  <section id="main-content">
 	    <article class="post">
   <header class="postHeader">
-    <div class="date"><span class="cal">Mar&nbsp;26,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 中的全部文章" rel="category">休闲 & 娱乐</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#趣事" title="查看 趣事 中的全部文章">趣事&nbsp;&nbsp;</a><a href="/blog/tags.html#游戏" title="查看 游戏 中的全部文章">游戏&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1>吉普赛人古老的神奇读心术</h1>
+    <div class="date"><span class="cal">Dec&nbsp;21,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#有限元" title="查看 有限元 中的全部文章">有限元&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1>有限单元法简介</h1>
   </header>
   <section class="postText">
-    <p>很久之前遇到的一款神秘小玩意儿，初玩感觉特别神秘。虽然很快就能看透它的原理，但是还是能带来了不少的乐趣，值得收藏的小魔术。</p>
+    <h2>什么是有限单元法?</h2>
 
-<p>提示：</p>
+<p>有限单元法是一种解决工程和数学物理问题的<strong>数值计算方法</strong>。可用有限元法解决的有关工程和数学物理领域内的典型问题包括结构分析、热传导、流体流动、质量传输和电磁电位等。</p>
 
-<ol>
-<li>任意选择一个两位数（或者说：从 10—99 之间任意选择一个数），把这个数的十位与个位相加，再把这个数减去这个和。例如：你选择的数是 23，然后 2+3=5，然后 23-5=18。</li>
-<li>在图表中找出与最后得出的数相对应的图形，并把这个图形牢记心中，然后点击水晶球。你会发现，水晶球所显示出来的图形就是你刚刚心里记下的那个图形！！</li>
-</ol>
+<h2>为什么要使用有限单元法?</h2>
 
+<p>工程数学问题中的解可分为解析解和数值解。解析解（又称为闭式解）指能够以数学表达式直接表示的解，通常包含一些严格的数学公式，比如有理分式、三角函数、指数等基本函数，一般针对的是整个求解域，给出求解域中任意位置的自变量就可求出其因变量,也就是问题的解，因此任意位置的解都是准确可靠的。但是，解析解通常要求解常微分方程或偏微分方程，仅适合一些比较简单的问题，当所研究问题比较复杂时，只能利用数值计算方法得到数值解，而且通过适当的方法可将数值解完全控制在允许误差范围之内，完全能够满足实际工程问题的应用需求。另一方面，数值解的离散方法使得计算机求解复杂问题成为可能，极大地提高了问题的求解效率。</p>
+
+<p>工程结构中的问题往往都比较复杂，比如结构的几何形状、载荷、材料特性等，因此只能利用数值法计算求解，而有限元法就是这样一种数值计算方法。有限单元法解决问题是要求解联立代数方程组，而不是求解常微分方程或偏微分方程。</p>
 
 <!--excerpt break-->
 
 
-<p><embed width="450px" height="375px" wmode="Transparent" allowscriptaccess="never" allownetworking="internal" src="/images/dxs.swf" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash"></embed></p>
+<h2>有限单元法的一般步骤</h2>
+
+<h3>步骤一：离散和选择单元类型</h3>
+
+<p>将物体划分为具有有限个节点的等价系统，选择最适当的单元类型来最接近地模拟实际的物理性能。单元类型的选择取决于实际受载条件下物体的物理构成，也取决于分析人员所期望的对实际行为的近似程度。</p>
+
+<h3>步骤二：选择位移函数</h3>
+
+<p>位移函数是用单元的节点值在单元内部定义的，是坐标的函数，每个单元可重复使用同一个通用的位移函数。</p>
+
+<p>有限单元法是这样一种方法：<span class="red">一个连续量，如整个物体内的位移，用一个离散的模型来近似，而此离散模型是由每个有限域或有限单元内定义的分片连续函数组成。</span></p>
+
+<h3>步骤三：定义应变位移和应力应变关系</h3>
+
+<h3>步骤四：推导单元刚度矩阵和方程</h3>
+
+<h4>直接平衡法</h4>
+
+<p>通过基本单元的力平衡条件和力与位移的关系得出，最适合于线单元或一维单元，比如弹簧单元、杆单元和梁单元。</p>
+
+<h4>功能量法</h4>
+
+<p>利用虚功原理、最小势能原理和 Castigliano 理论推导单元方程。虚功原理可用于任何材料特性，而最小势能原理和 Castigliano 理论只能应用于弹性材料。</p>
+
+<h4>加权残余法</h4>
+
+<p>当泛函（比如势能）不容易得到时，加权残余法就特别有用。最著名的是迦辽金法。</p>
+
+<p>利用上述任何一种方法得出描述单元特性的方程，写为矩阵形式：</p>
+
+<p><code>\[
+\begin{Bmatrix}
+{f}_{1} \\
+{f}_{2} \\
+{f}_{3} \\
+\vdots \\
+{f}_{n}
+\end{Bmatrix} = \begin{bmatrix}
+k_{11} &amp; k_{12} &amp; k_{13} &amp; \cdots &amp; k_{1n} \\
+k_{21} &amp; k_{22} &amp; k_{23} &amp; \cdots  &amp; k_{2n} \\
+k_{31} &amp; k_{32} &amp; k_{33} &amp; \cdots  &amp; k_{3n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+k_{n1} &amp; k_{n2} &amp; k_{n3} &amp; \cdots  &amp; k_{nn}
+\end{bmatrix} \begin{Bmatrix}
+{d}_{1} \\
+{d}_{2} \\
+{d}_{3} \\
+\vdots \\
+{d}_{n}
+\end{Bmatrix}
+\]</code></p>
+
+<p>将上式简写为：</p>
+
+<p><code>\[
+\begin{Bmatrix} f \end{Bmatrix} = \begin{bmatrix} k \end{bmatrix} \begin{Bmatrix} d \end{Bmatrix}
+\]</code></p>
+
+<p>式中，<code>\( \begin{Bmatrix} f \end{Bmatrix} \)</code>是单元节点力矢量，<code>\( \begin{bmatrix} k \end{bmatrix} \)</code>是单元刚度矩阵（通常为齐次方阵），<code>\( \begin{Bmatrix} d \end{Bmatrix} \)</code>是单元未知节点自由度或广义位移矢量。广义位移可以包括实际位移、斜度，甚至曲率等。</p>
+
+<h3>步骤五：组装单元方程得出总体方程并引进边界条件</h3>
+
+<p>利用叠加法（又称为直接刚度法）将单个单元方程加在一起得出整个结构的总体方程，最后组成的总体方程写为矩阵形式为：</p>
+
+<p><code>\[
+\begin{Bmatrix} F \end{Bmatrix} = \begin{bmatrix} K \end{bmatrix} \begin{Bmatrix} d \end{Bmatrix}
+\]</code></p>
+
+<p>式中，<code>\( \begin{Bmatrix} F \end{Bmatrix} \)</code>是整体节点力矢量，<code>\( \begin{bmatrix} K \end{bmatrix} \)</code>是结构总体刚度矩阵（又称为总刚），<code>\( \begin{Bmatrix} d \end{Bmatrix} \)</code>是已知和未知结构节点自由度或广义位移矢量。</p>
+
+<p>由于总体刚度矩阵<code>\( \begin{bmatrix} K \end{bmatrix} \)</code>的行列式等于零，因此它是一个奇异矩阵，需要引入某些边界条件（约束或支撑）。</p>
+
+<h3>步骤六：解未知自由度（或广义位移）</h3>
+
+<p>在引入边界条件之后的总体方程形成一组联立代数方程组，扩展的矩阵形式为：</p>
+
+<p><code>\[
+\begin{Bmatrix}
+{F}_{1} \\
+{F}_{2} \\
+{F}_{3} \\
+\vdots \\
+{F}_{n}
+\end{Bmatrix} = \begin{bmatrix}
+K_{11} &amp; K_{12} &amp; K_{13} &amp; \cdots &amp; K_{1n} \\
+K_{21} &amp; K_{22} &amp; K_{23} &amp; \cdots  &amp; K_{2n} \\
+K_{31} &amp; K_{32} &amp; K_{33} &amp; \cdots  &amp; K_{3n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+K_{n1} &amp; K_{n2} &amp; K_{n3} &amp; \cdots  &amp; K_{nn}
+\end{bmatrix} \begin{Bmatrix}
+{d}_{1} \\
+{d}_{2} \\
+{d}_{3} \\
+\vdots \\
+{d}_{n}
+\end{Bmatrix}
+\]</code></p>
+
+<p>其中 n 为未知节点自由度的结构总数。可用消元法或迭代法求解次方程，得出<code>\( d_s \)</code>。</p>
+
+<h3>步骤七：求解单元应变和应力</h3>
+
+<p>利用应变和位移的关系及应力应变关系求出单元的应变和应力。</p>
+
+<h3>步骤八：分析并解释结果</h3>
+
+<h2>有限单元法的应用</h2>
+
+<p>有限单元法常用于分析结构与非结构问题，典型结构问题包括：</p>
+
+<ol>
+<li>应力分析</li>
+<li>屈曲</li>
+<li>震动分析</li>
+<li>冲撞问题</li>
+</ol>
+
+
+<p>非结构问题包括：</p>
+
+<ol>
+<li>热传递</li>
+<li>流体流动</li>
+<li>电位或磁位的分布</li>
+</ol>
+
+
+<h2>有限单元法的优点</h2>
+
+<ol>
+<li>可以很容易的模拟不规则形状的结构</li>
+<li>可以毫无困难地处理一般的载荷条件</li>
+<li>因为单元方程是单个建立的，因此可以模拟出几种不同材料构成的物体</li>
+<li>可以处理数量不受限制的和各种类型的边界条件</li>
+<li>单元的尺寸大小可以变化，必要时可使用小单元</li>
+<li>改变有限元模拟比较容易，花费不大</li>
+<li>可包括动态作用</li>
+<li>可处理大变形和非线性材料带来的非线性问题</li>
+</ol>
+
 
   </section>
   <section class="postText">
-  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/how_to_increase_the_rss_feeds.html" title="如何增加网站的 RSS 订阅用户数量">如何增加网站的 RSS 订阅用户数量</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/meaning_of_life.html" title="生命的意义">生命的意义</a></p>
+  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/memory_leakage_trace.html" title="程序设计中内存泄露检测方法">程序设计中内存泄露检测方法</a></p>
   </section>
   <section class="postText">
     <div id="duoshuo">

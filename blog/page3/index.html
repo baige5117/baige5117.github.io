@@ -51,6 +51,25 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Sep&nbsp;17,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#物理" title="查看 物理 中的全部文章">物理&nbsp;&nbsp;</a><a href="/blog/tags.html#力学" title="查看 力学 中的全部文章">力学&nbsp;&nbsp;</a><a href="/blog/tags.html#有限元" title="查看 有限元 中的全部文章">有限元&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/plane_stress_and_plane_strain_of_elasticity.html">弹性力学中平面应力问题和平面应变问题</a></h1>
+  </header>
+  <section class="postText">
+    <p>在实际问题中，虽然任何弹性体都是空间物体，且外力也都是空间力系，但是许多受力模型都近似表现为一种平面受力状态，或者其纵向的受力状态对模型的受力分析影响可忽略不计。那么，如果将此空间问题简化为平面问题，那么其计算将会大大简化，而且还不影响计算精度。在弹性力学中，这就是平面问题基本理论。</p>
+
+<p>那么是不是所有空间问题都可以简化为平面问题呢？当然是不可以，只有当空间受力对象由于其特殊的形状或者承受特殊的外力时才可简化为平面问题，而且视具体问题的不同简化的平面问题也不同，例如薄板拉压问题和水坝侧向水压问题虽都可简化为平面问题，但显然其模型特征有很大的区别。因此，平面问题可分为两类：平面应力问题和平面应变问题。</p>
+[......]
+    <p class="read-more"><a href="/blog/plane_stress_and_plane_strain_of_elasticity.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Sep&nbsp;16,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#力学" title="查看 力学 中的全部文章">力学&nbsp;&nbsp;</a><a href="/blog/tags.html#物理" title="查看 物理 中的全部文章">物理&nbsp;&nbsp;</a><a href="/blog/tags.html#数学" title="查看 数学 中的全部文章">数学&nbsp;&nbsp;</a><a href="/blog/tags.html#有限元" title="查看 有限元 中的全部文章">有限元&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
     <h1><a href="/blog/equations_of_elasticity.html">弹性力学三大方程</a></h1>
   </header>
@@ -203,49 +222,6 @@
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Aug&nbsp;30,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#Linux" title="查看 Linux 中的全部文章">Linux&nbsp;&nbsp;</a><a href="/blog/tags.html#软件" title="查看 软件 中的全部文章">软件&nbsp;&nbsp;</a><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/install_virtualbox_in_gentoo.html">在 Linux/Gentoo 中安装 VirtualBox 虚拟机</a></h1>
-  </header>
-  <section class="postText">
-    <h2>安装方法</h2>
-
-<h3>手动编译安装</h3>
-
-<p>到 <a href="https://www.virtualbox.org/">VirtualBox 官网</a>下载最新安装版本，linux 版本是 tar.gz 压缩包，下载之后解压缩，会得到一个 virtualbox*.run 文件，查看该文件是不是可执行文件，若不是将其添加可执行权限：</p>
-
-<pre><code># chmod +x virtualbox*.run
-</code></pre>
-
-<p>然后安装 VirtualBox：</p>
-
-<pre><code># ./virtualbox*.run install
-</code></pre>
-
-<p>安装完之后要将用户添加到 vboxusers 组中才可使用 VirtualBox：</p>
-
-<pre><code>$ less /etc/group           //查看系统中都有哪些组
-$ groups Jim            //查看普通用户 Jim 都属于那些组
-# gpasswd -a Jim vboxusers      //将 Jim 添加到 vboxusers 组
-</code></pre>
-
-<p>之后点击 VirtualBox 图标很可能打不开，此时需要安装 media-libs/libsdl 软件包：</p>
-
-<pre><code># emerge -avt media-libs/libsdl 
-</code></pre>
-
-<p>安装之后就能顺利打开虚拟机。</p>
-[......]
-    <p class="read-more"><a href="/blog/install_virtualbox_in_gentoo.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
   
@@ -388,7 +364,7 @@ $ groups Jim            //查看普通用户 Jim 都属于那些组
       </li>
       
       <li>
-	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(36)
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(37)
       </li>
       
       <li>
@@ -470,8 +446,13 @@ $ groups Jim            //查看普通用户 Jim 都属于那些组
       
       
       
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(8)</li>
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(9)</li>
           
         
       
@@ -1255,7 +1236,7 @@ $ groups Jim            //查看普通用户 Jim 都属于那些组
     
     <a href="/blog/tags.html#数学" title="3">数学</a>
     
-    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    <a href="/blog/tags.html#有限元" title="4">有限元</a>
     
     <a href="/blog/tags.html#事业" title="1">事业</a>
     

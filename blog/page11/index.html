@@ -51,6 +51,34 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Nov&nbsp;07,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#CSS" title="查看 CSS 中的全部文章">CSS&nbsp;&nbsp;</a><a href="/blog/tags.html#HTML" title="查看 HTML 中的全部文章">HTML&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/css_pseudo_classes.html">CSS伪类选择器</a></h1>
+  </header>
+  <section class="postText">
+    <h2>基本介绍</h2>
+
+<p>CSS3 的伪类选择器有多，本文仅讨论状态伪类选择器——<code>:hover</code>、<code>:active</code>、<code>:focus</code>。这些选择器都有一个共同的特征名那就是定义的样式只有当元素处于某种状态下时才起作用，在默认状态下无效。</p>
+
+<ul>
+<li><code>:hover</code>选择器：当鼠标悬停在所指定的元素上时所使用的样式；</li>
+<li><code>:active</code>选择器：当所指定的元素处于激活状态（鼠标在元素上按下还没有松开）时所使用的样式；</li>
+<li><code>:focus</code>选择器：当元素获得光标焦点时使用的样式，主要用在文本框输入文字时使用；</li>
+</ul>
+
+
+<p>状态选择器最常用的地方就是<b>链接</b>和<b>输入框</b>了。其中的 <code>:focus</code> 伪选择器主要用在键盘操作者进行页面的访问，利用 <code>Tab</code> 键即可查看到当某链接为选定的链接后的效果。</p>
+[......]
+    <p class="read-more"><a href="/blog/css_pseudo_classes.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Nov&nbsp;02,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 中的全部文章" rel="category">人生 & 思考</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#故事" title="查看 故事 中的全部文章">故事&nbsp;&nbsp;</a><a href="/blog/tags.html#国学" title="查看 国学 中的全部文章">国学&nbsp;&nbsp;</a><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
     <h1><a href="/blog/old_Chinese_fable_blessing_in_disguise.html">Blessing in disguise | 塞翁失马，焉知非福</a></h1>
   </header>
@@ -218,25 +246,6 @@ text-justify: inter-ideograph;
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Oct&nbsp;27,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100uy2f.html" target="_blank" rel="author">逍遥书斋</a></span></div>
-    <h1><a href="/blog/R%2A-Tree.html">R* 树——一种高效且健壮的点和矩形访问方法</a></h1>
-  </header>
-  <section class="postText">
-    <h2>摘要</h2>
-
-<p>R 树是最为著名的矩形访问方法（Access method）之一，其算法的基本原理是对中间节点的外接矩形面积进行启发式的优化。我们在一个标准实验平台下对各种数据、各种查询、各种操作进行了大量的实验，并根据实验结果设计了 R* 树。R* 树可以对路径中每个外接矩形的面积、边长（margin）和叠加程度进行综合优化，并将整个路径上所有外界矩形的优化结果合并起来考虑。（原文是incorporates a combined optimization of area, margin and overlap of each enclosing rectangle in the directory）。我们在标准的实验平台下对两种数据结构进行了详细的性能比较，结果证明，与现有的各种 R 树变种相比，R* 树都有明显的性能优势。这里的 R 树变种包括 Guttman 的线性 R 树、二次 R 树（或者叫平方 R 树），也包括 Greene 的 R 树变种。R* 树具有全面的性能优势，不论是针对矩形数据还是针对多维点数据、不论是查询操作还是地图叠加等各种空间操作，R* 树的性能优势均有所表现。从实际应用的角度来讲，R* 树在下面两个方面对用户有强烈的吸引力：第一，R* 树不论对点还是其他各种空间数据都能提供有效的支持；第二，R* 树的实现代价仅比 R 树略高。</p>
-[......]
-    <p class="read-more"><a href="/blog/R%2A-Tree.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
   
@@ -379,7 +388,7 @@ text-justify: inter-ideograph;
       </li>
       
       <li>
-	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(36)
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(37)
       </li>
       
       <li>
@@ -461,8 +470,13 @@ text-justify: inter-ideograph;
       
       
       
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(8)</li>
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(9)</li>
           
         
       
@@ -1246,7 +1260,7 @@ text-justify: inter-ideograph;
     
     <a href="/blog/tags.html#数学" title="3">数学</a>
     
-    <a href="/blog/tags.html#有限元" title="3">有限元</a>
+    <a href="/blog/tags.html#有限元" title="4">有限元</a>
     
     <a href="/blog/tags.html#事业" title="1">事业</a>
     
