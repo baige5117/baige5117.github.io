@@ -51,6 +51,35 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;26,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100t5nx.html" target="_blank" rel="author">逍遥书斋</a></span></div>
+    <h1><a href="/blog/R-Tree.html">R 树——动态空间索引结构</a></h1>
+  </header>
+  <section class="postText">
+    <h2>一些术语</h2>
+
+<p>本文特别定义了一些术语用于表示不同的对象，正确地区分这些术语有助于更好的理解 R 树。</p>
+
+<ul>
+<li>空间数据库（Spatial database）：存储真正的空间数据对象（比如点、面片等）的地方，它由大量的空间数据对象组成，这些数据对象几乎没有任何（或者仅有简单的）组织形式。</li>
+<li>叶子节点（Leaf node）：树中最底层的节点，没有子节点的节点。R 树中的叶子节点由一定数目的索引记录构成。</li>
+<li>非叶节点（Non-leaf node）：树中除叶子节点之外的节点。R 树中的非叶节点由一定数目的条目构成。</li>
+<li>索引记录（Index records）：叶子节点中存储的数据形式，一条索引记录指向空间数据库中的一个数据对象。</li>
+<li>元组（Tuple）：空间数据库中存储的数据形式，一条元组就是一个空间数据对象，并且每个元组都有一个唯一的标识符。</li>
+<li>条目（Entry）：又称索引条目（Index entry），R 树节点中存储的数据形式，当为叶子节点时，此条目就是索引记录。</li>
+</ul>
+
+[......]
+    <p class="read-more"><a href="/blog/R-Tree.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Oct&nbsp;25,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#文学" title="查看 文学 中的全部文章">文学&nbsp;&nbsp;</a><a href="/blog/tags.html#古诗" title="查看 古诗 中的全部文章">古诗&nbsp;&nbsp;</a><a href="/blog/tags.html#国学" title="查看 国学 中的全部文章">国学&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
     <h1><a href="/blog/Yi-Zi-poem.html">“一”字诗</a></h1>
   </header>
@@ -276,35 +305,6 @@ And Eternity in an hour.<br />
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Aug&nbsp;20,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a><a href="/blog/tags.html#C语言" title="查看 C语言 中的全部文章">C语言&nbsp;&nbsp;</a><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/dynamic_memory_allocation.html">C 语言动态内存分配</a></h1>
-  </header>
-  <section class="postText">
-    <h2>基本信息</h2>
-
-<p>所谓动态内存分配就是指在程序执行的过程中动态地分配或者回收存储空间的分配内存的方法。动态内存分配不像数组等静态内存分配方法那样需要预先分配存储空间，而是由系统根据程序的需要即时分配，且分配的大小就是程序要求的大小。</p>
-
-<h2>详细释义</h2>
-
-<p>例如我们定义一个<code>float</code>型数组：</p>
-
-<div class="highlight"><pre><code class="c"><span class="lineno">1</span>     <span class="kt">float</span> <span class="n">score</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
-</code></pre></div>
-
-
-
-[......]
-    <p class="read-more"><a href="/blog/dynamic_memory_allocation.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
   
@@ -447,7 +447,7 @@ And Eternity in an hour.<br />
       </li>
       
       <li>
-	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(35)
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(36)
       </li>
       
       <li>
@@ -524,8 +524,13 @@ And Eternity in an hour.<br />
       
       
       
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(7)</li>
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(8)</li>
           
         
       
@@ -1203,7 +1208,7 @@ And Eternity in an hour.<br />
     
     <a href="/blog/tags.html#趣事" title="6">趣事</a>
     
-    <a href="/blog/tags.html#C语言" title="7">C语言</a>
+    <a href="/blog/tags.html#C语言" title="8">C语言</a>
     
     <a href="/blog/tags.html#游戏" title="2">游戏</a>
     
@@ -1281,7 +1286,7 @@ And Eternity in an hour.<br />
     
     <a href="/blog/tags.html#视频" title="2">视频</a>
     
-    <a href="/blog/tags.html#程序设计" title="4">程序设计</a>
+    <a href="/blog/tags.html#程序设计" title="5">程序设计</a>
     
     <a href="/blog/tags.html#RSS" title="1">RSS</a>
     
@@ -1312,6 +1317,8 @@ And Eternity in an hour.<br />
     <a href="/blog/tags.html#有限元" title="3">有限元</a>
     
     <a href="/blog/tags.html#事业" title="1">事业</a>
+    
+    <a href="/blog/tags.html#工具" title="1">工具</a>
     
   </div>
   </section>

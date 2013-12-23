@@ -592,17 +592,18 @@ width:200px;
 height:200px;
 padding:10px;
 overflow: hidden;
-text-indent:100%;
+text-indent:400px;
 white-space:nowrap;
 /*background:#F8F7F1;*/
 border:1px solid #FFF;
 -moz-box-shadow:0 0 5px 2px #ddd;
 -webkit-box-shadow:0 0 5px 2px #ddd;
 box-shadow:0 0 5px 2px #ddd;
-background:url("/images/avatar.png") 10px 10px no-repeat;
+/*background:url("/images/avatar.png") 10px 10px no-repeat;*/
+background:url("/images/qin.jpg") 10px 10px no-repeat;
 }
 div.avatar a:hover {
-background:url("/images/avatar.png") 10px -210px no-repeat;
+/*background:url("/images/avatar.png") 10px -210px no-repeat;*/
 }
 
 .sideBox ul {
