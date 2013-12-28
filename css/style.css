@@ -118,7 +118,9 @@ img { width: expression(this.width > 450 & this.height < this.width ? 450 : true
 em {font-style: italic;}
 strong {font-weight: bold;}
 sup {vertical-align:super;}
-/******************** HTML Text Formatting ********************/
+
+/****************** HTML Text Formatting ******************/
+
 .align_r {text-align:right;}
 .align_c {text-align:center;}
 .float_r {float:right;}
@@ -184,27 +186,28 @@ display:block;
 }
 .quote_src:before {content:'\2014\2014';}
 
-/* LAYOUT STRUCTURE */
+/****************** LAYOUT STRUCTURE ******************/
 
 #wrapper {
     width:922px; 
     margin:10px auto 0;
+    padding:0;
 }
 
 header#page-header{
-    background:url(/images/icons/bk_header.png) no-repeat;
+    background:url("/images/icons/bk_header.png") no-repeat;
     height:110px;
     padding:24px 50px 0 75px;
     position:relative;
 }
 
 #content-wrapper {
-    background:url(/images/icons/bk_content_wrap.png) 0 10px repeat-y;
+    background:url("/images/icons/bk_content_wrap.png") 0 10px repeat-y;
     overflow:hidden;
 }
 
 #content-inner-wrapper {
-    background:url(/images/icons/bk_content.png) no-repeat;
+    background:url("/images/icons/bk_content.png") no-repeat;
     min-height:200px;
     overflow:hidden;
 }
@@ -218,14 +221,14 @@ header#page-header{
 aside#sidebar {
     float:left;
     width:270px; /*230*/
-    background:url(/images/icons/shadow_social.png) 0 32px no-repeat;
+    background:url("/images/icons/shadow_social.png") 0 32px no-repeat;
     min-height:200px;
     padding-left:20px;
     font-size:12px;
 }
 
 footer#page-footer {
-    background:url(/images/icons/bk_footer.png) no-repeat;
+    background:url("/images/icons/bk_footer.png") no-repeat;
     min-height:140px;
 }
 
@@ -259,9 +262,9 @@ footer#page-footer {
 }
 
 #logo span {
-    font-size:10px;
+    font-size:12px;
     color:#666;
-    text-transform:uppercase;
+    text-transform:capitalize;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -274,40 +277,40 @@ footer#page-footer {
 /* CONTENT ELEMENTS 
 ----------------------------*/
 
-.post, .page{
-    position:relative;
-    background:url(/images/icons/bk_post_header.png) 78px 0 no-repeat;
+.post {
+position:relative;
+background:url("/images/icons/bk_post_header.png") 78px 0 no-repeat;
 }	
-
-.post .sidebadge, .page .sidebadge {
-    position:absolute;
-    width:42px;
-    height:33px;
-    background:url(/images/icons/post_badge.png) no-repeat;
-    top:25px;
-    left:-52px;
+.page {
+position:relative;
+background:url("/images/icons/bk_post_header.png") 78px 0 no-repeat;
+padding-top:30px;
+}
+.post .sidebadge {
+position:absolute;
+width:42px;
+height:33px;
+background:url("/images/icons/post_badge.png") no-repeat;
+top:25px;
+left:-52px;
 }
 
-.post header, .page header {
-    background:url(/images/icons/bk_header_separator.png) 50% 100% no-repeat;
-    padding-top:30px;
-    margin-bottom:20px;
-    padding-bottom:0;
-    overflow:hidden;
-}
-
-.page header  {
-    padding-top:5px;
+.post header {
+background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
+padding-top:30px;
+margin-bottom:20px;
+padding-bottom:0;
+overflow:hidden;
 }
 
 .post header .date {
-    color:#666;
-    text-shadow:1px 1px #fff;
+color:#666;
+text-shadow:1px 1px #fff;
 }
 
 .post header .date span a {
-    text-decoration:none;
-    vertical-align:middle;
+text-decoration:none;
+vertical-align:middle;
 }
 
 .post header .date span.cal {font-family:Kristi, 方正舒体, 华为楷体, 楷体;font-size:26px;padding:0;position:relative;top:3px;}
@@ -334,17 +337,13 @@ footer#page-footer {
     border-bottom:1px dotted #B6BE10;
 }
 
-.post section.postText, .page section.postText {
-    background:url(/images/icons/bk_header_separator.png) 50% 100% no-repeat;
+.post section.postText {
+    background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
     padding-bottom:10px;
     margin-bottom:20px;
 }
 
-.page section.postText {
-    background:none;
-}
-
-.post section.postText img, .page section.postText img {
+.post section.postText img {
     padding:10px;
     background:#F8F7F1;
     border:1px solid #FFF;
@@ -361,7 +360,7 @@ footer#page-footer {
     box-shadow:none;
     vertical-align:middle
 }
-.post section.postText a:hover img, .page section.postText a:hover img {
+.post section.postText a:hover img, .page a:hover img {
     background:#FDFDFB;
     border:1px solid #8DDCEF;
     -moz-box-shadow:0 0 10px 2px #B9E9F7;
@@ -373,10 +372,10 @@ footer#page-footer {
     margin:0 20px;
 }
 
-.post section.postText a {
+.post section.postText a, .page a {
 color:#007edf;/*#227CE8*/
 }
-.post section.postText a:hover {
+.post section.postText a:hover, .page a:hover {
 color:#cc3366;
 }
 
@@ -392,6 +391,15 @@ padding:0 2em;
 .post section.postText li {
 margin:0.5em 0;
 padding:0 0.5em;
+}
+
+.post section.postText dd {
+margin:0;
+padding-left:20px;
+}
+
+.post section.postText h2, .post section.postText h3, .post section.postText h4 {
+line-height:140%;
 }
 
 #post_nxpr {
@@ -471,7 +479,7 @@ td {
   border: 1px solid #333;
  }
 
-/************************** PAGINATION ****************************/
+/******************* PAGINATION **********************/
 
 .pagination {
     overflow:hidden;
@@ -512,7 +520,7 @@ td {
 }
 
 
-/**************************** SIDEBAR *******************************/
+/*********************** SIDEBAR ************************/
 
 #sidebar section {
     margin:10px 0 20px;
@@ -732,25 +740,7 @@ overflow:hidden;
 	outline:none;
 }
 
-/*********************** Gotop.CSS **********************/
-
-div#gotop {
-    color:#13382A;
-    font-size:80%;
-    background-color:#ECE8DB;
-    background:rgba(236,232,219,0.6);
-    width:20px;
-    height:60px;
-    position:fixed;
-    _position:absolute;
-    bottom:10px;
-    right:10px;
-    display:none;
-    cursor:pointer;
-    line-height:20px;
-    text-align:center;
-    border:1px #ccc solid;
-}
+/*********************** About.CSS **********************/
 
 .expand { display:block;}
 .collapse { display:none;}
@@ -789,21 +779,21 @@ background:no-repeat 0 -40px url("/images/icons/contact.png");
 /******************* Gotop.CSS *******************/
 
 #gotop {
-    border:1px #ccc solid;
-    background-color:#81622D;
-    background: rgba(129,98,45,0.6);
+    color:#13382A;
+    font-size:80%;
+    background-color:#ECE8DB;
+    background:rgba(236,232,219,0.6);
     width:20px;
     height:60px;
     position:fixed;
     _position:absolute;
     bottom:10px;
     right:10px;
-    display:block;
+    display:none;
     cursor:pointer;
     line-height:20px;
     text-align:center;
-    color:#ffffff;
-    font-size:80%;
+    border:1px #ccc solid;
 }
 
 #gotop a {
@@ -873,37 +863,61 @@ left:-35px;
 overflow:hidden;
 }
 
-.music_frame {
-margin:20px 10px;
+/*.music_frame {
+margin:0 10px 20px;
 padding:0 0 0 5px;
 width:515px;
 border:1px solid #DEDEDE;
+}*/
+.music_frame {
+margin:0 10px 25px;
+padding:25px 0 0 5px;
+width:515px;
+position:relative;
+background:url("/images/icons/bk_post_header.png") 78px 0 no-repeat;
+/*border:1px solid #DEDEDE;*/
 }
 /*.music_frame:after {display:block;content:"";clear:both;}*/
-.m_f_title {
+.headphone {
+position:absolute;
+width:45px;
+height:45px;
+background:url("/images/icons/headphone.png") no-repeat;
+top:20px;
+left:5px;
+}
+
+/*.m_f_title {
 margin:0 0 10px;
 padding:0 0 0 50px;
 height:45px;
 background: url("/images/icons/headphone.png") no-repeat left top;
 border-bottom:1px solid #ccc;
 position:relative;
+}*/
+.m_f_title {
+background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
+padding:0 0 5px 50px;
+margin-bottom:0 0 10px;
+position:relative;
+height:45px;
 }
 
 .m_f_title h1 {
 margin:0;
-padding:5px 0 0 5px;
+padding:0 0 0 5px;
 font-size:18px;
 line-height:18px;
-border-left:1px solid #ccc;
+/*border-left:1px solid #ccc;*/
 }
 
 .m_f_title p {
 margin: 0;
-padding:2px 0 0 5px;
+padding:8px 0 2px 5px;
 font-size:10px;
-#height:22px;
+line-height:10px;
 color:#979797;
-border-left:1px solid #ccc;
+/*border-left:1px solid #ccc;*/
 }
 .m_f_mid {
 margin:10px auto;
@@ -923,7 +937,7 @@ padding:0;
 background: url("/images/icons/album_img.png") no-repeat 0 0 transparent;
 height: 160px;
 width: 210px;
-#border-right:1px solid #ccc;
+/*border-right:1px solid #ccc;*/
 }
 .album_imgbg img {
 margin:2px 0 0 2px;
@@ -962,10 +976,12 @@ border-bottom:none;
 }
 .music_abst {
 margin:0;
-padding:0;
+padding:0 0 20px 0;
 font-size:14px;
 line-height:1.8;
+background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
 }
+
 #post_wrapper .m_f_mid ul {
 margin:5px 0 0 0;
 padding:0;

@@ -51,6 +51,83 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;05,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a><a href="/blog/tags.html#数学" title="查看 数学 中的全部文章">数学&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/mathjax_in_jekyll.html">利用 MathJax 在 Jekyll 网页中插入 Tex/LaTex 数学公式</a></h1>
+  </header>
+  <section class="postText">
+    <p><a href="http://www.mathjax.org/" title="MathJax 官网">MathJax</a> 是一款基于 JavaScript 的开源数学公式显示引擎，利用它可在各种当下流行的浏览器中“完美”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>渲染并显示 LaTax、MathML 以及 AsciiMath 数学公式。</p>
+
+<p>但是，在 Jekyll 中使用 MathJax 时会出现严重问题，原因在于一些 LaTex 公式通常被作为 Markdown 标记处理从而影响公式的正常输出显示，因此需要一些特殊的配置。</p>
+
+<h2>配置并链接 MathJax 库</h2>
+
+<p>在<code>&lt;head&gt;</code>标签内添加如下代码：</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/x-mathjax-config&quot;</span><span class="o">&gt;</span>
+<span class="lineno"> 2</span>     <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+<span class="lineno"> 3</span>       <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
+<span class="lineno"> 4</span>         <span class="nx">skipTags</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="s1">&#39;noscript&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">]</span>
+<span class="lineno"> 5</span>       <span class="p">}</span>
+<span class="lineno"> 6</span>     <span class="p">});</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>     <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 9</span>         <span class="kd">var</span> <span class="nx">all</span> <span class="o">=</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">getAllJax</span><span class="p">(),</span> <span class="nx">i</span><span class="p">;</span>
+<span class="lineno">10</span>         <span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">all</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">11</span>             <span class="nx">all</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">SourceElement</span><span class="p">().</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">className</span> <span class="o">+=</span> <span class="s1">&#39; has-jax&#39;</span><span class="p">;</span>
+<span class="lineno">12</span>         <span class="p">}</span>
+<span class="lineno">13</span>     <span class="p">});</span>
+<span class="lineno">14</span> <span class="o">&lt;</span><span class="err">/script&gt;      </span>
+<span class="lineno">15</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+
+
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>完美是相对而言，其实 MathJax 对数学公式的控制还存在一些欠缺，比如控制公式的 CSS 样式。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+[......]
+    <p class="read-more"><a href="/blog/mathjax_in_jekyll.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Dec&nbsp;04,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/rdiscount.html">RDiscount - Markdown for Ruby</a></h1>
+  </header>
+  <section class="postText">
+    <p>RDiscount 是针对 Gruber 的 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 语法利用 C 语言开发的一款快速转换程序，可将由 Markdown 语法书写的文本转换为 HTML 格式文档。它使用 <a href="http://www.pell.portland.or.us/~orc/Code/discount/">Discount</a> 处理程序来完成转换工作，在保留原 Markdown 语法特性的基础上，又增加了许多有用的新特性。</p>
+
+<h2><a href="http://michelf.ca/projects/php-markdown/extra/#footnotes" title="php Markdown Extra - Footnotes">脚注</a></h2>
+
+<p>脚注由两部分构成：<strong>脚注标记</strong>和<strong>脚注内容</strong>，前者作为需进行脚注标注的文本的数字上标标记，后者则作为标注内容将以脚注列表的形式位于文档末尾处。</p>
+
+<pre><code>这是脚注示例[^1]。
+
+[^1]: 这是脚注内容。
+</code></pre>
+[......]
+    <p class="read-more"><a href="/blog/rdiscount.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Dec&nbsp;02,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 中的全部文章" rel="category">职场 & 工作</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#工作" title="查看 工作 中的全部文章">工作&nbsp;&nbsp;</a><a href="/blog/tags.html#职业" title="查看 职业 中的全部文章">职业&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Internet</span></div>
     <h1><a href="/blog/about_career.html">一位过来人对求职工作者的深刻建议</a></h1>
   </header>
@@ -212,50 +289,6 @@
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Sep&nbsp;28,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 中的全部文章" rel="category">人生 & 思考</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a><a href="/blog/tags.html#思考" title="查看 思考 中的全部文章">思考&nbsp;&nbsp;</a><a href="/blog/tags.html#生活" title="查看 生活 中的全部文章">生活&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/cherish_the_scenery_on_the_way.html">珍惜沿途的风景</a></h1>
-  </header>
-  <section class="postText">
-    <p style="text-align:center;"><img src="http://baige5117.u.qiniudn.com/20130928.jpg" height="338" width="450" alt="沿途的风景" /></p>
-
-<p>随着经济和科技的发展，我们的生活水准也在不断的变化，用一个常见的词，那就是日新月异。无论是在网络上还是平面媒体上，每天都可以看到经济数据的攀升、交通工具的提速等相关内容的报道，人们每天都在谈论着房子、股票、期货、基金，每天吃着麦当劳、肯德基，每天早出晚归，加班熬夜，以上这些似乎已经成了生活的主题。</p>
-
-<p>不要为明天忧虑，天上的飞鸟，不耕种也不收获，上天尚且要养活它；田野里的百合花，从不忧虑它能不能开花，是不是可以开得和其它一样美，但是它就自然的开花了，开得比所罗门皇冠上的珍珠还美。你呢，忧虑什么呢?人比飞鸟和百合花贵重多了，上帝会弃你不顾吗？</p>
-[......]
-    <p class="read-more"><a href="/blog/cherish_the_scenery_on_the_way.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Sep&nbsp;26,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 中的全部文章" rel="category">人生 & 思考</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#故事" title="查看 故事 中的全部文章">故事&nbsp;&nbsp;</a><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a><a href="/blog/tags.html#励志" title="查看 励志 中的全部文章">励志&nbsp;&nbsp;</a><a href="/blog/tags.html#事业" title="查看 事业 中的全部文章">事业&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/story_of_two_plumbers.html">两个管道工的故事</a></h1>
-  </header>
-  <section class="postText">
-    <p>很久很久以前，在意大利中部山谷的一个小村子里，住着两位年轻人，一个叫柏波罗，一个叫布鲁诺，他们是堂兄弟。两位年轻人从小就是要好的伙伴，都有雄心勃勃的梦想。</p>
-
-<p>他们常常没完没了地谈论，在某一天、通过某种方式，让自己可以成为村里最富有的人。他们都很聪明而且勤奋，他们所需要的只是机会。</p>
-
-<p>有一天，机会来了。村里决定要雇两个人把附近河里的水运到村广场的蓄水池里去。村长把这份工作交给了柏波罗和布鲁诺。两个人各抓起两只水桶奔向河边开始了他们辛勤的工作。当一天结束时，他们把村广场的蓄水池装满了。村长按每桶水一分钱付钱给他们。</p>
-
-<p>“我们的梦想终于实现了!” 布鲁诺大喊着，“我简直不敢相信我们的好运气”。</p>
-[......]
-    <p class="read-more"><a href="/blog/story_of_two_plumbers.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
   
@@ -355,7 +388,8 @@
 
 	  </section>
 	  <!-- End Main Content ( right col ) -->
-	  
+
+	  <!-- Begin Sidebar ( left col ) -->
 	  <aside id="sidebar">
   <!-- Begin Social Icons -->
   <section id="nav">
@@ -390,7 +424,7 @@
       </li>
       
       <li>
-	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(19)
+	<a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 下的所有文章">人生 & 思考</a>&nbsp;(20)
       </li>
       
       <li>
@@ -398,7 +432,7 @@
       </li>
       
       <li>
-	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(37)
+	<a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 下的所有文章">学习 & 提升</a>&nbsp;(38)
       </li>
       
       <li>
@@ -426,6 +460,7 @@
       <li><a href="/blog/how_to_change_your_life.html" title="如何改变你的生活">如何改变你的生活</a></li>
       <li><a href="/blog/5_search_command_in_linux.html" title="Linux 下五大搜索命令">Linux 下五大搜索命令</a></li>
       <li><a href="/blog/declaration_analysis_in_c.html" title="C 语言声明解析">C 语言声明解析</a></li>
+      <li><a href="/blog/how_to_be_a_hacker.html" title="如何成为一名黑客">如何成为一名黑客</a></li>
     </ul>
   </section>
   <section class="sideBox">
@@ -485,8 +520,18 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
-          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(9)</li>
+          <li><a href="/blog/archive.html#2013&nbsp;年&nbsp;12&nbsp;月" title="查看所有 2013&nbsp;年&nbsp;12&nbsp;月 的文章">2013&nbsp;年&nbsp;12&nbsp;月</a>&nbsp;&nbsp;(11)</li>
           
         
       
@@ -1146,7 +1191,7 @@
     
     <a href="/blog/tags.html#梦想" title="5">梦想</a>
     
-    <a href="/blog/tags.html#人生" title="23">人生</a>
+    <a href="/blog/tags.html#人生" title="24">人生</a>
     
     <a href="/blog/tags.html#健康" title="5">健康</a>
     
@@ -1276,6 +1321,12 @@
     
     <a href="/blog/tags.html#工具" title="1">工具</a>
     
+    <a href="/blog/tags.html#成长" title="1">成长</a>
+    
+    <a href="/blog/tags.html#交流" title="1">交流</a>
+    
+    <a href="/blog/tags.html#技巧" title="1">技巧</a>
+    
   </div>
   </section>
 
@@ -1290,11 +1341,12 @@
   </section>
 </aside>
 
+	  <!-- End Sidebar ( left col ) -->
 	</div>
       </div>
       <!-- End Content -->
       <footer id="page-footer">
-	<div id="site5bottom">By <br /><a href="/">Yinlai.Bai</a>.<br/>
+	<div id="site5bottom">By <br /><a href="/">Baige5117</a>.<br/>
 	</div>
       </footer>
     </div>
