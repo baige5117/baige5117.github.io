@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>利用 ImageMagick 和 Bash 脚本批量剪裁图片 | All For One</title>
+<title>利用 ImageMagick 和 Bash 脚本批量剪裁图片 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,9 +53,18 @@
   <section class="postText">
     <h2>任务描述</h2>
 
+
+
+
 <p>对某一个目录里面的所有图片文件进行剪裁，使得到的图片具有相同的尺寸。</p>
 
+
+
+
 <h2>脚本程序</h2>
+
+
+
 
 <div class="highlight"><pre><code class="bash"><span class="lineno">1</span>  <span class="c">#! /bin/bash </span>
 <span class="lineno">2</span>     
@@ -71,23 +80,52 @@
 <!--excerpt break-->
 
 
+
+
 <h2>程序解释</h2>
+
+
+
 
 <p>首先利用<code>ls</code>命令列出原始图片目录的所有文件名称，此时会得到一个文件名称列表，然后利用<code>for</code>循环逐个将列表中的文件名称赋值给循环变量<code>f</code>，此时<code>f</code>就代表原始图片目录中的图片文件。最后就是利用<code>ImageMagick</code>工具中的<code>convert</code>转换命令对每个图片文件进行剪切处理，并将其保存到剪切图片目录中，文件名称不变。</p>
 
+
+
+
 <p>程序中需要设置 4 个参数：<code>Width</code>-宽度像素值、<code>Height</code>-高度像素值、<code>X0</code>-偏离图片左上角点的横向位移、<code>Y0</code>-偏离图片左上角点的纵向位移。</p>
+
+
+
 
 <h2>注意事项</h2>
 
+
+
+
 <p>通过程序中的四个参数可以发现，每个图片都是以左上角点为参考点进行剪裁的，因此要求每张图片中的内容的分布都要一致。</p>
+
+
+
 
 <h2>应用举例</h2>
 
+
+
+
 <p>在扫描书籍时，扫描得到的图片中扫面背景要比实际的书籍内容大，因此需要将图片中多余的背景剪裁掉。</p>
+
+
+
 
 <p>例如在当前目录中的 Pictures 目录中存在 100 张大小为 1000x600 pixels 的图片，需要将其剪裁至大小为 800x500 pixels 的图片，并保存至当前目录中的 Crop 目录中。</p>
 
+
+
+
 <p>首先，在当前目录中创建 crop.sh 脚本文件并添加以下内容：</p>
+
+
+
 
 <div class="highlight"><pre><code class="bash"><span class="lineno">1</span>     <span class="c">#! /bin/bash </span>
 <span class="lineno">2</span>     
@@ -98,15 +136,27 @@
 </code></pre></div>
 
 
+
+
 <p>然后，添加可执行权限：</p>
+
+
+
 
 <pre><code># chmod +x crop.sh
 </code></pre>
 
+
+
+
 <p>最后，在终端中执行：</p>
+
+
+
 
 <pre><code># ./crop.sh Pictures Crop
 </code></pre>
+
 
   </section>
   <section class="postText">
@@ -1108,12 +1158,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

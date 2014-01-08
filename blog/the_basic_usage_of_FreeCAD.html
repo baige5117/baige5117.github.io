@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>FreeCAD 的使用 | All For One</title>
+<title>FreeCAD 的使用 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,80 +53,165 @@
   <section class="postText">
     <h2>FreeCAD 简介</h2>
 
+
+
+
 <p>FreeCAD 是一款参数化三维建模工具，其以参数化特征建模为核心功能，基于模块化的软件架构而实现，可在不改动系统核心的的前提下进行高级功能扩展和定制。其主要应用于机械工程与产品设计领域，当然也适用于诸如建筑等工程领域。</p>
+
+
+
 
 <p>FreeCAD 建立于强大的几何核心 OpenCasCade 之上，采用 Coin 3D 提供的与 Open Inventor 兼容的三维场景模型，并提供丰富的 Python 应用程序接口，其图形交互界面基于 Qt 实现。</p>
 
+
+
+
 <p>FreeCAD 也是一款开源软件，完全遵循 Open Source(GPL &amp; LGPL License)协议。而且完全跨平台使用，目前能够完美地在 Windows, Mac OS X 与 Linux 平台上运行且具有完全一致的用户交互界面和功能。</p>
 
+
+
+
 <p>但是，FC 仍然处于初级开发阶段，因此无法完成一些高级任务。尽管如此，对于一些初级操作以及那些想深入学习建模原理的用户，FC 还是值得学习和使用。</p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <p style="text-align:center;"><img src="/images/post/fc_complete.jpg" height="358" width="450" alt="FreeCAD主界面" /></p>
+
+
+
 
 <p style="text-align:center;">图 1 FreeCAD主界面</p>
 
+
+
+
 <h2>宏（Macros）</h2>
+
+
+
 
 <p>FreeCAD 中的宏，简单的说，就是由一系列操作命令组成的脚本文件，用户可以通过一个简单的宏文件就可以“一步”创作出一个复杂的操作。由于 FreeCAD 自身是由 Python 语言开发的，所以这里的宏文件当然也就是用 python 脚本语言编写的，python 命令再加上 FreeCAD 系统本身的 API 函数，就可以编制一些列复杂的操作。</p>
 
+
+
+
 <h3>制作宏</h3>
+
+
+
 
 <p>两种制作宏的方法：</p>
 
+
+
+
 <h4>1、录制宏：</h4>
+
+
+
 
 <p>在 FreeCAD 图形界面中，由鼠标和键盘等通过菜单命令、工具栏工具等来进行一系列操作，并将这一些列操作过程录制下来，从而制作出宏。</p>
 
+
+
+
 <p>录制宏操作的主要工具集中在宏工具栏中<img src="/images/post/fc_macro_01.jpg" alt="宏工具栏" class="pclean" title="宏工具栏"\>。从左向右依次为：录制(Record)，停止录制(Stop Recording)，编辑宏(Edit)，执行宏(Play)。操作很简单，首先点击“录制”按钮，输入宏名称，开始录制操作过程，然后在图形界面中进行一系列的操作，等操作结束，点击“停止录制”按钮结束宏录制，此时，宏文件就制作完成，此时可以打开“编辑宏”对话框，如图 2 所示，选择录制的宏，然后选择“Execute”执行宏操作。</p>
+
+
+
 
 <p style="text-align:center;"><img src="/images/post/fc_macros-02.png" height="372" width="352" alt="FreeCAD编辑宏对话框" /></p>
 
+
+
+
 <p style="text-align:center;">图2 宏编辑对话框</p>
+
+
+
 
 <p>FreeCAD 默认的宏文件目录为 HOME/.FreeCAD/ 目录，可以修改，修改方法为：在“编辑宏”对话框中的下方“Macro destination”中可以修改宏目录，此时打开一个目录选择对话框，不过其中只显示非隐藏目录，对于 FreeCAD 默认的目录来说无法选择，此时可以在对话框中间的空白处鼠标右键选择“show hidden files”即可查看并选择系统隐藏文件及目录。</p>
 
+
+
+
 <p>此方法简单快捷，但是不能制作出复杂的宏，比如自定义的一些复杂操作。</p>
+
+
+
 
 <h4>2、手动编写宏文件</h4>
 
+
+
+
 <p>利用 python 语句和 FreeCAD 系统中的 API 函数，按照 python 语法规则，编写符合要求的宏文件，即脚本文件。FreeCAD 默认的宏文件后缀名为 .FCMacro，但是后缀名也可是 .py，比如 file.py，但是在自定义宏命令时智能使用默认后缀名。</p>
+
+
+
 
 <h3>自定义宏命令</h3>
 
+
+
+
 <p>要想执行一个宏，首先得点击“编辑”按钮，在对话框中选择相应的宏文件，然后点击“Execute”按钮执行宏。此过程有点繁琐，可以通过自定义操作来创造一个宏的快捷键或显示在工具栏中的快捷图标来简化此操作。方法如下：</p>
+
+
+
 
 <p>首先得编写好一个宏文件，后缀必须为 .FCMacro，否则自定义中无法识别宏文件。菜单栏“Tools”-“Customize”，在“Macros”选项卡中分别选择相应的宏文件，添加菜单信息，提示信息等，并可以选择按钮图标（可以自己制作一个svg格式的矢量图），如图 3 所示。添加完相关信息之后点击“Add”即可添加一个宏命令，如图 4 所示：</p>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/fc_macros-03.png" height="317" width="450" alt="FreeCAD自定义宏命令" /></p>
+
+
+
 
 <p style="text-align:center;">图3 自定义宏对话框 1</p>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/fc_macros-04.png" height="317" width="450" alt="FreeCAD自定义宏命令" /></p>
+
+
+
 
 <p style="text-align:center;">图4 自定义宏对话框 2</p>
 
+
+
+
 <p>然后需要将此宏命令添加到工具栏中。在“Toolbars”选项卡中，先在左边的下拉列表中选择“Macros”（注意：是“Macros”而不是“Macro”），此时会出现刚添加的宏命令，选择此宏命令；然后在右边的下拉菜单中选择一个工作空间，比如“Start”，如果以前没有新建过自定义工具栏，则此时没有可以选择的工具栏，如图 5 所示，那么就需要首先新建一个工具栏“New&hellip;”，然后选择新建的工具栏（如果工具栏前面有个加号表示此工具栏已经有工具命令了，需要点击加号打开工具栏），然后点击中间的“右向箭头按钮”将左侧的宏命令添加到自定义的工具栏中，如图 6 所示：</p>
 
-<p style="text-align:center;"><img src="/images/post/fc_macros-05.png" height="317" width="450" alt="FreeCAD自定义宏命令工具栏" /><-
-->图5 自定义宏工具栏 1</p>
 
-<p style="text-align:center;"><img src="/images/post/fc_macros-06.png" height="317" width="450" alt="FreeCAD自定义宏命令工具栏" /></p>
 
-<p style="text-align:center;">图6 自定义宏工具栏 2</p>
 
-<p>OK，任务完成，需要重新启动相应的工作空间才可生效。当然也可以将需要的一些工具添加到此自定义工具栏中，比如测量工具。最终生成的自定义工具栏为：<img src="/images/post/fc_macros-07.jpg" alt="自定义宏工具栏" class="pclean" title="自定义宏工具栏"\>。</p>
+<p><p style="text-align:center;"><img src="/images/post/fc_macros-05.png" height="317" width="450" alt="FreeCAD自定义宏命令工具栏" /><-
+->图5 自定义宏工具栏 1</p></p>
 
-<p>这样当开启 FreeCAD 后在相应的工作空间的工具栏中就可以发现自定义的一个宏命令了，点击一下就可以运行宏文件做相应的操作了。</p>
+<p><p style="text-align:center;"><img src="/images/post/fc_macros-06.png" height="317" width="450" alt="FreeCAD自定义宏命令工具栏" /></p></p>
 
-<h2>参考链接</h2>
+<p><p style="text-align:center;">图6 自定义宏工具栏 2</p></p>
 
-<ul>
+<p><p>OK，任务完成，需要重新启动相应的工作空间才可生效。当然也可以将需要的一些工具添加到此自定义工具栏中，比如测量工具。最终生成的自定义工具栏为：<img src="/images/post/fc_macros-07.jpg" alt="自定义宏工具栏" class="pclean" title="自定义宏工具栏"\>。</p></p>
+
+<p><p>这样当开启 FreeCAD 后在相应的工作空间的工具栏中就可以发现自定义的一个宏命令了，点击一下就可以运行宏文件做相应的操作了。</p></p>
+
+<p><h2>参考链接</h2></p>
+
+<p><ul>
 <li><a href="http://www.freecadweb.org/wiki/index.php?title=Macros">FreeCAD 官方网站</a></li>
-</ul>
-
+</ul></p>
 
   </section>
   <section class="postText">
@@ -1128,12 +1213,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

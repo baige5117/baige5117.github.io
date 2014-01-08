@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>HTML/CSS 两端对齐 | All For One</title>
+<title>HTML/CSS 两端对齐 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,15 +53,30 @@
   <section class="postText">
     <h3>文本两端对齐</h3>
 
+
+
+
 <p>可使用以下代码使文本两端对齐：</p>
+
+
+
 
 <pre><code>text-align: justify;
 text-justify: inter-ideograph;
 </code></pre>
 
+
+
+
 <p>使用这两行 CSS 代码可以使文本中的英文文本实现完美两端对齐，但是对于中文文本有条件性限制：<b>中文中所使用的标点必须全部为英文标点（也即半角符号标点），或者可以使用全角符号标点，但是在中文文本中的英文字符必须使用全角字符。</b></p>
 
+
+
+
 <p>比如说，以下这段文本使用了中文全角标点符号，而其中的英文也为正常状态下的半角字符，则使用以上代码后没能实现两端对齐，效果如下：</p>
+
+
+
 
 <div style="margin:1em 2em;border:1px solid black;background:#F5FFEB;overflow: auto;">
 <p style="padding:0;text-align: justify;text-justify: inter-ideograph;">大家好，我叫Baige5117，来自中国。我很喜欢篮球（Basketball），非常喜欢看NBA（美国男子篮球职业联赛）。喜欢的球星有迈克乔丹（Michael Jordan），科比（Kobe Bryant），麦迪（Tracy McGrady）等。我也经常打篮球，技术一流，希望能提高，哈哈。大家好，我叫Baige5117，来自中国。我很喜欢篮球（Basketball），非常喜欢看NBA（美国男子篮球职业联赛）。喜欢的球星有迈克乔丹（Michael Jordan），科比（Kobe Bryant），麦迪（Tracy McGrady）等。我也经常打篮球，技术一流，希望能提高，哈哈。</p>
@@ -73,21 +88,34 @@ text-justify: inter-ideograph;
 <!--excerpt break-->
 
 
+
+
 <p>而以下的文本使用了半角标点符号，从而实现了两端对齐：</p>
+
+
+
 
 <div style="margin:1em 2em;border:1px solid black;background:#F5FFEB;overflow: auto;">
 <p style="padding:0;text-align: justify;text-justify: inter-ideograph;">大家好, 我叫Baige5117, 来自中国. 我很喜欢篮球(Basketball), 非常喜欢看NBA(美国男子篮球职业联赛). 喜欢的球星有迈克乔丹（Michael Jordan），科比（Kobe Bryant），麦迪（Tracy McGrady）等. 我也经常打篮球, 技术一流, 希望能提高, 哈哈. 大家好, 我叫Baige5117, 来自中国. 我很喜欢篮球(Basketball), 非常喜欢看NBA(美国男子篮球职业联赛). 喜欢的球星有迈克乔丹（Michael Jordan），科比（Kobe Bryant），麦迪（Tracy McGrady）等. 我也经常打篮球, 技术一流, 希望能提高, 哈哈.</p>
 </div>
 
 
+
+
 <p>以下的文本使用了全角英文符号和全角的标点符号，也能实现两端对齐，但是使用全角的英文字符明显不太现实（太难看了）：</p>
+
+
+
 
 <div style="margin:1em 2em;border:1px solid black;background:#F5FFEB;overflow: auto;">
 <p style="padding:0;text-align: justify;text-justify: inter-ideograph;">大家好，我叫Ｂａｉｇｅ５１１７，来自中国。我很喜欢篮球（Ｂａｓｋｅｔｂａｌｌ），非常喜欢看ＮＢＡ（美国男子篮球职业联赛）。喜欢的球星有迈克乔丹（Ｍｉｃｈａｅｌ　Ｊｏｒｄａｎ），科比（Ｋｏｂｅ　Ｂｒｙａｎｔ），麦迪（Ｔｒａｃｙ　ＭｃＧｒａｄｙ）等。我也经常打篮球，技术一流，希望能提高，哈哈。大家好，我叫Ｂａｉｇｅ５１１７，来自中国。我很喜欢篮球（Ｂａｓｋｅｔｂａｌｌ），非常喜欢看ＮＢＡ（美国男子篮球职业联赛）。喜欢的球星有迈克乔丹（Ｍｉｃｈａｅｌ　Ｊｏｒｄａｎ），科比（Ｋｏｂｅ　Ｂｒｙａｎｔ），麦迪（Ｔｒａｃｙ　ＭｃＧｒａｄｙ）等。我也经常打篮球，技术一流，希望能提高，哈哈。</p>
 </div>
 
 
+
+
 <p>综上所述，<b>中文文本使用英文字符显然不合适，而英文字符使用全角字符也明显不现实，故要想真正实现中英文混合文本的两端对齐还无法完美实现。所以，暂且还是不使用两端对齐了。</b></p>
+
 
   </section>
   <section class="postText">
@@ -1089,12 +1117,12 @@ text-justify: inter-ideograph;
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

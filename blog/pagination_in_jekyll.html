@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>Jekyll 博客分页显示 | All For One</title>
+<title>Jekyll 博客分页显示 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,19 +53,40 @@
   <section class="postText">
     <p>对于许多网站尤其是博客而言，把所有内容显示在一个页面内，将严重影响网页显示效果，降低用户的阅读体验，而且还显得不够专业。因此，内容的分页显示非常重要。</p>
 
+
+
+
 <p>Jekyll 内置分页功能，利用 Jekyll 构建静态站点可以很方便完成分页显示。</p>
 
+
+
+
 <p>首先，需要在配置文件 <em>_config.yml</em> 中设置每页显示的博文条目数目:</p>
+
+
+
 
 <pre><code>paginate: 5
 </code></pre>
 
+
+
+
 <p>根据需要设置分页所在路径：</p>
+
+
+
 
 <pre><code>paginate_path: "blog/page:num"
 </code></pre>
 
+
+
+
 <p>然后，利用 <code>paginator</code> liquid 对象获取并显示分页相关信息。<code>paginator</code> 具有以下属性：</p>
+
+
+
 
 <ul>
 <li><code>page</code>：当前页页码</li>
@@ -80,47 +101,36 @@
 </ul>
 
 
+
+
 <!--excerpt break-->
+
+
 
 
 <p>最后，分页显示的代码如下：</p>
 
-<pre><code>  {% for post in paginator.posts %}
-  &lt;h1&gt;&lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;&lt;/h1&gt;
-  &lt;p class="author"&gt;&lt;span class="date"&gt;{{ post.date }}&lt;/span&gt;&lt;/p&gt;
-  &lt;div class="content"&gt;
-    {{ post.content }}
-  &lt;/div&gt;
-  {% endfor %}
+
+
+
+<pre><code>  
 
   &lt;div class="pagination"&gt;
-  {% if paginator.previous_page %}
-  {% if paginator.previous_page == 1 %}
-  &lt;a href="/"&gt;&amp;#171;&lt;/a&gt;
-  {% else %}
-  &lt;a href="/blog/page{{paginator.previous_page}}" title="前一页"&gt;&amp;#171;&lt;/a&gt;
-  {% endif %}
-  {% endif %}
+  
 
-  {% for count in (1..paginator.total_pages) %}
-  {% if count == paginator.page %}
-  &lt;span class="current"&gt;{{count}}&lt;/span&gt;
-  {% else %}
-  {% if count == 1 %}
-  &lt;a href="/"&gt;{{count}}&lt;/a&gt;
-  {% else %}
-  &lt;a href="/blog/page{{count}}"&gt;{{count}}&lt;/a&gt;
-  {% endif %}
-  {% endif %}
-  {% endfor %}
+  
 
-  {% if paginator.next_page %}
-  &lt;a href="/blog/page{{paginator.next_page}}" title="后一页"&gt;&amp;#187;&lt;/a&gt;
-  {% endif %}
+  
   &lt;/div&gt;
 </code></pre>
 
+
+
+
 <p>相关的 CSS 样式为：</p>
+
+
+
 
 <pre><code>.pagination {
     overflow:hidden;
@@ -145,44 +155,50 @@
 }
 </code></pre>
 
+
+
+
 <p>显示效果如下图所示：</p>
+
+
+
 
 <p style="text-align:center;"><img src="/images/post/pagination-1.png" height="630" width="450" alt="分页显示效果图-第一页" /></p>
 
+
+
+
 <p>另一种页面导航代码如下：</p>
 
+
+
+
 <pre><code>  &lt;div class="pagination"&gt;
-  {% if paginator.page == 1 %}
-    &lt;p&gt;&amp;laquo; 首页&lt;/p&gt;
-  {% else %}
+  
     &lt;a href="/"&gt;&amp;laquo; 首页&lt;/a&gt;
-  {% endif %}
+  
 
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      &lt;a href="/"&gt;&amp;lsaquo; 前一页&lt;/a&gt;
-    {% else %}
-      &lt;a href="/blog/page{{paginator.previous_page}}"&gt;&amp;lsaquo; 前一页&lt;/a&gt;
-    {% endif %}
-  {% else %}
+  
     &lt;p&gt;&amp;lsaquo; 前一页&lt;/p&gt;
-  {% endif %}
+  
 
-  {% if paginator.next_page %}
-    &lt;a href="/blog/page{{paginator.next_page}}"&gt;后一页 &amp;rsaquo;&lt;/a&gt;
-  {% else %}
+  
     &lt;p&gt;后一页 &amp;rsaquo;&lt;/p&gt;
-  {% endif %}
+  
 
-  {% if paginator.page == paginator.total_pages %}
+  
     &lt;p&gt;末页 &amp;raquo;&lt;/p&gt;
-  {% else %}
-    &lt;a href="/blog/page{{paginator.total_pages}}"&gt;末页 &amp;raquo;&lt;/a&gt;
-  {% endif %}
+  
   &lt;/div&gt;
 </code></pre>
 
+
+
+
 <p>相关的 CSS 样式为：</p>
+
+
+
 
 <pre><code>.pagination {
     margin:0 auto;
@@ -213,11 +229,21 @@
 .pagination p {background-color:#ccc;}
 </code></pre>
 
+
+
+
 <p>显示效果如下图所示：</p>
+
+
+
 
 <p style="text-align:center;"><img src="/images/post/pagination-2.png" height="524" width="450" alt="分页显示效果图-第一页" /></p>
 
+
+
+
 <p>参考资料：<a href="http://jekyllrb.com/docs/pagination/">Jekyll: Pagination</a></p>
+
 
   </section>
   <section class="postText">
@@ -1219,12 +1245,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

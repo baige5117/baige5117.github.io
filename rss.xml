@@ -1,0 +1,2227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>All For One - Baige5117's Personal Blog</title>
+    <link>http://baige5117.github.io</link>
+    <description>Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting.</description>
+    <copyright>Copyright &amp;#169; 2011-2013 | Design &amp;#38; Content by &lt;a href=&quot;/index.html&quot;&gt;Baige5117&lt;/a&gt; | Powered by &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;jekyll&lt;/a&gt; hosted by &lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; | All Rights Reserved</copyright>
+    <pubDate>Mon, 06 Jan 2014 00:00:00 +0800</pubDate>
+    <item>
+      <title>Jekyll 博客分页显示</title>
+      <link>http://baige5117.github.io/blog/pagination_in_jekyll.html</link>
+      <description>&lt;p&gt;对于许多网站尤其是博客而言，把所有内容显示在一个页面内，将严重影响网页显示效果，降低用户的阅读体验，而且还显得不够专业。因此，内容的分页显示非常重要。&lt;/p&gt;
+
+&lt;p&gt;Jekyll 内置分页功能，利用 Jekyll 构建静态站点可以很方便完成分页显示。&lt;/p&gt;
+
+&lt;p&gt;首先，需要在配置文件 &lt;em&gt;_config.yml&lt;/em&gt; 中设置每页显示的博文条目数目:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;paginate: 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;根据需要设置分页所在路径：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;paginate_path: &quot;blog/page:num&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后，利用 &lt;code&gt;paginator&lt;/code&gt; liquid 对象获取并显示分页相关信息。&lt;code&gt;paginator&lt;/code&gt; 具有以下属性：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;page&lt;/code&gt;：当前页页码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;per_page&lt;/code&gt;：每页的文章数目&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;posts&lt;/code&gt;：当前页的文章列表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;total_posts&lt;/code&gt;：所有文章的数目&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;total_pages&lt;/code&gt;：分页数目&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;previous_page&lt;/code&gt;：当前页的前一页页码，如果没有前一页的话为 &lt;code&gt;nil&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;previous_page_path&lt;/code&gt;：当前页的前一页的路径，如果没有前一页的话为 &lt;code&gt;nil&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next_page&lt;/code&gt;：当前页的后一页页码，如果没有后一页的话为 &lt;code&gt;nil&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next_page_path&lt;/code&gt;：当前页的后一页的路径，如果没有后一页的话为 &lt;code&gt;nil&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      <pubDate>Mon, 06 Jan 2014 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/pagination_in_jekyll.html</guid>
+      <dc:date>2014-01-06T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Loser 应该知道的 6 个残酷人生事实</title>
+      <link>http://baige5117.github.io/blog/6_harsh_truths_that_will_make_you_a_better_person.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20140104.jpg&quot; height=&quot;200&quot; width=&quot;450&quot; alt=&quot;Loser 应该知道的 6 个残酷人生事实&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你的职业道路非常顺利，你的生活美满感情顺利，你可以不用读这篇文章。祝你一天愉快，这篇文章不是为你写的。你做的非常出色，我们都为你自豪。&lt;/p&gt;
+
+&lt;p&gt;对于其余的人来说，我希望你做一件事情：说出 5 件你引以为豪的事情。写在纸上也好，或者喊出来也好都可以。但这里有一个条件：你不可以列出你“是”怎样的人（比如，我是一个温柔的人，我很诚实），只能列出你“做”的事情（比如，我刚获得了全国象棋冠军，我做的 chili 是全麻省最好的）。如果你发现很难列出五件事情，这篇文章就是为你所写的。而且你他妈的肯定一边听一边心里会不舒服。我的感受是，如果有人在 1995 年的时候跟我讲这些事情就好了。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 04 Jan 2014 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/6_harsh_truths_that_will_make_you_a_better_person.html</guid>
+      <dc:date>2014-01-04T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>五年之后你在何方？</title>
+      <link>http://baige5117.github.io/blog/what_you_are_doing_in_5_years.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20131231.jpg&quot; height=&quot;337&quot; width=&quot;450&quot; alt=&quot;五年之后你在何方？&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一九七六年的冬天，当时我十九岁，在休斯顿太空总署的大空梭实验室里工作，同时也在总署旁边的休斯顿大学主修电脑。纵然忙于学校、睡眠与工作之间，这几乎占据了我一天二十四小时的全部时间，但只要有多余的一分钟，我总是会把所有的精力放在我的音乐创作上。&lt;/p&gt;
+
+&lt;p&gt;我知道写歌词不是我的专长，所以在这段日子里，我处处寻找一位善写歌、词的搭档，与我一起合作创作。我认识了一位朋友，她的名字叫凡內芮（Valerie Johnson）。自从二十多年前离开德州后，就再也没听过她的消息，但是她却在我事业的起步时，给了我最大的鼓励。仅十九岁的凡內芮在德州的诗词比赛中，不知得过多少奖牌。她的写作总是让我爱不释手，当时我们的确合写了许多很好的作品，一直到今天，我仍然认为这些作品充满了特色与创意。&lt;/p&gt;
+
+&lt;p&gt;一个星期六的周末，凡內芮又热情地邀请我至她家的牧场烤肉。她的家族是德州有名的石油大亨，拥有庞大的牧场。她的家庭虽然极为富有，但她的穿着、所开的车、与她谦诚待人的态度，更让我加倍地打从心底佩服她。凡內芮知道我对音乐的执着。然而，面对那遥远的音乐界及整个美国陌生的唱片市场，我们一点管道都没有。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/what_you_are_doing_in_5_years.html</guid>
+      <dc:date>2013-12-31T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>提问的智慧</title>
+      <link>http://baige5117.github.io/blog/how_to_ask_questions_the_smart_way.html</link>
+      <description>&lt;h2&gt;目录&lt;/h2&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href=&quot;#s1&quot;&gt;译文&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s2&quot;&gt;弃权申明&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s3&quot;&gt;引言&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s4&quot;&gt;提问前&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s5&quot;&gt;提问时&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-1&quot;&gt;仔细挑选论坛&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-2&quot;&gt;面向新手的论坛和互联网中继聊天（IRC）通常响应最快&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-3&quot;&gt;第二步，使用项目的邮件列表&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-4&quot;&gt;使用有意义且明确的主题&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-5&quot;&gt;使问题容易回复&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-6&quot;&gt;用清晰、语法、拼写正确的语句书写&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-7&quot;&gt;使用易于读取且标准的文件格式发送问题&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-8&quot;&gt;描述问题应准确且有内容&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-9&quot;&gt;量不在多，精炼则灵&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-10&quot;&gt;别急于宣称找到臭虫&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-11&quot;&gt;低声下气代替不了做自己的家庭作业&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-12&quot;&gt;描述问题症状而不是猜测&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-13&quot;&gt;按时间先后罗列问题症状&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-14&quot;&gt;描述目标而不是过程&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-15&quot;&gt;别要求私下回复电邮&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-16&quot;&gt;提问应明确&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-17&quot;&gt;关于代码的问题&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-18&quot;&gt;别张贴家庭作业式问题&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-19&quot;&gt;删除无意义的要求&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-20&quot;&gt;不要把问题标记为“紧急”， 即使对你而言的确如此&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-21&quot;&gt;礼貌总是有益的&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-22&quot;&gt;问题解决后追加一条简要说明&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;a href=&quot;#s6&quot;&gt;如何解读回答&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&quot;#s6-1&quot;&gt;“读读该死的手册”（RTFM）和“搜搜该死的网络”（STFW）：如何明白你已完全搞砸&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s6-2&quot;&gt;如果还不明白……&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s6-3&quot;&gt;对待无礼&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;a href=&quot;#s7&quot;&gt;别象失败者那样反应&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s8&quot;&gt;提问禁忌&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s9&quot;&gt;好问题与坏问题&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s10&quot;&gt;如果得不到回答&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s11&quot;&gt;如何更好地回答&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s12&quot;&gt;相关资源&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s13&quot;&gt;鸣谢&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s14&quot;&gt;作者与版权&lt;/a&gt;&lt;/dt&gt;
+&lt;/dl&gt;
+
+
+
+</description>
+      <pubDate>Sat, 28 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_ask_questions_the_smart_way.html</guid>
+      <dc:date>2013-12-28T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>人不成熟的六个特征</title>
+      <link>http://baige5117.github.io/blog/six_features_of_immature.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20131227.jpg&quot; height=&quot;300&quot; width=&quot;450&quot; alt=&quot;人不成熟的六个特征&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;人不成熟的第一个特征：就是立即要回报&lt;/h2&gt;
+
+&lt;p&gt;他不懂得只有春天播种，秋天才会收获。很多人在做任何事情的时候，刚刚付出一点点，马上就要得到回报。（学钢琴，学英语等等，刚开始就觉得难，发现不行，立即就要放弃。）很多人做生意，开始没有什么成绩，就想着要放弃，有的人一个月放弃，有的人三个月放弃，有的人半年放弃，有的人一年放弃，我不明白人们为什么轻易放弃，但是我知道，放弃是一种习惯，一种典型失败者的习惯。所以说你要有眼光，要看得更远一些，眼光是用来看未来的！&lt;/p&gt;
+
+&lt;p&gt;对在生活中有放弃习惯的人，有一句话一定要送给你：＂成功者永不放弃，放弃者永不成功＂。那为什么很多的人做事容易放弃呢？美国著名成功学大师拿破仑希尔说过:&lt;/p&gt;
+
+&lt;p&gt;穷人有两个非常典型的心态：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;永远对机会说：“不”；&lt;/li&gt;
+&lt;li&gt;总想 “一夜暴富”。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      <pubDate>Fri, 27 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/six_features_of_immature.html</guid>
+      <dc:date>2013-12-27T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>有限单元法简介</title>
+      <link>http://baige5117.github.io/blog/the_finite_element_method_introduction.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20131221.jpg&quot; height=&quot;250&quot; width=&quot;450&quot; alt=&quot;有限单元法简介&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;什么是有限单元法?&lt;/h2&gt;
+
+&lt;p&gt;有限单元法是一种解决工程和数学物理问题的&lt;strong&gt;数值计算方法&lt;/strong&gt;。可用有限元法解决的有关工程和数学物理领域内的典型问题包括结构分析、热传导、流体流动、质量传输和电磁电位等。&lt;/p&gt;
+
+&lt;h2&gt;为什么要使用有限单元法?&lt;/h2&gt;
+
+&lt;p&gt;工程数学问题中的解可分为解析解和数值解。解析解（又称为闭式解）指能够以数学表达式直接表示的解，通常包含一些严格的数学公式，比如有理分式、三角函数、指数等基本函数，一般针对的是整个求解域，给出求解域中任意位置的自变量就可求出其因变量,也就是问题的解，因此任意位置的解都是准确可靠的。但是，解析解通常要求解常微分方程或偏微分方程，仅适合一些比较简单的问题，当所研究问题比较复杂时，只能利用数值计算方法得到数值解，而且通过适当的方法可将数值解完全控制在允许误差范围之内，完全能够满足实际工程问题的应用需求。另一方面，数值解的离散方法使得计算机求解复杂问题成为可能，极大地提高了问题的求解效率。&lt;/p&gt;
+
+&lt;p&gt;工程结构中的问题往往都比较复杂，比如结构的几何形状、载荷、材料特性等，因此只能利用数值法计算求解，而有限元法就是这样一种数值计算方法。有限单元法解决问题是要求解联立代数方程组，而不是求解常微分方程或偏微分方程。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 21 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/the_finite_element_method_introduction.html</guid>
+      <dc:date>2013-12-21T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>程序设计中内存泄露检测方法</title>
+      <link>http://baige5117.github.io/blog/memory_leakage_trace.html</link>
+      <description>&lt;p&gt;内存泄露为计算机的专业用词，指由于疏忽或错误造成程序未能释放已经不再使用的内存的情况。内存泄漏并非指内存在物理上的消失，而是应用程序分配某段内存后，由于设计错误，失去了对该段内存的控制，因而造成了内存的浪费。&lt;/p&gt;
+
+&lt;p&gt;内存泄漏会因为减少可用内存的数量从而降低计算机的性能，最终，在最糟糕的情况下，过多的可用内存被分配掉导致全部或部分设备停止正常工作，或者应用程序崩溃。&lt;/p&gt;
+
+&lt;p&gt;因此，在程序设计过程中一定要注意内存的管理，尽量从源头上减少内存泄露的发生，而且也要及时利用相关方法和工具对内存使用进行检测，以改善程序的性能。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 20 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/memory_leakage_trace.html</guid>
+      <dc:date>2013-12-20T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>把自己当成打工的，一辈子都是打工的</title>
+      <link>http://baige5117.github.io/blog/donot_work_as_a_employee.html</link>
+      <description>&lt;p&gt;我觉得有的人对创业的理解有误区。他们把创业理解成几个哥们开一个公司，回去印几盒名片，我叫董事局主席，你叫首席执行官，自己的同学脖子上都挂上个CXO，名字很洋气，也不知道什么意思。如果把这个理解为创业就大错特错。&lt;/p&gt;
+
+&lt;p&gt;我希望大家这样来理解创业，把创业看成是一种心态，为了实现一个目标，孜孜不倦的去追求。只要你不满足于现状，想法设法去突破，那就是 创业。如果你是一个在校学生，是搞电脑，如果你不满足于只是把学分学好，不满足于把考试应付好，而是花了很多时间提高你的编程能力，下了很大功夫来研究很 多软件，那这也是创业。学习是这样，工作也是这样，只要你勇敢的正视问题，积极的去解决问题，敢于去承担未来的风险，这其实就是创业心态。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 18 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/donot_work_as_a_employee.html</guid>
+      <dc:date>2013-12-18T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>给那些仍旧在公司混日子的人</title>
+      <link>http://baige5117.github.io/blog/to_people_who_muddle_along.html</link>
+      <description>&lt;p&gt;网上有热心的朋友帮我整理了一个交流谈话，我已经记不得具体是什么时候在什么场合讲的，但都是至今我想对一些朋友说的真心话：你混日子，就是日子混你，你自己是输家。&lt;/p&gt;
+
+&lt;p&gt;1、我自己当年，无论我在方正给国家打工，还是我在雅虎给外国人打工，我都跟别人最大的不一样，我从来不觉得我在给他们打工，我真的可能是很有自信的人，我觉得我在为自己干。因为我干任何一件事我首先考虑的是，我通过干这件事我能学到什么东西，学到的东西是别人剥夺不走的，客观上可能给公司创造了价值。&lt;/p&gt;
+
+&lt;p&gt;2、一件事交给我我应付一下，很容易应付，应付完了之后不觉得是在浪费生命吗？一件事你可以把它做到60分，你可以做的很轻松，做完了你每天重复每天干三个小时活就完了，然后你天天上班没事，然后你回家三十亩地一头牛老婆孩子热炕头，但你怎么进步呢？人的进步离开了学校之后，学习不再是上课也不是读书，通过你在工作中通过你做事情做项目积累自己的经验，跟很多人打交道。因为我有不服输的性格，再普通的事我要做的比别人好，大家做的很普通我要做的跟大家不一样，要做到超出大家想象要花很多时间很多努力，但我最后发现我的收获最大的，因为我下了功夫，你的收获和你的投入是成正比的。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/to_people_who_muddle_along.html</guid>
+      <dc:date>2013-12-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>苹果入职信：你会热爱你的工作</title>
+      <link>http://baige5117.github.io/blog/you_will_love_your_work.html</link>
+      <description>&lt;p&gt;There&amp;rsquo;s work and there&amp;rsquo;s your life&amp;rsquo;s work.&lt;/p&gt;
+
+&lt;p&gt;The kind of work that has your fingerprints all over it. The kind of work that you&amp;rsquo;d never compromise on. That you&amp;rsquo;d sacrifice a weekend for. You can do that kind of work at Apple . People don&amp;rsquo;t come here to play it safe. They come here to swim in the deep end.&lt;/p&gt;
+
+&lt;p&gt;They want their work to add up to something.&lt;/p&gt;
+
+&lt;p&gt;Something big. Something that couldn&amp;rsquo;t happen anywhere else.&lt;/p&gt;
+
+&lt;p&gt;Welcome to Apple.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 16 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/you_will_love_your_work.html</guid>
+      <dc:date>2013-12-16T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>为啥是我得癌症？</title>
+      <link>http://baige5117.github.io/blog/why_i_got_the_cancer.html</link>
+      <description>&lt;p&gt;病房里无论再热闹开心的场面，此言一出，气氛会在一秒钟内变得死寂凝重，一秒后，便有阿姨抽抽搭搭地暗自涕泪，有阿姨哭天喊痛骂老天瞎眼，有阿姨捶着胸指着天花板信誓旦旦平素没有做过亏心事为啥有如此报应。有几个病人算几个病人，没有一个能面对这个直捅心窝子的话题。&lt;/p&gt;
+
+&lt;p&gt;除了我。&lt;/p&gt;
+
+&lt;p&gt;我从来不去想这个问题，既然病患已然在身，恶毒诅咒也好，悔过自新也好，都不可能改变我是得了癌症的事实，更不可能瞬间把我的乳腺癌像转汇外币一样转到其它地方去。我能为力而又让我倍感伤怀的事情，我索性不去想。&lt;/p&gt;
+
+&lt;p&gt;时隔一年，几经生死，我可以坐在桌边打字，我觉得是我思考这个问题的时候了，客观科学，不带任何感情色彩地去分析总结一下，为啥是我得癌症。做这件事对我并无任何意义，但是对周围的人可能会起到防微杜渐的作用。我在癌症里整整挣扎了一年，人间极刑般的苦痛，身心已经摧残到无可摧残，我不想看到这件事在任何一个人身上发生，但凡是人，我都要去帮他们去避免，哪怕是我最为憎恨讨厌的人。&lt;/p&gt;
+</description>
+      <pubDate>Sun, 15 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/why_i_got_the_cancer.html</guid>
+      <dc:date>2013-12-15T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>利用 MathJax 在 Jekyll 网页中插入 Tex/LaTex 数学公式</title>
+      <link>http://baige5117.github.io/blog/mathjax_in_jekyll.html</link>
+      <description>&lt;p&gt;&lt;a href=&quot;http://www.mathjax.org/&quot; title=&quot;MathJax 官网&quot;&gt;MathJax&lt;/a&gt; 是一款基于 JavaScript 的开源数学公式显示引擎，利用它可在各种当下流行的浏览器中“完美”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;渲染并显示 LaTax、MathML 以及 AsciiMath 数学公式。&lt;/p&gt;
+
+&lt;p&gt;但是，在 Jekyll 中使用 MathJax 时会出现严重问题，原因在于一些 LaTex 公式通常被作为 Markdown 标记处理从而影响公式的正常输出显示，因此需要一些特殊的配置。&lt;/p&gt;
+
+&lt;h2&gt;配置并链接 MathJax 库&lt;/h2&gt;
+
+&lt;p&gt;在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;标签内添加如下代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text/x-mathjax-config&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;MathJax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;nx&quot;&gt;tex2jax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;         &lt;span class=&quot;nx&quot;&gt;skipTags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;noscript&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;textarea&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;pre&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;MathJax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MathJax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAllJax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;             &lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SourceElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39; has-jax&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;      &lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn:1&quot;&gt;
+&lt;p&gt;完美是相对而言，其实 MathJax 对数学公式的控制还存在一些欠缺，比如控制公式的 CSS 样式。&lt;a href=&quot;#fnref:1&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+
+</description>
+      <pubDate>Thu, 05 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/mathjax_in_jekyll.html</guid>
+      <dc:date>2013-12-05T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>RDiscount - Markdown for Ruby</title>
+      <link>http://baige5117.github.io/blog/rdiscount.html</link>
+      <description>&lt;p&gt;RDiscount 是针对 Gruber 的 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; 语法利用 C 语言开发的一款快速转换程序，可将由 Markdown 语法书写的文本转换为 HTML 格式文档。它使用 &lt;a href=&quot;http://www.pell.portland.or.us/~orc/Code/discount/&quot;&gt;Discount&lt;/a&gt; 处理程序来完成转换工作，在保留原 Markdown 语法特性的基础上，又增加了许多有用的新特性。&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://michelf.ca/projects/php-markdown/extra/#footnotes&quot; title=&quot;php Markdown Extra - Footnotes&quot;&gt;脚注&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;脚注由两部分构成：&lt;strong&gt;脚注标记&lt;/strong&gt;和&lt;strong&gt;脚注内容&lt;/strong&gt;，前者作为需进行脚注标注的文本的数字上标标记，后者则作为标注内容将以脚注列表的形式位于文档末尾处。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;这是脚注示例[^1]。
+
+[^1]: 这是脚注内容。
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Wed, 04 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/rdiscount.html</guid>
+      <dc:date>2013-12-04T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>一位过来人对求职工作者的深刻建议</title>
+      <link>http://baige5117.github.io/blog/about_career.html</link>
+      <description>&lt;p&gt;如果这篇文章没有分享给你，那是我的错。如果这篇文章分享给你了，你却没有读，继续走弯路的你不要怪我。如果你看了这篇文章，只读了一半你就说没时间了，说明你已经是个“茫”人了。如果你看完了，你觉得这篇文章只是讲讲大道理，说明你的人生阅历还不够，需要你把这篇文章珍藏，走出去碰几年壁，头破血流后再回来，再读，你就会感叹自己的年少无知。如果你看完了，觉得很有道理，然后束之高阁，继续走进拥挤的地铁，依然用着自己昨日的观念来思考自己的未来，你的人生也将继续重复着昨日的状况。如果你看完了，觉得那是一个过来人，对你的人生忠告，并你也愿意用他告诉你的思想去指导自己今后的生活，对你来讲成功不是很难，难的是你是否可以用这篇文章里的思想一直鞭策自己。如果你看完了，觉得那是一个长辈用他的一生的时间来写的一篇对你忠告的文章，说明你已经有了和他相似的人生阅历，只要你继续努力，成就伟业并不难，难的是你是否可以把自己的人生经验和他人分享呢？&lt;/p&gt;
+
+&lt;p&gt;体验决定深度，知识决定广度。你的人生是什么呢？&lt;/p&gt;
+</description>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/about_career.html</guid>
+      <dc:date>2013-12-02T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>人生的五个球 | Five Balls of Life</title>
+      <link>http://baige5117.github.io/blog/5_balls_of_life.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20131103.jpg&quot; height=&quot;429&quot; width=&quot;300&quot; alt=&quot;Five Balls of Life&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine life as a game in which you are juggling some five balls in the air. You name them work, family, health, friends and spirit and you&amp;rsquo;re keeping all of these in the air.&lt;/p&gt;
+
+&lt;p&gt;You will soon understand that work is a rubber ball. If you drop it, it will bounce back.But the other four balls family, health, friends and spirit are made of glass. If you drop one of these, they will be irrevocably scuffed, marked, nicked, damaged or even shattered. They will never be the same. You must understand that and strive for balance in your life. How?&lt;/p&gt;
+</description>
+      <pubDate>Sat, 02 Nov 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/5_balls_of_life.html</guid>
+      <dc:date>2013-11-02T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>做学问的境界</title>
+      <link>http://baige5117.github.io/blog/state_of_knowledge.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20131004.jpg&quot; height=&quot;298&quot; width=&quot;450&quot; alt=&quot;国学大师&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在这个浮躁的现代社会，每个人似乎都待见立竿见影、水到渠成的事情，“出名要趁早”反映了当今社会的急功近利。然后殊不知绝大多数事情都不是一朝一夕可以完成的，想要成就任何事情都需要脚踏实地、逐步积累，对于稿科研、做学问的人来说则更应如此。那么，我们可以仔细品味一下这些国学大师们是如何做学问的，或许从中可以悟出一些道理。&lt;/p&gt;
+
+&lt;h2&gt;王国维的学问三境界&lt;/h2&gt;
+
+&lt;p&gt;国学大师王国维在其著作《人间词话》中用晏殊、柳永和辛弃疾词中所创造的三种境界，来说明古今之成大事业、大学问者必经的三种境界。&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;古今之成大事业、大学问者，必经过三种之境界： &lt;br/&gt;
+“昨夜西风凋碧树，独上高楼，望尽天涯路。”此第一境也。 &lt;br/&gt;
+“衣带渐宽终不悔，为伊消得人憔悴。”此第二境也。 &lt;br/&gt;
+“众里寻他千百度，蓦然回首，那人却在灯火阑珊处。”此第三境也。 &lt;br/&gt;
+此等语皆非大词人不能道。然遽以此意解释诸词，恐为晏欧诸公所不许也。
+&lt;span class=&quot;quote_src&quot;&gt;王国维《人间词话》&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/state_of_knowledge.html</guid>
+      <dc:date>2013-10-05T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>文件批量重命名 Bash 脚本</title>
+      <link>http://baige5117.github.io/blog/file_batch_rename_with_bash_script.html</link>
+      <description>&lt;h2&gt;任务描述&lt;/h2&gt;
+
+&lt;p&gt;将某一目录下的所有文件重命名为具有某种规则的名称，比如按数字升序的文件名。&lt;/p&gt;
+
+&lt;h2&gt;脚本程序&lt;/h2&gt;
+
+&lt;p&gt;用 Bash 脚本程序进行处理，代码如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;f in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ls &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;        &lt;/span&gt;mv &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1/$f&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;name++&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;9&lt;/span&gt;     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;程序解释&lt;/h2&gt;
+
+&lt;p&gt;其实没啥解释的，主要用到&lt;code&gt;mv&lt;/code&gt;命令来完成重命名。&lt;/p&gt;
+</description>
+      <pubDate>Mon, 30 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/file_batch_rename_with_bash_script.html</guid>
+      <dc:date>2013-09-30T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>利用 ImageMagick 和 Bash 脚本批量剪裁图片</title>
+      <link>http://baige5117.github.io/blog/ImageMagick_bash_script_to_crop_images.html</link>
+      <description>&lt;h2&gt;任务描述&lt;/h2&gt;
+
+&lt;p&gt;对某一个目录里面的所有图片文件进行剪裁，使得到的图片具有相同的尺寸。&lt;/p&gt;
+
+&lt;h2&gt;脚本程序&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;#! /bin/bash &lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;f in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ls &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;convert &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1/$f&amp;quot;&lt;/span&gt; -crop WidthxHeight+X0+Y0  &lt;span class=&quot;s2&quot;&gt;&amp;quot;$2/$f&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Mon, 30 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/ImageMagick_bash_script_to_crop_images.html</guid>
+      <dc:date>2013-09-30T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>逆向工程基本步骤与关键技术</title>
+      <link>http://baige5117.github.io/blog/reverse_engineering_basic_steps_and_key_techniques.html</link>
+      <description>&lt;h2&gt;逆向工程基本步骤&lt;/h2&gt;
+
+&lt;p&gt;逆向工程基于实物原型进行产品创新设计需要经过数据获取、建模方案制定、数据预处理、特征提取、CAD建模、创新设计及产品制造等步骤，具体内容如图 1 所示。&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;/images/post/2013092802.png&quot; height=&quot;582&quot; width=&quot;450&quot; alt=&quot;逆向工程基本步骤&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;图1 逆向工程基本步骤&lt;/p&gt;
+</description>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/reverse_engineering_basic_steps_and_key_techniques.html</guid>
+      <dc:date>2013-09-28T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>珍惜沿途的风景</title>
+      <link>http://baige5117.github.io/blog/cherish_the_scenery_on_the_way.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20130928.jpg&quot; height=&quot;338&quot; width=&quot;450&quot; alt=&quot;沿途的风景&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;随着经济和科技的发展，我们的生活水准也在不断的变化，用一个常见的词，那就是日新月异。无论是在网络上还是平面媒体上，每天都可以看到经济数据的攀升、交通工具的提速等相关内容的报道，人们每天都在谈论着房子、股票、期货、基金，每天吃着麦当劳、肯德基，每天早出晚归，加班熬夜，以上这些似乎已经成了生活的主题。&lt;/p&gt;
+
+&lt;p&gt;不要为明天忧虑，天上的飞鸟，不耕种也不收获，上天尚且要养活它；田野里的百合花，从不忧虑它能不能开花，是不是可以开得和其它一样美，但是它就自然的开花了，开得比所罗门皇冠上的珍珠还美。你呢，忧虑什么呢?人比飞鸟和百合花贵重多了，上帝会弃你不顾吗？&lt;/p&gt;
+</description>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/cherish_the_scenery_on_the_way.html</guid>
+      <dc:date>2013-09-28T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>两个管道工的故事</title>
+      <link>http://baige5117.github.io/blog/story_of_two_plumbers.html</link>
+      <description>&lt;p&gt;很久很久以前，在意大利中部山谷的一个小村子里，住着两位年轻人，一个叫柏波罗，一个叫布鲁诺，他们是堂兄弟。两位年轻人从小就是要好的伙伴，都有雄心勃勃的梦想。&lt;/p&gt;
+
+&lt;p&gt;他们常常没完没了地谈论，在某一天、通过某种方式，让自己可以成为村里最富有的人。他们都很聪明而且勤奋，他们所需要的只是机会。&lt;/p&gt;
+
+&lt;p&gt;有一天，机会来了。村里决定要雇两个人把附近河里的水运到村广场的蓄水池里去。村长把这份工作交给了柏波罗和布鲁诺。两个人各抓起两只水桶奔向河边开始了他们辛勤的工作。当一天结束时，他们把村广场的蓄水池装满了。村长按每桶水一分钱付钱给他们。&lt;/p&gt;
+
+&lt;p&gt;“我们的梦想终于实现了!” 布鲁诺大喊着，“我简直不敢相信我们的好运气”。&lt;/p&gt;
+</description>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/story_of_two_plumbers.html</guid>
+      <dc:date>2013-09-26T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>弹性力学中平面应力问题和平面应变问题</title>
+      <link>http://baige5117.github.io/blog/plane_stress_and_plane_strain_of_elasticity.html</link>
+      <description>&lt;p&gt;在实际问题中，虽然任何弹性体都是空间物体，且外力也都是空间力系，但是许多受力模型都近似表现为一种平面受力状态，或者其纵向的受力状态对模型的受力分析影响可忽略不计。那么，如果将此空间问题简化为平面问题，那么其计算将会大大简化，而且还不影响计算精度。在弹性力学中，这就是平面问题基本理论。&lt;/p&gt;
+
+&lt;p&gt;那么是不是所有空间问题都可以简化为平面问题呢？当然是不可以，只有当空间受力对象由于其特殊的形状或者承受特殊的外力时才可简化为平面问题，而且视具体问题的不同简化的平面问题也不同，例如薄板拉压问题和水坝侧向水压问题虽都可简化为平面问题，但显然其模型特征有很大的区别。因此，平面问题可分为两类：平面应力问题和平面应变问题。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 17 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/plane_stress_and_plane_strain_of_elasticity.html</guid>
+      <dc:date>2013-09-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>弹性力学三大方程</title>
+      <link>http://baige5117.github.io/blog/equations_of_elasticity.html</link>
+      <description>&lt;p&gt;为了由弹性力学问题中的已知量求出未知量，必须建立这些已知量与未知量之间的关系，以及各个未知量之间的关系，从而导出一套求解的方程。在导出方程时，可以从三个方面来进行分析。一方面是静力学方面，由此建立应力、体力、面力之间的关系。另一方面是几何学方面，由此建立形变、位移和边界位移之间的关系。再一个是物理学方面，由此建立形变与应力之间的关系。&lt;/p&gt;
+
+&lt;h2&gt;平衡方程&lt;/h2&gt;
+
+&lt;p&gt;在 P 点附近取出一个微小的正平行六面体PACB，它在 x 和 y 方向的尺寸分为为 dx 和 dy，在 z 方向的尺寸为单位长度 1，此正平行六面体又称微元体，进行应力分析，如下图所示。&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;/images/post/elasticity-01.png&quot; height=&quot;300&quot; width=&quot;300&quot; title=&quot;微元体应力示意图&quot; alt=&quot;微元体应力示意图&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;图1 微元体应力示意图&lt;/p&gt;
+</description>
+      <pubDate>Mon, 16 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/equations_of_elasticity.html</guid>
+      <dc:date>2013-09-16T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>弹性力学基本假设</title>
+      <link>http://baige5117.github.io/blog/basic_assumptions_of_elasticity.html</link>
+      <description>&lt;p&gt;一天神在看人类的理论力学和材料力学，他说我创造世界的时候才没有那么多假设，当然他决定还是保留几个假设，好让人类的数学工具不至于显得那么落后。我忘说了，那个时候是18世纪末19世纪初，所以后来人类的数学工具进步了，所以一些假设就被人抛弃了。&lt;/p&gt;
+
+&lt;p&gt;神说，假定物体是连续的，使得 σ、ε、u 等量表示成坐标的连续函数。有人抛弃了这个假设就变成了离散力学。&lt;/p&gt;
+
+&lt;p&gt;神说，假定物体是完全弹性的，也就是应力与应变间成线性比例关系，使求解方程线性化。有人抛弃了这个假设就变成了塑性力学。&lt;/p&gt;
+
+&lt;p&gt;神说，假定物体是均匀的，使得弹性常数（E,μ）不随位置坐标而变化。有人抛弃了这个假设就变成了非线性力学。&lt;/p&gt;
+
+&lt;p&gt;神说，假定物体是各向同性的，使得弹性常数（E,μ）不随坐标方向而变化。有人抛弃了这个假设就变成了各向异性力学。&lt;/p&gt;
+</description>
+      <pubDate>Mon, 16 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/basic_assumptions_of_elasticity.html</guid>
+      <dc:date>2013-09-16T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>逆向工程简介——内涵与应用领域</title>
+      <link>http://baige5117.github.io/blog/reverse_engineering_defination.html</link>
+      <description>&lt;h2&gt;逆向工程的内涵&lt;/h2&gt;
+
+&lt;p&gt;逆向工程（Reverse Engineering，RE），又称为反求工程、反向工程等，是指针对已存在的产品原型，消化吸收和挖掘蕴含其中的涉及产品设计、制造和管理等各个方面的一系列分析方法、手段和技术的综合。广义的逆向工程包括产品设计意图与原理的反求、几何形状与结构的反求、制造工艺反求、材料反求、美学审视和外观反求等。在机械工程领域，逆向工程主要集中在形状反求方面，具体是指利用一定的测量手段对实物或模型进行测量，根据测量数据采用三维几何建模方法重构实物的 CAD 模型的过程，是一个从样品生成产品数字化信息模型，并在此基础上进行产品设计开发及加工制造的全过程。&lt;/p&gt;
+
+&lt;p&gt;作为一种逆向思维的工作方式，RE与传统的产品正向设计方法不同。传统的产品开发过程遵从正向设计的思维进行，是从收集市场需求信息开始，按照：“产品功能描述——产品概念设计——产品总体设计及详细的零部件设计——指定生产工艺流程——设计、制造工装夹具、模具等——零部件的加工及装配——产品检验及性能测试”这样的步骤开展工作，是从无到有，从未知到已知，从抽象到具体的过程。而RE则是按照产品引进、消化吸收与创新的思路，以“实物——原理——功能——三维重构——再设计”框架进行工作，是一个“认识原型——再现原型——超越原型”的过程，其工作流程如图 1 所示。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 14 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/reverse_engineering_defination.html</guid>
+      <dc:date>2013-09-14T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>逆向工程简介</title>
+      <link>http://baige5117.github.io/blog/reverse_engineering.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;/images/post/20130914.jpg&quot; height=&quot;116&quot; width=&quot;450&quot; alt=&quot;逆向工程示例&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;逆向工程（Reverse Engineering，RE）这一术语起源于60年代，但对它从工程的广泛性去研究，从反求的科学性进行深化还是从90年代初刚刚开始。反求工程类似于反向推理，属于逆向思维体系。它以社会方法学为指导，以现代设计理论、方法、技术为基础，运用各种专业人员的工程设计经验，知识和创新思维，对已有的产品进行解剖、分析、重构和再创造，在工程设计领域，它具有独特的内涵，可以说它是对设计的设计。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 14 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/reverse_engineering.html</guid>
+      <dc:date>2013-09-14T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>《非诚勿扰》中秦奋的征婚启事</title>
+      <link>http://baige5117.github.io/blog/persona_ad_fchwr.html</link>
+      <description>&lt;p&gt;你要想找一帅哥就别来了，你要想找一钱包就别见了。硕士学历以上的免谈，女企业家免谈(小商小贩除外)，省得咱们互相都会失望。刘德华和阿汤哥那种才貌双全的郎君是不会来征你的婚的，当然我也没做诺丁山的梦。您要真是一仙女我也接不住，没期待您长得跟画报封面一样看一眼就魂飞魄散。外表时尚，内心保守，身心都健康的一般人就行。要是多少还有点婉约那就更靠谱了。我喜欢会叠衣服的女人，每次洗完烫平叠得都像刚从商店里买回来的一样。说得够具体了吧。&lt;/p&gt;
+
+&lt;p&gt;自我介绍一下，我岁数已经不小了，留学生身份出去的，在国外生活过十几年，没正经上过学，蹉跎中练就一身生存技能，现在学无所成海外归来，实话实说，应该定性为一只没有公司、没有股票、没有学位的“三无伪海龟”。性格OPEN，人品五五开，不算老实，但天生胆小，杀人不犯法我也下不去手，总体而言属于对人群对社会有益无害的一类。&lt;/p&gt;
+
+&lt;p&gt;非诚勿扰！&lt;/p&gt;
+</description>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/persona_ad_fchwr.html</guid>
+      <dc:date>2013-09-07T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>陈欧体</title>
+      <link>http://baige5117.github.io/blog/chenou_style.html</link>
+      <description>&lt;blockquote&gt;&lt;p&gt;你只闻到我的香水，却没看到我的汗水；你有你的规则，我有我的选择；你否定我的现在，我决定我的未来；你嘲笑我一无所有不配去爱，我可怜你总是等待；你可以轻视我们的年轻，我们会证明这是谁的时代。梦想，注定是孤独的旅行，路上少不了质疑和嘲笑，但，那又怎样？哪怕遍体鳞伤，也要活得漂亮。我是陈欧，我为自己代言。&lt;span class=&quot;quote_src&quot;&gt;陈欧&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;以上就是名震网络的陈欧体的鼻祖——源自聚美优品 2012 年度广告语，经过广大网友的集思广益，创造了许多颇具特色的陈欧体。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/chenou_style.html</guid>
+      <dc:date>2013-09-07T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>两个和尚的故事</title>
+      <link>http://baige5117.github.io/blog/two_monk.html</link>
+      <description>&lt;p&gt;两个和尚住在隔壁，所谓隔壁就是隔壁那座山，他们分别住在相邻的两座山上的庙里。两座山之间有一条溪，这两个和尚每天都会在同一时间下山去溪边挑水，久而久之，他们便成为了好朋友。&lt;/p&gt;
+
+&lt;p&gt;就这样，时间在每天挑水中不知不觉已经过了5年。突然有一天，左边这座山的和尚没有下山挑水，右边那座山的和尚心想：“他大概睡过头了。”便不以为意。&lt;/p&gt;
+
+&lt;p&gt;哪知道第二天左边这座山的和尚还是没有下山挑水，第三天也一样。过了一个星期还是一样，直到过了一个月，右边那座山的和尚终于忍不住了，他心想：“我的朋友可能生病了，我要过去拜访他，看看能帮上什么忙。”&lt;/p&gt;
+
+&lt;p&gt;于是他便爬上了左边这座山，去探望他的老朋友。&lt;/p&gt;
+
+&lt;p&gt;等他到了左边这座山的庙里，看到他的老友之后大吃一惊，因为他的老友正在庙前打太极拳，一点也不像一个月没喝水的人。他很好奇地问：“你已经一个月没有下山挑水了，难道你可以不用喝水吗？”左边这座山的和尚说：“来来来，我带你去看。”于是他带着右边那座山的和尚走到庙的后院，指着一口井说： “这5年来，我每天做完功课后都会抽空挖这口井，即使有时很忙，能挖多少就算多少。如今终于让我挖出井水，我就不用再下山挑水，我可以有更多时间练我喜欢的太极拳。”&lt;/p&gt;
+</description>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/two_monk.html</guid>
+      <dc:date>2013-09-04T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>在 Linux/Gentoo 中安装 VirtualBox 虚拟机</title>
+      <link>http://baige5117.github.io/blog/install_virtualbox_in_gentoo.html</link>
+      <description>&lt;h2&gt;安装方法&lt;/h2&gt;
+
+&lt;h3&gt;手动编译安装&lt;/h3&gt;
+
+&lt;p&gt;到 &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;VirtualBox 官网&lt;/a&gt;下载最新安装版本，linux 版本是 tar.gz 压缩包，下载之后解压缩，会得到一个 virtualbox*.run 文件，查看该文件是不是可执行文件，若不是将其添加可执行权限：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# chmod +x virtualbox*.run
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后安装 VirtualBox：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ./virtualbox*.run install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完之后要将用户添加到 vboxusers 组中才可使用 VirtualBox：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ less /etc/group           //查看系统中都有哪些组
+$ groups Jim            //查看普通用户 Jim 都属于那些组
+# gpasswd -a Jim vboxusers      //将 Jim 添加到 vboxusers 组
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;之后点击 VirtualBox 图标很可能打不开，此时需要安装 media-libs/libsdl 软件包：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# emerge -avt media-libs/libsdl 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装之后就能顺利打开虚拟机。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 30 Aug 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/install_virtualbox_in_gentoo.html</guid>
+      <dc:date>2013-08-30T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>渔夫与富翁的故事</title>
+      <link>http://baige5117.github.io/blog/fisherman_and_rich_man.html</link>
+      <description>&lt;p&gt;在一个天气晴朗的下午，一位到海边度假的富翁遇到了一位正在睡觉的渔夫。&lt;/p&gt;
+
+&lt;p&gt;富翁说：“今天天气好，正好可捕鱼，你怎么在这里睡大觉？”&lt;/p&gt;
+
+&lt;p&gt;渔夫说：“我给自己定的目标是每天捕 10 公斤鱼，平时要撒网 5 次。今天天气好，我只撒网2次，任务就全部完成，所以没事就可以睡大觉啦。”&lt;/p&gt;
+
+&lt;p&gt;富翁说：“那你为什么不借机多撒几次网，捕更多的鱼呢？”&lt;/p&gt;
+
+&lt;p&gt;“为什么要捕那么多鱼？10 公斤已经够我们享用”。渔夫不解地问。&lt;/p&gt;
+
+&lt;p&gt;富翁说：“那样你可以去集市卖更多的钱。”&lt;/p&gt;
+
+&lt;p&gt;“那又怎样？”&lt;/p&gt;
+
+&lt;p&gt;“那样的话在不久的将来你就能够买一艘大船，并且可以雇人到深海去捕更多的鱼。”&lt;/p&gt;
+
+&lt;p&gt;“然后呢？”&lt;/p&gt;
+
+&lt;p&gt;“你可以办一个鱼类加工厂，做大老板，再也不用捕鱼了。”&lt;/p&gt;
+
+&lt;p&gt;“那我干什么呢？”&lt;/p&gt;
+
+&lt;p&gt;“你就可以在沙滩上晒晒太阳，睡睡觉了。”富翁得意的说道。&lt;/p&gt;
+
+&lt;p&gt;渔夫说：“我现在不就在睡觉晒太阳吗？”&lt;/p&gt;
+</description>
+      <pubDate>Wed, 21 Aug 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/fisherman_and_rich_man.html</guid>
+      <dc:date>2013-08-21T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>在不健全的中国如何不堕落</title>
+      <link>http://baige5117.github.io/blog/how_not_to_degenerate_in_china.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20130817.jpg&quot; height=&quot;500&quot; width=&quot;403&quot; alt=&quot;胡适与蒋介石&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这一两个星期里，各地的大学都有毕业的班次，都有得多的毕业生离开学校去开始他们的成人事业。&lt;/p&gt;
+
+&lt;p&gt;学生的生活是一种享有特殊优待的生活，社会都能纵容他们，不肯严格的要他们负行为的责任。现在他们要撑起自己的肩膀来挑他们自己的担子了。在这个国难最紧急的年头，他们的担子真不轻!我们祝他们的成功，同时也不忍不依据自己的经验，赠他们几句送行的赠言，——虽未必是救命毫毛，也许做个防身的锦囊罢！&lt;/p&gt;
+
+&lt;p&gt;你们毕业之后，可走的路不出这几条：绝少数的人还可以在国内或国外的研究院继续做学术研究；少数的人可以寻着相当的职业；此外还有做官，办党，革命三条路；此外就是在家享福或者失业亲居了。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 17 Aug 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_not_to_degenerate_in_china.html</guid>
+      <dc:date>2013-08-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Linux File System Structure Explained with Examples</title>
+      <link>http://baige5117.github.io/blog/linux_file_system_structure.html</link>
+      <description>&lt;p&gt;Have you wondered why certain programs are located under /bin, or /sbin, or /usr/bin, or /usr/sbin?&lt;/p&gt;
+
+&lt;p&gt;For example, less command is located under /usr/bin directory. Why not /bin, or /sbin, or /usr/sbin? What is the different between all these directories?&lt;/p&gt;
+
+&lt;p&gt;In this article, let us review the Linux filesystem structures and understand the meaning of individual high-level directories.&lt;/p&gt;
+</description>
+      <pubDate>Sat, 03 Aug 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/linux_file_system_structure.html</guid>
+      <dc:date>2013-08-03T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>阅读与人生</title>
+      <link>http://baige5117.github.io/blog/reading_and_life.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/2013072402.jpg&quot; height=&quot;240&quot; width=&quot;450&quot; alt=&quot;Reading_Life&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最近花了将近三个月的时间重温了一下经典名著——《飘》（&lt;em&gt;Gone With The Wind&lt;/em&gt;），再一次被这部旷世大作所震撼所感动。阅读的内容已无需多说，这里关注的重点是阅读的感受。&lt;/p&gt;
+
+&lt;p&gt;三个月的时间读完两本将近三千多页的书确实有点久，但是如果这是在海绵挤水式的时间夹缝中完成的或许就没有那么久了。每天只能利用睡觉前的半个小时来品读这部名著，而等到真正要入睡时又会由于情节的引人入胜而浮想联翩导致失眠，有太多的午休时间由于阅读太投入而被无意识地占用。虽然有点“累”，但是我只想说 “I LOVE IT”，至少在大部分的时间中是这样。&lt;/p&gt;
+
+&lt;p&gt;但是，到了最后一段时间有点急躁了，看着一本厚厚的大书还剩那么多的页数，真不知道何时才能读完它。突然间就产生了一种感觉，觉得这本书就像一个累赘，阅读它就像执行一项例行公事似的，每天都必须在规定的时间拿起它阅读它。觉得有点浪费时间，严重影响了正常的学习计划和作息规律。因此，有一种一口气把它给读完以便专心地投入到科研工作中的冲动。于是，在后期的阅读中，有意地加快了翻书的速度，但仅仅也就手指的速度加快而大脑的速度却没有加快，结果可想而知，后期的阅读质量严重下降，阅读的乐趣失去了一大部分。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 24 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/reading_and_life.html</guid>
+      <dc:date>2013-07-24T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>读书还是读完书？</title>
+      <link>http://baige5117.github.io/blog/how_to_read.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20130724.jpg&quot; height=&quot;300&quot; width=&quot;450&quot; alt=&quot;Reading&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;以前，读书前会很想读一本书，但实际读书时，经常是“想读完书”，而不是“想读书”。这种想法经常会让我的生活变得很痛苦，当你做一件事想着快点做完时，你的心思其实已经不在这件事上了。&lt;/p&gt;
+
+&lt;p&gt;这个问题在我大学时困扰了我很久。我没有意识到这本身其实是一个价值观问题，以至于我常在一些时间管理的书中寻找答案。那些书都只能让你更高效地“做完事”，却不能让你在做的过程中更投入一分。&lt;/p&gt;
+
+&lt;p&gt;直到后来离开学校，了解了一小部分禅宗思想，我开始豁然开朗。禅宗讲求摒除心中的杂质，全部精神专注于当下，摒弃过去摒弃未来，任何的多余的念头都可能使你正在做的事情不纯粹。禅宗上，这叫“正念”，我非常非常欣赏。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 24 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_read.html</guid>
+      <dc:date>2013-07-24T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>沃伦·巴菲特在佛罗里达大学商学院上的演讲（节选）</title>
+      <link>http://baige5117.github.io/blog/buffett_lecture_at_university_florida.html</link>
+      <description>&lt;p&gt;巴菲特的这次演讲是我最喜欢的演讲之一，讲的大道理不多，但确是至理名言，仅仅通过一个智力测试就把人生中最重要的道理通俗易懂地表达出来，值得深思。以下片段只是巴菲特此次演讲的一个节选，在长达一个半钟头的演讲中，他的重点还是与观众的提问环节上，而真正的演讲内容也仅仅是下面的一小部分。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Warren Buffett Lecture at the University of Florida School of Business&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;October 15, 1998&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I would like to talk for just one minute to the students about your future when you leave here. Because you will learn a tremendous amount about investments, you all have the ability to do well; you all have the IQ to do well. You all have the energy and initiative to do well or you wouldn&amp;rsquo;t be here. Most of you will succeed in meeting your aspirations. But in determining whether you succeed there is more to it than intellect and energy. I would like to talk just a second about that. In fact, there was a guy, Pete Kiewit in Omaha, who used to say, he looked for three things in hiring people: integrity, intelligence and energy. And he said if the person did not have the first two, the later two would kill him, because if they don&amp;rsquo;t have integrity, you want them dumb and lazy.&lt;/p&gt;
+</description>
+      <pubDate>Tue, 23 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/buffett_lecture_at_university_florida.html</guid>
+      <dc:date>2013-07-23T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>单元测试 | Unit Test</title>
+      <link>http://baige5117.github.io/blog/unit_test.html</link>
+      <description>&lt;h2&gt;单元测试简介&lt;/h2&gt;
+
+&lt;p&gt;单元测试，又称为模块测试，是指针对程序模块（软件设计的最小单元）来进行正确性检验的测试工作。更通俗一点的讲，单元测试就是检查一个函数执行后它的返回结果或者它对系统数据造成的影响(或者其它方面的影响)是否跟你的期望一致，也就是为了证明代码的行为和我期望的一致。&lt;/p&gt;
+
+&lt;p&gt;单元测试中的单元可是是单个程序、函数、过程（过程化编程）等，也可以是面向对象编程中的方法等。&lt;/p&gt;
+
+&lt;p&gt;单元测试的目的就是验证测试单元的正确性，以便为后续工作提供正确无误的功能模块或数据。如果某个测试单元在没有保证正确的情况下就被上层代码使用，则很可能造成程序崩溃，或者给后续工作埋下严重的安全隐患，而且随着项目的深入，调用层次会越来越深，就很容易产生严重的 BUG 问题，从而增加开发难度，降低开发效率。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/unit_test.html</guid>
+      <dc:date>2013-07-20T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>MinUnit – 最小的 C 语言单元测试框架</title>
+      <link>http://baige5117.github.io/blog/minunit.html</link>
+      <description>&lt;p&gt;单元测试的本质是对测试单元进行正确性测试，因此关键在于测试而不是测试框架（或者测试模板），拘泥于复杂的测试框架中往往造成本末倒置。因此应该将重点放在单元测试的思想和方法上面。下面介绍一个极其简单的 C 语言单元测试框架——MinUnit。&lt;/p&gt;
+
+&lt;h2&gt;源代码&lt;/h2&gt;
+
+&lt;p&gt;编辑头文件，主要是定义宏和变量：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;cm&quot;&gt;/* file: minunit.h */&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mu_assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mu_run_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests_run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; \
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;                            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;extern&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests_run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/minunit.html</guid>
+      <dc:date>2013-07-20T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>《中国合伙人》语录与感悟</title>
+      <link>http://baige5117.github.io/blog/American_Dreams_in_China.html</link>
+      <description>&lt;ol&gt;
+&lt;li&gt;究竟是我们改变了世界还是世界改变了我们？&lt;/li&gt;
+&lt;li&gt;想一千次，不如去做一次。华丽的跌倒，胜过无谓的徘徊。&lt;/li&gt;
+&lt;li&gt;梦想是什么？梦想就是一种让你感到坚持就是幸福的东西。我们只有在失败中寻找胜利，在绝望中寻求希望。&lt;/li&gt;
+&lt;li&gt;假如生活欺骗了你，你也要欺骗回生活。&lt;/li&gt;
+&lt;li&gt;有些事情只有停下来才能看清楚，总有些更重要的事情赋予我们打败恐惧的勇气。&lt;/li&gt;
+&lt;li&gt;谁伤害过你，谁击溃过你，都不重要，重要的是谁让你重现笑容。&lt;/li&gt;
+&lt;li&gt;其实我们追求的不是成功而是自己的尊严。&lt;/li&gt;
+&lt;li&gt;用时间和心看人，而不是用眼睛。&lt;/li&gt;
+&lt;li&gt;掉在水里你不会淹死，呆在水里你才会淹死，你只有游，不停地往前游。&lt;/li&gt;
+&lt;li&gt;不要活在过去的回忆里。昨天的太阳，晒不干今天的衣裳！&lt;/li&gt;
+&lt;li&gt;千万别跟丈母娘打麻将，千万别跟想法比你多的女人上床，千万别跟好朋友合伙开公司。&lt;/li&gt;
+&lt;li&gt;我没有装孙子，我真的是孙子！&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      <pubDate>Wed, 17 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/American_Dreams_in_China.html</guid>
+      <dc:date>2013-07-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>国家一级设计师十年整理的CAD精髓</title>
+      <link>http://baige5117.github.io/blog/cad_essence_from_national_level_designer.html</link>
+      <description>&lt;h2&gt;AUTOCAD使用心得之一&lt;/h2&gt;
+
+&lt;p&gt;使用的三个基本方面：&lt;strong&gt;清晰、准确、高效&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;目前，公司的设计文件，特别是图纸，都是用 AUTOCAD 软件绘制的。但是，现在还有很多人对 CAD 并不是非常熟悉，或者说使用起来并非得心应手，以至于效率并不是很高，可以说，在公司，绘制同样的一张图纸，速度快的和慢的在耗时上可能会相差好几倍。同时，每个人绘制出来的图纸看上去感觉都不经相同，有些图纸看上去一目了然、清晰漂亮，而有些图纸不但表达不清，过分点可以用惨不忍睹来形容。&lt;/p&gt;
+
+&lt;p&gt;不知大家认为，使用 CAD 画图，最重要的是什么？对这个问题，每个人都有可能理解不同，但在我看来，最重要的是时时刻刻记住自己使用 CAD 画图的目的是什么。&lt;/p&gt;
+
+&lt;p&gt;我们进行工程设计，不管是什么专业、什么阶段，实际上都是要将某些设计思想或者是设计内容，表达、反映到设计文件上。而图纸，就是一种直观、准确、醒目、易于交流的表达形式。所以我们完成的东西（不管是最终完成的设计文件，还是作为条件提交给其他专业的过程文件），一定需要能够很好的帮助我们表达自己的设计思想、设计内容。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 10 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/cad_essence_from_national_level_designer.html</guid>
+      <dc:date>2013-07-10T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Lady &amp; Bird</title>
+      <link>http://baige5117.github.io/blog/lady_and_bird.html</link>
+      <description>&lt;h2&gt;专辑介绍&lt;/h2&gt;
+
+&lt;p&gt;这是一张听着并不是那么轻松的音乐专辑，伤感、无助甚至有些许绝望，却又略显一点点的镇定，错综复杂的心绪或许会使您潸然泪下，也或许使您不敢再继续听下去。但是，听完之后你会时不时地想起它，情不自禁的拿起耳机再次静静的听一遍，一同感受着 Lady &amp;amp; Bird 的感受。&lt;/p&gt;
+
+&lt;p&gt;这首专辑其实映射出了许多现代年轻人的心理状态，表面上的茫茫碌碌却突出了实际上的空虚和无助，有福同享有难同当的纯真年代正在一点点的远去，一切以利益为上的社会已经使人情冷暖变得不那么重要，而这也成为近来刮起的怀旧风的直接原因。&lt;/p&gt;
+
+&lt;p&gt;Keren Ann 和 Bradi Johannsson，一个是拥有多国血统的混血女创作人，一个是冰岛 Trip-hop 乐队 Bang Gang 的主唱，两个纯美如孩童的音乐精灵借居成人虚设，化名成 Lady&amp;amp;bird，天马行空，奔放自由地嬉戏小小的音乐天堂中；他们对音乐最真诚的感受、对生命最真切的关怀，对宇宙单纯有奥秘的科学思维，毫无保留地借着这张音乐专辑Lady＆Bird一体呈现给世人，像似一分天上掉下来的礼物般神秘美丽。Lady＆Bird 的音乐/文字能量非常轻微飘忽、非常细嫩，这些能量在阅听者心中共振成或是喜悦或是悲伤的淡淡图象，如Air的Virginsuicides电影原声带般胧美。&lt;/p&gt;
+</description>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/lady_and_bird.html</guid>
+      <dc:date>2013-07-08T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Linux 下五大搜索命令</title>
+      <link>http://baige5117.github.io/blog/5_search_command_in_linux.html</link>
+      <description>&lt;p&gt;使用电脑的时候，需要经常查找文件。在 Linux 系统环境中，有很多方法可以做到这一点，下面对 linux 下的五大搜索命令进行简单的介绍。&lt;/p&gt;
+
+&lt;h2&gt;1. find&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;find&lt;/code&gt;是最常见和最强大的查找命令，你可以用它找到任何你想找的文件。&lt;code&gt;find&lt;/code&gt;命令可在使用、管理 Linux 系统中方便地查找所需要的指定文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;find&lt;/code&gt;的使用格式如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;指定目录&gt;：&lt;/strong&gt;所要搜索的目录及其所有子目录。默认为当前目录。可以为一个目录列表，目录间用空格分隔。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;指定条件&gt;：&lt;/strong&gt;所要搜索的文件的特征。当要使用多个特征时可以用&lt;code&gt;-and&lt;/code&gt;参数，也可以省略此参数用空格代替。常用的条件如下：&lt;/p&gt;
+</description>
+      <pubDate>Mon, 08 Jul 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/5_search_command_in_linux.html</guid>
+      <dc:date>2013-07-08T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>如何成为一名黑客</title>
+      <link>http://baige5117.github.io/blog/how_to_be_a_hacker.html</link>
+      <description>&lt;p&gt;曾经，黑客是一种荣耀，一种美好的传统，它代表着反权威却奉公守法的网络英雄。如今，黑客的形象已经十分暧昧，代表的是英雄或罪犯？正义或邪恶？高尚或卑劣？那么，到底什么才能称得上为真正的黑客？黑客的世界是什么样的?他们用什么技术、哪些工具？下面来听听 &lt;a href=&quot;http://catb.org/~esr/faqs/hacker-howto.html&quot;&gt;Eric Steven Raymond&lt;/a&gt; 对黑客的理解及如何成为一名黑客。&lt;/p&gt;
+
+&lt;h2&gt;目录&lt;/h2&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href=&quot;#s1&quot;&gt;为什么会有这份文档&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s2&quot;&gt;什么是黑客&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s3&quot;&gt;黑客的态度&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&quot;#s3-1&quot;&gt;1. 这个世界充满了令人着迷的问题等着我们解决&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s3-2&quot;&gt;2. 一个问题不应该被解决两次&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s3-3&quot;&gt;3. 无聊和乏味的工作是罪恶&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s3-4&quot;&gt;4. 崇尚自由&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s3-5&quot;&gt;5. 态度不能替代能力&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;a href=&quot;#s4&quot;&gt;黑客的基本技能&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&quot;#s4-1&quot;&gt;1. 学习如何编程&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s4-2&quot;&gt;2. 学习使用开源的 Unix 系统&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s4-3&quot;&gt;3. 学会使用万维网以及编写 HTML&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s4-4&quot;&gt;4. 学习英语，如果你的水平不够用的话&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;a href=&quot;#s5&quot;&gt;提高自己在黑客圈中的地位&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-1&quot;&gt;1. 撰写开源软件&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-2&quot;&gt;2. 帮助测试并调试开源软件&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-3&quot;&gt;3. 发布有用的信息&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-4&quot;&gt;4. 帮助维护基础设施的运转&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#s5-5&quot;&gt;5. 为黑客文化本身服务&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;a href=&quot;#s6&quot;&gt;黑客和书呆子(Nerd)的联系&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s7&quot;&gt;向黑客的格调靠拢&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s8&quot;&gt;关于黑客、开源、以及自由软件的历史&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s9&quot;&gt;其它资源&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s10&quot;&gt;FAQ（常见问题解答）&lt;/a&gt;&lt;/dt&gt;
+&lt;dt&gt;&lt;a href=&quot;#s11&quot;&gt;转载说明及链接&lt;/a&gt;&lt;/dt&gt;
+&lt;/dl&gt;
+
+
+
+</description>
+      <pubDate>Thu, 13 Jun 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_be_a_hacker.html</guid>
+      <dc:date>2013-06-13T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>静中细思</title>
+      <link>http://baige5117.github.io/blog/pondering_in_silence.html</link>
+      <description>&lt;p&gt;静中细思，古今亿百年无有穷期，人生其间数十寒暑，仅须臾耳，当思一博；&lt;/p&gt;
+
+&lt;p&gt;大地数万里，不可纪极，人于其中寝处游息，昼仅一室，夜仅一榻耳，当思珍惜；&lt;/p&gt;
+
+&lt;p&gt;古人书籍，近人著述，浩如烟海，人生目光之所及者，不过九牛一毛耳，当思多览；&lt;/p&gt;
+
+&lt;p&gt;事变万端，美名百途，人生才力之所能及者，不过太仓之粒耳，当思奋争；&lt;/p&gt;
+
+&lt;p&gt;然知天之长，而吾所历者短，则忧患横逆之来，当少忍以待其定；&lt;/p&gt;
+
+&lt;p&gt;知地之大，而吾所居者小，则遇荣利争夺之境，当退让以守其雌。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/pondering_in_silence.html</guid>
+      <dc:date>2013-06-12T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>加菲猫经典语录</title>
+      <link>http://baige5117.github.io/blog/garfield.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20130606.jpg&quot; height=&quot;300&quot; width=&quot;400&quot; alt=&quot;加菲猫&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;当童年已成往事，当纯真已成记忆，作为八零后的我们是否依然记得那些陪伴我们成长、给我们带来无尽快乐的伙伴呢？兔八哥，啄木鸟，忍者神龟，多啦A梦……当然，还有那只贪吃、慵懒、阴险、狡诈、虚荣、自恋，偶尔也坚强、有点责任心的肥猫——加菲。&lt;/p&gt;
+
+&lt;p&gt;加菲不仅个性鲜明，而且语出惊人，留下一系列亘古名言。&lt;/p&gt;
+
+&lt;h2&gt;主要“人物”介绍：&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;加菲（Garfield）&lt;/strong&gt;：一只不抓更不吃老鼠的猫，自称为“自然界最完美的宠物”；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;乔恩·艾博克（Jon Arbuckle）&lt;/strong&gt;：加菲的主人；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;欧迪（Odie）&lt;/strong&gt;：一只没头脑的狗，加菲的虐待对象。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      <pubDate>Thu, 06 Jun 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/garfield.html</guid>
+      <dc:date>2013-06-06T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>七分钟锻炼法</title>
+      <link>http://baige5117.github.io/blog/the_scientific_7_minute_workout.html</link>
+      <description>&lt;p&gt;2013 年 5 月 12 日纽约时报杂志发表一篇文章：&lt;a href=&quot;http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/&quot;&gt;七分钟锻炼法&lt;/a&gt;，一种简单有效的健身方法，长期坚持锻炼辅助体重训练，经证明对健康大有益处。&lt;/p&gt;
+
+&lt;h2&gt;基本条件&lt;/h2&gt;
+
+&lt;p&gt;七分钟锻炼法由于简单而备受关注，所谓的简单其实真的很简单，所需条件只有一面墙、一把椅子以及七分钟时间，当然还需要你本人。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 05 Jun 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/the_scientific_7_minute_workout.html</guid>
+      <dc:date>2013-06-05T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>民谣精选集 —《消失于美轮美奂的土地上》</title>
+      <link>http://baige5117.github.io/blog/lost_in_the_enchanted_land.html</link>
+      <description>&lt;h2&gt;专辑介绍&lt;/h2&gt;
+
+&lt;p&gt;曾几何时，MP3 中多了一份精选集——《Lost In The Enchanted Land》（《消失于美轮美奂的土地上》），从此它就一直占据着一块固定的特殊空间，从未更新，从未舍弃，每当夜深人静的时刻，总想听听这份音乐，宁静、空旷、和谐、自由、奔放……&lt;/p&gt;
+
+&lt;p&gt;创作者是支俄罗斯民谣团队 Велеслава。关于这支乐队，知者甚少，网络上罕见 Велеслава 的资料，仅有几篇俄语的信息而已，英文介绍都没有，连封面都仅有这张模糊不堪的。虽然是一支默默无闻的团队，但却绝不可小觎他们的音乐。这张作品既散发着纯朴的民谣之风，又融合着奇异的电子旋律，简直美得让人心旷神怡，简单动听两字远远不足于形容。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 05 Jun 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/lost_in_the_enchanted_land.html</guid>
+      <dc:date>2013-06-05T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>利用 Excel 进行数据分析</title>
+      <link>http://baige5117.github.io/blog/exel_chart.html</link>
+      <description>&lt;p&gt;Microsoft Excel 不仅仅是电子表格那么简单，也可以用来做数据处理、统计分析和辅助决策等操作，比如绘制各种分析图形(折线图、柱状图、饼图等)。&lt;/p&gt;
+
+&lt;h2&gt;数据可视化&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;任务描述&lt;/strong&gt;：在同一张图表中分别绘制函数 y=x&lt;sup&gt;2&lt;/sup&gt; 与函数 y=20x+10 的图形。&lt;/p&gt;
+
+&lt;h3&gt;步骤一：随机获取一组离散点集并输入表格中。&lt;/h3&gt;
+
+&lt;p&gt;自变量 x 的值取为：0、2、4、6、……、30，在 Excel 中任何一列中输入自变量的值，比如 A3 - A18。可以手动输入，也可以自动填充。填充方法为首先手动输入前两个数值，然后拖动选中包含这两个数值的单元格，在将鼠标指针移动到单元格右下方，当指针变为十字形时向下拖动鼠标即可完成自动填充。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/exel_chart.html</guid>
+      <dc:date>2013-05-29T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>打工是最愚蠢的投资</title>
+      <link>http://baige5117.github.io/blog/LiJiacheng_speech.html</link>
+      <description>&lt;p&gt;很多人会认为打工并不是投资，强烈反对这种观念。其实打工才是最大最愚蠢的投资。人生最宝贵的是什么？除了我们的青春还有什么更宝贵？很多人都抱怨我穷，我没钱想做生意又找不到资金。多么的可笑！其实在你身上就有着一座金山（无形资产），只是你不敢承认。宁可埋没也不敢利用。宁可委委屈屈地帮人打工，把你的资产双手拱让给了你的老板。我们试想一下，有谁生下来上天就会送给他一大堆金钱的？问问李嘉诚吧。我曾经问过我的一个朋友为什么不去打工？他的回答很惊人：“说句得罪点，出去打工简直就是愚蠢浪费青春！”&lt;/p&gt;
+
+&lt;p&gt;为什么你一直是打工仔？因为你安于现状！因为你没有勇气，你天生胆小怕事不敢另择它路！所以你是打工仔！因为你没有勇往直前，没有超越自我的精神！所以，你还是一个打工仔！你想过了改变你的生活，改变你穷困的命运，但是你没有做！因为你不敢做！你害怕输，你害怕输的一穷再穷！你最后不敢想，还是在打工，所以你还是打工仔！！！你努力了，你拼搏了，你抱着雄心大志。结果你没看到预想的成就！你放弃了！你只还是一个打工仔！！为什么你一直是打工仔？因为你随波逐流！近墨者黑，不思上进，分钱没得，死爱闹热，所以你一直是打工仔！因为你畏惧你父母，你听信你亲戚，你没有主张，你不敢一个人做决定。所以，你只不过还是一直是一个打工仔！你观念传统，只想打工赚点钱结婚生子，然后生病老死，走你父母一模一样的路，所以你一直是打工仔！你天生脆弱、脑筋迟钝只想做按班就部的工作，你想做无本的生意，你想坐在家里等天上掉陷饼，所以你一直是一个打工仔！你抱怨没有机遇，机遇来到你身边的时候你又抓不住！因为你不会抓！所以你还是一直是打工仔！因为你的贫穷，所以你自卑！你退缩了！你什么都不敢做！你只会给别人打工！所以你一直是打工仔！你没有特别技能，你只有使蛮力！你和你父母一样，恶性循环，所以，你一直永远的一个一直在打工的打工仔！&lt;/p&gt;
+</description>
+      <pubDate>Fri, 10 May 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/LiJiacheng_speech.html</guid>
+      <dc:date>2013-05-10T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>算法时间复杂度分析</title>
+      <link>http://baige5117.github.io/blog/algorithm_complexity_analysis.html</link>
+      <description>&lt;p&gt;程序 P 所需时间 T(P) 是其编译时间和运行（或执行）时间的总和。由于编译时间不依赖于问题实例的特征（比如问题规模），所以编译时间一般都是固定的。此外，一旦已经证实了程序可以正常运行，就可以多次执行而不需要重新编译，所以，真正关心的是程序的执行时间。&lt;/p&gt;
+
+&lt;p&gt;但是确定程序的执行时间也不是一件容易的事，因为它受多方面的影响，比如说硬件、软件平台等，相同的算法在不同的硬件机器上执行，所消耗的时间是不同的。即使是在同一台机器上，一个算法在不同的时间执行，所消耗的时间也是不同的（当某个时刻计算机系统待处理的任务比较多时，这个时刻算法执行消耗的时间相对于计算机系统待处理任务较少时，所用的时间可能会多些）。我们使用“时间复杂度”并不是为了计算算法执行所消耗的时间，而是用于评定不同的算法之间在时间成本上，那个消耗的时间理论上少些，那个多些。对于某一具体问题的不同算法 A 和 B，经过“时间复杂度”的理论分析，通常情况下，如果算法 A 在时间成本上比算法 B 消耗的时间要少，那么在实际运行中算法 A 的执行会比算法 B 快。注意这里是&lt;strong&gt;通常情况下&lt;/strong&gt;的结果，因为毕竟实际情况比较复杂，而且任何情况都有特殊的时候，但是，就平均上而言，特殊毕竟是少数，大部分都是正常情况的，所以时间复杂度的理论分析和实际的运行效果都是一致的。因此，算法的时间复杂度分析对于程序的评估具有非常重要的作用。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 26 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/algorithm_complexity_analysis.html</guid>
+      <dc:date>2013-04-26T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>aria2：高速下载工具</title>
+      <link>http://baige5117.github.io/blog/aria2_hight_speed_download_tool.html</link>
+      <description>&lt;p&gt;aria2 是 Linux 下一个不错的高速下载工具。由于它具有分段下载引擎，所以支持从多个地址或者从一个地址的多个连接来下载同一个文件。这样自然就大大加快了文件的下载速度。aria2 也具有断点续传功能，这使你随时能够恢复已经中断的文件下载。除了支持一般的 http(s) 和 ftp 协议外，aria2 还支持 BitTorrent 协议。这意味着，你也可以使用 aria2 来下载 torrent 文件。&lt;/p&gt;
+
+&lt;p&gt;官网对 aria2 的定义为：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;aria2c - The ultra fast download utility.&lt;/strong&gt;&lt;/p&gt;
+</description>
+      <pubDate>Thu, 25 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/aria2_hight_speed_download_tool.html</guid>
+      <dc:date>2013-04-25T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>如何改变你的生活</title>
+      <link>http://baige5117.github.io/blog/how_to_change_your_life.html</link>
+      <description>&lt;blockquote&gt;&lt;p&gt;You will never change your life until you change something you do daily.&lt;span class=&quot;quote_src&quot;&gt;Mike Murdock&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;首先问一个简单的问题：你想成为一个什么样的人？&lt;/p&gt;
+
+&lt;p&gt;你梦想某一天成为一个作家、音乐家、设计者、程序员、通晓多种语言的语言高手、木匠、漫画家、企业家以及某一领域的专家吗？&lt;/p&gt;
+
+&lt;p&gt;如何才能梦想成真呢？你是否将你的梦想写在纸上，并将其塞到一个瓶子中然后将其仍向大海，希望它为你作证？不。做这种事一般不会使梦想实现。&lt;/p&gt;
+
+&lt;p&gt;你是否设定过一个在年末之前必须完成的大目标，或者三个月的目标？当然你或许这样干过，但是通常这都无济于事。事实上，如果你回头想想你生活中制定的大部分目标，或许都没有真正起作用。能有多少此成功过呢？&lt;/p&gt;
+</description>
+      <pubDate>Wed, 24 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_change_your_life.html</guid>
+      <dc:date>2013-04-24T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>瑞士——富裕的世外桃源</title>
+      <link>http://baige5117.github.io/blog/+Switzerland_wealthy_ShiWaiTaoYuan.html</link>
+      <description>&lt;p&gt;诱人奶油土豆……美味的葡萄酒……让人流口水的山莓……这就是瑞士——世界上最富有的国家……有机会一定得去……呵呵 ！&lt;/p&gt;
+
+&lt;p&gt;在我看来，天然的就是最好的味道……&lt;/p&gt;
+
+&lt;p&gt;1000 元每平米的房产，而且终身属于你……&lt;/p&gt;
+
+&lt;p&gt;秀丽的阿尔皮斯山脉……&lt;/p&gt;
+
+&lt;p&gt;系有牛玲的奶牛……&lt;/p&gt;
+
+&lt;p&gt;奶酪土豆……&lt;/p&gt;
+
+&lt;p&gt;红、紫、黄、绿的葡萄……&lt;/p&gt;
+
+&lt;p&gt;美味的葡萄酒……&lt;/p&gt;
+
+&lt;p&gt;回家的幸福就是和家人坐在一起天南海北的侃大山，回家的幸福就是光着脚走在后院的泥巴路上然后再给眼睛做一次 SPA……&lt;/p&gt;
+</description>
+      <pubDate>Tue, 23 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/+Switzerland_wealthy_ShiWaiTaoYuan.html</guid>
+      <dc:date>2013-04-23T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>理工科学生必须知道的十件事</title>
+      <link>http://baige5117.github.io/blog/ten_must_knows_for_science_and_engineer_students.html</link>
+      <description>&lt;p&gt;一位在 MIT 教数学的老师总结了十条经验，对理工科学生应该很有教益：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;你能够做到每天七个小时坐在书桌前。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;只有在学你觉得学不会的东西时才能学到东西。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;总的来说，知其所以然比知其然重要得多。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在科学和工程方面，没有人能骗太久。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;并不是天才才能做有创造性的工作。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;你必须对自己高标准严要求。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/ten_must_knows_for_science_and_engineer_students.html</guid>
+      <dc:date>2013-04-21T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>一生所爱 - 卢冠廷</title>
+      <link>http://baige5117.github.io/blog/YiShengSuoAi-LuGuanting.html</link>
+      <description>&lt;p&gt;漫天的风沙掠过沙漠，至尊宝一摇一摆的离去，这时最后望了一眼终成眷属的恋人，然后转身隐没在人群中。决不回头的背后是扬起的尘沙，尘沙的背后有人在城墙上说： “那个人样子好怪“！”我也看到了，他好像是条狗啊！“卢冠廷的音乐适时的响起：“苦海，泛起爱恨，在世间，难逃命运&amp;hellip;&amp;hellip;”&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;/images/music/dahuaxiyou.jpg&quot; height=&quot;156&quot; width=&quot;156&quot; alt=&quot;DaHuaXiYou&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;align_c&quot;&gt;&lt;embed src=&quot;http://www.xiami.com/widget/9750957_2079912/singlePlayer.swf&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;257&quot; height=&quot;33&quot; wmode=&quot;transparent&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+
+
+</description>
+      <pubDate>Tue, 16 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/YiShengSuoAi-LuGuanting.html</guid>
+      <dc:date>2013-04-16T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Wget 基本用法</title>
+      <link>http://baige5117.github.io/blog/the_basic_usage_of_wget.html</link>
+      <description>&lt;p&gt;Wget 是一个非交互式（即无图形交互界面）的自由网络下载工具，支持通过 HTTP、HTTPS、FTP 三个最常见的 TCP/IP 协议下载，并可以使用 HTTP 代理。可以说 wget 是网络下载工具的最佳选择，因为它可以处理几乎任何复杂的下载任务。&lt;/p&gt;
+
+&lt;p&gt;基本语法为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ wget [option]... [URL]...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;下载单个文件&lt;/h3&gt;
+
+&lt;p&gt;直接在 &lt;code&gt;wget&lt;/code&gt; 命令之后加上文件的下载地址即可。用法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ wget &amp;lt;URL&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;比如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ wget http://www.example.com/example.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Mon, 15 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/the_basic_usage_of_wget.html</guid>
+      <dc:date>2013-04-15T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>几款不错的开源 CAD/CAM 软件</title>
+      <link>http://baige5117.github.io/blog/open_source_CAD-CAM_softwares.html</link>
+      <description>&lt;h2&gt;FreeCAD&lt;/h2&gt;
+
+&lt;p&gt;FreeCAD 是一款参数化三维建模工具，其以参数化特征建模为核心功能，基于模块化的软件架构而实现，可在不改动系统核心的的前提下进行高级功能扩展和定制。其主要应用于机械工程与产品设计领域，当然也适用于诸如建筑等工程领域。&lt;/p&gt;
+
+&lt;p&gt;FreeCAD 也是本人目前在 Linux/Gentoo 系统中使用的开源 CAD 软件，关于 FreeCAD 的基本简介和基本用法可以参考 &lt;a href=&quot;/blog/the_basic_usage_of_FreeCAD.html&quot;&gt;FreeCAD 的使用&lt;/a&gt; 一文。&lt;/p&gt;
+
+&lt;p&gt;官方网站：&lt;a href=&quot;http://sourceforge.net/projects/free-cad/&quot;&gt;http://sourceforge.net/projects/free-cad/&lt;/a&gt;&lt;/p&gt;
+</description>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/open_source_CAD-CAM_softwares.html</guid>
+      <dc:date>2013-04-11T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>三个故事说穿许多人</title>
+      <link>http://baige5117.github.io/blog/three_stories.html</link>
+      <description>&lt;h2&gt;一&lt;/h2&gt;
+
+&lt;p&gt;A 不喜欢吃鸡蛋，每次发了鸡蛋都给 B 吃。 刚开始 B 很感谢，久而久之便习惯了。习惯了，便理所当然了。于是，直到有一天，A 将鸡蛋给了 C，B 就不爽了。她忘记了这个鸡蛋本来就是 A 的，A 想给谁都可以。为此，她们大吵一架，从此绝交。&lt;/p&gt;
+
+&lt;h2&gt;二&lt;/h2&gt;
+
+&lt;p&gt;有一年，很热的夏天，一队人出去漂流。女孩的拖鞋在玩水的时候，把拖鞋掉下去了，沉底了。到岸边的时候，全是晒的很烫的鹅卵石，他们要走很长的一段路。于是，女孩儿就向别人寻求帮忙，可是谁都只有一双拖鞋。女孩心里很不爽，因为她习惯了向别人求助，而只要撒娇就会得到满意地答复。可是这次却没有。她忽然觉得这些人都不好，都见死不救。后来，有一个男孩将自己的拖鞋给了她，然后自己赤脚在那晒得滚烫的鹅卵石上走了很久的路。还自嘲说是铁板烧。女孩表示感谢，男孩说，你要记住，没有谁是必须要帮你的。帮你是出于交情，不帮你是应该。女孩记住了男孩的话，自此以后学会了对施以援手的人铭记在心，并给以更大的回报。&lt;/p&gt;
+</description>
+      <pubDate>Mon, 01 Apr 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/three_stories.html</guid>
+      <dc:date>2013-04-01T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>我怎样才能嫁给有钱人？</title>
+      <link>http://baige5117.github.io/blog/how_to_marry_a_rich_man.html</link>
+      <description>&lt;p&gt;一个年轻漂亮的美国女孩在美国一家大型网上论坛金融版上发表了这样一个问题帖：我怎样才能嫁给有钱人？&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;我下面要说的都是心里话。&lt;/p&gt;
+
+&lt;p&gt;本人 25 岁，非常漂亮，是那种让人惊艳的漂亮，谈吐文雅，有品位，想嫁给年薪 50 万美元的人。你也许会说我贪心，但在纽约年薪 100 万才算是中产，本人的要求其实不高。这个版上有没有年薪超过 50万的人？你们都结婚了吗？&lt;/p&gt;
+
+&lt;p&gt;我想请教各位一个问题——怎样才能嫁给你们这样的有钱人？我约会过的人中，最有钱的年薪 25 万，这似乎是我的上限。要住进纽约中心公园以西的高尚住宅区，年薪 25 万远远不够。我是来诚心诚意请教的。&lt;/p&gt;
+
+&lt;p&gt;有几个具体的问题：一、有钱的单身汉一般都在哪里消磨时光？（请列出酒吧、饭店、健身房的名字和详细地址。）二、我应该把目标定在哪个年龄段？三、为什么有些富豪的妻子看起来相貌平平？我见过有些女孩，长相如同白开水，毫无吸引人的地方，但她们却能嫁入豪门。而单身酒吧里那些迷死人的美女却运气不佳。四、你们怎么决定谁能做妻子，谁只能做女朋友？（我现在的目标是结婚。）
+&lt;span class=&quot;quote_src&quot;&gt;波尔斯女士&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+      <pubDate>Fri, 29 Mar 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_marry_a_rich_man.html</guid>
+      <dc:date>2013-03-29T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>为学</title>
+      <link>http://baige5117.github.io/blog/WeiXue.html</link>
+      <description>&lt;p&gt;天下事有难易乎？为之，则难者亦易矣；不为，则易者亦难矣。人之为学有难易乎？学之，则难者亦易矣；不学，则易者亦难矣。&lt;/p&gt;
+
+&lt;p&gt;吾资之昏，不逮人也；吾材之庸，不逮人也。旦旦而学之，久而不怠焉，迄（qì）乎成，而亦不知其昏与庸；吾资之聪，倍人也；吾材之敏，倍人也；屛弃而不用，其与昏与庸无以异也。圣人之道，卒于鲁也传之。然则昏庸聪敏之用，岂有常哉！&lt;/p&gt;
+
+&lt;p&gt;蜀之鄙有二僧：其一贫，其一富。贫者语（yù）于富者曰：“吾欲之南海，何如？”　富者曰：“子何恃而往？”曰： “吾一瓶一钵（bō）足矣。”&lt;/p&gt;
+</description>
+      <pubDate>Fri, 29 Mar 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/WeiXue.html</guid>
+      <dc:date>2013-03-29T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>生命的意义</title>
+      <link>http://baige5117.github.io/blog/meaning_of_life.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20130327.jpg&quot; height=&quot;368&quot; width=&quot;400&quot; alt=&quot;Hawking&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;人为什么要活着？活着的意义是什么？生命的本质又是什么？千百年来，有无数的能人智士不断的探索并试图回答这类哲学的顶级问题。可是，又有谁能找到真正的答案呢？&lt;/p&gt;
+
+&lt;p&gt;万物都有本源，问题也不例外。任何具体问题都会有唯一而又清晰的答案，有一些问题，答案或许是显而易见的，也也或许是模糊隐晦的，但是只要不断努力善于思考都最终能够“山穷水尽疑无路，柳暗花明又一村”；也有一些问题，答案或许超出了人类的认识极限，虽然客观存在但是由于“不识庐山真面目，只缘身在此山中”的缘故，我们永远无法得知；然而，还有一些问题，答案似乎虽然近在咫尺却又遥不可及，同一个问题，仁者见仁智者见智，对于这类问题，问题似乎比答案更加重要、更为迷人……&lt;/p&gt;
+</description>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/meaning_of_life.html</guid>
+      <dc:date>2013-03-27T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>吉普赛人古老的神奇读心术</title>
+      <link>http://baige5117.github.io/blog/mind_reader.html</link>
+      <description>&lt;p&gt;很久之前遇到的一款神秘小玩意儿，初玩感觉特别神秘。虽然很快就能看透它的原理，但是还是能带来了不少的乐趣，值得收藏的小魔术。&lt;/p&gt;
+
+&lt;p&gt;提示：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;任意选择一个两位数（或者说：从 10—99 之间任意选择一个数），把这个数的十位与个位相加，再把这个数减去这个和。例如：你选择的数是 23，然后 2+3=5，然后 23-5=18。&lt;/li&gt;
+&lt;li&gt;在图表中找出与最后得出的数相对应的图形，并把这个图形牢记心中，然后点击水晶球。你会发现，水晶球所显示出来的图形就是你刚刚心里记下的那个图形！！&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      <pubDate>Tue, 26 Mar 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/mind_reader.html</guid>
+      <dc:date>2013-03-26T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>如何增加网站的 RSS 订阅用户数量</title>
+      <link>http://baige5117.github.io/blog/how_to_increase_the_rss_feeds.html</link>
+      <description>&lt;p&gt;大多数博客都热爱订阅者，不仅如此，他们也热衷于获得新的RSS订阅者，当有一天你醒来，看到你的Feedburner（译者注：国内大部人通过 Feedsky 管理自己的 Feed）数增加了 200 或 300，你肯定会很高兴，对不对？&lt;/p&gt;
+
+&lt;p&gt;然而，那样的日子非常少，大多数人很难持续获得（那怕是少量的）新 RSS 订阅者。有什么你值得你去做的呢？是否有什么方法可以有效地吸引更多的 RSS 订阅者？答案是肯定的。许多人过去都曾写这这个主题，我也想在这个问题上给出我自己的观点。因此，我写下如下 50 个获得新订阅者的方法，并且尽量写得简短些，看看吧！&lt;/p&gt;
+
+&lt;p&gt;1、有一个大 RSS 图标。人都是懒惰，你必须始终铭记。如果您使用一个小 RSS 图标，访客很难找到它。大多数人寻找几秒钟后就会选择放弃。所以，一定要确保 RSS 图标大而容易识别。&lt;/p&gt;
+
+&lt;p&gt;2、将 RSS 图标展示在折页线以上。除了使用大 RSS 图标，您必须确保你的 RSS 图标位于折页线以上。这是因为绝大多数博客都这样做，当读者想订阅时，会习惯去那儿寻找 RSS 图标，所以，你应跟随这个潮流。&lt;/p&gt;
+
+&lt;p&gt;3、在博客所有页面展示 RSS 图标。当我刚开始写博客时，我就犯了这个错误。只在我的主页展示了 RSS 图标，当我添加 RSS 图标到博客所有页面后，订阅量猛增。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 06 Mar 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_increase_the_rss_feeds.html</guid>
+      <dc:date>2013-03-06T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Linux/Unix 环境下实现精确计算程序运行的时间</title>
+      <link>http://baige5117.github.io/blog/calculate_the_running_time_of_algorithm.html</link>
+      <description>&lt;p&gt;写程序时，程序的运行效率很重要，其往往是评价程序优劣性的直接标准。程序运行效率的最简单方法就是计算程序的运行时间。为了提高程序效率，使用适当的方法对程序的各个部分进行运行时间的计算是很有必要的。&lt;/p&gt;
+
+&lt;p&gt;在 Linux/Unix 环境下，计算 C 程序运行时间可以通过以下三个函数来实现：&lt;code&gt;clock()&lt;/code&gt;、&lt;code&gt;time()&lt;/code&gt;、&lt;code&gt;gettimeofday()&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;clock() 函数&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;clock()&lt;/code&gt;函数是 ANSI C 的标准库函数，是 C/C++ 十分常用的计时函数，其声明定义在 time.h 头文件中：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clock_t clock( void ); 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Wed, 27 Feb 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/calculate_the_running_time_of_algorithm.html</guid>
+      <dc:date>2013-02-27T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>人的幸福感取决于什么</title>
+      <link>http://baige5117.github.io/blog/what_happiness_depend_on.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20130225.jpg&quot; height=&quot;293&quot; width=&quot;440&quot; alt=&quot;Happiness of Life&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;There is no way to happyiess, happiness is the way.&lt;span class=&quot;quote_src&quot;&gt;Dr. wayne&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;1988 年 4 月，霍华德金森 24 岁，是美国哥伦比亚大学的哲学系博士。他毕业论文的课题是《人的幸福感取决于什么》。为了完成这一课题，他向市民随机派发出了一万份问卷。问卷中，有详细的个人资料登记，还有五个选项：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A 非常幸福&lt;/li&gt;
+&lt;li&gt;B 幸福&lt;/li&gt;
+&lt;li&gt;C 一般&lt;/li&gt;
+&lt;li&gt;D 痛苦&lt;/li&gt;
+&lt;li&gt;E 非常痛苦&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;历时两个多月，他最终收回了五千二百余张有效问卷。经过统计，仅仅只有 121 人认为自己非常幸福。&lt;/p&gt;
+
+&lt;p&gt;接下来，霍华德金森对这 121 人做了详细地调查分析。他发现，这 121 人当中有 50 人，是这座城市的成功人士，他们的幸福感主要来源于事业的成功。而另外的 71 人，有的是普通的家庭主妇，有的是卖菜的农民，有的是公司里的小职员，还有的甚至是领取救济金的流浪汉。这些职业平凡生涯黯淡的人，为什么也会拥有如此高的幸福感呢？通过与这些人的多次接触交流，霍华德金森发现，这些人虽然职业多样性格迥然，但是有一点他们是相同的。那就是他们都对物质没有太多的要求，他们平淡自守，安贫乐道，很能享受柴米油盐的寻常生活。&lt;/p&gt;
+</description>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/what_happiness_depend_on.html</guid>
+      <dc:date>2013-02-25T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>What is Life</title>
+      <link>http://baige5117.github.io/blog/what_is_life.html</link>
+      <description>&lt;p&gt;Life is an opportunity, benefit from it.&lt;/p&gt;
+
+&lt;p&gt;Life is beauty, admire it.&lt;/p&gt;
+
+&lt;p&gt;Life is bliss, taste it.&lt;/p&gt;
+
+&lt;p&gt;Life is a dream, realize it.&lt;/p&gt;
+
+&lt;p&gt;Life is a challenge, meet it.&lt;/p&gt;
+
+&lt;p&gt;Life is a duty, complete it.&lt;/p&gt;
+
+&lt;p&gt;Life is a game, play it.&lt;/p&gt;
+
+&lt;p&gt;Life is costly, care for it.&lt;/p&gt;
+
+&lt;p&gt;Life is wealth, keep it.&lt;/p&gt;
+
+&lt;p&gt;Life is love, enjoy it.&lt;/p&gt;
+
+&lt;p&gt;Life is mystery, know it.&lt;/p&gt;
+
+&lt;p&gt;Life is a promise, fulfill it.&lt;/p&gt;
+
+&lt;p&gt;Life is sorrow, overcome it.&lt;/p&gt;
+
+&lt;p&gt;Life is a song, sing it.&lt;/p&gt;
+
+&lt;p&gt;Life is a struggle, accept it.&lt;/p&gt;
+
+&lt;p&gt;Life is tragedy, confront it.&lt;/p&gt;
+
+&lt;p&gt;Life is an adventure, dare it.&lt;/p&gt;
+
+&lt;p&gt;Life is luck, make it.&lt;/p&gt;
+
+&lt;p&gt;Life is too precious, do not destroy it.&lt;/p&gt;
+
+&lt;p&gt;Life is life, fight for it.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 18 Jan 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/what_is_life.html</guid>
+      <dc:date>2013-01-18T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Regrets of the Dying</title>
+      <link>http://baige5117.github.io/blog/regrets_of_the_dying.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121209.jpg&quot; height=&quot;293&quot; width=&quot;440&quot; alt=&quot;Beauty of Life&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Bronnie Ware is a writer and songwriter from Australia who spent several years caring for dying people in their homes. She has recently released a full-length book titled &amp;lsquo;The Top Five Regrets of the Dying - A Life Transformed by the Dearly Departing&amp;rsquo;. It is a memoir of her own life and how it was transformed through the regrets of the dying people she cared for. The following is what she wrote.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <pubDate>Thu, 17 Jan 2013 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/regrets_of_the_dying.html</guid>
+      <dc:date>2013-01-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>经典幽默—用微笑诠释生活-01</title>
+      <link>http://baige5117.github.io/blog/humors_01.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121229.jpeg&quot; height=&quot;447&quot; width=&quot;440&quot; alt=&quot;经典幽默&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;听说女人如衣服，兄弟如手足，回想起来，我竟然七手八脚地裸奔了二十多年，汗颜！^_^&amp;ldquo; 哈哈哈哈……俗话说，笑一笑，十年少！生活如此之美，为何不暂缓压力，放松心情，开怀一笑呢？&lt;/p&gt;
+</description>
+      <pubDate>Sat, 29 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/humors_01.html</guid>
+      <dc:date>2012-12-29T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>北大宣传片——女生日记</title>
+      <link>http://baige5117.github.io/blog/girl_diary.html</link>
+      <description>&lt;blockquote&gt;&lt;p&gt;什么是空气？99.03% 的氮和氧加上 0.03% 的二氧化碳。&lt;/p&gt;
+
+&lt;p&gt;什么是记忆？生物学中个体的解码、存储、检索。&lt;/p&gt;
+
+&lt;p&gt;什么是大学？大学是以多种不同观点看待世界的专业群体。&lt;/p&gt;
+
+&lt;p&gt;什么是高音C？每秒二百六十二次的震动。&lt;/p&gt;
+
+&lt;p&gt;什么是社会？社会是由自我繁殖的个体构建而成的社群。&lt;/p&gt;
+
+&lt;p&gt;什么是喜欢？旺盛分泌的多巴液，期限30个月。&lt;/p&gt;
+
+&lt;p&gt;什么是时光？时光是我们穿上的衣服，却在也脱不下来。&lt;/p&gt;
+
+&lt;p&gt;什么是美？从“知道”到达“懂得”……&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+      <pubDate>Fri, 28 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/girl_diary.html</guid>
+      <dc:date>2012-12-28T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>北大宣传片——男生日记</title>
+      <link>http://baige5117.github.io/blog/boy_diary.html</link>
+      <description>&lt;blockquote&gt;&lt;p&gt;在对的时间遇见对的人，那是童话；在错的时间遇到对的人，这才是青春……&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;曾记得，那些让我们内心有所悸动的人和事，即使只是一个关切的眼神，抑或一个划过嘴角浅浅的微笑，都震撼吾心，久久不能忘怀。因为青春，我们彷徨着不知所措，因为青春，我们一无所有两手空空，也因为着青春，我们敢爱敢恨无所顾忌，也因为着青春，我们敢闹敢闯肆无忌惮。这就是我们的青春，有着放不下，也忘不了，剪不断，理还乱的情愫。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 28 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/boy_diary.html</guid>
+      <dc:date>2012-12-28T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>The Time Account</title>
+      <link>http://baige5117.github.io/blog/The_Time_Account.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121225.jpg&quot; height=&quot;400&quot; width=&quot;400&quot; alt=&quot;Time&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Say there is a bank that credits your account each morning with $86,400. Every evening, the bank deletes whatever remains of this sum that you have failed to use during the day. It does not carry over any balance from day to day.&lt;/p&gt;
+
+&lt;p&gt;What would you do if you had such an account?&lt;/p&gt;
+
+&lt;p&gt;Draw out every cent, every day, of course!&lt;/p&gt;
+
+&lt;p&gt;Well, each of us has such an account. Its name is TIME.&lt;/p&gt;
+</description>
+      <pubDate>Tue, 25 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/The_Time_Account.html</guid>
+      <dc:date>2012-12-25T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>丘吉尔的最后一次演讲</title>
+      <link>http://baige5117.github.io/blog/last_speech_of_Churchill.html</link>
+      <description>&lt;blockquote&gt;&lt;p&gt;Never give up&lt;img src=&quot;class:quote_src&quot; alt=&quot;Sir Winston Leonard Spencer Churchill&quot; /&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;这是英国首先丘吉尔一生最精彩的演讲，也是他在二战期间的最后一次演讲。&lt;/p&gt;
+
+&lt;p&gt;1940 年，德国轰炸伦敦后，整个英国都沉侵子啊怀疑、忧郁的情绪中。1941 年 10 月 29 日，丘吉尔出席了剑桥大学的毕业典礼。校长想请首相先致辞，丘吉尔却说：“不，我打算到典礼结束前 20 分钟再讲。”随即静静坐在一旁的观礼席上。&lt;/p&gt;
+
+&lt;p&gt;在典礼进行到最后 20 分钟时，丘吉尔登上主席台，他从容地脱下大衣，摘下帽子，默默地注视着台下的几千名青年学生。一分钟后，他挥舞着拳头，开始了他习惯式的演讲。但是演讲持续的时间很短，而且内容也很简单。丘吉尔双目炯炯有神，只不断重复着讲了一句相同的话：&lt;/p&gt;
+</description>
+      <pubDate>Mon, 24 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/last_speech_of_Churchill.html</guid>
+      <dc:date>2012-12-24T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Python 学习笔记</title>
+      <link>http://baige5117.github.io/blog/notes_of_python.html</link>
+      <description>&lt;h2&gt;简单的“Hello world”程序&lt;/h2&gt;
+
+&lt;p&gt;有两种方法可以运行 python 程序：python 解析器（或称 python 运行环境）中交互运行和源文件运行&lt;/p&gt;
+
+&lt;h3&gt;python 解析器中交互运行&lt;/h3&gt;
+
+&lt;p&gt;打开终端，输入&lt;code&gt;python3&lt;/code&gt;命令打开 python 解析器，将出现提示符&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;输入 &lt;code&gt;print('Hello world')&lt;/code&gt; 语句，然后回车，将看到 &lt;code&gt;Hello word&lt;/code&gt; 输出字样。下面是在 linux 环境下的运行结果：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python3&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dec&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2012&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GCC&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;4.6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linux2&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;Type&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;help&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;license&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;more&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;information&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Hello world&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Sat, 22 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/notes_of_python.html</guid>
+      <dc:date>2012-12-22T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>网站优化之 CSS 文件优化措施</title>
+      <link>http://baige5117.github.io/blog/optimization_of_css_file.html</link>
+      <description>&lt;h2&gt;选择器选用的优化措施&lt;/h2&gt;
+
+&lt;p&gt;根据样式表匹配规则，选择器的匹配是从左往右进行匹配的，所以，选择器规则越长则匹配实践越长。因此，选择器选用的优化措施最主要的原则就是，尽量使选择器具有唯一性，减少使用子孙或祖先选择器。&lt;/p&gt;
+
+&lt;h3&gt;尽量不要使用通用选择器，比如最常用的&lt;code&gt;* {...}&lt;/code&gt;。&lt;/h3&gt;
+
+&lt;h3&gt;尽量不要为 id 指配特定的标签。&lt;/h3&gt;
+
+&lt;p&gt;id 选择器在同一页面只能使用一次，所以此条规则容易理解。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;button#backButton {…}  /* Bad */
+.menu-left#newMenuIcon {…} /* Bad */
+
+#backButton {…} /* Good */
+#newMenuIcon {…} /* Good */
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/optimization_of_css_file.html</guid>
+      <dc:date>2012-12-15T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>HTML/CSS 图片下方有空隙</title>
+      <link>http://baige5117.github.io/blog/html_css_image_space.html</link>
+      <description>&lt;h2&gt;问题表述&lt;/h2&gt;
+
+&lt;p&gt;在网页设计过程中，欲打算做一块矩形区域，在其中上下紧邻放置一张图片和一个段落，其 CSS 和 HTML 相关代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;div { background: green; }
+img { margin:0; border:1px solid black; }
+p { margin:0; border:1px solid black; }
+
+------------------------------------------------
+
+&amp;lt;div&amp;gt;
+ &amp;lt;img src=&quot;#&quot; alt=&quot;...&quot; /&amp;gt;
+ &amp;lt;p&amp;gt;段落文字&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但是，在生成的页面中，矩形区域中的图片和下方的段落之间存在这大约 5px 的空白间隙，效果图片如下图所示，图中右边的图片为想要的效果图，左图为实际效果图：&lt;/p&gt;
+</description>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/html_css_image_space.html</guid>
+      <dc:date>2012-12-12T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>浅谈生命的意义</title>
+      <link>http://baige5117.github.io/blog/talk_about_the_meaning_of_life.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121209.jpg&quot; height=&quot;275&quot; width=&quot;418&quot; alt=&quot;生命的意义&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们的生命被琐碎消耗至尽，但这些却又是我们穷尽一生所追求的东西。&lt;/p&gt;
+
+&lt;p&gt;生命在我看来可以理解为生存状态和命运轨迹之间的结合。生存的状态是我们还活着，不管活的辛苦与否，这种状态是我们必须维持的。而命运的轨迹，是基于活着这个状态来寻求更远的发展。任何有生命的物体，都在遵循着这两个基本法则，不断的想方设法使自己的生命变得强大，变得更加巩固。人是这样的，动物是这样的，草木是这样的，甚至一个国家也是如此。&lt;/p&gt;
+
+&lt;p&gt;但很多时候我们忽略了一个事实，生命是与时间挂钩的。再牛逼的人物也有衰老的一天，再美丽的鲜花也有凋谢的一天，再强大的帝国也有衰败的一天。那么，既然已经知道了结果并不美好，我们为什么还要那么执着的想要变得牛逼，变得强大，变得辉煌？&lt;/p&gt;
+</description>
+      <pubDate>Sun, 09 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/talk_about_the_meaning_of_life.html</guid>
+      <dc:date>2012-12-09T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>经典排序算法</title>
+      <link>http://baige5117.github.io/blog/classic_sort_algorithm.html</link>
+      <description>&lt;p&gt;排序，就是将无序元素经过一系列操作将其变为有序元素以方便后续处理的过程。排序操作是计算机编程中最常用的一种操作之一，因此被研究出了许多经典的排序算法，如快速排序、选择排序、冒泡排序等。&lt;/p&gt;
+
+&lt;h2&gt;快速排序（Quick Sort）&lt;/h2&gt;
+
+&lt;h3&gt;基本思想&lt;/h3&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;/images/post/quicksort.gif&quot; height=&quot;214&quot; width=&quot;280&quot; alt=&quot;快速排序&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;快速排序采用的思想是&lt;strong&gt;分治&lt;/strong&gt;与&lt;strong&gt;递归&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;具体为：选取一个元素（理论上可以随便找一个元素，但为了简便起见一般选取第一个元素）作为基准（pivot），通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比基准元素都要小，而另外一部分的所有数据都要比基准元素大。然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 08 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/classic_sort_algorithm.html</guid>
+      <dc:date>2012-12-08T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Linux 中 Grep 命令使用方法</title>
+      <link>http://baige5117.github.io/blog/the_basic_usage_of_grep_in_linux.html</link>
+      <description>&lt;p&gt;grep（global search regular expression(RE) and print out the line，全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。&lt;/p&gt;
+
+&lt;p&gt;grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到屏幕，不影响原文件内容。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 04 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/the_basic_usage_of_grep_in_linux.html</guid>
+      <dc:date>2012-12-04T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>FreeCAD 的使用</title>
+      <link>http://baige5117.github.io/blog/the_basic_usage_of_FreeCAD.html</link>
+      <description>&lt;h2&gt;FreeCAD 简介&lt;/h2&gt;
+
+&lt;p&gt;FreeCAD 是一款参数化三维建模工具，其以参数化特征建模为核心功能，基于模块化的软件架构而实现，可在不改动系统核心的的前提下进行高级功能扩展和定制。其主要应用于机械工程与产品设计领域，当然也适用于诸如建筑等工程领域。&lt;/p&gt;
+
+&lt;p&gt;FreeCAD 建立于强大的几何核心 OpenCasCade 之上，采用 Coin 3D 提供的与 Open Inventor 兼容的三维场景模型，并提供丰富的 Python 应用程序接口，其图形交互界面基于 Qt 实现。&lt;/p&gt;
+
+&lt;p&gt;FreeCAD 也是一款开源软件，完全遵循 Open Source(GPL &amp;amp; LGPL License)协议。而且完全跨平台使用，目前能够完美地在 Windows, Mac OS X 与 Linux 平台上运行且具有完全一致的用户交互界面和功能。&lt;/p&gt;
+
+&lt;p&gt;但是，FC 仍然处于初级开发阶段，因此无法完成一些高级任务。尽管如此，对于一些初级操作以及那些想深入学习建模原理的用户，FC 还是值得学习和使用。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 04 Dec 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/the_basic_usage_of_FreeCAD.html</guid>
+      <dc:date>2012-12-04T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>机械工程师的级别</title>
+      <link>http://baige5117.github.io/blog/level_of_mechanical_engineer.html</link>
+      <description>&lt;p&gt;首先，千万不要以为机械只是搞结构，更不要以为结构只是使用 PROE、solidworks 或者其他什么软件。其实搞机械机构的有个先天优势，那就是什么产品都是以结构为平台的，你往哪里发展都有可能。搞结构能让你对产品有更直观的理解，让你更严谨，更切实。另一方面，搞结构的是个漫长痛苦的锻炼过程，但是一旦练就本领，多老都不怕，甚至越老越吃香。&lt;/p&gt;
+
+&lt;p&gt;根据我自己的从业经历，我随便列几条我认为搞结构的人的发展路径（个人看法，），依次为：&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;菜鸟1级&lt;/b&gt;：会使用 AUTOCAD 画一些简单的二维图，根据这个图，你能想象产品的三维形态。&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;菜鸟2级&lt;/b&gt;：你的二维图上能够看到公差，材料，表面处理，工艺技术要求等信息了。而且这些信息是你自己标上去的，你知道他们意味着什么。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 24 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/level_of_mechanical_engineer.html</guid>
+      <dc:date>2012-11-24T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>活在当下</title>
+      <link>http://baige5117.github.io/blog/the_power_of_now.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121117.jpg&quot; height=&quot;316&quot; width=&quot;450&quot; alt=&quot;活在当下&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;走到生命的哪一个阶段，都该喜欢那一段时光，完成那一阶段该完成的职责，顺生而行，不沉迷过去，不狂热地期待着未来，生命这样就好。不管正经历着怎样的挣扎与挑战，或许我们都只有一个选择：虽然痛苦，却依然要快乐，并相信未来。&lt;span class=&quot;quote_src&quot;&gt;白岩松&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;人生要活在当下，及时享受每一天。&lt;/p&gt;
+
+&lt;p&gt;人生其实是很短暂的，更不用提由于生命的脆弱而发生的各种意外。而且生活本身就是过程，结果只是短暂的时刻。所以，当清晨睁开第一眼的瞬间，就应该翘起嘴巴露出发自内心的微笑，因为至少我们还活着，又可以享受明媚的阳光，呼吸新鲜的空气，听到欢快的鸟语，问到沁人心脾的花香……生活到处都是美，只是由于我们迫于追赶时代而暂时蒙蔽了发现美的眼睛。活在当下，就不要再为未来做任何毫无意义的纠结、恐惧了。该来的迟早要来，躲也躲不过去，既不会提前也不会推迟；不该来的再强求也不会来。我们所能做的只有把握好当下，把当下该做好的事情做好，仅此而已。所以，为永远无法预测的事情枉费心机，浪费感情真是一件得不偿失的事情，将这部分时间精力节省出来更好的享受当下不更好！&lt;/p&gt;
+</description>
+      <pubDate>Sat, 17 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/the_power_of_now.html</guid>
+      <dc:date>2012-11-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Photoshop CS5 学习笔记</title>
+      <link>http://baige5117.github.io/blog/notes_of_photoshop_cs5.html</link>
+      <description>&lt;h2&gt;基础知识&lt;/h2&gt;
+
+&lt;p&gt;1、PS CS5 界面组成部分：视图控制栏、菜单栏、工具箱、工具选项栏、控制面板、工作区域。&lt;/p&gt;
+
+&lt;p&gt;2、主窗口中一般只会显示一些最常用的控制面板，比如颜色、、图层、管道等，可以在菜单栏的“窗口”菜单中勾选相关的控制面板使其在主窗口中显示出来。&lt;/p&gt;
+
+&lt;p&gt;3、放大与缩小：a、工具箱放大镜工具（Z）；b、Ctrl+“+”、Ctrl+“-”；c、Alt+鼠标滚轮；d、Ctrl+0（满画面显示图片）。&lt;/p&gt;
+
+&lt;p&gt;4、手抓工具：a、工具箱中的手抓工具（H）；b、按住空格键的同时拖动鼠标左键。&lt;/p&gt;
+
+&lt;p&gt;5、自由变换：Ctrl+T。可以实现图片的缩放、旋转等操作。在按住 Shift 的时候拖动图片的四个角点可以实现等比缩放。自由变换之后确认可以按“Enter”，取消自由变换则“Esc”。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 16 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/notes_of_photoshop_cs5.html</guid>
+      <dc:date>2012-11-16T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Inkscape 学习笔记</title>
+      <link>http://baige5117.github.io/blog/notes_of_inkscape.html</link>
+      <description>&lt;h2&gt;操作相关&lt;/h2&gt;
+
+&lt;h3&gt;1. 改变画布大小使其自动调整以适应内容大小&lt;/h3&gt;
+
+&lt;p&gt;File &amp;rarr; Document Properties &amp;rarr; Page &amp;rarr; +Resize page to content&amp;hellip; &amp;rarr; Resize page to drawing or selection&lt;/p&gt;
+
+&lt;h3&gt;2. 矩形&lt;/h3&gt;
+
+&lt;p&gt;矩形绘制技巧：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;配合 Ctrl 键，可以绘制正方形或边长为整数比率(2：1，3：1等)的矩形。&lt;/li&gt;
+&lt;li&gt;配合 Shift 键，从中心开始绘制。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;刚绘制的矩形(新绘的矩形总是自动被选中)在三个角上显示3个控制柄，但实际上有四个控制柄，如果矩形没有圆角，右上角的两个是重合在一起的。这两个是倒圆控制柄；另外两个(左上和右下)是缩放控制柄。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/notes_of_inkscape.html</guid>
+      <dc:date>2012-11-14T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>文件名截取脚本</title>
+      <link>http://baige5117.github.io/blog/truncate_file_name_with_bash_script.html</link>
+      <description>&lt;h2&gt;任务描述&lt;/h2&gt;
+
+&lt;p&gt;获取一个目录里面的所有文件的文件名（带扩展名），不带扩展名的文件名，以及扩展名。&lt;/p&gt;
+
+&lt;h3&gt;脚本程序&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;#! /bin/bash &lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ls &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%.*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;extension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;##*.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;9&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Fri, 09 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/truncate_file_name_with_bash_script.html</guid>
+      <dc:date>2012-11-09T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>神雕瞎驴新解——金庸看完哭了</title>
+      <link>http://baige5117.github.io/blog/new_explanation_of_ShenDiaoXiaLv.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121109.jpg&quot; height=&quot;338&quot; width=&quot;450&quot; alt=&quot;神雕侠侣&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;一、身世&lt;/h2&gt;
+
+&lt;p&gt;大家好，我叫杨过，原名杨经过。&lt;/p&gt;
+
+&lt;p&gt;因为妈生我的时候刚好有一只羊经过。&lt;/p&gt;
+
+&lt;p&gt;开始大家都叫我阿经。&lt;/p&gt;
+
+&lt;p&gt;成名后我开始浪迹江湖，由于我是广东人，大家也就都很亲切地叫我：粤经。&lt;/p&gt;
+
+&lt;p&gt;我老听得别扭的，后来乾脆就改名为杨过。&lt;/p&gt;
+
+&lt;p&gt;我一出世，就没见过父母的面。&lt;/p&gt;
+
+&lt;p&gt;八岁那一年，一个叫『神雕大瞎』的收留了我。&lt;/p&gt;
+
+&lt;p&gt;他就是郭靖。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 09 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/new_explanation_of_ShenDiaoXiaLv.html</guid>
+      <dc:date>2012-11-09T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>CSS伪类选择器</title>
+      <link>http://baige5117.github.io/blog/css_pseudo_classes.html</link>
+      <description>&lt;h2&gt;基本介绍&lt;/h2&gt;
+
+&lt;p&gt;CSS3 的伪类选择器有多，本文仅讨论状态伪类选择器——&lt;code&gt;:hover&lt;/code&gt;、&lt;code&gt;:active&lt;/code&gt;、&lt;code&gt;:focus&lt;/code&gt;。这些选择器都有一个共同的特征名那就是定义的样式只有当元素处于某种状态下时才起作用，在默认状态下无效。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:hover&lt;/code&gt;选择器：当鼠标悬停在所指定的元素上时所使用的样式；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:active&lt;/code&gt;选择器：当所指定的元素处于激活状态（鼠标在元素上按下还没有松开）时所使用的样式；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:focus&lt;/code&gt;选择器：当元素获得光标焦点时使用的样式，主要用在文本框输入文字时使用；&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;状态选择器最常用的地方就是&lt;b&gt;链接&lt;/b&gt;和&lt;b&gt;输入框&lt;/b&gt;了。其中的 &lt;code&gt;:focus&lt;/code&gt; 伪选择器主要用在键盘操作者进行页面的访问，利用 &lt;code&gt;Tab&lt;/code&gt; 键即可查看到当某链接为选定的链接后的效果。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 07 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/css_pseudo_classes.html</guid>
+      <dc:date>2012-11-07T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Blessing in disguise | 塞翁失马，焉知非福</title>
+      <link>http://baige5117.github.io/blog/old_Chinese_fable_blessing_in_disguise.html</link>
+      <description>&lt;p&gt;A farmer had only one horse. One day, his horse ran away.&lt;/p&gt;
+
+&lt;p&gt;All the neighbors came by saying, “I&amp;rsquo;m so sorry. This is such bad news. You must be so upset.” The man just said, “We&amp;rsquo;ll see.”&lt;/p&gt;
+
+&lt;p&gt;A few days later, his horse came back with twenty wild horses. The man and his son corraled all 21 horses.&lt;/p&gt;
+
+&lt;p&gt;All the neighbors came by saying, “Congratulations! This is such good news. You must be so happy!” The man just said, “We&amp;rsquo;ll see.”&lt;/p&gt;
+
+&lt;p&gt;One of the wild horses kicked the man&amp;rsquo;s only son, breaking both his legs.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/old_Chinese_fable_blessing_in_disguise.html</guid>
+      <dc:date>2012-11-02T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>时间有限，你选择什么：诱惑还是梦想？</title>
+      <link>http://baige5117.github.io/blog/temptation_or_dream.html</link>
+      <description>&lt;p&gt;每个人来到这个世界都带着一个梦想。没有人会说自己不曾有过梦想，只是，大多时候我们的梦想已被现实的残酷所磨灭。有梦想的人是快乐的，能够保护自己梦想的人是勇敢的，最终实现自己梦想的人是无悔的。&lt;/p&gt;
+
+&lt;p&gt;时间是有限的，你的梦想就在那里，你想去做，再长的路，一步一步也能走完。你不想去做，即使再短的路，不迈开双脚也无法到达。每天，你都会有 24 小时，上帝是公平的，你的时间不会比爱因斯坦多一秒种，也不会比乔布斯少一秒钟。他们每天都会反省自己，时刻保持清醒的头脑，让所有的精力都花费在建筑梦想大厦的一砖一瓦上。你的 24 小时在做些什么？看电影么？上网聊天么？除去这些你所谓的休息放松，你还有多少时间用来完成自己的计划？&lt;/p&gt;
+</description>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/temptation_or_dream.html</guid>
+      <dc:date>2012-11-01T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>The Secret - The Law of Attraction</title>
+      <link>http://baige5117.github.io/blog/secret_law_of_attraction.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20121101.jpg&quot; height=&quot;300&quot; width=&quot;450&quot; alt=&quot;The Secret&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The leaders in the past who had the secret wanted to keep the power, and not share the power. So, they kept people ignorant of the secret. People went to work, they did their job, they came home. There were on a 2)treadmill, with no power, because the secret was kept in the few.&lt;/p&gt;
+
+&lt;p&gt;You know, this secret gives you everything you want. Happineess, health and wealth. You can have, do or be anything you want.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/secret_law_of_attraction.html</guid>
+      <dc:date>2012-11-01T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>HTML/CSS 两端对齐</title>
+      <link>http://baige5117.github.io/blog/html_css_justified.html</link>
+      <description>&lt;h3&gt;文本两端对齐&lt;/h3&gt;
+
+&lt;p&gt;可使用以下代码使文本两端对齐：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;text-align: justify;
+text-justify: inter-ideograph;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用这两行 CSS 代码可以使文本中的英文文本实现完美两端对齐，但是对于中文文本有条件性限制：&lt;b&gt;中文中所使用的标点必须全部为英文标点（也即半角符号标点），或者可以使用全角符号标点，但是在中文文本中的英文字符必须使用全角字符。&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;比如说，以下这段文本使用了中文全角标点符号，而其中的英文也为正常状态下的半角字符，则使用以上代码后没能实现两端对齐，效果如下：&lt;/p&gt;
+
+&lt;div style=&quot;margin:1em 2em;border:1px solid black;background:#F5FFEB;overflow: auto;&quot;&gt;
+&lt;p style=&quot;padding:0;text-align: justify;text-justify: inter-ideograph;&quot;&gt;大家好，我叫Baige5117，来自中国。我很喜欢篮球（Basketball），非常喜欢看NBA（美国男子篮球职业联赛）。喜欢的球星有迈克乔丹（Michael Jordan），科比（Kobe Bryant），麦迪（Tracy McGrady）等。我也经常打篮球，技术一流，希望能提高，哈哈。大家好，我叫Baige5117，来自中国。我很喜欢篮球（Basketball），非常喜欢看NBA（美国男子篮球职业联赛）。喜欢的球星有迈克乔丹（Michael Jordan），科比（Kobe Bryant），麦迪（Tracy McGrady）等。我也经常打篮球，技术一流，希望能提高，哈哈。&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/html_css_justified.html</guid>
+      <dc:date>2012-11-01T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>历史上十个最著名的思想实验</title>
+      <link>http://baige5117.github.io/blog/10_thought_experiments.html</link>
+      <description>&lt;h2&gt;10．电车难题（The Trolley Problem）&lt;/h2&gt;
+
+&lt;p&gt;“电车难题”是伦理学领域最为知名的思想实验之一，其内容大致是：一个疯子把五个无辜的人绑在电车轨道上。一辆失控的电车朝他们驶来，并且片刻后就要碾压到他们。幸运的是，你可以拉一个拉杆，让电车开到另一条轨道上。但是还有一个问题，那个疯子在那另一条轨道上也绑了一个人。考虑以上状况，你应该拉拉杆吗？&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;解读：&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;电车难题最早是由哲学家Philippa Foot提出的，用来批判伦理哲学中的主要理论，特别是功利主义。功利主义提出的观点是，大部分道德决策都是根据“为最多的人提供最大的利益”的原则做出的。从一个功利主义者的观点来看，明显的选择应该是拉拉杆，拯救五个人只杀死一个人。但是功利主义的批判者认为，一旦拉了拉杆，你就成为一个不道德行为的同谋——你要为另一条轨道上单独的一个人的死负部分责任。然而，其他人认为，你身处这种状况下就要求你要有所作为，你的不作为将会是同等的不道德。总之，不存在完全的道德行为，这就是重点所在。许多哲学家都用电车难题作为例子来表示现实生活中的状况经常强迫一个人违背他自己的道德准则，并且还存在着没有完全道德做法的情况。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 30 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/10_thought_experiments.html</guid>
+      <dc:date>2012-10-30T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Markdown 基本语法</title>
+      <link>http://baige5117.github.io/blog/markdown_syntax.html</link>
+      <description>&lt;h2&gt;Markdown 基本介绍&lt;/h2&gt;
+
+&lt;p&gt;Markdown 既是一种轻量级的标记语言，又是一款文本到 HTML（text-to HTML）转换工具。利用 markdown 可以用一种易读易写的纯文本格式写作，然后将其转换为结构化标记语言 XHTML/HTML。Markdown 首要的设计目标是使其成为可读性最大并可再发行的可输入输出格式。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。Markdown 允许使用 HTML 语法，所以使用者如果需要可以直接用 HTML 来表示。&lt;/p&gt;
+
+&lt;h3&gt;行内 HTML&lt;/h3&gt;
+
+&lt;p&gt;Markdown 的语法非常短小精悍，仅仅实现了 HTML 的一小部分标签，要想使用更多的 HTML 标签，需要在 Markdown 文本中插入 HTML 标签。插入的方式很简单，无需前置符号或者限定符号，只需要直接插入 HTML 标签即可。&lt;/p&gt;
+
+&lt;p&gt;但是，对于块级别（block-level）的元素——例如&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;等——前后必须使用空行分割开，而且块级元素的开始标签和结束标签不能用空格或者制表符缩进。&lt;/p&gt;
+
+&lt;p&gt;在块级 HTML 标签内部将不再支持 Markdown 的语法格式，也即在 HTML 块内无法再使用星号进行强调。&lt;/p&gt;
+
+&lt;p&gt;文本级（span-level） HTML 元素没有以上限制，可以在任何位置使用，而且在其标签内仍支持 Markdown 语法格式。&lt;/p&gt;
+</description>
+      <pubDate>Sun, 28 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/markdown_syntax.html</guid>
+      <dc:date>2012-10-28T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>理查德·斯托曼的征婚启事</title>
+      <link>http://baige5117.github.io/blog/RMS-personal-ad.html</link>
+      <description>&lt;p&gt;理查德·马修·斯托曼（Richard Matthew Stallman, RMS，生于1953年），自由软件运动的精神领袖、GNU 计划以及自由软件基金会（Free Software Foundation）的创立者、著名黑客。他的主要成就包括 Emacs 及后来的 GNU Emacs，GNU C 编译器及 GNU 调试器。他所写作的 GNU 通用公共许可证（GNU GPL）是世上最广为采用的自由软件许可证，为 copyleft 观念开拓出一条崭新的道路。他最大的影响是为自由软件运动竖立道德、政治及法律框架。他被许多人誉为当今自由软件的斗士、伟大的理想主义者。&lt;/p&gt;
+
+&lt;p&gt;斯托曼不仅技术一流，其幽默感也颇佳，从他的&lt;a href=&quot;http://www.stallman.org/&quot;&gt;个人主页&lt;/a&gt;上贴着的那张显赫的“&lt;a href=&quot;http://www.stallman.org/extra/personal.html&quot;&gt;征婚启事&lt;/a&gt;”就可见一斑：&lt;/p&gt;
+</description>
+      <pubDate>Sat, 27 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/RMS-personal-ad.html</guid>
+      <dc:date>2012-10-27T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>R* 树——一种高效且健壮的点和矩形访问方法</title>
+      <link>http://baige5117.github.io/blog/R%2A-Tree.html</link>
+      <description>&lt;h2&gt;摘要&lt;/h2&gt;
+
+&lt;p&gt;R 树是最为著名的矩形访问方法（Access method）之一，其算法的基本原理是对中间节点的外接矩形面积进行启发式的优化。我们在一个标准实验平台下对各种数据、各种查询、各种操作进行了大量的实验，并根据实验结果设计了 R* 树。R* 树可以对路径中每个外接矩形的面积、边长（margin）和叠加程度进行综合优化，并将整个路径上所有外界矩形的优化结果合并起来考虑。（原文是incorporates a combined optimization of area, margin and overlap of each enclosing rectangle in the directory）。我们在标准的实验平台下对两种数据结构进行了详细的性能比较，结果证明，与现有的各种 R 树变种相比，R* 树都有明显的性能优势。这里的 R 树变种包括 Guttman 的线性 R 树、二次 R 树（或者叫平方 R 树），也包括 Greene 的 R 树变种。R* 树具有全面的性能优势，不论是针对矩形数据还是针对多维点数据、不论是查询操作还是地图叠加等各种空间操作，R* 树的性能优势均有所表现。从实际应用的角度来讲，R* 树在下面两个方面对用户有强烈的吸引力：第一，R* 树不论对点还是其他各种空间数据都能提供有效的支持；第二，R* 树的实现代价仅比 R 树略高。&lt;/p&gt;
+</description>
+      <pubDate>Sat, 27 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/R%2A-Tree.html</guid>
+      <dc:date>2012-10-27T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>R 树——动态空间索引结构</title>
+      <link>http://baige5117.github.io/blog/R-Tree.html</link>
+      <description>&lt;h2&gt;一些术语&lt;/h2&gt;
+
+&lt;p&gt;本文特别定义了一些术语用于表示不同的对象，正确地区分这些术语有助于更好的理解 R 树。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;空间数据库（Spatial database）：存储真正的空间数据对象（比如点、面片等）的地方，它由大量的空间数据对象组成，这些数据对象几乎没有任何（或者仅有简单的）组织形式。&lt;/li&gt;
+&lt;li&gt;叶子节点（Leaf node）：树中最底层的节点，没有子节点的节点。R 树中的叶子节点由一定数目的索引记录构成。&lt;/li&gt;
+&lt;li&gt;非叶节点（Non-leaf node）：树中除叶子节点之外的节点。R 树中的非叶节点由一定数目的条目构成。&lt;/li&gt;
+&lt;li&gt;索引记录（Index records）：叶子节点中存储的数据形式，一条索引记录指向空间数据库中的一个数据对象。&lt;/li&gt;
+&lt;li&gt;元组（Tuple）：空间数据库中存储的数据形式，一条元组就是一个空间数据对象，并且每个元组都有一个唯一的标识符。&lt;/li&gt;
+&lt;li&gt;条目（Entry）：又称索引条目（Index entry），R 树节点中存储的数据形式，当为叶子节点时，此条目就是索引记录。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      <pubDate>Fri, 26 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/R-Tree.html</guid>
+      <dc:date>2012-10-26T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>“一”字诗</title>
+      <link>http://baige5117.github.io/blog/Yi-Zi-poem.html</link>
+      <description>&lt;blockquote class=&quot;align_c&quot;&gt;
+一花一世界，&lt;br /&gt;
+一木一浮生，&lt;br /&gt;
+一草一天堂，&lt;br /&gt;
+一叶一如来，&lt;br /&gt;
+一砂一极乐，&lt;br /&gt;
+一方一净土，&lt;br /&gt;
+一笑一尘缘，&lt;br /&gt;
+一念一清静。&lt;br /&gt;
+&lt;span class=&quot;quote_src&quot;&gt;佛曰&lt;/span&gt;
+&lt;/blockquote&gt;
+
+
+
+
+&lt;blockquote class=&quot;align_c&quot;&gt;
+To see a World in a Grain of Sand&lt;br /&gt;
+And a Heaven in a Wild Flower,&lt;br /&gt;
+Hold Infinity in the palm of your hand&lt;br /&gt;
+And Eternity in an hour.&lt;br /&gt;
+&lt;hr /&gt;
+一沙一世界，一花一天堂。&lt;br /&gt;
+无限掌中置，刹那成永恒。&lt;br /&gt;
+&lt;span class=&quot;quote_src&quot;&gt;英国诗人威廉·布莱克（William Blake）(1757-1827)&lt;/span&gt;
+&lt;/blockquote&gt;
+
+
+
+</description>
+      <pubDate>Thu, 25 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/Yi-Zi-poem.html</guid>
+      <dc:date>2012-10-25T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>CSS 之 Position 详解</title>
+      <link>http://baige5117.github.io/blog/css-positon.html</link>
+      <description>&lt;p&gt;在网页设计中，能够很好地定位其中的元素，直接关系到页面的效果。只有把各元素都合理地放置到页面中，才能搭建触美观的页面效果。&lt;/p&gt;
+
+&lt;p&gt;在 CSS 中，可以通过 &lt;code&gt;position&lt;/code&gt;、&lt;code&gt;float&lt;/code&gt;、&lt;code&gt;z-index&lt;/code&gt; 等定位方式对元素进行定位。本文将讨论一下难以理解的 &lt;code&gt;position&lt;/code&gt; 定位方式。&lt;/p&gt;
+
+&lt;p&gt;在市面上有很多关于 CSS 的参考书籍，但是这些书籍往往会对那些诸如字体，文本，背景等简单的属性进行大张旗鼓的介绍，而对那些同样重要但难以理解的属性仅只言片语一笔带过，有避重就轻的嫌疑。CSS 中主要难以理解的属性包括盒型模型，定位等。本文将主要讲述关于 &lt;code&gt;position&lt;/code&gt; 的理解，力求让您看完本文后对 &lt;code&gt;position&lt;/code&gt; 有着最全面的认识。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;position&lt;/code&gt; 用于规定页面元素（主要指框模型）的定位方式：静态定位、绝对定位、相对定位还是固定定位，其中的静态定位是默认的定位方式。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 24 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/css-positon.html</guid>
+      <dc:date>2012-10-24T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>如何有效地休息？</title>
+      <link>http://baige5117.github.io/blog/how-to-rest.html</link>
+      <description>&lt;p&gt;你真的会休息吗？&lt;/p&gt;
+
+&lt;p&gt;你根本不会休息。&lt;/p&gt;
+
+&lt;p&gt;为什么你睡了 11 个小时仍然觉得疲累？&lt;/p&gt;
+
+&lt;p&gt;为什么你花了好几万去岛国度假并没有增加生活的热情？&lt;/p&gt;
+
+&lt;p&gt;都说要去 KTV，去夜店，去游乐园就能忘掉不快，更带劲地开始新的一天，但是尽兴归来心里只剩空虚？&lt;/p&gt;
+
+&lt;p&gt;我们真的明白休息的含义吗？我们休息对了吗？&lt;/p&gt;
+
+&lt;p&gt;你理解的休息是什么？一个饱觉？一阵疯玩？到 KTV 释放饭后的一串饱嗝？&lt;/p&gt;
+
+&lt;p&gt;休息的真正含义是什么？是恢复疲劳，放松神经，当你重新投入工作与学习的时候觉得又是一个精力充沛的新人。&lt;/p&gt;
+
+&lt;p&gt;如果你的休息方式并不能为你带来这些，那么，无论这些活动的名字听起来有多轻松，看上去有多High，它都是一种错误。抛弃它们，来一场休息革命！&lt;/p&gt;
+</description>
+      <pubDate>Tue, 16 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how-to-rest.html</guid>
+      <dc:date>2012-10-16T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>你配不上你当初的梦想</title>
+      <link>http://baige5117.github.io/blog/out-of-your-dream.html</link>
+      <description>&lt;p&gt;昨天的你坐在高三的教室里自习到学校锁门。你咬着牙对自己说，一定要以最骄傲的姿态离开。看看今天狼狈不堪的模样，有什么可以骄傲。&lt;/p&gt;
+
+&lt;p&gt;昨天的你对自己说，不论我今天有多么彷徨迷茫，有一天，我都要过上自己想要的生活。以你现在的状态，凭什么。&lt;/p&gt;
+
+&lt;p&gt;你唯恐他人受到伤害，不忍心拒绝任何请求，发一条短信都要忖度语气，却还是懊恼自己考虑不周全。自己都费解，究竟是想讨好谁。&lt;/p&gt;
+
+&lt;p&gt;你希望自己可以宠辱不惊，喜怒不形，却总是习惯把一切写在脸上，who cares？&lt;/p&gt;
+</description>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/out-of-your-dream.html</guid>
+      <dc:date>2012-10-12T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>高效率人士的优秀习惯</title>
+      <link>http://baige5117.github.io/blog/good_habbits_of_efficient_people.html</link>
+      <description>&lt;p&gt;“逝者如斯夫，不舍昼夜”。如何在有限的生命里去做一件有意义的事，仁者见仁，智者见智，但是，有一点却是共识：上天留给你去发现“生命的意义”的时间已经不多。一天的时间永远是 24 个小时，高效率的人能把 24 小时变成 48 小时，而低效率的人却能把 24 小时变成 12 小时。向高效率的人士学习，你会发现高效率其实就那么简单。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1、高度集中的注意力。&lt;/strong&gt;在做任何事情的时候，都会全身心的投入，心无杂念，不受外界因素的干扰。因此要培养迅速将注意力集中到一件事情上的能力，而且要锻炼抗干扰能力。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2、一次只着手完成一件事。&lt;/strong&gt;这样做可以减少注意力和思维的来回切换，持续保持高效的状态，进而快速完成任务。一次只做一件事并不一定是一段时间只做一件事直至将其完成，而是在一个有效的时间段内只做某一件事，这件事或许是某一计划的一部分。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 02 Oct 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/good_habbits_of_efficient_people.html</guid>
+      <dc:date>2012-10-02T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>C 语言声明解析</title>
+      <link>http://baige5117.github.io/blog/declaration_analysis_in_c.html</link>
+      <description>&lt;h2&gt;合法声明的限制条件&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;函数的返回值不能是一个函数，而可以是一个函数指针，所以像&lt;code&gt;foo()()&lt;/code&gt;这样是非法的，而&lt;code&gt;int(* fun())()&lt;/code&gt;是合法的；&lt;/li&gt;
+&lt;li&gt;函数的返回值不能是一个数组，而可以是一个指向数组的指针，所以像 &lt;code&gt;foo()[]&lt;/code&gt; 这样是非法的，而 &lt;code&gt;int(* fun())[]&lt;/code&gt; 是合法的；&lt;/li&gt;
+&lt;li&gt;数组里面不能有函数，但数组里面可以有其他数组，所以像 &lt;code&gt;foo[]()&lt;/code&gt; 这样是非法的，而 &lt;code&gt;int foo[][]&lt;/code&gt; 是合法的。&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;声明的优先级规则&lt;/h2&gt;
+
+&lt;p&gt;A：  声明从它的名字开始读取，然后按照优先级顺序依次读取。&lt;/p&gt;
+
+&lt;p&gt;B：  优先级从高到低依次是：&lt;/p&gt;
+
+&lt;p&gt;B.1： 声明中被括号括起来的部分&lt;/p&gt;
+
+&lt;p&gt;B.2： 后缀操作符：括号&lt;code&gt;( )&lt;/code&gt;表示这是一个函数，而方括号 &lt;code&gt;[ ]&lt;/code&gt; 表示这是一个数组。&lt;/p&gt;
+
+&lt;p&gt;B.3： 前缀操作符：星号&lt;code&gt;*&lt;/code&gt;表示“指向&amp;hellip;的指针”。&lt;/p&gt;
+
+&lt;p&gt;C：  如果 &lt;code&gt;const&lt;/code&gt; 和（或）&lt;code&gt;volatile&lt;/code&gt; 关键字的后面紧跟类型说明符（如 &lt;code&gt;int&lt;/code&gt;、&lt;code&gt;long&lt;/code&gt; 等），那么它作用于类型说明符。其他情况下，&lt;code&gt;const&lt;/code&gt; 和（或）&lt;code&gt;volatile&lt;/code&gt; 关键字作用于它左边紧邻的指针星号。&lt;/p&gt;
+</description>
+      <pubDate>Thu, 20 Sep 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/declaration_analysis_in_c.html</guid>
+      <dc:date>2012-09-20T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>Image Magick bash script to resize and crop images</title>
+      <link>http://baige5117.github.io/blog/image_magick_bash_script_to_resize_and_crop_images.html</link>
+      <description>
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;     
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# script to resize and crop&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/Users/data/files/candidate/photo/&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;resume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;resume
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;orig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;_orig
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$dir$orig&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;k in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ls *.jpg&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;k&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%h&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$k&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;  &lt;span class=&quot;nv&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%w&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$k&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;#echo &amp;quot;$k, w:$w, h:$h&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$w&lt;/span&gt; -ge &lt;span class=&quot;nv&quot;&gt;$h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;      &lt;/span&gt;convert &lt;span class=&quot;nv&quot;&gt;$k&lt;/span&gt; -resize x72 -crop 72x72+0+0  &lt;span class=&quot;s2&quot;&gt;&amp;quot;$dir$resume/$k&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt;       
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;      &lt;/span&gt;convert &lt;span class=&quot;nv&quot;&gt;$k&lt;/span&gt; -resize 72x -crop 72x72+0+0 &lt;span class=&quot;s2&quot;&gt;&amp;quot;$dir$resume/$k&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;#echo &amp;quot;portrait&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;    done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Mon, 10 Sep 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/image_magick_bash_script_to_resize_and_crop_images.html</guid>
+      <dc:date>2012-09-10T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>C 语言动态内存分配</title>
+      <link>http://baige5117.github.io/blog/dynamic_memory_allocation.html</link>
+      <description>&lt;h2&gt;基本信息&lt;/h2&gt;
+
+&lt;p&gt;所谓动态内存分配就是指在程序执行的过程中动态地分配或者回收存储空间的分配内存的方法。动态内存分配不像数组等静态内存分配方法那样需要预先分配存储空间，而是由系统根据程序的需要即时分配，且分配的大小就是程序要求的大小。&lt;/p&gt;
+
+&lt;h2&gt;详细释义&lt;/h2&gt;
+
+&lt;p&gt;例如我们定义一个&lt;code&gt;float&lt;/code&gt;型数组：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;     &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Mon, 20 Aug 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/dynamic_memory_allocation.html</guid>
+      <dc:date>2012-08-20T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>人生之梯</title>
+      <link>http://baige5117.github.io/blog/ladder_of_life.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20120717.jpg&quot; height=&quot;308&quot; width=&quot;450&quot; alt=&quot;人生哲学&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;有一对兄弟，他们的家住在 80 层楼上。有一天他们外出旅行回家，发现大楼停电了！虽然他们背着大包的行李，但看来没有什么别的选择，于是哥哥对弟弟说，我们就爬楼梯上去！于是，他们背着两大包行李开始爬楼梯。爬到 20 楼的时候他们开始累了，哥哥说“包包太重了，不如这样吧，我们把包包放在这里，等来电后坐电梯来拿。”于是，他们把行李放在了 20 楼，轻松多了，继续向上爬。&lt;/p&gt;
+
+&lt;p&gt;他们有说有笑地往上爬，但是好景不长，到了 40 楼，两人实在累了。想到还只爬了一半，两人开始互相埋怨，指责对方不注意大楼的停电公告，才会落得如此下场。他们边吵边爬，就这样一路爬到了 60 楼。到了 60 楼，他们累得连吵架的力气也没有了。弟弟对哥哥说，“我们不要吵了，爬完它吧。”于是他们默默地继续爬楼，终于 80 楼到了！兴奋地来到家门口兄弟俩才发现他们的钥匙留在了 20 楼的包包里了。&lt;/p&gt;
+</description>
+      <pubDate>Tue, 17 Jul 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/ladder_of_life.html</guid>
+      <dc:date>2012-07-17T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>我的人生观</title>
+      <link>http://baige5117.github.io/blog/my_outlook_on_life.html</link>
+      <description>&lt;p&gt;How strange is the lot of us mortals! Each of us is here for a brief sojourn; for what purpose he knows not, though he sometimes thinks he senses it. But without deeper reflection one knows from daily life that one exists for other people &amp;ndash; first of all for those upon whose smiles and well-being our own happiness is wholly dependent, and then for the many, unknown to us, to whose destinies we are bound by the ties of sympathy. A hundred times every day I remind myself that my inner and outer life are based on the labors of other men, living and dead, and that I must exert myself in order to give in the same measure as I have received and am still receiving&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;I have never looked upon ease and happiness as ends in themselves &amp;ndash; this critical basis I call the ideal of a pigsty. The ideals that have lighted my way, and time after time have given me new courage to face life cheerfully, have been Kindness, Beauty, and Truth. Without the sense of kinship with men of like mind, without the occupation with the objective world, the eternally unattainable in the field of art and scientific endeavors, life would have seemed empty to me. The trite objects of human efforts &amp;ndash; possessions, outward success, luxury &amp;ndash; have always seemed to me contemptible.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 25 Jun 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/my_outlook_on_life.html</guid>
+      <dc:date>2012-06-25T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>华尔街日报：致毕业生们</title>
+      <link>http://baige5117.github.io/blog/dear_class_of_2012.html</link>
+      <description>&lt;p&gt;Dear Class of 2012:&lt;/p&gt;
+
+&lt;p&gt;Allow me to be the first one not to congratulate you. Through exertions that—let&amp;rsquo;s be honest—were probably less than heroic, most of you have spent the last few years getting inflated grades in useless subjects in order to obtain a debased degree. Now you&amp;rsquo;re entering a lousy economy, courtesy of the very president whom you, as freshmen, voted for with such enthusiasm. Please spare us the self-pity about how tough it is to look for a job while living with your parents. They&amp;rsquo;re the ones who spent a fortune on your education only to get you back— return-to-sender, forwarding address unknown.&lt;/p&gt;
+
+&lt;p&gt;No doubt some of you have overcome real hardships or taken real degrees. A couple of years ago I hired a summer intern from West Point. She came to the office directly from weeks of field exercises in which she kept a bulletproof vest on at all times, even while sleeping. She writes brilliantly and is as self-effacing as she is accomplished. Now she&amp;rsquo;s in Afghanistan fighting the Taliban.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 21 Jun 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/dear_class_of_2012.html</guid>
+      <dc:date>2012-06-21T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>动物庄园</title>
+      <link>http://baige5117.github.io/blog/animal_farm.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;/images/post/animal_farm.jpg&quot; height=&quot;474&quot; width=&quot;352&quot; alt=&quot;动物庄园&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;书目信息&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;原版名称：《Animal Farm》&lt;/li&gt;
+&lt;li&gt;中文译名：《动物庄园》&lt;/li&gt;
+&lt;li&gt;作   者：（英）乔治·奥威尔（George Orwell）&lt;/li&gt;
+&lt;li&gt;翻译版本：赫海龙的译本&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      <pubDate>Sat, 09 Jun 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/animal_farm.html</guid>
+      <dc:date>2012-06-09T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>童年的回忆：淘金者(Lode Runner)</title>
+      <link>http://baige5117.github.io/blog/lode_runner.html</link>
+      <description>&lt;p&gt;时光荏苒，一去不还。岁月在悄无声息地带走属于我们每个人懵懂青春的同时，也留下了回味无穷的回忆。而对于色彩斑斓的童年时代，我们又能想起点什么呢？&lt;/p&gt;
+
+&lt;p&gt;写作业，动画片，还是做游戏？除此之外，不得不提当年风光无限的红白机游戏！不知你是否还记得因为红白机游戏你损坏了多少次电视机？还记得因为某个游戏关卡而寝食难安？不管你是一个人独自霸占在电视机前独享其乐，还是与小伙伴们轮流上手，当年的那份痴迷与狂热确实给我们的童年增添了无穷的乐趣。&lt;/p&gt;
+
+&lt;p&gt;经典的红白机游戏有很多，超级玛丽、魂斗罗、坦克大战、雷雨、拳皇……当然，这些也都是我喜欢的游戏，不过要细数我最爱的游戏，那还得数 Lode Runner。&lt;/p&gt;
+</description>
+      <pubDate>Sun, 08 Apr 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/lode_runner.html</guid>
+      <dc:date>2012-04-08T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>程序猿</title>
+      <link>http://baige5117.github.io/blog/programmer.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20120312.jpg&quot; height=&quot;380&quot; width=&quot;399&quot; alt=&quot;Programmer&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;iostream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;kr&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;         &lt;span class=&quot;nx&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;         &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello Word!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;         &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;is_sleeping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;              &lt;span class=&quot;nx&quot;&gt;write_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+</description>
+      <pubDate>Mon, 12 Mar 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/programmer.html</guid>
+      <dc:date>2012-03-12T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>电影——三傻大闹宝莱坞</title>
+      <link>http://baige5117.github.io/blog/three_idiots.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20120108.jpg&quot; height=&quot;299&quot; width=&quot;450&quot; alt=&quot;三傻大闹宝莱坞&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;影片简介&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;英文名：3 idiots&lt;/li&gt;
+&lt;li&gt;中文名：《三傻大闹宝莱坞》&lt;/li&gt;
+&lt;li&gt;制片地区：印度&lt;/li&gt;
+&lt;li&gt;类型：励志，爱情，大学，戏剧&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;观后感&lt;/h2&gt;
+
+&lt;p&gt;深有感触的看完了《三傻大闹宝莱坞》这部电影，有以下几点体会：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;不要被太多的条条框框所束缚，只要不触犯法律及道德的底线，什么都可以尝试。&lt;/li&gt;
+&lt;li&gt;要敢于也要善于挑战权威。&lt;/li&gt;
+&lt;li&gt;书本只是传授知识的载体，没必要将它看的很重，更没必要爱不释手，珍藏如金，有了书就要将其转化为自己的知识，自己的能力。正如电影中所说：“一种记录，分析，总结，组织，讨论和解释信息的，有插图或无插图的硬装或平装的，加套或不加套的， 包含有前言 介绍 目录表 索引的用以增长知识，加深理解的 提升并教育人类大脑的装置该装置需要视觉，有时候触碰的感官形式使用”“简单点！”“书!”。和《风雨哈佛路》中那位老师的观点一致：书本就是他人的观点，并不代表自己的观点。只可用来参考，并结合实际将其转化为自己内在的东西。&lt;/li&gt;
+&lt;li&gt;跟随自己内心的快乐行动，不要后悔。&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      <pubDate>Sun, 08 Jan 2012 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/three_idiots.html</guid>
+      <dc:date>2012-01-08T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>大学生健康必知——如何减少手机辐射</title>
+      <link>http://baige5117.github.io/blog/how_to_redece_exposure_from_cellphones.html</link>
+      <description>&lt;p&gt;近期总感觉困乏无力，没精打采，记忆力减退，郁闷之极。偶然间发现了早前的一篇关于手机辐射的文章，突然感觉似乎找到了问题的答案，因此，搜集资料，整理如下，希望对自己的身体健康有所帮助，同时也给 Peers 们一点警醒和帮助。&lt;/p&gt;
+
+&lt;p&gt;众所周知，现如今手机已成为现代人的必备用品，而且手机几乎还从早到晚贴身跟着主人：白天，男士多挂在腰间，放在裤兜或胸前口袋；女士则多拿在手上，挂于胸 前或放在手袋。晚上，很多人还把手机放在床头当闹钟用。不过，在享受手机带来的方便的同时，你应该设法减低手机对健康的伤害！&lt;/p&gt;
+
+&lt;p&gt;25 岁的姜小姐洗脸时感觉到右边耳垂附近有鼓包，而且比较硬，但当时没在意，过两个月后包越来越大，这才来医院检查。医生确诊此为腮腺肿瘤。&lt;/p&gt;
+</description>
+      <pubDate>Wed, 21 Dec 2011 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_redece_exposure_from_cellphones.html</guid>
+      <dc:date>2011-12-21T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>美无处不在，关键在于要善于去发现它</title>
+      <link>http://baige5117.github.io/blog/beauty_is_everywhere.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20111218.jpg&quot; height=&quot;299&quot; width=&quot;450&quot; alt=&quot;Beauty&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在华盛顿特区的一个地铁站里，一位男子用一把小提琴演奏了 6 首巴赫的作品，共演奏了 45 分钟左右。他前面的地上，放着一顶口子朝上的帽子。显然，这是一位街头卖艺人。&lt;/p&gt;
+
+&lt;p&gt;没有人知道，这位在地铁里卖艺的小提琴手，是约夏·贝尔（Joshua Bell），世界上最伟大的音乐家之一。他演奏的是一首世上最复杂的作品，用的是一把价值 350 万美元的小提琴。&lt;/p&gt;
+
+&lt;p&gt;在约夏·贝尔演奏的 45 分钟里，大约有 2000 人从这个地铁站经过。&lt;/p&gt;
+</description>
+      <pubDate>Sun, 18 Dec 2011 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/beauty_is_everywhere.html</guid>
+      <dc:date>2011-12-18T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>电影——面对巨人</title>
+      <link>http://baige5117.github.io/blog/facing_the_gaints.html</link>
+      <description>&lt;p&gt;今晚观看了电影《面对巨人》（Facing the Giant），有触动。&lt;/p&gt;
+
+&lt;p&gt;电影的主题思想很明确，很直白的告诉我们：人要有信仰！生命的意义在于信仰，人生的价值体现于信仰、我们的力量源泉源自信仰，我们的生活更需要信仰。人是一种寻找目标的动物，他生活的意义在于是否正在寻找和追求自己的目标。而寻找和追求自己的目标靠的是什么？是信仰！是信念！是坚定的信念与不懈的努力！没有信仰的人生是空洞的，是浮华的，是随波逐流的。谋事在人，成事在天。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;人要有信仰，但不一定要必须信奉宗教等，他只是一种精神寄托，最重要的是要相信自己！&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;With God all thing is possible！我也想补充更重要的一句：Nothing is impossible to me！当然前提是要有充足的准备。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;人的潜能都是非常巨大的，大的令人无法想象的，要时时刻刻发挥自己最大的潜力，不要白白把自己的大好潜力给浪费掉！&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;play hard，have fun！&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;坚持到底就是胜利，直到你剩下最后一点力气。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      <pubDate>Sat, 12 Nov 2011 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/facing_the_gaints.html</guid>
+      <dc:date>2011-11-12T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>如何最有效的慢跑</title>
+      <link>http://baige5117.github.io/blog/how_to_jog_in_the_best_way.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20111003.jpg&quot; height=&quot;287&quot; width=&quot;450&quot; alt=&quot;Jogging&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;慢跑时的呼吸方法&lt;/h3&gt;
+
+&lt;p&gt;用鼻子呼吸比较好，正常呼吸，最好不要用嘴呼吸，用鼻子呼吸增加肺活量，还不容易肚子痛。也可以用鼻子吸气，嘴吐气，这样可以坚持的久一点。慢跑时呼吸要均匀，要有节奏，找到适合自己的呼吸技巧，就可以在最佳状态下慢跑。&lt;/p&gt;
+
+&lt;h3&gt;慢跑前重暖身，慢跑后要舒缓&lt;/h3&gt;
+
+&lt;p&gt;慢跑瘦身的效果好，能燃烧很多热量，不过也有许多注意事项。但是慢跑要加强热身运动，增强韧带弹性、关节灵活度，不然稍不小心就会造成肌肉拉伤、扭伤等运动伤害。&lt;/p&gt;
+
+&lt;p&gt;慢跑后一定要进行舒缓运动，因为当激烈的运动后，多量血液会集中在下肢和肌肉，若立刻停止，没有搭配舒缓运动，则会影响血液回流到心脏，而使得血液滞留在肌肉，无法有效排除乳酸，容易发生心脏和脑部血液供给不足，而产生头晕、昏倒现象。&lt;/p&gt;
+
+&lt;p&gt;而且不少MM担心跑步会让小腿变粗，其实只要在跑完步后进行5-10分钟按摩，放松腿部肌肉，这样就小腿就不会变粗，还会越来越细呢。如果情况允许，在睡觉前用热水泡脚，能有效消除水肿等问题，达到瘦腿的功效。&lt;/p&gt;
+</description>
+      <pubDate>Mon, 03 Oct 2011 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_to_jog_in_the_best_way.html</guid>
+      <dc:date>2011-10-03T00:00:00+08:00</dc:date>
+    </item>
+    <item>
+      <title>每天早上叫醒你的不是闹钟而是梦想</title>
+      <link>http://baige5117.github.io/blog/it_is_not_the_clock_but_your_dream_to_wake_up_you.html</link>
+      <description>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://baige5117.u.qiniudn.com/20110901.jpg&quot; height=&quot;291&quot; width=&quot;440&quot; alt=&quot;The Dream&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;励志是一支海洛因，让你每一天醉生梦死地沉迷其中。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;每个人在成长中都经历过这种事——&lt;/p&gt;
+
+&lt;p&gt;听完一场激动人心的励志讲座，回去后通宵背单词。&lt;/p&gt;
+
+&lt;p&gt;然而励志是一种精神毒品，&lt;/p&gt;
+
+&lt;p&gt;如同药物一样，在血液的浓度中达到峰值后开始下降。&lt;/p&gt;
+
+&lt;p&gt;这种亢奋状态一般会持续三天左右。&lt;/p&gt;
+
+&lt;p&gt;三天之后，一切照旧。&lt;/p&gt;
+
+&lt;p&gt;该上网的上网，该DOTA的DOTA。&lt;/p&gt;
+
+&lt;p&gt;所以人最好是每三天听一场励志讲座。&lt;/p&gt;
+
+&lt;p&gt;这确实不可能实现。&lt;/p&gt;
+
+&lt;p&gt;所以你要给自己各种不同的励志。&lt;/p&gt;
+</description>
+      <pubDate>Thu, 01 Sep 2011 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/it_is_not_the_clock_but_your_dream_to_wake_up_you.html</guid>
+      <dc:date>2011-09-01T00:00:00+08:00</dc:date>
+    </item>
+    <dc:date>2014-01-06T00:00:00+08:00</dc:date>
+  </channel>
+</rss>

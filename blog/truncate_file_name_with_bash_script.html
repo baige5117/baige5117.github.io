@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>文件名截取脚本 | All For One</title>
+<title>文件名截取脚本 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,9 +53,18 @@
   <section class="postText">
     <h2>任务描述</h2>
 
+
+
+
 <p>获取一个目录里面的所有文件的文件名（带扩展名），不带扩展名的文件名，以及扩展名。</p>
 
+
+
+
 <h3>脚本程序</h3>
+
+
+
 
 <div class="highlight"><pre><code class="bash"><span class="lineno">1</span>     <span class="c">#! /bin/bash </span>
 <span class="lineno">2</span>     
@@ -74,22 +83,48 @@
 <!--excerpt break-->
 
 
+
+
 <h2>程序解释</h2>
+
+
+
 
 <p>首先利用 <code>ls</code> 命令列出目标目录的所有文件名称，此时会得到一个文件名称列表，然后利用 <code>for</code> 循环逐个将列表中的文件名称赋值给循环变量 <code>file</code>，此时 <code>file</code> 就是所要的带扩展名的文件名。最后就是对每个文件名称进行截取获得其不带扩展名的文件名 <code>filename</code>，以及扩展名 <code>extension</code>，具体利用了 bash 脚本的字符串截取方法。</p>
 
+
+
+
 <p>不过此脚本程序有个问题，如果此脚本文件自身在目标目录内，则也会输出脚本自身的文件名称，不过此时可以利用 <code>sed</code> 命令来删除一些行。如果此脚本文件自身不在目标目录内，则无此现象。</p>
+
+
+
 
 <h2>具体应用</h2>
 
+
+
+
 <p>在做博客的时候，需要遍历某一目录下的所有文件，并获取文件名，然后输出一些格式化的语句，避免了对于每个文件都手动写入。</p>
 
+
+
+
 <p>比如说，在 HTML 文件中欲对一目录下的每个文件得到下面这样的格式化输出：</p>
+
+
+
 
 <pre><code>&lt;li&gt;&lt;a href="dis_dir/filename.extension" target="_blank" title="filename"&gt;&lt;img src="dis_dir/filename.extension" alt="filename" /&gt;&lt;/a&gt;&lt;/li&gt;
 </code></pre>
 
+
+
+
 <p>则可以将上述脚本稍加修改，即可得到 get_filename.sh 脚本：</p>
+
+
+
 
 <div class="highlight"><pre><code class="bash"><span class="lineno">1</span>     <span class="c">#! /bin/bash </span>
 <span class="lineno">2</span>     
@@ -103,17 +138,32 @@
 </code></pre></div>
 
 
+
+
 <p>具体用法为：</p>
+
+
+
 
 <pre><code>$ ./get_filename.sh dir newfile.txt
 </code></pre>
 
+
+
+
 <p><b>注意：</b>利用此脚本时，必须将此脚本放置到目标目录外，否则会输入一行多余信息，即此脚本自身的文件名称格式化输出。要想在目标目录内进行操作，要在脚本末尾加上下面一句命令：</p>
+
+
+
 
 <pre><code>$ sed -i '1d' $2
 </code></pre>
 
+
+
+
 <p>此命令的作用是将所生成的文件的第一行信息给删掉。</p>
+
 
   </section>
   <section class="postText">
@@ -1115,12 +1165,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>程序设计中内存泄露检测方法 | All For One</title>
+<title>程序设计中内存泄露检测方法 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,28 +53,60 @@
   <section class="postText">
     <p>内存泄露为计算机的专业用词，指由于疏忽或错误造成程序未能释放已经不再使用的内存的情况。内存泄漏并非指内存在物理上的消失，而是应用程序分配某段内存后，由于设计错误，失去了对该段内存的控制，因而造成了内存的浪费。</p>
 
+
+
+
 <p>内存泄漏会因为减少可用内存的数量从而降低计算机的性能，最终，在最糟糕的情况下，过多的可用内存被分配掉导致全部或部分设备停止正常工作，或者应用程序崩溃。</p>
 
+
+
+
 <p>因此，在程序设计过程中一定要注意内存的管理，尽量从源头上减少内存泄露的发生，而且也要及时利用相关方法和工具对内存使用进行检测，以改善程序的性能。</p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <h2>mtrace</h2>
+
+
+
 
 <h3>mtrace 简介</h3>
 
+
+
+
 <p><code>mtrace</code>是 GNU C 程序库中的内存调试函数，用于检测由<code>malloc</code>、<code>realloc</code>和<code>free</code>管理分配的内存使用情况。在头文件<code>&lt;mcheck.h&gt;</code>中声明及定义，函数原型为：</p>
+
+
+
 
 <pre><code>void mtrace(void);
 void muntrace(void);
 </code></pre>
 
+
+
+
 <p>其中<code>mtrace</code>函数为内存检测的起点，通常放在程序的起始处，而<code>muntrace</code>为终止内存检测，如果检测到程序末尾时可以省略。</p>
+
+
+
 
 <h3>mtrace 使用实例</h3>
 
+
+
+
 <p>设要检测的源程序为 <em>test.c</em>：</p>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno">1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
 <span class="lineno">2</span> <span class="cp">#include &lt;stblib.h&gt;</span>
@@ -86,7 +118,12 @@ void muntrace(void);
 </code></pre></div>
 
 
+
+
 <p>显然这个程序在结束前没有释放指针 a 指向的内存。首先需要在源文件中包含头文件<code>&lt;mcheck.h&gt;</code>，然后调用内存检测函数<code>mtrace</code>和<code>muntrace</code>，此时源程序修改为：</p>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
 <span class="lineno"> 2</span> <span class="cp">#include &lt;stblib.h&gt;</span>
@@ -101,27 +138,56 @@ void muntrace(void);
 </code></pre></div>
 
 
+
+
 <p>要正确使用<code>mtrace</code>需首先定义环境变量<code>MALLOC_TRACE</code>以设置日志（记录）文件：</p>
+
+
+
 
 <pre><code>$ export MALLOC_TRACE=test.log
 </code></pre>
 
+
+
+
 <p>然后在调试模式下编译 <em>test.c</em>：</p>
+
+
+
 
 <pre><code>$ gcc test.c -o test -g
 </code></pre>
 
+
+
+
 <p>执行程序，内存检测函数会将检测结果写入日志文件：</p>
+
+
+
 
 <pre><code>$ ./test
 </code></pre>
 
+
+
+
 <p>但是，检测结果是计算机可阅读的格式，需要将其转换。只要安装<code>mtrace</code>，就会有一名为<code>mtrace</code>的 Perl 脚本程序存在，可将检测结果转换为一般人可阅读的格式，在 shell 输入以下指令：</p>
+
+
+
 
 <pre><code>$ mtrace test test.log
 </code></pre>
 
+
+
+
 <p>编译好的程序<code>test</code>会寻找环境变量<code>MALLOC_TRACE</code>并把内存泄漏检测情况输出到里面。<code>mtrace</code>Perl 脚本程序只是一个分析日志文件的工具，上述源文件的测试结果为：</p>
+
+
+
 
 <pre><code>Memory not freed:
 -----------------
@@ -129,7 +195,13 @@ void muntrace(void);
 0x08a99378      0xa  at /home/hit9/c/test.c:7
 </code></pre>
 
+
+
+
 <p>其实上述过程可以写个 Makefile 简化操作：</p>
+
+
+
 
 <pre><code>all:
     gcc test.c -o test -g
@@ -137,17 +209,31 @@ void muntrace(void);
     mtrace test test.log
 </code></pre>
 
+
+
+
 <h2>Valgrind</h2>
+
+
+
 
 <p>Valgrind 是一款用于内存调试、内存泄漏检测以及性能分析的软件开发工具。具体信息可访问 <a href="http://valgrind.org/">Valgrind 官网</a>。</p>
 
+
+
+
 <h2>参考链接</h2>
+
+
+
 
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Mtrace">wiki: mtrace</a></li>
 <li><a href="https://wiki.gnome.org/Valgrind">Valgrind - GNU Wiki</a></li>
 <li><a href="http://valgrind.org/">Valgrind 官网</a></li>
 </ul>
+
+
 
 
   </section>
@@ -1150,12 +1236,12 @@ void muntrace(void);
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

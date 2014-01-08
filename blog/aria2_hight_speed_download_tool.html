@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>aria2：高速下载工具 | All For One</title>
+<title>aria2：高速下载工具 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,51 +53,108 @@
   <section class="postText">
     <p>aria2 是 Linux 下一个不错的高速下载工具。由于它具有分段下载引擎，所以支持从多个地址或者从一个地址的多个连接来下载同一个文件。这样自然就大大加快了文件的下载速度。aria2 也具有断点续传功能，这使你随时能够恢复已经中断的文件下载。除了支持一般的 http(s) 和 ftp 协议外，aria2 还支持 BitTorrent 协议。这意味着，你也可以使用 aria2 来下载 torrent 文件。</p>
 
+
+
+
 <p>官网对 aria2 的定义为：</p>
 
+
+
+
 <p><strong>aria2c - The ultra fast download utility.</strong></p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <p>在 Gentoo/linux 中的安装方式为：</p>
+
+
+
 
 <pre><code># emerge –avt aria2
 </code></pre>
 
+
+
+
 <p>若想下载 torrent 文件和 Metalink 文件，则需要开启 <em>bittorrent</em>、<em>metalink</em> 两个 USE：</p>
+
+
+
 
 <pre><code># USE="bittorrent metalink" emerge -avt net-misc/aria2
 </code></pre>
 
+
+
+
 <p>aria2 的命令行工具名称为 <code>aria2c</code>。</p>
 
+
+
+
 <p>aria2 的使用非常简单，一般情况下只需加上下载地址即可。示例如下：</p>
+
+
+
 
 <pre><code>$ aria2c http://www.example.com/ex.tar.bz2
 </code></pre>
 
+
+
+
 <p>从两个地址下载：</p>
+
+
+
 
 <pre><code>$ aria2c http://a/f.iso ftp://b/f.iso
 </code></pre>
 
+
+
+
 <p>断点续传：</p>
+
+
+
 
 <pre><code>$ aria2c -c http://www.example.com/ex.tar.bz2
 </code></pre>
 
+
+
+
 <p>下载 BitTorrent 文件：</p>
+
+
+
 
 <pre><code>$ aria2c http://example.org/mylinux.torrent
 </code></pre>
 
+
+
+
 <p>下载 Metalink 文件：</p>
+
+
+
 
 <pre><code>$ aria2c http://example.org/mylinux.metalink
 </code></pre>
 
+
+
+
 <p>参考链接：<a href="url:%20http://aria2.sourceforge.net/">aria2 官网</a></p>
+
 
   </section>
   <section class="postText">
@@ -1099,12 +1156,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

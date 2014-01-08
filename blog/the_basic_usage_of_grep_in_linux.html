@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>Linux 中 Grep 命令使用方法 | All For One</title>
+<title>Linux 中 Grep 命令使用方法 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,12 +53,23 @@
   <section class="postText">
     <p>grep（global search regular expression(RE) and print out the line，全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
 
+
+
+
 <p>grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到屏幕，不影响原文件内容。</p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <p>首先创建一个演示文档用于后续对 grep 命令的讲解演示：</p>
+
+
+
 
 <pre><code>$ cat demo_file
 THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
@@ -69,7 +80,13 @@ Two lines above this line is empty.
 And this is the last line.
 </code></pre>
 
+
+
+
 <h4>1、在单个文件中搜索特定的字符串，输出为包含特定字符串的文本行</h4>
+
+
+
 
 <pre><code>Syntax:
 grep "literal_string" filename
@@ -79,13 +96,25 @@ this line is the 1st lower case line in this file.
 Two lines above this line is empty.
 </code></pre>
 
+
+
+
 <h4>2、在多个文件中检索指定的字串，输出为包含特定字符串的文件名和文本行</h4>
+
+
+
 
 <pre><code>Syntax:
 grep "string" FILE_PATTERN
 </code></pre>
 
+
+
+
 <p>为了演示需要先将刚才的演示文档复制一份。输出的文本行前面会加上相应的文件名。</p>
+
+
+
 
 <pre><code>$ cp demo_file demo_file1
 
@@ -98,13 +127,25 @@ demo_file1:Two lines above this line is empty.
 demo_file1:And this is the last line.
 </code></pre>
 
+
+
+
 <h4>3、利用<code>grep -i</code>进行大小写无关的搜索</h4>
+
+
+
 
 <pre><code>Syntax:
 grep -i "string" FILE
 </code></pre>
 
+
+
+
 <p>将忽略大小写的区别，这样的话，字符串“the”，“The”和“THE”都将被搜索。</p>
+
+
+
 
 <pre><code>$ grep -i "the" demo_file
 THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
@@ -113,18 +154,36 @@ This Line Has All Its First Character Of The Word With Upper Case.
 And this is the last line.
 </code></pre>
 
+
+
+
 <h4>4、使用用正则表达式</h4>
+
+
+
 
 <pre><code>Syntax:
 grep "REGEX" filename
 </code></pre>
 
+
+
+
 <p>例如，要搜索全部以“lines”开始以“empty”结束的字串，如搜索“lines[之间任意字]empty”，并且忽略大小写：</p>
+
+
+
 
 <pre><code>$ grep -i "lines.*empty" filename //中间的点不能省略
 </code></pre>
 
+
+
+
 <p>正则表达式遵循的几个重复的操作：</p>
+
+
+
 
 <ul>
 <li><code>?</code> 最多匹配一次</li>
@@ -137,9 +196,17 @@ grep "REGEX" filename
 </ul>
 
 
+
+
 <h4>5、用<code>grep -w</code>搜索整个词，而不是词中的部分字符串</h4>
 
+
+
+
 <p>搜索包含单词为“is”的文本行，当然包含“his”, “this” 等的文本行将忽略：</p>
+
+
+
 
 <pre><code>$ grep -i "is" demo_file
 THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
@@ -149,9 +216,18 @@ Two lines above this line is empty.
 And this is the last line.
 </code></pre>
 
+
+
+
 <h4>6、利用<code>grep -A -B -C</code>显示所匹配的文本行的前/后/前后一些行内容</h4>
 
+
+
+
 <p>对于一些大型文件，不仅显示所匹配的文本行，而且显示之前/之后/前后的一些文本行也是很有用的。为演示需要，先创建另一个演示文档：</p>
+
+
+
 
 <pre><code>$ cat demo_text
  4. Vim Word Navigation
@@ -174,13 +250,25 @@ And this is the last line.
   * 192.168.1.1 - seven words.
 </code></pre>
 
+
+
+
 <p>6.1、显示匹配行<strong>之后</strong>的行<code>-A</code>（After）</p>
+
+
+
 
 <pre><code>Syntax:
 grep -A &lt;N&gt; "string" FILENAME
 </code></pre>
 
+
+
+
 <p>例如，显示匹配行之后的三行内容（空行也算）：</p>
+
+
+
 
 <pre><code>$ grep -A 3 -i "example" demo_text
 Example to show the difference between WORD and word
@@ -189,13 +277,25 @@ Example to show the difference between WORD and word
 * 192.168.1.1 - seven words.
 </code></pre>
 
+
+
+
 <p>6.2、显示匹配行<strong>之前</strong>的行<code>-B</code>（Before）</p>
+
+
+
 
 <pre><code>Syntax:
 grep -B &lt;N&gt; "string" FILENAME
 </code></pre>
 
+
+
+
 <p>例如，显示匹配行之前的两行内容（空行也算）：</p>
+
+
+
 
 <pre><code>$ grep -B 2 "single WORD" demo_text
 Example to show the difference between WORD and word
@@ -203,9 +303,18 @@ Example to show the difference between WORD and word
 * 192.168.1.1 - single WORD
 </code></pre>
 
+
+
+
 <p>6.3、显示匹配行<strong>前后</strong>的行<code>-C</code></p>
 
+
+
+
 <p>例如，显示匹配行前后的各两行内容（空行也算）：</p>
+
+
+
 
 <pre><code>$ grep -C 2 "Example" demo_text
 word - word consists of a sequence of letters, digits and underscores.
@@ -215,14 +324,29 @@ Example to show the difference between WORD and word
 * 192.168.1.1 - single WORD
 </code></pre>
 
+
+
+
 <h4>7、高亮显示匹配的内容</h4>
 
+
+
+
 <p>需要设置<code>GREP_OPTIONS</code>环境变量：</p>
+
+
+
 
 <pre><code>$ export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
 </code></pre>
 
+
+
+
 <p>然后再进行搜索。</p>
+
+
+
 
 <pre><code>$ export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
 
@@ -232,16 +356,34 @@ Two lines above this line is empty.
 And this is the last line.
 </code></pre>
 
+
+
+
 <h4>8、利用<code>grep -r</code>在目录中递归搜索</h4>
 
+
+
+
 <p>如果在目录中即有文件又有目录，则普通的搜索只搜索文件而不搜索目录，利用 -r 选项即可递归进行搜索，搜索目录下的所有文件及其子目录内的文件。</p>
+
+
+
 
 <pre><code>$ grep -r "ramesh" *
 </code></pre>
 
+
+
+
 <h4>9、利用<code>grep -v</code>搜索不包含特定字符串的文本行</h4>
 
+
+
+
 <p>例如显示所有不包含字符串“go”的文本行：</p>
+
+
+
 
 <pre><code>$ grep -v "go" demo_text
 4. Vim Word Navigation
@@ -257,7 +399,13 @@ Example to show the difference between WORD and word
 * 192.168.1.1 - seven words.
 </code></pre>
 
+
+
+
 <h4>10、显示不包含所有几个特定字符串的文本行</h4>
+
+
+
 
 <pre><code>Syntax:
 grep -v -e "pattern" -e "pattern"
@@ -273,40 +421,79 @@ $ grep -v -e "a" -e "b" -e "c" test-file.txt
 d
 </code></pre>
 
+
+
+
 <h4>11、利用<code>grep -c</code>统计所匹配的字符串数目</h4>
+
+
+
 
 <pre><code>Syntax:
 grep -c "pattern" filename
 </code></pre>
 
+
+
+
 <p>例如：</p>
+
+
+
 
 <pre><code>$ grep -c "go" demo_text
 6
 </code></pre>
 
+
+
+
 <p>查找有多少行匹配字符串：</p>
+
+
+
 
 <pre><code>$ grep -c this demo_file
 3
 </code></pre>
 
+
+
+
 <p>查找有多少行不匹配字符串：</p>
+
+
+
 
 <pre><code>$ grep -v -c this demo_file
 4
 </code></pre>
 
+
+
+
 <h4>12、利用<code>grep -l</code>只显示包含特定字符串的文件名称</h4>
+
+
+
 
 <pre><code>$ grep -l this demo_*
 demo_file
 demo_file1
 </code></pre>
 
+
+
+
 <h4>13、利用<code>grep -o</code>只显示所匹配的字符串</h4>
 
+
+
+
 <p>默认的搜索显示的是匹配的文本行的所有内容，但是如果想只显示所搜的特定字符串，则就要使用 -o 选项了。乍看起来只显示所匹配的字符串好像用处不大，但在使用正则表达式的搜索中很有用处。</p>
+
+
+
 
 <pre><code>$ grep -o "is.*line" demo_file
 is line is the 1st lower case line
@@ -314,13 +501,25 @@ is line
 is is the last line
 </code></pre>
 
+
+
+
 <h4>14、显示特定字符串的具体位置</h4>
+
+
+
 
 <pre><code>Syntax:
 grep -o -b "pattern" file
 </code></pre>
 
+
+
+
 <p>例如：</p>
+
+
+
 
 <pre><code>$ cat temp-file.txt
 12345
@@ -331,7 +530,13 @@ $ grep -o -b "3" temp-file.txt
 8:3
 </code></pre>
 
+
+
+
 <h4>15、利用<code>grep -n</code>同时显示行号</h4>
+
+
+
 
 <pre><code>$ grep -n "go" demo_text
 5: * e - go to the end of the current word.
@@ -341,6 +546,7 @@ $ grep -o -b "3" temp-file.txt
 9: * w - go to the next word.
 10: * W - go to the next WORD.
 </code></pre>
+
 
   </section>
   <section class="postText">
@@ -1342,12 +1548,12 @@ $ grep -o -b "3" temp-file.txt
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

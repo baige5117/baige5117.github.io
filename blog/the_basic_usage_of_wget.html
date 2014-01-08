@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>Wget 基本用法 | All For One</title>
+<title>Wget 基本用法 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,39 +53,83 @@
   <section class="postText">
     <p>Wget 是一个非交互式（即无图形交互界面）的自由网络下载工具，支持通过 HTTP、HTTPS、FTP 三个最常见的 TCP/IP 协议下载，并可以使用 HTTP 代理。可以说 wget 是网络下载工具的最佳选择，因为它可以处理几乎任何复杂的下载任务。</p>
 
+
+
+
 <p>基本语法为：</p>
+
+
+
 
 <pre><code>$ wget [option]... [URL]...
 </code></pre>
 
+
+
+
 <h3>下载单个文件</h3>
 
+
+
+
 <p>直接在 <code>wget</code> 命令之后加上文件的下载地址即可。用法：</p>
+
+
+
 
 <pre><code>$ wget &lt;URL&gt;
 </code></pre>
 
+
+
+
 <p>比如：</p>
+
+
+
 
 <pre><code>$ wget http://www.example.com/example.tar.bz2
 </code></pre>
 
+
+
+
 <!--excerpt break-->
+
+
 
 
 <h3>断点续传下载</h3>
 
+
+
+
 <p>有时候由于网速限制或者文件太大无法一次性下载完成，此时如果利用的还是普通单个文件下载方式，则每次都需要从新下载整个文件，严重浪费下载时间，因此，可以开启断点续传模式，从而继续完成未完成的下载任务。用法：</p>
+
+
+
 
 <pre><code>$ wget -c &lt;URL&gt;
 </code></pre>
 
+
+
+
 <h3>下载整个网站</h3>
+
+
+
 
 <p>方法一：</p>
 
+
+
+
 <pre><code>$ wget --mirror -p --convert-links -P ./LOCAL-DIR WEBSITE-URL
 </code></pre>
+
+
+
 
 <ul>
 <li><code>–-mirror(-m)</code>：开启镜像下载模式，进行递归下载。与以下选项组合等效：-r -N -l inf &ndash;no-remove-listing。</li>
@@ -95,10 +139,18 @@
 </ul>
 
 
+
+
 <p>方法二：</p>
+
+
+
 
 <pre><code>$ wget -r -p -k -np WEBSITE-URL
 </code></pre>
+
+
+
 
 <ul>
 <li><code>-r</code>：递归下载，会下载所有的链接，不过要注意的是，不要单独使用这个参数，因为如果你要下载的网站也有别的网站的链接，wget 也会把别的网站的东西下载下来，由于互联网的特性，很有可能你会把整个互联网给下载下来，所以要加上 -np 这个参数，表示不下载别的站点的链接。</li>
@@ -106,9 +158,17 @@
 </ul>
 
 
+
+
 <h3>下载多个文件</h3>
 
+
+
+
 <p>首先需要建立一份下载任务列表，将需要下载的所有文件的下载地址依次列出：</p>
+
+
+
 
 <pre><code>$ cat &gt; download-file-list.txt
 url1
@@ -117,10 +177,17 @@ url3
 ...
 </code></pre>
 
+
+
+
 <p>然后利用 <code>-i</code> 选项将下载任务列表文件作为参数传递给 <code>wget</code>：</p>
+
+
+
 
 <pre><code>$ wget -i download-file-list.txt
 </code></pre>
+
 
   </section>
   <section class="postText">
@@ -1122,12 +1189,12 @@ url3
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

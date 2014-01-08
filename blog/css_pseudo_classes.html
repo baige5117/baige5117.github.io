@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>CSS伪类选择器 | All For One</title>
+<title>CSS伪类选择器 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,7 +53,13 @@
   <section class="postText">
     <h2>基本介绍</h2>
 
+
+
+
 <p>CSS3 的伪类选择器有多，本文仅讨论状态伪类选择器——<code>:hover</code>、<code>:active</code>、<code>:focus</code>。这些选择器都有一个共同的特征名那就是定义的样式只有当元素处于某种状态下时才起作用，在默认状态下无效。</p>
+
+
+
 
 <ul>
 <li><code>:hover</code>选择器：当鼠标悬停在所指定的元素上时所使用的样式；</li>
@@ -62,45 +68,95 @@
 </ul>
 
 
+
+
 <p>状态选择器最常用的地方就是<b>链接</b>和<b>输入框</b>了。其中的 <code>:focus</code> 伪选择器主要用在键盘操作者进行页面的访问，利用 <code>Tab</code> 键即可查看到当某链接为选定的链接后的效果。</p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <h2>一种现象</h2>
+
+
+
 
 <p>在 IE 以及 Firefox 浏览器下，默认情况下，点击链接文字或图片（特指<code>&lt;a&gt;</code>标签下的）时，链接的周围会出现一个虚线框，当鼠标移开，或点击页面其它地方后，此虚线框就消失。</p>
 
+
+
+
 <p>此虚线框对一部分用户来说，尤其是键盘使用爱好者或不得不用键盘的使用者，用处是显而易见的，因为可以直接利用键盘上的 Tab 键在不同的链接之间切换，当切换到某个链接上时，此链接周围就会出现虚线框。没有了此虚线框，对于这些用户来说，网页内容就像一篇纯文本文档，失去了网页的超链接的无穷乐趣。</p>
+
+
+
 
 <p>但是，对于一些应用场合，此虚线框的出现就会严重影响美观程度，试想当点击一张图片准备切换另一张图片时，在图片中间出现一个虚线框，者给图片的欣赏带来很大的影响。此时，就应该在相关的链接上做适当设置，使此虚线框消失，或变的不明显。</p>
 
+
+
+
 <h2>解决出现虚线框的办法</h2>
+
+
+
 
 <h3>消除虚线框</h3>
 
+
+
+
 <p>消除虚线框其实很简单，只需要对链接的 <code>outline</code> 属进行相关设置即可。哪到底是对链接标签选择器 <code>a</code> 进行设置，还是对伪类选择器 <code>:hover</code>、<code>:active</code>、<code>:focus</code> 进行设置呢？当然，最好不要直接对标签选择器 <code>a</code> 进行设置，因为这也太绝对化了，直接把所有链接的虚线框都给屏蔽掉了，也就直接把键盘用户给排除掉了，所以最好还是对伪类选择器进行设置。由上文可知 <code>:focus</code> 伪类只要是用于处理聚焦区域的显示，尤其是针对键盘事件的响应，因为键盘切换的原理就是让链接内容获取焦点(focus)的，那么是否应该对此伪类选择器进行设置？即：</p>
+
+
+
 
 <pre><code>a:focus {outline: none;}
 </code></pre>
 
+
+
+
 <p>但消除聚焦区域的虚线框对于普通用户来说可以很好的解决，但是对于键盘用户仍然无法定位到正确的连接上，从而无法访问链接。</p>
 
+
+
+
 <p>经网上查询，有人做了总结性文章：<a href="http://blog.csdn.net/liujiajie1990/article/details/7971355">《CSS-鼠标点击去除外边虚线键盘焦点加上》</a>，称最好将 <code>:active</code> 的 <code>outline</code> 属性进行设置：</p>
+
+
+
 
 <pre><code>a:active {outline: none;}
 </code></pre>
 
+
+
+
 <p>这样效果或许会好点，虽然在一定的场合虚线框还会出现。</p>
 
+
+
+
 <h3>使虚线框表现的不明显</h3>
+
+
+
 
 <pre><code> a:focus { background-color:#f00; }   
  /*或者*/  
  a:hover, a:focus {text-decoration:underline;}  
 </code></pre>
 
+
+
+
 <p>设置焦点被触发时，链接背景为红色等。当然可以根据需要设计出更加复杂的样式，更可以把<code>focus</code>和<code>hover</code>设置成同样的样式。</p>
+
 
   </section>
   <section class="postText">
@@ -1102,12 +1158,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

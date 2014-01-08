@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>经典排序算法 | All For One</title>
+<title>经典排序算法 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,24 +53,53 @@
   <section class="postText">
     <p>排序，就是将无序元素经过一系列操作将其变为有序元素以方便后续处理的过程。排序操作是计算机编程中最常用的一种操作之一，因此被研究出了许多经典的排序算法，如快速排序、选择排序、冒泡排序等。</p>
 
+
+
+
 <h2>快速排序（Quick Sort）</h2>
+
+
+
 
 <h3>基本思想</h3>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/quicksort.gif" height="214" width="280" alt="快速排序" /></p>
+
+
+
 
 <p>快速排序采用的思想是<strong>分治</strong>与<strong>递归</strong>。</p>
 
+
+
+
 <p>具体为：选取一个元素（理论上可以随便找一个元素，但为了简便起见一般选取第一个元素）作为基准（pivot），通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比基准元素都要小，而另外一部分的所有数据都要比基准元素大。然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <h3>基本步骤</h3>
+
+
+
 
 <p>假设需要排序的数据为：<span class="blue">[4 2 5 6 1 7]</span>。</p>
 
+
+
+
 <p>第一次分治，使用 left 和 right 两个指针分别从“数组”的两边进行扫描，把比基准元素小的元素和比基准元素大的元素分开。</p>
+
+
+
 
 <ul>
 <li>Step1：选取基准元素为 4，先从 right 端开始扫描，7 大于 4，right 前移指向 1，1 小于 4，所以将 1 前移到基准元素 4 的位置,也即 left 所指的位置，然后 left 后移，此时数组变为：<span class="blue">[1 2 5 6 1 7]</span>。</li>
@@ -79,9 +108,17 @@
 </ul>
 
 
+
+
 <p>经过第一次分治，由基准元素将原“数组”分为两个“数组”：<span class="blue">[1 2]</span> 和 <span class="blue">[6 5 7]</span>，然后再利用上述过程对两个“数组”进行分治递归排序即可完成快速排序。</p>
 
+
+
+
 <h3>实现代码</h3>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="kt">int</span> <span class="n">v</span><span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{...};</span>
 <span class="lineno"> 2</span>     <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -111,27 +148,62 @@
 </code></pre></div>
 
 
+
+
 <h3>效率分析</h3>
+
+
+
 
 <p>快速排序的时间主要耗费在划分操作上，对长度为 k 的区间进行划分，共需 k-1 次关键字的比较。</p>
 
+
+
+
 <p>最坏情况是每次划分选取的基准都是当前无序区中关键字最小(或最大)的记录，划分的结果是基准左边的子区间为空(或右边的子区间为空)，而划分所得的另一个非空的子区间中记录数目，仅仅比划分前的无序区中记录个数减少一个。时间复杂度为 O(n*n)</p>
+
+
+
 
 <p>在最好情况下，每次划分所取的基准都是当前无序区的"中值"记录，划分的结果是基准的左、右两个无序子区间的长度大致相等。总的关键字比较次数：O(nlgn)</p>
 
+
+
+
 <p>尽管快速排序的最坏时间为 O(n<sup>2</sup> )，但就平均性能而言，它是基于关键字比较的内部排序算法中速度最快者，快速排序亦因此而得名。它的平均时间复杂度为 O(nlgn)。</p>
+
+
+
 
 <h2>选择排序（Selection Sort）</h2>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/selectionsort.gif" height="200" width="200" alt="选择排序" /></p>
+
+
+
 
 <h3>基本思想</h3>
 
+
+
+
 <p>选择排序，是一种简单直观的排序算法。具体思想为，首先直接从待排序的“数组”中选择最小（或最大）的元素，将其移动至“数组”起始位置（或末端位置），然后对剩下未排序的元素组成的“数组”重复前述过程直至所有元素都进行了排序。</p>
+
+
+
 
 <p>其演示图例如右图所示。</p>
 
+
+
+
 <h3>实现代码</h3>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="kt">int</span> <span class="n">v</span><span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{...};</span>
 <span class="lineno"> 2</span>         
@@ -153,21 +225,47 @@
 </code></pre></div>
 
 
+
+
 <h3>效率分析</h3>
+
+
+
 
 <p>从选择排序的思想或者是上面的代码中，我们都不难看出，寻找最小的元素需要一个循环的过程，而排序又是需要一个循环的过程。因此显而易见，这个算法的时间复杂度也是 O(n*n)的。这就意味值在 n 比较小的情况下，算法可以保证一定的速度，当 n 足够大时，算法的效率会降低。并且随着 n 的增大，算法的时间增长很快。因此使用时需要特别注意。</p>
 
+
+
+
 <h2>冒泡排序（Bubble Sort）</h2>
+
+
+
 
 <h3>基本思想</h3>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/bubblesort.gif" height="237" width="280" alt="冒泡排序" /></p>
+
+
+
 
 <p>冒泡排序也是一种简单有效的排序算法，其基本思想为：重复地遍历要排序的“数组”，一次比较“数组”中相邻元素的大小，若此相邻元素次序颠倒（即前大后小），则交换两元素的位置，直到走到“数组”末端，此过程称为“一次冒泡”。遍历数组的工作是重复地进行直到没有再需要交换，也就是说该数组已经排序完成。之所以叫“冒泡排序”是因为如果按照从前往后遍历的话，最大的元素经过一次冒泡操作会移动至“数组”的最末端，就像水中的气泡一样，会最终浮到水面上。</p>
 
+
+
+
 <p>其演示图例如右图所示。</p>
 
+
+
+
 <h3>基本步骤</h3>
+
+
+
 
 <ul>
 <li>Step1：比较相邻的元素，如果第一个比第二个大，就交换他们两个的位置。</li>
@@ -177,7 +275,12 @@
 </ul>
 
 
+
+
 <h3>实现代码</h3>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="kt">int</span> <span class="n">v</span><span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{...};</span>
 <span class="lineno"> 2</span>     
@@ -198,11 +301,22 @@
 </code></pre></div>
 
 
+
+
 <h3>效率分析</h3>
+
+
+
 
 <p>因为每一趟排序都使有序区增加了一个气泡，在经过 n-1 趟排序之后，有序区中就有 n-1 个气泡，而无序区中气泡的重量总是大于等于有序区中气泡的重量，所以整个冒泡排序过程至多需要进行 n-1 趟排序。以此本算法的时间复杂度还是 O(n*n)，也不能算是一个高效的算法。</p>
 
+
+
+
 <p>细心分析不难发现，本算法还有可以优化的空间，若在某一趟排序中未发现气泡位置的交换，则说明待排序的无序区中所有气泡均满足轻者在上，重者在下的原则，因此，冒泡排序过程可在此趟排序后终止。为此， 在下面给出的算法中，引入一个布尔量exchange，在每趟排序开始前，先将其置为FALSE。若排序过程中发生了交换，则将其置为TRUE。各趟排序 结束时检查exchange，若未曾发生过交换则终止算法，不再进行下一趟排序。这样可以减少不必要的比较。改进的代码如下：</p>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="kt">int</span> <span class="n">v</span><span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{...};</span>
 <span class="lineno"> 2</span> 
@@ -229,15 +343,32 @@
 </code></pre></div>
 
 
+
+
 <h2>插入排序（Insertion Sort）</h2>
+
+
+
 
 <h3>基本思想</h3>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/insertionsort.gif" height="237" width="350" alt="插入排序" /></p>
+
+
+
 
 <p>插入排序就是一种简单直观的排序算法，这里的插入排序又称直接插入排序（因为希尔排序也是一种插入排序算法）。其基本思想是：每一步都将一个待排数据按其大小插入到已经排序的数据中的适当位置，直到全部插入完毕。其方法有点像打扑克牌时将刚抓取的新扑克按顺序插入到已抓取的扑克牌当中。</p>
 
+
+
+
 <h3>基本步骤</h3>
+
+
+
 
 <ul>
 <li><strong>Step1：</strong>从第一个元素开始，该元素可以认为已经被排序；</li>
@@ -249,7 +380,12 @@
 </ul>
 
 
+
+
 <h3>实现代码</h3>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{...};</span>
 <span class="lineno"> 2</span> 
@@ -269,17 +405,37 @@
 </code></pre></div>
 
 
+
+
 <h3>效率分析</h3>
+
+
+
 
 <p>插入排序的思路很简单，很清晰，是一种最常见最简单的排序方法。但是可以看出，由于需要两层循环，外层循环 n-1 次，内层循环每次递增一次。当输入完全从小到大有序时，只需要常数的时间，这当然是最好的情况。但是我们不能期望输入，当输入完全逆序时，最坏的情况就出现了，显然时间复杂度是 O(n*n) 的。我们都很清楚，这个时间复杂度在排序中并不能算好的。这也是为什么插入排序虽然简单，但并没有被广泛应用的原因所在。其空间复杂度为 O(1)。</p>
 
+
+
+
 <h2>希尔排序（Shell Sort）</h2>
+
+
+
 
 <h3>基本思想</h3>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/shellsort.gif" height="344" width="277" alt="希尔排序" /></p>
 
+
+
+
 <p>希尔排序，也称递减增量排序算法，实质上是一种分组插入排序方法，是插入排序的一种高速而稳定的改进，因 Donald Shell 于1959年提出而得名。它是基于插入排序的以下两点行之而提出改进的：</p>
+
+
+
 
 <ul>
 <li>插入排序在对几乎已经排好序的数据操作时， 效率高， 即可以达到线性排序的效率；</li>
@@ -287,15 +443,32 @@
 </ul>
 
 
+
+
 <p>其基本思想为：通过将比较的全部元素分为几个区域分别进行插入排序来提升插入排序的性能，这样可以让一个元素一次性地朝最终位置前进一大步，然后再取越来越小的步长（或称增量）进行排序，算法的最后一步就是普通的插入排序，但是到了这步，需排序的数据几乎是已排好的了（此时插入排序较快）。</p>
+
+
+
 
 <p>一种简单有效的处理办法是，将原“数组"按顺序写成一个二维数组的形式，即每一行只有 d（步长值）个元素（最后一行除外），然后分别对每一列的所有元素进行插入排序。改变步长重复上述过程直至排序完成。</p>
 
+
+
+
 <p>步长序列的选取：步长的选择是希尔排序的重要部分。只要最终步长为 1 任何步长序列都可以工作。算法最开始以一定的步长进行排序。然后会继续以一定步长进行排序，最终算法以步长为1进行排序。当步长为 1 时，算法变为插入排序，这就保证了数据一定会被排序。<span class="red">最常用的步长序列规则为每次减半，即第一次步长取“数组”总长度的一半，第二次取第一次步长的一半，以此类推直到步长为 1 为止</span>。</p>
+
+
+
 
 <p>根据<a href="http://zh.wikipedia.org/wiki/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F">维基百科</a>中介绍，已知的最好步长序列由 Marcin Ciura 设计（1，4，10，23，57，132，301，701，1750，…）。另一个在大数组中表现优异的步长序列是(斐波那契数列除去0和1将剩余的数以黄金分割比的两倍的幂进行运算得到的数列)：（1, 9, 34, 182, 836, 4025, 19001, 90358, 428481, 2034035, 9651787, 45806244, 217378076, 1031612713, …）。</p>
 
+
+
+
 <h3>基本步骤</h3>
+
+
+
 
 <ul>
 <li><strong>Step1：</strong>选择初始步长 d1，并将全部元素分为 d1 组，即距离为 d1 个元素的那些元素分为一组；</li>
@@ -305,7 +478,12 @@
 </ul>
 
 
+
+
 <h3>实现代码</h3>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="n">N</span><span class="p">]</span> <span class="o">=</span> <span class="p">{...};</span>
 <span class="lineno"> 2</span> 
@@ -326,11 +504,20 @@
 </code></pre></div>
 
 
+
+
 <h3>效率分析</h3>
+
+
+
 
 <p>希尔排序是基于插入排序的一种算法，在此算法基础之上增加了一个新的特性，提高了效率。希尔排序的时间复杂度为 O(N*(logN)<sup>2</sup> )，没有快速排序算法快 O(N*(logN))，因此中等大小规模表现良好，对规模非常大的数据排序不是 最优选择。但是比O(N<sup>2</sup> ）复杂度的算法快得多。并且希尔排序非常容易实现，算法代码短而简单。此外，希尔算法在最坏的情况下和平均情况下执行效率相差不是很多，与此同时快速排序在最坏 的情况下执行的效率会非常差。专家们提倡，几乎任何排序工作在开始时都可以用希尔排序，若在实际使用中证明它不够快，再改成快速排序这样更高级的排序算法。</p>
 
+
+
+
 <p>我们知道一次插入排序是稳定的，不会改变相同元素的相对顺序，但是希尔排序是多次插入排序，在不同的插入排序过程中，相同的元素可能在各自的插入排序中移动，最后其稳定性就会被打乱，所以希尔排序是不稳定的。</p>
+
 
   </section>
   <section class="postText">
@@ -1332,12 +1519,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

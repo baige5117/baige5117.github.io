@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>MinUnit – 最小的 C 语言单元测试框架 | All For One</title>
+<title>MinUnit – 最小的 C 语言单元测试框架 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,9 +53,18 @@
   <section class="postText">
     <p>单元测试的本质是对测试单元进行正确性测试，因此关键在于测试而不是测试框架（或者测试模板），拘泥于复杂的测试框架中往往造成本末倒置。因此应该将重点放在单元测试的思想和方法上面。下面介绍一个极其简单的 C 语言单元测试框架——MinUnit。</p>
 
+
+
+
 <h2>源代码</h2>
 
+
+
+
 <p>编辑头文件，主要是定义宏和变量：</p>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno">1</span>  <span class="cm">/* file: minunit.h */</span>
 <span class="lineno">2</span>  <span class="err">#</span><span class="n">define</span> <span class="n">mu_assert</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span> <span class="k">do</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">test</span><span class="p">))</span> <span class="k">return</span> <span class="n">message</span><span class="p">;</span> <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -70,13 +79,27 @@
 <!--excerpt break-->
 
 
+
+
 <h2>建立测试案例</h2>
+
+
+
 
 <p>一个 MinUnit 测试实例仅仅是一个函数，当测试案例通过时此函数返回 0（NULL）。如果测试失败，这个函数返回一些描述测试失败的字符串。<code>mu_assert</code>是一个当表达式失败时返回字符串的宏。而宏<code>mu_runtest</code>重复调用测试案例直到测试实例失败。这就是 MinUnit 的全部内容。</p>
 
+
+
+
 <h2>实例</h2>
 
+
+
+
 <p>以下实例测试两个案例，一个案例能够正确通过，而另一个则失败。</p>
+
+
+
 
 <div class="highlight"><pre><code class="c"><span class="lineno"> 1</span>     <span class="cm">/* file minunit_example.c */</span>
 <span class="lineno"> 2</span>  
@@ -120,9 +143,15 @@
 </code></pre></div>
 
 
+
+
 <h2>参考链接</h2>
 
+
+
+
 <p><a href="http://www.jera.com/techinfo/jtns/jtn002.html" title="MinUnit 官网">MinUnit</a></p>
+
 
   </section>
   <section class="postText">
@@ -1124,12 +1153,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

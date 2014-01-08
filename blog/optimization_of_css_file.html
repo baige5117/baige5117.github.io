@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>网站优化之 CSS 文件优化措施 | All For One</title>
+<title>网站优化之 CSS 文件优化措施 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,13 +53,28 @@
   <section class="postText">
     <h2>选择器选用的优化措施</h2>
 
+
+
+
 <p>根据样式表匹配规则，选择器的匹配是从左往右进行匹配的，所以，选择器规则越长则匹配实践越长。因此，选择器选用的优化措施最主要的原则就是，尽量使选择器具有唯一性，减少使用子孙或祖先选择器。</p>
+
+
+
 
 <h3>尽量不要使用通用选择器，比如最常用的<code>* {...}</code>。</h3>
 
+
+
+
 <h3>尽量不要为 id 指配特定的标签。</h3>
 
+
+
+
 <p>id 选择器在同一页面只能使用一次，所以此条规则容易理解。</p>
+
+
+
 
 <pre><code>button#backButton {…}  /* Bad */
 .menu-left#newMenuIcon {…} /* Bad */
@@ -68,12 +83,23 @@
 #newMenuIcon {…} /* Good */
 </code></pre>
 
+
+
+
 <!--excerpt break-->
+
+
 
 
 <h3>尽量不要为 class 指配特定的标签。</h3>
 
+
+
+
 <p>尽管 class 选择器可以在同一页面多次使用，但是相对于 HTML 标签来说也算是具有唯一性的，所以此条规则也不难理解。</p>
+
+
+
 
 <pre><code>treecell.indented {…} /* Bad */
 
@@ -81,14 +107,26 @@
 .hierarchy-deep {…} /* Best */
 </code></pre>
 
+
+
+
 <h3>标签分类器尽量不要包含子孙标签分类器。</h3>
+
+
+
 
 <pre><code>treehead treerow treecell {…} /* Bad */
 treehead &gt; treerow &gt; treecell {…} /* BETTER, BUT STILL BAD */
 .treecell-header {…} /* Good */
 </code></pre>
 
+
+
+
 <h3>对所有的子孙选择器都判断能否不用子孙选择器。</h3>
+
+
+
 
 <pre><code>ul li {color: blue;} /* Not so Good */
 ol li {color: red;} /* Not so Good */
@@ -97,13 +135,28 @@ ol li {color: red;} /* Not so Good */
 .ordered-list-item {color: red;} /* Better */
 </code></pre>
 
+
+
+
 <h3>尽量利用继承属性。</h3>
+
+
+
 
 <h3>对于非连接的元素尽量不要使用 <code>:hover</code> 伪选择器。</h3>
 
+
+
+
 <h3>尽量减少使用表达式（expressions），可以是用 javascript 代替。</h3>
 
+
+
+
 <h2>样式表位置的选择</h2>
+
+
+
 
 <ul>
 <li>对于外部的样式表文件（如 style.css）尽量放在<code>&lt;head&gt;</code>标签内，且使用<code>&lt;link&gt;</code>标签来加载，少用<code>@import</code>。</li>
@@ -111,11 +164,18 @@ ol li {color: red;} /* Not so Good */
 </ul>
 
 
+
+
 <h2>参考链接</h2>
+
+
+
 
 <ul>
 <li><a href="http://developer.mozilla.org/en/Writing_Efficient_CSS" target="_blank">Writing efficient CSS</a></li>
 </ul>
+
+
 
 
   </section>
@@ -1118,12 +1178,12 @@ ol li {color: red;} /* Not so Good */
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

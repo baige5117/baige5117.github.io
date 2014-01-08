@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>C 语言声明解析 | All For One</title>
+<title>C 语言声明解析 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,6 +53,9 @@
   <section class="postText">
     <h2>合法声明的限制条件</h2>
 
+
+
+
 <ol>
 <li>函数的返回值不能是一个函数，而可以是一个函数指针，所以像<code>foo()()</code>这样是非法的，而<code>int(* fun())()</code>是合法的；</li>
 <li>函数的返回值不能是一个数组，而可以是一个指向数组的指针，所以像 <code>foo()[]</code> 这样是非法的，而 <code>int(* fun())[]</code> 是合法的；</li>
@@ -60,29 +63,63 @@
 </ol>
 
 
+
+
 <h2>声明的优先级规则</h2>
+
+
+
 
 <p>A：  声明从它的名字开始读取，然后按照优先级顺序依次读取。</p>
 
+
+
+
 <p>B：  优先级从高到低依次是：</p>
+
+
+
 
 <p>B.1： 声明中被括号括起来的部分</p>
 
+
+
+
 <p>B.2： 后缀操作符：括号<code>( )</code>表示这是一个函数，而方括号 <code>[ ]</code> 表示这是一个数组。</p>
+
+
+
 
 <p>B.3： 前缀操作符：星号<code>*</code>表示“指向&hellip;的指针”。</p>
 
+
+
+
 <p>C：  如果 <code>const</code> 和（或）<code>volatile</code> 关键字的后面紧跟类型说明符（如 <code>int</code>、<code>long</code> 等），那么它作用于类型说明符。其他情况下，<code>const</code> 和（或）<code>volatile</code> 关键字作用于它左边紧邻的指针星号。</p>
+
+
+
 
 <!--excerpt break-->
 
 
+
+
 <h2>用优先级规则分析 C 语言声明一例</h2>
+
+
+
 
 <p>试分析以下声明语句：</p>
 
+
+
+
 <pre><code>char * const *(*next) ();
 </code></pre>
+
+
+
 
 <table border="1px" cellspacing="0" style="border-collapse:collapse">
 <tr>
@@ -116,30 +153,66 @@
 </table>
 
 
+
+
 <p>把上述分析结果加以概括，这个声明表示：“<code>next</code> 是一个指针，它指向一个函数，该函数返回另一个指针，该指针指向一个类型为 <code>char</code> 的常量指针”。</p>
+
+
+
 
 <h2>用图表解析 C 语言声明的步骤</h2>
 
+
+
+
 <p>图表参见下面的图 1。如果按图索骥，从第一步开始，顺着箭头逐步往下分析，无论多么复杂的 C 语言声明都可以迎刃而解，都可以用最通俗的语言来解释。在图中忽略了 <code>typedef</code> 以简化声明。如果声明中有 <code>typedef</code>，就将其翻译成没有 <code>typedef</code> 的样子。如果它类似于<code>typedef p a …</code>这种形式，就把声明中所有类型为<code>a…</code>的东西用<code>p</code>来代替。</p>
+
+
+
 
 <p style="text-align:center;"><img src="/images/post/c_declaration_analysis.png" height="581" width="450" alt="C语言声明解析环" /></p>
 
+
+
+
 <p style="text-align:center;">图1 C 语言声明解析环</p>
 
+
+
+
 <p>现在仍然以刚刚那个例子来说明，即分析以下声明语句：</p>
+
+
+
 
 <pre><code>char * const *(*next) ();
 </code></pre>
 
+
+
+
 <p>在分析这个声明时，需要逐渐把已经处理过的片段“去掉”，这样便能知道还要分析多少内容。再次提醒，记住 <code>const</code> 表示“只读”，并不能因为它的意思是常量就认为它表示的就是常量。</p>
+
+
+
 
 <p>分析处理过程显示在图 2 中，在每一步骤中，所处理的那部分声明用红色字体表示。从第一步开始，我们将依次进行这些步骤。</p>
 
+
+
+
 <p style="text-align:center;"><img src="/images/post/cda_ex.png" height="264" width="450" alt="C语言声明解析举例" /></p>
+
+
+
 
 <p style="text-align:center;">图2 C 语言声明解析举例</p>
 
+
+
+
 <p>将上述分析拼在一起，读作：“<code>next</code> 是一个指向函数的指针，该函数返回另外一个指针，该指针指向一个只读的指向 <code>char</code> 的指针”。</p>
+
 
   </section>
   <section class="postText">
@@ -1141,12 +1214,12 @@
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>

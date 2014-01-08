@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>Python 学习笔记 | All For One</title>
+<title>Python 学习笔记 | All For One - Baige5117's Personal Blog</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -53,13 +53,28 @@
   <section class="postText">
     <h2>简单的“Hello world”程序</h2>
 
+
+
+
 <p>有两种方法可以运行 python 程序：python 解析器（或称 python 运行环境）中交互运行和源文件运行</p>
+
+
+
 
 <h3>python 解析器中交互运行</h3>
 
+
+
+
 <p>打开终端，输入<code>python3</code>命令打开 python 解析器，将出现提示符<code>&gt;&gt;&gt;</code>。</p>
 
+
+
+
 <p>输入 <code>print('Hello world')</code> 语句，然后回车，将看到 <code>Hello word</code> 输出字样。下面是在 linux 环境下的运行结果：</p>
+
+
+
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span>     <span class="o">&gt;&gt;&gt;</span> <span class="n">python3</span>
 <span class="lineno">2</span>     <span class="n">Python</span> <span class="mf">3.2</span><span class="o">.</span><span class="mi">3</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Dec</span> <span class="mi">18</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">22</span><span class="p">)</span> 
@@ -76,84 +91,185 @@
 <!--excerpt break-->
 
 
+
+
 <p>退出 python 解析器的方法是：在 linux 系统中按下 <kbd>Ctrl-d</kbd> 或者输入 <code>exit()</code> （不要忘了后面的一对括号）并回车就可退出；在 Windows 系统下，按下 <kbd>Ctrl-z</kbd> 并回车即可。</p>
+
+
+
 
 <h3>源文件运行</h3>
 
+
+
+
 <p>打开文本编辑器，新建一名为 <em>hello.py</em> 的源文件（后缀 <em>.py</em> 无关紧要）并输入以下文本：</p>
+
+
+
 
 <pre><code>print('Hello World')
 </code></pre>
 
+
+
+
 <p>打开终端并进入源文件所在的目录，然后输入 <code>python3 hello.py</code> 命令即得到“Hello World”字样输出，运行结果如下：</p>
+
+
+
 
 <pre><code>&gt;&gt;&gt; python3 hello.py 
 Hello World
 </code></pre>
 
+
+
+
 <h3>可执行的 python 程序</h3>
 
+
+
+
 <p>在 <em>hello.py</em> 文件的第一行加入以下文本内容（被称为 <strong>hashbang</strong>）：</p>
+
+
+
 
 <pre><code>#!/usr/bin/env python3
 </code></pre>
 
+
+
+
 <p>所以现在的 <em>hello.py</em> 文件内容如下：</p>
+
+
+
 
 <pre><code>#!/usr/bin/env python3
 print('Hello World')
 </code></pre>
 
+
+
+
 <p>然后赋予此文件具有可执行权限：</p>
+
+
+
 
 <pre><code>$ chmod a+x hello.py
 </code></pre>
 
+
+
+
 <p>然后就可以直接在终端中运行源文件了：</p>
+
+
+
 
 <pre><code>$ ./hello.py
 Hello World
 </code></pre>
 
+
+
+
 <p>上面的命令必须在源文件所在的目录内才能成功运行，所以使用了 <code>./</code>，要想在任意目录中运行此源文件，需要先将包含源文件的目录添加到 <code>PATH</code> 变量中。比如源文件所在目录为 /home/user01/bin，则强其添加到 <code>PATH</code> 变量中：</p>
+
+
+
 
 <pre><code>$ export PATH=$PATH:/home/user01/bin
 </code></pre>
 
+
+
+
 <p>之后就可以在终端中直接输入 <code>hello.py</code> 来运行 python 程序了。</p>
+
+
+
 
 <h2>基本知识</h2>
 
+
+
+
 <h3>注释信息</h3>
 
+
+
+
 <p>Python 中的注释信息提示符为井号 <code>#</code>，任何位于 <code>#</code> 右边的信息都被认为为注释信息。例如：</p>
+
+
+
 
 <pre><code>print(‚Hello World‚) # Note that print is a function
 # Note that print is a function
 print(‚Hello World‚)
 </code></pre>
 
+
+
+
 <h3>常量（或称字面常量 Literal Constants）</h3>
+
+
+
 
 <p>常量的值无法改变，有数字常量，比如 5、3.14 等；字符串常量，例如 ’This is a string’、"It’s a string!&ldquo; 等。</p>
 
+
+
+
 <h3>数字（Numbers）</h3>
+
+
+
 
 <p>数字又分为两种类型——整型和浮点型。</p>
 
+
+
+
 <p>整型没有小数点，例如 2、100 等，而浮点型有小数点，例如 3.14、52.3E-4，其中 52.3E-4 表示 52.3*10^-4 。</p>
+
+
+
 
 <p><strong>注意：</strong>python 没有 <code>long</code> 类型，<code>int</code> 类型可以使任意长度的整型数字。</p>
 
+
+
+
 <h3>字符串（Strings）</h3>
+
+
+
 
 <p>字符串是由一系列字符（比如字母、数字、下划线等）组成的字符序列，通常括在引号中——单引号、双引号及三引号。</p>
 
+
+
+
 <p>单引号（<code>' '</code>）：’Quote me on this’。</p>
+
+
+
 
 <p>双引号（<code>" "</code>）："Quote me on this"。</p>
 
+
+
+
 <p>三引号（<code>"""</code> 或者 <code>'''</code>）：可以将一个多行字符串用三引号括起来，而且在其中可以任意使用单引号和双引号，比如：</p>
+
+
+
 
 <pre><code>"""
 Usage: thingy [OPTIONS]
@@ -162,7 +278,13 @@ Usage: thingy [OPTIONS]
 """
 </code></pre>
 
+
+
+
 <p><strong>注意：</strong></p>
+
+
+
 
 <ul>
 <li>单引号与双引号括起来的字符串之间没有任何区别。</li>
@@ -171,9 +293,17 @@ Usage: thingy [OPTIONS]
 </ul>
 
 
+
+
 <h4>格式化方法</h4>
 
+
+
+
 <p>如果想用其它信息创建字符串，可以使用 <code>format()</code> 函数实现。例如创建 <em>str_format.py</em> 文件并添加以下内容：</p>
+
+
+
 
 <pre><code>age = 20
 name = 'Swaroop'
@@ -181,14 +311,26 @@ print('{0} was {1} years old when he wrote this book'.format(name, age))
 print('Why is {0} playing with that python?'.format(name))
 </code></pre>
 
+
+
+
 <p>将输出以下信息：</p>
+
+
+
 
 <pre><code>$ python3 str_format.py
 Swaroop was 20 years old when he wrote this book
 Why is Swaroop playing with that python?
 </code></pre>
 
+
+
+
 <p><code>format()</code> 是字符串对象的一个成员函数，用于将一些变量转化为字符串并做相应的替换，即将 <code>{ }</code> 依次替换为由后面的变量转换称的字符串。其中 <code>{ }</code> 中的数字编号是从 0 开始的，但不是必需的，即下面的内容和上面的内容具有完全相同的输出效果：</p>
+
+
+
 
 <pre><code>age = 20
 name = 'Swaroop'
@@ -196,18 +338,39 @@ print('{} was {} years old when he wrote this book'.format(name, age))
 print('Why is {} playing with that python?'.format(name))
 </code></pre>
 
+
+
+
 <p>其实可以通过以下语句实现相同的效果：</p>
+
+
+
 
 <pre><code>name + ’ is ’ + str(age) + ’ years old’
 </code></pre>
 
+
+
+
 <p>但是用 <code>format()</code> 更优雅，不容易出错，且自动转化变量为字符串类型。</p>
+
+
+
 
 <h3>变量（Variable）</h3>
 
+
+
+
 <p>变量，顾名思义就是值可以改变的量，变量是标识符（Identifier）的一种。</p>
 
+
+
+
 <p>Python 变量的使用只需要将一个值（字面常量或变量等）赋给变量名即可，无需声明变量类型。比如文件 <em>var.py</em> 有以下声明语句：</p>
+
+
+
 
 <pre><code>i = 5
 print (i)
@@ -217,7 +380,13 @@ i = 'Hello world!'
 print (i)
 </code></pre>
 
+
+
+
 <p>输出：</p>
+
+
+
 
 <pre><code>python3 var.py
 5
@@ -225,9 +394,18 @@ print (i)
 Hello world!
 </code></pre>
 
+
+
+
 <h3>标识符（Identifier）</h3>
 
+
+
+
 <p>标识符是用于唯一标识对象的名称，标识符命名规则：</p>
+
+
+
 
 <ul>
 <li>标识符由且仅有以下字符组成：字母、下划线和数字；</li>
@@ -236,45 +414,95 @@ Hello world!
 </ul>
 
 
+
+
 <h3>数据类型（Data Types）</h3>
+
+
+
 
 <p>变量具有多种数据类型，最常用的数字和字符串，还有可以创建任意自定义类型的类（class）类型。</p>
 
+
+
+
 <h3>对象（Object）</h3>
+
+
+
 
 <p>一般意义上，Python 把程序中的所有东西都称为对象，包括数字、字符串以及函数等。</p>
 
+
+
+
 <h3>逻辑行和物理行（Logical And Physical Line）</h3>
 
+
+
+
 <p>物理行就是在程序源文件中所看到的一行内容，而逻辑行是 Python 所处理的单条声明语句。Python 隐式的假设每一个物理行都对应一个逻辑行，而且也鼓励每行只有一条声明语句，但是一个物理行也可以包含多个逻辑行，即一行中有多条声明语句，此时需要显式利用分号（;）来将每条逻辑声明语句分割开（物理行中的最后一个逻辑声明语句末尾可以不加分号）。比如：</p>
+
+
+
 
 <pre><code>i = 5
 print(i)
 </code></pre>
 
+
+
+
 <p>等同于：</p>
+
+
+
 
 <pre><code>i = 5;
 print(i);
 </code></pre>
 
+
+
+
 <p>也等同于：</p>
+
+
+
 
 <pre><code>i = 5; print(i);
 </code></pre>
 
+
+
+
 <p>也等同于：</p>
+
+
+
 
 <pre><code>i = 5; print(i)
 </code></pre>
 
+
+
+
 <p><strong>建议：</strong>每行尽量只有一条声明语句，尽量不使用分号，如果逻辑行语句太长可以使用反斜线（\）将单行分成多行。比如：</p>
+
+
+
 
 <pre><code>s = ‘This is a string. \
 This continues the string.’
 </code></pre>
 
+
+
+
 <p>等同于：</p>
+
+
+
 
 <pre><code>s = ‘This is a string. This continues the string.‘
 
@@ -282,22 +510,49 @@ print\
 (i)
 </code></pre>
 
+
+
+
 <p>等同于：</p>
+
+
+
 
 <pre><code>print(i)
 </code></pre>
 
+
+
+
 <h3>缩进（Indentation）</h3>
+
+
+
 
 <p>Python 对于缩进的控制非常严格，因为 python 是用缩进来分割语句块（block）的（C 语言是由花括号），而缩进是由空白符（空格符和制表符）来实现的。</p>
 
+
+
+
 <p>同一级别的语句要具有相同的缩进量，而且不能随意使用缩进，否则容易出错。比如语句前面不能随便加空格。</p>
+
+
+
 
 <h2>操作符与表达式（Operators and Expressions）</h2>
 
+
+
+
 <p>Python 的大多数声明语句（即逻辑行）都会包括表达式，表达式由操作符和操作数（operand）组成。</p>
 
+
+
+
 <h3>操作符</h3>
+
+
+
 
 <ul>
 <li><code>+</code>：将两个对象相加。对于数字就是求和，对于字符串就是合并。</li>
@@ -325,15 +580,32 @@ print\
 </ul>
 
 
+
+
 <h3>数学运算与赋值的简便写法</h3>
+
+
+
 
 <p>规则就是 <code>var = var operation expression</code> 可以简写为：<code>var operation= expression</code>。</p>
 
+
+
+
 <p>比如：<code>a = a * 3</code> 可以简写为 <code>a *= 3</code></p>
+
+
+
 
 <h3>优先级顺序（Evaluation Order）</h3>
 
+
+
+
 <p>按照优先级顺序由低到高以此为（处于同一行中的操作符具有相同的优先级）：</p>
+
+
+
 
 <ul>
 <li>lambda</li>
@@ -362,13 +634,27 @@ print\
 </ul>
 
 
+
+
 <p>要想改变操作符的优先级顺序，可以使用<strong>小括号</strong>来实现。比如 <code>((2+3)+3)*4</code>。</p>
+
+
+
 
 <h3>结合性（Associativity）</h3>
 
+
+
+
 <p>具有同一优先级的操作符一般具有从左向右的结合性。但是也有从有向左结合的操作符，比如赋值操作符<code>=</code>。</p>
 
+
+
+
 <h2>一些注意事项</h2>
+
+
+
 
 <ol>
 <li><p>python 语言对大小写敏感，所以 <code>print</code> 和 <code>Print</code> 是不一样的函数名。</p></li>
@@ -376,14 +662,24 @@ print\
 </ol>
 
 
+
+
 <p>获取函数功能（比如 <code>print()</code> 函数）的帮助信息，直接输入 <code>help(print)</code>；获取操作符（比如 <code>return</code>）的帮助信息，直接输入 <code>help(‘return’)</code>，需要将操作符用引号括起来。</p>
 
+
+
+
 <h2>参考资料</h2>
+
+
+
 
 <ul>
 <li><a href="http://www.python.org/">Python 官网</a></li>
 <li>Book: <em>A Byte of Python</em> by Swaroop C H.</li>
 </ul>
+
+
 
 
   </section>
@@ -1386,12 +1682,12 @@ print\
   </section>
 
   <section class="sideBox">
-    <h3 id="contact">联系我</h3>		
+    <h3 id="contact">联系我</h3>
     <ul id="social">
       <li><a class="email" href="mailto:baige5117@gmail.com" title="baige5117@gmail.com" target="_blank">email</a></li>
       <li><a class="weibo" href="http://weibo.com/u/1312421323" title="关注我的微博" target="_blank">weibo</a></li>
       <li><a class="douban" href="http://www.douban.com/people/2697328/" title="访问我的豆瓣" target="_blank">douban</a></li>
-      <li><a class="rss" href="#" title="订阅我的博客" target="_blank">rss</a></li>
+      <li><a class="rss" href="/rss.xml" title="订阅我的博客" target="_blank">rss</a></li>
     </ul>
   </section>
 </aside>
