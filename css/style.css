@@ -480,7 +480,7 @@ td {
  }
 
 /******************* PAGINATION **********************/
-
+/*
 .pagination {
     overflow:hidden;
     text-align:center;
@@ -499,26 +499,38 @@ td {
     border:none;
     
 }
-.emm-paginate .emm-title {
-    float:left;
-    font-size:13px;
-    color:#555; 	  
-    padding-top:3px;
-}
-.emm-paginate .emm-gap {
-    color:#999; 
-    margin-left:10px;
-}
 .pagination .current {
     background:url(/images/icons/bk_pagination.png) 50% 100% no-repeat;
 }
-.emm-paginate .emm-page {
-    
-}
-.emm-paginate .emm-prev, .emm-paginate .emm-next {
-    
-}
+*/
 
+.pagination {
+    margin:0 auto;
+    padding:5px 0;
+    width:370px;
+    overflow:hidden;
+}
+.pagination a, .pagination p { 
+    display:block; 
+    margin:0 5px;
+    padding:5px 0;
+    width:80px; 
+    height:13px;
+    font-size:13px;
+    line-height:13px;
+    font-weight:700;
+    color:#222;
+    background-color:#aaaaaa;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #222;
+    text-align:center; 
+    text-decoration:none; 
+    float:left;
+    border:1px solid #fff;
+    text-shadow:1px 1px #fff;
+}
+.pagination a:hover {background-color:#ccc;}
+.pagination p {background-color:#ccc;}
 
 /*********************** SIDEBAR ************************/
 
@@ -680,7 +692,6 @@ overflow:hidden;
 }
 
 
-
 /* FOOTER
 -----------------------------------*/
 
@@ -802,58 +813,6 @@ background:no-repeat 0 -40px url("/images/icons/contact.png");
 
 
 /********************* Music.CSS *********************/
-#music_side {
-margin:20px 20px 0 0; 
-padding:0;
-float:right;
-width: 200px;
-position: relative;
-border:1px solid #DEDEDE;
-}
-.m_s_album {
-margin: 10px auto;
-padding: 2px;
-width: 150px;
-height: 150px;
-border: 1px solid #C7A38B;
-}
-
-.m_s_album a {
-margin: 0;
-padding: 0;
-display: block;
-width: 150px;
-height: 150px;
-position: relative;
-}
-.m_s_album a:hover {
-width: 154px;
-height: 154px;
-top: -2px;
-left: -2px;
-font-size: 120%;
-font-weight: bold;
-}
-
-.m_s_album img {
-display: block;/*很关键，否则在图片下方会出现5px的空隙！*/
-width: 100%;
-height: 85%;
-margin: 0;
-padding:0;
-}
-.m_s_album p {
-width: 100%;
-height: 15%;
-margin: 0;
-padding: 0;
-font-size: 90%;
-color: #C7A38B;
-text-align: center;
-background-color: #fff;
-}
-
-
 #music_main {
 margin:0;
 padding:0;
@@ -863,14 +822,8 @@ left:-35px;
 overflow:hidden;
 }
 
-/*.music_frame {
-margin:0 10px 20px;
-padding:0 0 0 5px;
-width:515px;
-border:1px solid #DEDEDE;
-}*/
 .music_frame {
-margin:0 10px 25px;
+margin:0 10px 15px;
 padding:25px 0 0 5px;
 width:515px;
 position:relative;
@@ -887,14 +840,6 @@ top:20px;
 left:5px;
 }
 
-/*.m_f_title {
-margin:0 0 10px;
-padding:0 0 0 50px;
-height:45px;
-background: url("/images/icons/headphone.png") no-repeat left top;
-border-bottom:1px solid #ccc;
-position:relative;
-}*/
 .m_f_title {
 background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
 padding:0 0 5px 50px;
@@ -976,20 +921,10 @@ border-bottom:none;
 }
 .music_abst {
 margin:0;
-padding:0 0 20px 0;
+padding:0 0 10px 0;
 font-size:14px;
 line-height:1.8;
 background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
-}
-
-#post_wrapper .m_f_mid ul {
-margin:5px 0 0 0;
-padding:0;
-
-}
-#post_wrapper .m_f_mid li {
-margin: 5px 0;
-padding:0;
 }
 
 #p_album_cover { /*用于专辑介绍页面中*/
@@ -1001,13 +936,13 @@ float:right;
 border:4px ridge;
 }
 
-/************** Say.CSS *****************/
 
+/************** Say.CSS *****************/
 .say_frame {
 display:block;
 margin:0 10px 24px 0;
 padding:1em 30px 0 30px;
-background:#f7f5e8 left top no-repeat url("/images/icons/quote-y-1.png");
+background:#f3f2ec left top no-repeat url("/images/icons/quote-y-1.png");/*f7f5e8 f0eee4*/
 position:relative;/*f5f5e6*/
 -webkit-box-shadow:0px 0px 8px -2px #333;
 -moz-box-shadow:0px 0px 8px -2px #333;
@@ -1040,7 +975,7 @@ color:#63615E;
 
 .highlight  { background: transparent; overflow:auto;}
 .highlight .hll { background-color: #ffffcc }
-.highlight .c { color: #008800; font-style: italic } /* Comment */
+.highlight .c { color: #008800; /*font-style: italic*/ } /* Comment */
 .highlight .err { /*border: 1px solid #FF0000;*/ color:a61717;} /* Error */
 .highlight .k { color: #AA22FF; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
