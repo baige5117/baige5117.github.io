@@ -31,6 +31,25 @@
       <dc:date>2014-01-12T00:00:00+08:00</dc:date>
     </item>
     <item>
+      <title>理发师的故事</title>
+      <link>http://baige5117.github.io/blog/story_of_a_barber.html</link>
+      <description>&lt;div class=&quot;say_frame&quot;&gt;
+一个小伙子到理发店理发，他问：“理发得等多长时间？”理发师看了一下店里的顾客说：“大约两个小时。”小伙子走了。&lt;/br&gt;&lt;/br&gt;
+几天后还是这个小伙子来理发，他一进门便问：“理发得等多长时间？”理发师看了一眼店里排队的顾客说：“大约三个小时。”小伙子走了。&lt;/br&gt;&lt;/br&gt;
+一个星期后这个小伙子又来了，问：“理发得等多长时间？”理发师看到店里已经满是顾客说：“大约四个半小时。”小伙子走了。&lt;/br&gt;&lt;/br&gt;
+理发师望着店里的一个朋友说：“喂，比尔，跟着这家伙，看他去哪儿。他总是来问他理发得等多长时间，可是却从来没有回来过。”&lt;/br&gt;&lt;/br&gt;
+不大一会儿，比尔回到店里，歇斯底里地笑着。理发师问：“他离开这儿去了哪儿？”&lt;/br&gt;&lt;/br&gt;
+比尔扬起头，笑出眼泪还挂在眼角：“去了你家！”
+&lt;/div&gt;
+
+
+&lt;p&gt;最初我以为这是个黄色笑话，后来觉得自己很惭愧，那小伙子是小偷，应该是偷东西去了，所以是个正经笑话。但是再看了一遍，还是黄色笑话，因为偷东西的话，可能前两次就被人发觉了。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 10 Jan 2014 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/story_of_a_barber.html</guid>
+      <dc:date>2014-01-10T00:00:00+08:00</dc:date>
+    </item>
+    <item>
       <title>Jekyll 博客 RSS 订阅</title>
       <link>http://baige5117.github.io/blog/rss_generator.html</link>
       <description>&lt;p&gt;利用 Jekyll 官方提供的插件 &lt;em&gt;rssgenerator.rb&lt;/em&gt; 即可实现博客的订阅输出。&lt;/p&gt;

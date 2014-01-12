@@ -50,6 +50,46 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Jul&nbsp;20,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#程序设计" title="查看 程序设计 中的全部文章">程序设计&nbsp;&nbsp;</a><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a><a href="/blog/tags.html#C语言" title="查看 C语言 中的全部文章">C语言&nbsp;&nbsp;</a><a href="/blog/tags.html#单元测试" title="查看 单元测试 中的全部文章">单元测试&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/minunit.html">MinUnit – 最小的 C 语言单元测试框架</a></h1>
+  </header>
+  <section class="postText">
+    <p>单元测试的本质是对测试单元进行正确性测试，因此关键在于测试而不是测试框架（或者测试模板），拘泥于复杂的测试框架中往往造成本末倒置。因此应该将重点放在单元测试的思想和方法上面。下面介绍一个极其简单的 C 语言单元测试框架——MinUnit。</p>
+
+
+
+
+<h2>源代码</h2>
+
+
+
+
+<p>编辑头文件，主要是定义宏和变量：</p>
+
+
+
+
+<div class="highlight"><pre><code class="c"><span class="lineno">1</span>  <span class="cm">/* file: minunit.h */</span>
+<span class="lineno">2</span>  <span class="err">#</span><span class="n">define</span> <span class="n">mu_assert</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span> <span class="k">do</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">test</span><span class="p">))</span> <span class="k">return</span> <span class="n">message</span><span class="p">;</span> <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno">3</span>  <span class="err">#</span><span class="n">define</span> <span class="n">mu_run_test</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="k">do</span> <span class="p">{</span> <span class="kt">char</span> <span class="o">*</span><span class="n">message</span> <span class="o">=</span> <span class="n">test</span><span class="p">();</span> <span class="n">tests_run</span><span class="o">++</span><span class="p">;</span> \
+<span class="lineno">4</span>                            <span class="k">if</span> <span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="k">return</span> <span class="n">message</span><span class="p">;</span> <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno">5</span>  <span class="k">extern</span> <span class="kt">int</span> <span class="n">tests_run</span><span class="p">;</span>
+</code></pre></div>
+
+
+
+[......]
+    <p class="read-more"><a href="/blog/minunit.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Jul&nbsp;17,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 中的全部文章" rel="category">休闲 & 娱乐</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#语录" title="查看 语录 中的全部文章">语录&nbsp;&nbsp;</a><a href="/blog/tags.html#电影" title="查看 电影 中的全部文章">电影&nbsp;&nbsp;</a><a href="/blog/tags.html#励志" title="查看 励志 中的全部文章">励志&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
     <h1><a href="/blog/American_Dreams_in_China.html">《中国合伙人》语录与感悟</a></h1>
   </header>
@@ -343,34 +383,6 @@
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Jun&nbsp;05,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#健康 & 运动" title="查看 健康 & 运动 中的全部文章" rel="category">健康 & 运动</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#健康" title="查看 健康 中的全部文章">健康&nbsp;&nbsp;</a><a href="/blog/tags.html#运动" title="查看 运动 中的全部文章">运动&nbsp;&nbsp;</a><a href="/blog/tags.html#健身" title="查看 健身 中的全部文章">健身&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/the_scientific_7_minute_workout.html">七分钟锻炼法</a></h1>
-  </header>
-  <section class="postText">
-    <p>2013 年 5 月 12 日纽约时报杂志发表一篇文章：<a href="http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/">七分钟锻炼法</a>，一种简单有效的健身方法，长期坚持锻炼辅助体重训练，经证明对健康大有益处。</p>
-
-
-
-
-<h2>基本条件</h2>
-
-
-
-
-<p>七分钟锻炼法由于简单而备受关注，所谓的简单其实真的很简单，所需条件只有一面墙、一把椅子以及七分钟时间，当然还需要你本人。</p>
-
-[......]
-    <p class="read-more"><a href="/blog/the_scientific_7_minute_workout.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
     <a href="/">&laquo; 首页</a>
@@ -425,7 +437,7 @@
       </li>
       
       <li>
-	<a href="/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(20)
+	<a href="/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(21)
       </li>
       
       <li>
@@ -502,8 +514,13 @@
       
       
       
+      
+      
+      
+      
+      
         
-          <li><a href="/archive.html#2014&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;01&nbsp;月 的文章">2014&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          <li><a href="/archive.html#2014&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;01&nbsp;月 的文章">2014&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(5)</li>
           
         
       
@@ -1265,7 +1282,7 @@
     
     <a href="/tags.html#人物" title="7">人物</a>
     
-    <a href="/tags.html#故事" title="7">故事</a>
+    <a href="/tags.html#故事" title="8">故事</a>
     
     <a href="/tags.html#学习笔记" title="13">学习笔记</a>
     
@@ -1368,6 +1385,10 @@
     <a href="/tags.html#交流" title="1">交流</a>
     
     <a href="/tags.html#技巧" title="1">技巧</a>
+    
+    <a href="/tags.html#逻辑" title="1">逻辑</a>
+    
+    <a href="/tags.html#推理" title="1">推理</a>
     
   </div>
   </section>

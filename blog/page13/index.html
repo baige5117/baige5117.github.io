@@ -50,6 +50,29 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;27,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100uy2f.html" target="_blank" rel="author">逍遥书斋</a></span></div>
+    <h1><a href="/blog/R%2A-Tree.html">R* 树——一种高效且健壮的点和矩形访问方法</a></h1>
+  </header>
+  <section class="postText">
+    <h2>摘要</h2>
+
+
+
+
+<p>R 树是最为著名的矩形访问方法（Access method）之一，其算法的基本原理是对中间节点的外接矩形面积进行启发式的优化。我们在一个标准实验平台下对各种数据、各种查询、各种操作进行了大量的实验，并根据实验结果设计了 R* 树。R* 树可以对路径中每个外接矩形的面积、边长（margin）和叠加程度进行综合优化，并将整个路径上所有外界矩形的优化结果合并起来考虑。（原文是incorporates a combined optimization of area, margin and overlap of each enclosing rectangle in the directory）。我们在标准的实验平台下对两种数据结构进行了详细的性能比较，结果证明，与现有的各种 R 树变种相比，R* 树都有明显的性能优势。这里的 R 树变种包括 Guttman 的线性 R 树、二次 R 树（或者叫平方 R 树），也包括 Greene 的 R 树变种。R* 树具有全面的性能优势，不论是针对矩形数据还是针对多维点数据、不论是查询操作还是地图叠加等各种空间操作，R* 树的性能优势均有所表现。从实际应用的角度来讲，R* 树在下面两个方面对用户有强烈的吸引力：第一，R* 树不论对点还是其他各种空间数据都能提供有效的支持；第二，R* 树的实现代价仅比 R 树略高。</p>
+
+[......]
+    <p class="read-more"><a href="/blog/R%2A-Tree.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Oct&nbsp;26,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100t5nx.html" target="_blank" rel="author">逍遥书斋</a></span></div>
     <h1><a href="/blog/R-Tree.html">R 树——动态空间索引结构</a></h1>
   </header>
@@ -342,52 +365,6 @@ And Eternity in an hour.<br />
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Sep&nbsp;10,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#工具 & 软件" title="查看 工具 & 软件 中的全部文章" rel="category">工具 & 软件</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a><a href="/blog/tags.html#脚本" title="查看 脚本 中的全部文章">脚本&nbsp;&nbsp;</a><a href="/blog/tags.html#批处理" title="查看 批处理 中的全部文章">批处理&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/image_magick_bash_script_to_resize_and_crop_images.html">Image Magick bash script to resize and crop images</a></h1>
-  </header>
-  <section class="postText">
-    
-
-<div class="highlight"><pre><code class="bash"><span class="lineno"> 1</span>     <span class="c">#!/bin/sh</span>
-<span class="lineno"> 2</span>     
-<span class="lineno"> 3</span>     <span class="c"># script to resize and crop</span>
-<span class="lineno"> 4</span>     
-<span class="lineno"> 5</span>     <span class="nv">dir</span><span class="o">=</span><span class="s2">&quot;/Users/data/files/candidate/photo/&quot;</span>
-<span class="lineno"> 6</span>     <span class="nv">resume</span><span class="o">=</span>resume
-<span class="lineno"> 7</span>     <span class="nv">orig</span><span class="o">=</span>_orig
-<span class="lineno"> 8</span>     <span class="nb">cd</span> <span class="s2">&quot;$dir$orig&quot;</span>
-<span class="lineno"> 9</span>     <span class="k">for </span>k in <span class="sb">`</span>ls *.jpg<span class="sb">`</span>
-<span class="lineno">10</span>     <span class="k">do</span>
-<span class="lineno">11</span> <span class="k"> </span><span class="nv">h</span><span class="o">=</span><span class="sb">`</span>identify -format <span class="s2">&quot;%h&quot;</span> <span class="nv">$k</span><span class="sb">`</span>
-<span class="lineno">12</span>  <span class="nv">w</span><span class="o">=</span><span class="sb">`</span>identify -format <span class="s2">&quot;%w&quot;</span> <span class="nv">$k</span><span class="sb">`</span>
-<span class="lineno">13</span>  <span class="c">#echo &quot;$k, w:$w, h:$h&quot;</span>
-<span class="lineno">14</span>  
-<span class="lineno">15</span>  <span class="k">if</span> <span class="o">[</span> <span class="nv">$w</span> -ge <span class="nv">$h</span> <span class="o">]</span>
-<span class="lineno">16</span>      <span class="k">then</span>
-<span class="lineno">17</span> <span class="k">      </span>convert <span class="nv">$k</span> -resize x72 -crop 72x72+0+0  <span class="s2">&quot;$dir$resume/$k&quot;</span>
-<span class="lineno">18</span>       
-<span class="lineno">19</span>      <span class="k">else</span>
-<span class="lineno">20</span> <span class="k">      </span>convert <span class="nv">$k</span> -resize 72x -crop 72x72+0+0 <span class="s2">&quot;$dir$resume/$k&quot;</span>
-<span class="lineno">21</span>       <span class="c">#echo &quot;portrait&quot;</span>
-<span class="lineno">22</span>  <span class="k">fi</span>
-<span class="lineno">23</span> 
-<span class="lineno">24</span> <span class="k">    done</span>
-</code></pre></div>
-
-
-
-[......]
-    <p class="read-more"><a href="/blog/image_magick_bash_script_to_resize_and_crop_images.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
     <a href="/">&laquo; 首页</a>
@@ -442,7 +419,7 @@ And Eternity in an hour.<br />
       </li>
       
       <li>
-	<a href="/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(20)
+	<a href="/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(21)
       </li>
       
       <li>
@@ -519,8 +496,13 @@ And Eternity in an hour.<br />
       
       
       
+      
+      
+      
+      
+      
         
-          <li><a href="/archive.html#2014&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;01&nbsp;月 的文章">2014&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(4)</li>
+          <li><a href="/archive.html#2014&nbsp;年&nbsp;01&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;01&nbsp;月 的文章">2014&nbsp;年&nbsp;01&nbsp;月</a>&nbsp;&nbsp;(5)</li>
           
         
       
@@ -1282,7 +1264,7 @@ And Eternity in an hour.<br />
     
     <a href="/tags.html#人物" title="7">人物</a>
     
-    <a href="/tags.html#故事" title="7">故事</a>
+    <a href="/tags.html#故事" title="8">故事</a>
     
     <a href="/tags.html#学习笔记" title="13">学习笔记</a>
     
@@ -1385,6 +1367,10 @@ And Eternity in an hour.<br />
     <a href="/tags.html#交流" title="1">交流</a>
     
     <a href="/tags.html#技巧" title="1">技巧</a>
+    
+    <a href="/tags.html#逻辑" title="1">逻辑</a>
+    
+    <a href="/tags.html#推理" title="1">推理</a>
     
   </div>
   </section>
