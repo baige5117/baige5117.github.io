@@ -57,7 +57,7 @@ body {
     background:url(/images/icons/bk_body.png);
     color:#333;
     font-size:13px;
-    font-family:Georgia, "Times New Roman", Times, "Microsoft YaHei", 微软雅黑, serif;
+    font-family:"Times New Roman", Times, Georgia, "Microsoft YaHei", 微软雅黑, serif;
     line-height:20px;
     -webkit-font-smoothing: antialiased;
 }
