@@ -50,6 +50,29 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Oct&nbsp;27,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 中的全部文章" rel="category">休闲 & 娱乐</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#人物" title="查看 人物 中的全部文章">人物&nbsp;&nbsp;</a><a href="/blog/tags.html#趣事" title="查看 趣事 中的全部文章">趣事&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/RMS-personal-ad.html">理查德·斯托曼的征婚启事</a></h1>
+  </header>
+  <section class="postText">
+    <p>理查德·马修·斯托曼（Richard Matthew Stallman, RMS，生于1953年），自由软件运动的精神领袖、GNU 计划以及自由软件基金会（Free Software Foundation）的创立者、著名黑客。他的主要成就包括 Emacs 及后来的 GNU Emacs，GNU C 编译器及 GNU 调试器。他所写作的 GNU 通用公共许可证（GNU GPL）是世上最广为采用的自由软件许可证，为 copyleft 观念开拓出一条崭新的道路。他最大的影响是为自由软件运动竖立道德、政治及法律框架。他被许多人誉为当今自由软件的斗士、伟大的理想主义者。</p>
+
+
+
+
+<p>斯托曼不仅技术一流，其幽默感也颇佳，从他的<a href="http://www.stallman.org/">个人主页</a>上贴着的那张显赫的“<a href="http://www.stallman.org/extra/personal.html">征婚启事</a>”就可见一斑：</p>
+
+[......]
+    <p class="read-more"><a href="/blog/RMS-personal-ad.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Oct&nbsp;27,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#空间索引" title="查看 空间索引 中的全部文章">空间索引&nbsp;&nbsp;</a><a href="/blog/tags.html#数据结构" title="查看 数据结构 中的全部文章">数据结构&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_672446ba0100uy2f.html" target="_blank" rel="author">逍遥书斋</a></span></div>
     <h1><a href="/blog/R%2A-Tree.html">R* 树——一种高效且健壮的点和矩形访问方法</a></h1>
   </header>
@@ -303,68 +326,6 @@ And Eternity in an hour.<br />
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Sep&nbsp;20,&nbsp;2012</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a><a href="/blog/tags.html#C语言" title="查看 C语言 中的全部文章">C语言&nbsp;&nbsp;</a><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1><a href="/blog/declaration_analysis_in_c.html">C 语言声明解析</a></h1>
-  </header>
-  <section class="postText">
-    <h2>合法声明的限制条件</h2>
-
-
-
-
-<ol>
-<li>函数的返回值不能是一个函数，而可以是一个函数指针，所以像<code>foo()()</code>这样是非法的，而<code>int(* fun())()</code>是合法的；</li>
-<li>函数的返回值不能是一个数组，而可以是一个指向数组的指针，所以像 <code>foo()[]</code> 这样是非法的，而 <code>int(* fun())[]</code> 是合法的；</li>
-<li>数组里面不能有函数，但数组里面可以有其他数组，所以像 <code>foo[]()</code> 这样是非法的，而 <code>int foo[][]</code> 是合法的。</li>
-</ol>
-
-
-
-
-<h2>声明的优先级规则</h2>
-
-
-
-
-<p>A：  声明从它的名字开始读取，然后按照优先级顺序依次读取。</p>
-
-
-
-
-<p>B：  优先级从高到低依次是：</p>
-
-
-
-
-<p>B.1： 声明中被括号括起来的部分</p>
-
-
-
-
-<p>B.2： 后缀操作符：括号<code>( )</code>表示这是一个函数，而方括号 <code>[ ]</code> 表示这是一个数组。</p>
-
-
-
-
-<p>B.3： 前缀操作符：星号<code>*</code>表示“指向&hellip;的指针”。</p>
-
-
-
-
-<p>C：  如果 <code>const</code> 和（或）<code>volatile</code> 关键字的后面紧跟类型说明符（如 <code>int</code>、<code>long</code> 等），那么它作用于类型说明符。其他情况下，<code>const</code> 和（或）<code>volatile</code> 关键字作用于它左边紧邻的指针星号。</p>
-
-[......]
-    <p class="read-more"><a href="/blog/declaration_analysis_in_c.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
     <a href="/">&laquo; 首页</a>
@@ -419,7 +380,7 @@ And Eternity in an hour.<br />
       </li>
       
       <li>
-	<a href="/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(21)
+	<a href="/categories.html#休闲 & 娱乐" title="查看 休闲 & 娱乐 下的所有文章">休闲 & 娱乐</a>&nbsp;(22)
       </li>
       
       <li>
@@ -473,6 +434,16 @@ And Eternity in an hour.<br />
       
       
         
+          
+        
+      
+      
+      
+      
+      
+      
+        
+          <li><a href="/archive.html#2014&nbsp;年&nbsp;02&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;02&nbsp;月 的文章">2014&nbsp;年&nbsp;02&nbsp;月</a>&nbsp;&nbsp;(1)</li>
           
         
       
@@ -1238,7 +1209,7 @@ And Eternity in an hour.<br />
     
     <a href="/tags.html#运动" title="2">运动</a>
     
-    <a href="/tags.html#电影" title="3">电影</a>
+    <a href="/tags.html#电影" title="4">电影</a>
     
     <a href="/tags.html#励志" title="12">励志</a>
     
