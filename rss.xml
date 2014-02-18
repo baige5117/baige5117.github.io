@@ -9,7 +9,30 @@
     <link>http://baige5117.github.io</link>
     <description>Baige5117's personal website, mainly for recording and sharing, including blogs, sayings, music, photos and anything interesting.</description>
     <copyright>Copyright &amp;#169; 2011-2013 | Design &amp;#38; Content by &lt;a href=&quot;/index.html&quot;&gt;Baige5117&lt;/a&gt; | Powered by &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;jekyll&lt;/a&gt; hosted by &lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; | All Rights Reserved</copyright>
-    <pubDate>Tue, 11 Feb 2014 00:00:00 +0800</pubDate>
+    <pubDate>Mon, 17 Feb 2014 00:00:00 +0800</pubDate>
+    <item>
+      <title>坐姿是如何带来疾病的</title>
+      <link>http://baige5117.github.io/blog/how_the_way_you_sit_makes_you_sick.html</link>
+      <description>&lt;p&gt;一天晚上，老爸肩膀斜靠着沙发坐在地板上看电视，其实他已经是半坐半躺在地板上了，甚至两腿还交叉着。可以想象得到，他的后背由于没有任何支撑已经弯曲的非常厉害。&lt;/p&gt;
+
+&lt;p&gt;由于电视节目的无聊透顶，出于好奇老爸把一把脉搏以感受一下自己的心跳。（译者注：正常情况下，脉搏和心率是一致的）&lt;/p&gt;
+
+&lt;p&gt;砰！砰！砰！&lt;/p&gt;
+
+&lt;p&gt;突然老爸发现部分心跳变的很长很慢&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;砰………… 砰…………&lt;/p&gt;
+
+&lt;p&gt;一分钟内有七次这样较慢的心跳。因此老爸将交叉的双腿伸开但依旧斜靠在沙发上，这次仍然出现几次较慢的心跳，但是一分钟内只有三次。然后他立即直其腰板坐了起来并测了一下心跳。&lt;/p&gt;
+
+&lt;p&gt;砰！砰！砰！&lt;/p&gt;
+
+&lt;p&gt;这次再没有出现较慢的心跳！他的心脏一直平稳的跳动着。那么是什么造成了心跳的差异？你又是如何在不知不觉中由于不良姿势而折磨自己身体的呢？&lt;/p&gt;
+</description>
+      <pubDate>Mon, 17 Feb 2014 00:00:00 +0800</pubDate>
+      <guid>http://baige5117.github.io/blog/how_the_way_you_sit_makes_you_sick.html</guid>
+      <dc:date>2014-02-17T00:00:00+08:00</dc:date>
+    </item>
     <item>
       <title>《一代宗师》经典台词</title>
       <link>http://baige5117.github.io/blog/classic_lines_of_the_grandmaster.html</link>
@@ -1450,7 +1473,7 @@ $ groups Jim            //查看普通用户 Jim 都属于那些组
     <item>
       <title>丘吉尔的最后一次演讲</title>
       <link>http://baige5117.github.io/blog/last_speech_of_Churchill.html</link>
-      <description>&lt;blockquote&gt;&lt;p&gt;Never give up&lt;img src=&quot;class:quote_src&quot; alt=&quot;Sir Winston Leonard Spencer Churchill&quot; /&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      <description>&lt;blockquote&gt;&lt;p&gt;Never give up! &lt;span class=&quot;quote_src&quot;&gt;Sir Winston Leonard Spencer Churchill&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;这是英国首先丘吉尔一生最精彩的演讲，也是他在二战期间的最后一次演讲。&lt;/p&gt;
 
@@ -1865,7 +1888,7 @@ text-justify: inter-ideograph;
       <dc:date>2012-10-27T00:00:00+08:00</dc:date>
     </item>
     <item>
-      <title>R* 树——一种高效且健壮的点和矩形访问方法</title>
+      <title>R* 树：一种高效且健壮的点和矩形访问方法</title>
       <link>http://baige5117.github.io/blog/R%2A-Tree.html</link>
       <description>&lt;h2&gt;摘要&lt;/h2&gt;
 
@@ -1876,7 +1899,7 @@ text-justify: inter-ideograph;
       <dc:date>2012-10-27T00:00:00+08:00</dc:date>
     </item>
     <item>
-      <title>R 树——动态空间索引结构</title>
+      <title>R 树：动态空间索引结构</title>
       <link>http://baige5117.github.io/blog/R-Tree.html</link>
       <description>&lt;h2&gt;一些术语&lt;/h2&gt;
 
@@ -2321,6 +2344,6 @@ And Eternity in an hour.&lt;br /&gt;
       <guid>http://baige5117.github.io/blog/it_is_not_the_clock_but_your_dream_to_wake_up_you.html</guid>
       <dc:date>2011-09-01T00:00:00+08:00</dc:date>
     </item>
-    <dc:date>2014-02-11T00:00:00+08:00</dc:date>
+    <dc:date>2014-02-17T00:00:00+08:00</dc:date>
   </channel>
 </rss>
