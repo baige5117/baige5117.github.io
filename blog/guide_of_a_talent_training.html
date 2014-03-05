@@ -10,7 +10,7 @@
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
-<title>文件批量重命名 Bash 脚本</title>
+<title>天才训练指南</title>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
 <!-- [if IE 7]>
@@ -47,55 +47,100 @@
 	  <section id="main-content">
 	    <article class="post">
   <header class="postHeader">
-    <div class="date"><span class="cal">Sep&nbsp;30,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#编程语言" title="查看 编程语言 中的全部文章">编程语言&nbsp;&nbsp;</a><a href="/blog/tags.html#脚本" title="查看 脚本 中的全部文章">脚本&nbsp;&nbsp;</a><a href="/blog/tags.html#批处理" title="查看 批处理 中的全部文章">批处理&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
-    <h1>文件批量重命名 Bash 脚本</h1>
+    <div class="date"><span class="cal">Mar&nbsp;04,&nbsp;2014</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 中的全部文章" rel="category">励志 & 成功</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#成功学" title="查看 成功学 中的全部文章">成功学&nbsp;&nbsp;</a><a href="/blog/tags.html#方法论" title="查看 方法论 中的全部文章">方法论&nbsp;&nbsp;</a><a href="/blog/tags.html#技巧" title="查看 技巧 中的全部文章">技巧&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://www.geekonomics10000.com/100" target="_blank" rel="author">同人于野</a></span></div>
+    <h1>天才训练指南</h1>
   </header>
   <section class="postText">
-    <h2>任务描述</h2>
+    <p>如果让我选择 2006 年在网上所看过最好的一篇短文，我选 Freakonomics 这本书的两位作者 Dubner 和 Levitt 发表在纽约时报杂志上的专栏文章 <a href="http://www.nytimes.com/2006/05/07/magazine/07wwln_freak.html"><em>A Star Is Made: Where Does Talent Really Come From</em></a>。我相信即使是十年以后我可能仍然会记得这篇文章，你看完之后有可能后悔可惜自己 20 年前没看到。Freakonomics 是本非常有意思的小书，书的两位作者每两个月发表一篇专栏，还开了个博客，我总体感觉专栏文章的质量不如书。但这篇专栏有点不同，内容并不完全是作者的原创思想，而是他们介绍一个心理学家的研究成果。</p>
 
 
 
 
-<p>将某一目录下的所有文件重命名为具有某种规则的名称，比如按数字升序的文件名。</p>
+<p>文章一开头说了个有趣的事实，如果你看 06 世界杯球星档案，你会发现很多球星的生日是一月到三月；如果你看英国和德国青年队球星的话，竟然有一半是出生在这三个月的。难道这三个月有利于足球天才出生么？答案是欧洲青少年联赛的队员报名年龄限制按 12 月 31 日划线，这样教练在选择队员的时候自然会优先选择那些一年中的早些时候出生的。</p>
 
 
 
 
-<h2>脚本程序</h2>
+<!--excerpt break-->
 
 
 
 
-<p>用 Bash 脚本程序进行处理，代码如下：</p>
+<p>这个故事相当吸引人。号称”反智的书生”的<a href="http://blog.sina.com.cn/m/xueyong">薛涌</a>同学显然是看到了此文，当时正好赶上世界杯，他在不告诉读者原文出处的情况下把这篇文章”编译”成了他自己的文章发表，叫做 <a href="http://sports.sina.com.cn/r/2006-05-10/14452204541.shtml">制造未来球星 最迟本月怀孕</a>。这哥们的很多立场我都赞同，就是做人太不讲究，把美国人写的文章变成自己的东西已经不是一次两次了。但薛涌未能理解文章的精髓。</p>
 
 
 
 
-<div class="highlight"><pre><code class="bash"><span class="lineno">1</span>     <span class="c">#!/bin/sh</span>
-<span class="lineno">2</span>     
-<span class="lineno">3</span>     <span class="nv">name</span> <span class="o">=</span> 1
-<span class="lineno">4</span>     <span class="k">for </span>f in <span class="sb">`</span>ls <span class="nv">$1</span><span class="sb">`</span>
-<span class="lineno">5</span>     <span class="k">do</span>
-<span class="lineno">6</span> <span class="k">        </span>mv <span class="s2">&quot;$1/$f&quot;</span> <span class="nv">$2</span>/<span class="nv">$name</span>
-<span class="lineno">7</span>       <span class="o">((</span>name++<span class="o">))</span>
-<span class="lineno">8</span>     <span class="k">done</span>
-<span class="lineno">9</span>     
-</code></pre></div>
+<p>这篇文章真正说的是成为天才的秘密。</p>
 
 
 
 
-<h2>程序解释</h2>
+<p>前不久温家宝又在呼吁出学术大师了。我国在基础科学方面的水平可能比足球强不了多少，改革开放 30 来年了也没出个诺贝尔奖，一句话就是缺天才。为了培养天才连少年班的主意都出了，怎么就是不行呢？心理学家 Anders Ericsson 的这项研究从技术角度解决了这个问题。研究覆盖了从职业运动员，艺术家到程序员差不多所有需要天才的领域，出版了一本 900 多页的书，结论是<span class="red">天才还真是练出来的，但是关键在于怎么练。</span></p>
 
 
 
 
-<p>其实没啥解释的，主要用到<code>mv</code>命令来完成重命名。</p>
+<p>想要训练一个天才绝不是整天苦练就行，你需要的是 “<span class="red">deliberate practice</span>“：</p>
+
+
+
+
+<ul>
+<li>每次训练有明确的目标</li>
+<li>获得即时的反馈</li>
+<li>既要注重结果，也要注重技术</li>
+</ul>
+
+
+
+
+<p>我想在这里对比一下我国对理工科大学生的训练，看看是否满足这些要求。</p>
+
+
+
+
+<p>首先我国理工科教学根本没有明确的目标。这里所说的目标是一次训练中要达到的具体的小目标，并不是说什么拿诺贝尔奖这样的人生理想。科学教育的正确目标可以是将来搞科研需要这个知识，可以是学会这个技术去使用它。但我国教学中，学生学习的目标不是知识本身，而是课本，不是这堂课我领会了什么思想，而是这堂课有什么知识点有什么公式要背，换句话说是考试。有些学生不屑于为了考试学习，自己看书的，往往因为缺乏指导而茫然，不知道看这本书的目的何在。</p>
+
+
+
+
+<p>“即时的反馈” (immediate feedback) 是我国训练学生中最缺乏的一个方面，越是高端人才的培养中越是如此。如果说高手们有什么成功秘诀，我猜就是这个即时的反馈。文章说的一个事实是医生们离开医学院以后，除了手术临床医生以外，其他专业的，比如看透视图的那些医生，他们的水平随时间在减弱，原因就是缺乏立即的反馈。就好比练武功，一招一式都需要有人随时纠正，不对马上改别把错误动作形成习惯。在科研领域，这意味着你搞科研的时候需要一个好导师随时告诉你你干的这个活怎么样。中国缺乏好导师，而且往往还一个导师带 30 个学生，谁给你反馈啊？</p>
+
+
+
+
+<p>反馈还意味着需要跟同行随时交流切磋，别人怎么做的，你这么做人家怎么评价等等，这就要求科研工作者需要经常跟高手开会，开会的时候还必须经常讨论。而国内的情况一方面会议就不多，开会的时候还大家都客气不爱提问。美国开学术会议除了发言以外广泛采用 poster 形式，实际上在讨论工作方面往往更有价值，而国内可能还没有采取这样的形式。这个技术还告诉我们想要提高自己的思想水平就应该经常在网上发帖，以便获得反馈。</p>
+
+
+
+
+<p>“结果和技术”，最起码的要求是你得自己训练，而不是看别人练。站在场边把姚明的技术统计倒背如流也没用，关键得自己上场。我国训练学生搞科研的做法是不搞科研，搞”课”研。请牛人来讲最新最强的理论，而不是强调让他们尽可能早的参与到科研活动中去，这就好比给北京青年队看 NBA 录像一样，培养出来的全是专业球迷。美国学生队不是自己直接搞的领域可能不太了解，也可能不知道最近 Witten 发了什么文章，但他自己的小小领域内，他可能大二就开始干了。很多人甚至喜欢评论课本，这本书写得好，这个人是牛人，陶醉在对课本的欣赏之中。在美国上课没见过任何一个老师赞美课本的，一线人物几乎没人写课本，所有课本都只不过是工具书，最终目的是为了科研这个结果。一切技术应该是为了科研服务。</p>
+
+
+
+
+<p>“技术”是说你的训练得得法，这同样需要高人的指点，而且你还得听从人家的指点。</p>
+
+
+
+
+<p>对比心理学家的研究成果，可见我国科学教育为什么不行了。我国这种缘木求鱼的教育方法最终培养出来的都是精通”基本知识”的”科学的家”，而不是”科学家”。说到底就是两个字：实践。毛泽东说在战争中学习战争，解放军很多高级将领文化程度一般，为什么总能打胜仗，靠的就是在实践中学习。学习科学知识不是为了考试，不是为了耍酷，不是为了有谈资，是为了搞科研。美国大学里面的技术课程一学期让学生做好几个 project，完全是追求学以致用，逼迫学生为了完成 project 而学习知识，其中还有小组合作，跟真正的科研没什么区别。</p>
+
+
+
+
+<p>宁可在本科的时候发几篇灌水小文章也比苦读十年期待一鸣惊人强。一提基础科学，有人总说”板凳要坐十年冷”，这种思想完全不适合现代化科研体系。坐十年板凳的运动员国家队能用么？马俊仁当年是一般比赛不参加，专门参加奥运会世界杯一鸣惊人结果人家怀疑你是不是服用禁药啊，一旦有点小事整个队伍居然崩溃了。这种做法现在已经被淘汰。正确的做法是象现在刘翔这样有什么大奖赛都去，追求一个稳定的成绩。</p>
+
+
+
+
+<p>科学工作者就好像运动员一样，需要不停的比赛，而不是不停的看录像。</p>
 
 
   </section>
   <section class="postText">
-  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/ImageMagick_bash_script_to_crop_images.html" title="利用 ImageMagick 和 Bash 脚本批量剪裁图片">利用 ImageMagick 和 Bash 脚本批量剪裁图片</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/state_of_knowledge.html" title="做学问的境界">做学问的境界</a></p>
+  <p><span class="emphasize_zh">上一篇：</span> <a rel="prev" href="/blog/homeless_to_harvard.html" title="《风雨哈佛路》感悟与经典台词">《风雨哈佛路》感悟与经典台词</a></p><p><span class="emphasize_zh">下一篇：</span><a rel="next" href="/blog/how_to_practise_for_10000_hours.html" title="怎样练习一万小时？">怎样练习一万小时？</a></p>
   </section>
   <section class="postText">
     <div id="duoshuo">

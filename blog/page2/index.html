@@ -50,6 +50,148 @@
 <!-- Begin Article -->
 <article class="post">
   <header class="postHeader">
+    <div class="date"><span class="cal">Jan&nbsp;08,&nbsp;2014</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/rss_generator.html">Jekyll 博客 RSS 订阅</a></h1>
+  </header>
+  <section class="postText">
+    <p>利用 Jekyll 官方提供的插件 <em>rssgenerator.rb</em> 即可实现博客的订阅输出。</p>
+
+
+
+
+<h2>使用方法</h2>
+
+
+
+
+<p>首先将 <em>rssgenerator.rb</em> 插件置入站点根目录中的 <em>_plugins</em> 目录中，然后在配置文件 <em>_config.yml</em> 添加相关配置内容即可。</p>
+
+
+
+
+<ul>
+<li><code>name</code>：博客名称</li>
+<li><code>url</code>：博客地址</li>
+<li><code>description</code>：[可选] 博客描述，如果没有指定则根据 <code>name</code> 生成描述</li>
+<li><code>author</code>：[可选] 博客作者，如果没有指定则为空</li>
+<li><code>copyright</code>：[可选] 博客版权，如果没有指定则为空</li>
+<li><code>rss_path</code>：[可选] RSS 文件输出目录，如果没有指定则设置为更目录 <code>/</code></li>
+<li><code>rss_name</code>：[可选] RSS 文件输出名称，如果没有指定则定义为 “rss.xml”</li>
+<li><code>rss_post_limit</code>：[可选] RSS 文件输出文章的数目</li>
+</ul>
+
+
+
+
+<p>这样，在每次重新生成博客内容的时候，就会在博客生成目录中重新生成一份 <em>rss.xml</em> 文件。</p>
+
+[......]
+    <p class="read-more"><a href="/blog/rss_generator.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Jan&nbsp;06,&nbsp;2014</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#学习 & 提升" title="查看 学习 & 提升 中的全部文章" rel="category">学习 & 提升</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#jekyll" title="查看 jekyll 中的全部文章">jekyll&nbsp;&nbsp;</a><a href="/blog/tags.html#学习笔记" title="查看 学习笔记 中的全部文章">学习笔记&nbsp;&nbsp;</a><a href="/blog/tags.html#网页设计" title="查看 网页设计 中的全部文章">网页设计&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Bai</span></div>
+    <h1><a href="/blog/pagination_in_jekyll.html">Jekyll 博客分页显示</a></h1>
+  </header>
+  <section class="postText">
+    <p>对于许多网站尤其是博客而言，把所有内容显示在一个页面内，将严重影响网页显示效果，降低用户的阅读体验，而且还显得不够专业。因此，内容的分页显示非常重要。</p>
+
+
+
+
+<p>Jekyll 内置分页功能，利用 Jekyll 构建静态站点可以很方便完成分页显示。</p>
+
+
+
+
+<p>首先，需要在配置文件 <em>_config.yml</em> 中设置每页显示的博文条目数目:</p>
+
+
+
+
+<pre><code>paginate: 5
+</code></pre>
+
+
+
+
+<p>根据需要设置分页所在路径：</p>
+
+
+
+
+<pre><code>paginate_path: "blog/page:num"
+</code></pre>
+
+
+
+
+<p>然后，利用 <code>paginator</code> liquid 对象获取并显示分页相关信息。<code>paginator</code> 具有以下属性：</p>
+
+
+
+
+<ul>
+<li><code>page</code>：当前页页码</li>
+<li><code>per_page</code>：每页的文章数目</li>
+<li><code>posts</code>：当前页的文章列表</li>
+<li><code>total_posts</code>：所有文章的数目</li>
+<li><code>total_pages</code>：分页数目</li>
+<li><code>previous_page</code>：当前页的前一页页码，如果没有前一页的话为 <code>nil</code></li>
+<li><code>previous_page_path</code>：当前页的前一页的路径，如果没有前一页的话为 <code>nil</code></li>
+<li><code>next_page</code>：当前页的后一页页码，如果没有后一页的话为 <code>nil</code></li>
+<li><code>next_page_path</code>：当前页的后一页的路径，如果没有后一页的话为 <code>nil</code></li>
+</ul>
+
+
+
+[......]
+    <p class="read-more"><a href="/blog/pagination_in_jekyll.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
+    <div class="date"><span class="cal">Jan&nbsp;04,&nbsp;2014</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#励志 & 成功" title="查看 励志 & 成功 中的全部文章" rel="category">励志 & 成功</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#励志" title="查看 励志 中的全部文章">励志&nbsp;&nbsp;</a><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://www.cracked.com/blog/6-harsh-truths-that-will-make-you-better-person/" target="_blank" rel="author">David Wong</a></span></div>
+    <h1><a href="/blog/6_harsh_truths_that_will_make_you_a_better_person.html">Loser 应该知道的 6 个残酷人生事实</a></h1>
+  </header>
+  <section class="postText">
+    <p style="text-align:center;"><img src="http://baige5117.u.qiniudn.com/20140104.jpg" height="200" width="450" alt="Loser 应该知道的 6 个残酷人生事实" /></p>
+
+
+
+
+<p>如果你的职业道路非常顺利，你的生活美满感情顺利，你可以不用读这篇文章。祝你一天愉快，这篇文章不是为你写的。你做的非常出色，我们都为你自豪。</p>
+
+
+
+
+<p>对于其余的人来说，我希望你做一件事情：说出 5 件你引以为豪的事情。写在纸上也好，或者喊出来也好都可以。但这里有一个条件：你不可以列出你“是”怎样的人（比如，我是一个温柔的人，我很诚实），只能列出你“做”的事情（比如，我刚获得了全国象棋冠军，我做的 chili 是全麻省最好的）。如果你发现很难列出五件事情，这篇文章就是为你所写的。而且你他妈的肯定一边听一边心里会不舒服。我的感受是，如果有人在 1995 年的时候跟我讲这些事情就好了。</p>
+
+[......]
+    <p class="read-more"><a href="/blog/6_harsh_truths_that_will_make_you_a_better_person.html">—阅读全文—</a></p>
+  </section>
+  <div class="sidebadge"></div>
+</article>
+<!-- End Article -->
+
+
+
+<!-- Begin Article -->
+<article class="post">
+  <header class="postHeader">
     <div class="date"><span class="cal">Dec&nbsp;31,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#人生 & 思考" title="查看 人生 & 思考 中的全部文章" rel="category">人生 & 思考</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#人生" title="查看 人生 中的全部文章">人生&nbsp;&nbsp;</a><a href="/blog/tags.html#梦想" title="查看 梦想 中的全部文章">梦想&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Internet</span></div>
     <h1><a href="/blog/what_you_are_doing_in_5_years.html">五年之后你在何方？</a></h1>
   </header>
@@ -264,95 +406,6 @@
 
 
 
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Dec&nbsp;18,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 中的全部文章" rel="category">职场 & 工作</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#工作" title="查看 工作 中的全部文章">工作&nbsp;&nbsp;</a><a href="/blog/tags.html#职业" title="查看 职业 中的全部文章">职业&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_49f9228d0101g006.html" target="_blank" rel="author">周鸿祎</a></span></div>
-    <h1><a href="/blog/donot_work_as_a_employee.html">把自己当成打工的，一辈子都是打工的</a></h1>
-  </header>
-  <section class="postText">
-    <p>我觉得有的人对创业的理解有误区。他们把创业理解成几个哥们开一个公司，回去印几盒名片，我叫董事局主席，你叫首席执行官，自己的同学脖子上都挂上个CXO，名字很洋气，也不知道什么意思。如果把这个理解为创业就大错特错。</p>
-
-
-
-
-<p>我希望大家这样来理解创业，把创业看成是一种心态，为了实现一个目标，孜孜不倦的去追求。只要你不满足于现状，想法设法去突破，那就是 创业。如果你是一个在校学生，是搞电脑，如果你不满足于只是把学分学好，不满足于把考试应付好，而是花了很多时间提高你的编程能力，下了很大功夫来研究很 多软件，那这也是创业。学习是这样，工作也是这样，只要你勇敢的正视问题，积极的去解决问题，敢于去承担未来的风险，这其实就是创业心态。</p>
-
-[......]
-    <p class="read-more"><a href="/blog/donot_work_as_a_employee.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Dec&nbsp;17,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 中的全部文章" rel="category">职场 & 工作</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#工作" title="查看 工作 中的全部文章">工作&nbsp;&nbsp;</a><a href="/blog/tags.html#职业" title="查看 职业 中的全部文章">职业&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth"><a href="http://blog.sina.com.cn/s/blog_49f9228d0101fx17.html" target="_blank" rel="author">周鸿祎</a></span></div>
-    <h1><a href="/blog/to_people_who_muddle_along.html">给那些仍旧在公司混日子的人</a></h1>
-  </header>
-  <section class="postText">
-    <p>网上有热心的朋友帮我整理了一个交流谈话，我已经记不得具体是什么时候在什么场合讲的，但都是至今我想对一些朋友说的真心话：你混日子，就是日子混你，你自己是输家。</p>
-
-
-
-
-<p>1、我自己当年，无论我在方正给国家打工，还是我在雅虎给外国人打工，我都跟别人最大的不一样，我从来不觉得我在给他们打工，我真的可能是很有自信的人，我觉得我在为自己干。因为我干任何一件事我首先考虑的是，我通过干这件事我能学到什么东西，学到的东西是别人剥夺不走的，客观上可能给公司创造了价值。</p>
-
-
-
-
-<p>2、一件事交给我我应付一下，很容易应付，应付完了之后不觉得是在浪费生命吗？一件事你可以把它做到60分，你可以做的很轻松，做完了你每天重复每天干三个小时活就完了，然后你天天上班没事，然后你回家三十亩地一头牛老婆孩子热炕头，但你怎么进步呢？人的进步离开了学校之后，学习不再是上课也不是读书，通过你在工作中通过你做事情做项目积累自己的经验，跟很多人打交道。因为我有不服输的性格，再普通的事我要做的比别人好，大家做的很普通我要做的跟大家不一样，要做到超出大家想象要花很多时间很多努力，但我最后发现我的收获最大的，因为我下了功夫，你的收获和你的投入是成正比的。</p>
-
-[......]
-    <p class="read-more"><a href="/blog/to_people_who_muddle_along.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
-<!-- Begin Article -->
-<article class="post">
-  <header class="postHeader">
-    <div class="date"><span class="cal">Dec&nbsp;16,&nbsp;2013</span>&nbsp;&ndash;&nbsp;<span class="cat"><a href="/blog/categories.html#职场 & 工作" title="查看 职场 & 工作 中的全部文章" rel="category">职场 & 工作</a></span>&nbsp;&ndash;&nbsp;<span class="tag"><a href="/blog/tags.html#工作" title="查看 工作 中的全部文章">工作&nbsp;&nbsp;</a><a href="/blog/tags.html#职业" title="查看 职业 中的全部文章">职业&nbsp;&nbsp;</a></span>&nbsp;&ndash;&nbsp;<span class="auth">Apple</span></div>
-    <h1><a href="/blog/you_will_love_your_work.html">苹果入职信：你会热爱你的工作</a></h1>
-  </header>
-  <section class="postText">
-    <p>There&rsquo;s work and there&rsquo;s your life&rsquo;s work.</p>
-
-
-
-
-<p>The kind of work that has your fingerprints all over it. The kind of work that you&rsquo;d never compromise on. That you&rsquo;d sacrifice a weekend for. You can do that kind of work at Apple . People don&rsquo;t come here to play it safe. They come here to swim in the deep end.</p>
-
-
-
-
-<p>They want their work to add up to something.</p>
-
-
-
-
-<p>Something big. Something that couldn&rsquo;t happen anywhere else.</p>
-
-
-
-
-<p>Welcome to Apple.</p>
-
-[......]
-    <p class="read-more"><a href="/blog/you_will_love_your_work.html">—阅读全文—</a></p>
-  </section>
-  <div class="sidebadge"></div>
-</article>
-<!-- End Article -->
-
-
-
 <div class="pagination">
   
     <a href="/">&laquo; 首页</a>
@@ -399,7 +452,7 @@
     <ul>
       
       <li>
-	<a href="/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(13)
+	<a href="/categories.html#励志 & 成功" title="查看 励志 & 成功 下的所有文章">励志 & 成功</a>&nbsp;(16)
       </li>
       
       <li>
@@ -469,8 +522,23 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
-          <li><a href="/archive.html#2014&nbsp;年&nbsp;03&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;03&nbsp;月 的文章">2014&nbsp;年&nbsp;03&nbsp;月</a>&nbsp;&nbsp;(1)</li>
+          <li><a href="/archive.html#2014&nbsp;年&nbsp;03&nbsp;月" title="查看所有 2014&nbsp;年&nbsp;03&nbsp;月 的文章">2014&nbsp;年&nbsp;03&nbsp;月</a>&nbsp;&nbsp;(4)</li>
           
         
       
@@ -1317,7 +1385,7 @@
     
     <a href="/tags.html#HTML" title="5">HTML</a>
     
-    <a href="/tags.html#成功学" title="3">成功学</a>
+    <a href="/tags.html#成功学" title="6">成功学</a>
     
     <a href="/tags.html#开心一刻" title="4">开心一刻</a>
     
@@ -1383,11 +1451,13 @@
     
     <a href="/tags.html#交流" title="1">交流</a>
     
-    <a href="/tags.html#技巧" title="1">技巧</a>
+    <a href="/tags.html#技巧" title="4">技巧</a>
     
     <a href="/tags.html#逻辑" title="1">逻辑</a>
     
     <a href="/tags.html#推理" title="1">推理</a>
+    
+    <a href="/tags.html#方法论" title="3">方法论</a>
     
   </div>
   </section>
