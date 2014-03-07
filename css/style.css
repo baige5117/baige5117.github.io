@@ -67,7 +67,7 @@ p {
     line-height:22px;
 }
 
-h1, h2 , h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     display:block;
     color:#13382A;
     line-height:100%;
@@ -304,8 +304,8 @@ overflow:hidden;
 }
 
 .post header .date {
-color:#666;
-text-shadow:1px 1px #fff;
+color:#666;/*#6E886C*/
+text-shadow:1px 1px 0 #fff;
 }
 
 .post header .date span a {
@@ -313,10 +313,10 @@ text-decoration:none;
 vertical-align:middle;
 }
 
-.post header .date span.cal {font-family:Kristi, 方正舒体, 华为楷体, 楷体;font-size:26px;padding:0;position:relative;top:3px;}
+.post header .date span.cal {font-family:Kristi, 方正舒体, 华文楷体, 楷体;font-size:26px;padding:0;position:relative;top:3px;}
 .post header .date span.cat {padding-left:18px;background:url("/images/icons/post_info.png") 0 0 no-repeat;font-size:12px;font-family:Georgia, "Times New Roman", Times, serif;}
 .post header .date span.tag {padding-left:18px;background:url("/images/icons/post_info.png") 0 -24px no-repeat;font-size:12px;font-family:Georgia, "Times New Roman", Times, serif;}
-.post header .date span.auth {font-size:26px;font-family:Kristi, 方正舒体, 华为楷体, 楷体;padding-left:18px;background:url("/images/icons/post_info.png") 0 -40px no-repeat;position:relative;top:3px;}
+.post header .date span.auth {font-size:26px;font-family:Kristi, 方正舒体, 华文楷体, 楷体;padding-left:18px;background:url("/images/icons/post_info.png") 0 -40px no-repeat;position:relative;top:3px;}
 
 .post header h1, .page header h1 {
     font-size:25px;
@@ -328,7 +328,8 @@ vertical-align:middle;
 }
 
 .post header h1 a {
-    color:#13382A;
+    color:#13382A;/*#AA402B;*/
+    /*text-shadow:0 1px 0 #FFFFFF, 1px 2px 2px #AAAAAA;*/
     border:none;
 }
 
@@ -759,7 +760,7 @@ overflow:hidden;
 .about:hover {color:#A3A30E}
 #exclp {
 font-size: 15px;
-font-family: LiSu,微软雅黑,'Comic Sans MS',san-serif;
+font-family: LiSu, 隶书, 微软雅黑, 'Comic Sans MS', san-serif;
 text-align: center;
 }
 .emphasize_zh { 
