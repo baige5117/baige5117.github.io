@@ -2,56 +2,50 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://baige5117.github.io/</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>weekly</changefreq>
 	<priority>0.8</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/music.html</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>monthly</changefreq>
 	<priority>0.6</priority>
     <url>
         <loc>http://baige5117.github.io/sayings.html</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>monthly</changefreq>
 	<priority>0.6</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/about.html</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>yearly</changefreq>
 	<priority>0.6</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/categories.html</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>weekly</changefreq>
 	<priority>0.5</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/tags.html</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>weekly</changefreq>
 	<priority>0.5</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/achive.html</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>weekly</changefreq>
 	<priority>0.5</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/rss.xml</loc>
-        <lastmod>2014-03-07T10:34:26+08:00</lastmod>
+        <lastmod>2014-03-11T22:29:18+08:00</lastmod>
 	<changefreq>weekly</changefreq>
 	<priority>0.5</priority>
-    </url>
-    <url>
-        <loc>http://baige5117.github.io/blog/growing_up_is_not_so_fast.html</loc>
-	<lastmod>2014-03-06T22:00:00+08:00</lastmod>
-	<changefreq>never</changefreq>
-	<priority>0.6</priority>
     </url>
     <url>
         <loc>http://baige5117.github.io/blog/a_star_is_made.html</loc>

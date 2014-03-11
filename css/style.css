@@ -241,23 +241,24 @@ footer#page-footer {
 }
 
 
-#logo h1#title {
+#logo h1 {
     margin:0;
     padding:0;
-    font-family:Georgia, "Times New Roman", Times serif;
-    font-weight:bold;
+    font-family:"Microsoft YaHei", 微软雅黑, Georgia, "Times New Roman", Times, sans-serif;
+    font-weight:normal;
     font-size:40px;
+    line-height:48px;
     color:#0C211A;
-    text-shadow:1px 1px #fff;
-    letter-spacing:-2px;
-    line-height:40px;
+    text-shadow:0 1px 0 #FFFFFF, 1px 2px 2px #AAAAAA;/*1px 1px #fff;*/
+    /*letter-spacing:-2px;*/
 }
 
-#logo h1#title a {
+#logo h1 a {
     border:none;
 }
 
-#logo h1#title a:hover{
+
+#logo h1 a:hover{
     color:#333;
 }
 
@@ -265,7 +266,7 @@ footer#page-footer {
     font-size:12px;
     color:#666;
     text-transform:capitalize;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Microsoft YaHei", 微软雅黑, Arial, Helvetica, sans-serif;
 }
 
 #topSearch {
@@ -285,6 +286,7 @@ background:url("/images/icons/bk_post_header.png") 78px 0 no-repeat;
 position:relative;
 background:url("/images/icons/bk_post_header.png") 78px 0 no-repeat;
 padding-top:30px;
+font-family:Arial, Helvetica, "Times New Roman", Times, sans-serif;
 }
 .post .sidebadge {
 position:absolute;
@@ -342,6 +344,7 @@ vertical-align:middle;
     background:url("/images/icons/bk_header_separator.png") 50% 100% no-repeat;
     padding-bottom:10px;
     margin-bottom:20px;
+    font-family:Arial, Helvetica, "Times New Roman", Times, Georgia, serif;
 }
 
 .post section.postText img {
